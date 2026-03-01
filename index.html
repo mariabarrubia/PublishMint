@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PublishMint | digital products to resell</title>
+  <meta name="description" content="PublishMint helps creators build high-converting digital products to resell. We turn your audience insights into profitable eBooks, templates, mini-courses, high converting offers and affiliate-ready assets.">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased">
+  <!-- Header -->
+  <nav class="bg-white/80 backdrop-blur-md fixed w-full z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="index.html" class="text-2xl font-bold text-indigo-600 tracking-tighter">PublishMint</a>
+        </div>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="index.html" class="text-indigo-600 font-medium transition-colors">Home</a>
+          <a href="about.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">About Us</a>
+          <a href="#how-it-works" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">How It Works</a>
+          <a href="contact.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Contact</a>
+          <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="bg-indigo-600 text-white px-6 py-2.5 rounded-full font-medium btn-glow">Book Strategy Call</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block px-3 py-2 text-indigo-600 font-medium">Home</a>
+        <a href="about.html" class="block px-3 py-2 text-gray-600 font-medium">About Us</a>
+        <a href="#how-it-works" class="block px-3 py-2 text-gray-600 font-medium">How It Works</a>
+        <a href="contact.html" class="block px-3 py-2 text-gray-600 font-medium">Contact</a>
+        <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="block px-3 py-2 text-indigo-600 font-bold">Book Strategy Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center fade-in">
+    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
+      We transform your audience insights into <br class="hidden md:block" />
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-500">high-converting digital assets.</span>
+    </h1>
+    <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+      You create content. We build the product, sales page, and affiliate launch engine. The easiest way to launch <a href="#how-it-works" class="text-indigo-600 hover:underline">digital products to resell</a>.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+      <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="w-full sm:w-auto bg-indigo-600 text-white px-8 py-4 rounded-full font-semibold text-lg btn-glow">
+        Book Your Free Strategy Call
+      </a>
+      <a href="#how-it-works" class="w-full sm:w-auto bg-white text-gray-700 border border-gray-200 hover:border-gray-300 px-8 py-4 rounded-full font-semibold text-lg transition-colors">
+        See How It Works
+      </a>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="py-10 border-y border-gray-100 bg-white fade-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-6">Integrated with top marketplaces</p>
+      <div class="flex flex-wrap justify-center gap-8 md:gap-12 items-center opacity-70">
+        <span class="text-xl font-bold text-gray-800 logo-monochrome">Digistore24</span>
+        <span class="text-xl font-bold text-gray-800 logo-monochrome">Clickbank</span>
+        <span class="text-xl font-bold text-gray-800 logo-monochrome">JVZoo</span>
+        <span class="text-xl font-bold text-gray-800 logo-monochrome">WarriorPlus</span>
+        <span class="text-xl font-bold text-gray-800 logo-monochrome">ShareASale</span>
+        <span class="text-xl font-bold text-gray-800 logo-monochrome">Awin</span>
+        <span class="text-xl font-bold text-gray-800 logo-monochrome">Amazon</span>
+        <span class="text-xl font-bold text-gray-800 logo-monochrome">IngramSpark</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem / Agitation -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">You Have the Influence. We Have the Product Engine.</h2>
+        <p class="text-lg text-gray-600">Stop leaving money on the table. If you have an audience, you need high-quality <a href="#how-it-works" class="text-indigo-600 hover:underline">digital products to resell</a>.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4 card-hover slide-in">
+          <div class="bg-indigo-100 p-3 rounded-xl text-indigo-600 icon-anim">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 text-lg mb-1">You're answering the same DMs daily</h3>
+            <p class="text-gray-600">That's a product idea waiting to be monetized.</p>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4 card-hover slide-in" style="transition-delay: 100ms;">
+          <div class="bg-indigo-100 p-3 rounded-xl text-indigo-600 icon-anim">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 text-lg mb-1">You want digital products to resell</h3>
+            <p class="text-gray-600">But you hate dealing with tech setups and design work.</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4 card-hover slide-in" style="transition-delay: 200ms;">
+          <div class="bg-indigo-100 p-3 rounded-xl text-indigo-600 icon-anim">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 text-lg mb-1">You lack time</h3>
+            <p class="text-gray-600">You don’t have weeks to build a course from scratch.</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start space-x-4 card-hover slide-in" style="transition-delay: 300ms;">
+          <div class="bg-indigo-100 p-3 rounded-xl text-indigo-600 icon-anim">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 text-lg mb-1">You want affiliate revenue</h3>
+            <p class="text-gray-600">Without the hassle of recruiting and managing affiliates yourself.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution - How It Works -->
+  <section id="how-it-works" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">A seamless 3-step process to launch your premium <a href="#how-it-works" class="text-indigo-600 hover:underline">digital products to resell</a>.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="bg-gray-50 rounded-3xl p-8 relative overflow-hidden card-hover fade-in">
+          <div class="text-6xl font-black text-gray-200 absolute -top-4 -right-4 opacity-50">01</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4 relative z-10">The Deep Dive</h3>
+          <p class="text-gray-600 relative z-10">We analyze your audience, top content, and niche trends to identify profitable digital products to resell.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="bg-gray-50 rounded-3xl p-8 relative overflow-hidden card-hover fade-in" style="transition-delay: 150ms;">
+          <div class="text-6xl font-black text-gray-200 absolute -top-4 -right-4 opacity-50">02</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4 relative z-10">We Build It</h3>
+          <p class="text-gray-600 relative z-10">Our human + AI team creates your product (PDF, course, template) and a conversion-optimized sales page.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-gray-50 rounded-3xl p-8 relative overflow-hidden card-hover fade-in" style="transition-delay: 300ms;">
+          <div class="text-6xl font-black text-gray-200 absolute -top-4 -right-4 opacity-50">03</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4 relative z-10">Double Launch</h3>
+          <p class="text-gray-600 relative z-10">You promote to your audience. We activate our 200+ affiliate network. You earn from both.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Create -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Bespoke Products, Powered by Data</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">We don't just guess. We build what your audience is already asking for.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover fade-in group">
+          <div class="w-12 h-12 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">High-Converting E-books</h3>
+          <p class="text-gray-600">Professionally written and designed eBooks that establish authority and generate sales.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover fade-in group">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Done-For-You Lead Magnets</h3>
+          <p class="text-gray-600">Irresistible freebies designed to rapidly grow your email list with qualified buyers.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover fade-in group">
+          <div class="w-12 h-12 bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Custom Notion & Canva Templates</h3>
+          <p class="text-gray-600">Highly sought-after utility templates that provide immediate value to your audience.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover fade-in group">
+          <div class="w-12 h-12 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">AI-Generated Trend Reports</h3>
+          <p class="text-gray-600">Data-rich industry insights packaged into premium, sellable reports.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover fade-in group lg:col-span-2 xl:col-span-1">
+          <div class="w-12 h-12 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Mini-Course Scripts & Workbooks</h3>
+          <p class="text-gray-600">Structured educational content ready to be recorded or sold as text-based courses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-24 bg-animated-gradient text-white text-center fade-in">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8">Ready to build an asset your audience actually wants to buy?</h2>
+      <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="inline-block bg-white text-indigo-600 px-10 py-5 rounded-full font-bold text-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+        Claim Your Strategy Session
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-50 border-t border-gray-200 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <a href="index.html" class="text-2xl font-bold text-indigo-600 tracking-tighter mb-4 block">PublishMint</a>
+          <p class="text-gray-500 max-w-sm">
+            We transform your audience insights into high-converting digital products to resell.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">Company</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-500 hover:text-indigo-600 footer-link">Home</a></li>
+            <li><a href="about.html" class="text-gray-500 hover:text-indigo-600 footer-link">About Us</a></li>
+            <li><a href="index.html#how-it-works" class="text-gray-500 hover:text-indigo-600 footer-link">How It Works</a></li>
+            <li><a href="contact.html" class="text-gray-500 hover:text-indigo-600 footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="terms.html" class="text-gray-500 hover:text-indigo-600 footer-link">Terms & Conditions</a></li>
+            <li><a href="privacy.html" class="text-gray-500 hover:text-indigo-600 footer-link">Privacy Policy</a></li>
+            <li><a href="refund.html" class="text-gray-500 hover:text-indigo-600 footer-link">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex space-x-6 mb-4 md:mb-0 text-sm text-gray-500">
+          <a href="mailto:kousaralom.6505@gmail.com" class="hover:text-indigo-600 transition-colors">kousaralom.6505@gmail.com</a>
+          <a href="tel:8134979150" class="hover:text-indigo-600 transition-colors">8134979150</a>
+        </div>
+        <p class="text-gray-400 text-sm">
+          &copy; 2024 PublishMint. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
