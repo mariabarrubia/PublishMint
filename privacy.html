@@ -1,130 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | PublishMint</title>
-  <meta name="description" content="Privacy Policy for PublishMint.">
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Privacy Policy for PublishMint." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="antialiased">
-  <!-- Header -->
-  <nav class="bg-white/80 backdrop-blur-md fixed w-full z-50 border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-        <div class="flex-shrink-0 flex items-center">
-          <a href="index.html" class="text-2xl font-bold text-indigo-600 tracking-tighter">PublishMint</a>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">
+          <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+          PublishMint
+        </a>
+
+        <ul class="navbar-nav">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="navbar-actions">
+          <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-primary">
+            <i class="fas fa-calendar-check"></i> Book Strategy Call
+          </a>
         </div>
-        <div class="hidden md:flex space-x-8 items-center">
-          <a href="index.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Home</a>
-          <a href="about.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">About Us</a>
-          <a href="index.html#how-it-works" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">How It Works</a>
-          <a href="contact.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Contact</a>
-          <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="bg-indigo-600 text-white px-6 py-2.5 rounded-full font-medium btn-glow">Book Strategy Call</a>
-        </div>
-        <div class="md:hidden flex items-center">
-          <button id="menu-btn" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="index.html" class="block px-3 py-2 text-gray-600 font-medium">Home</a>
-        <a href="about.html" class="block px-3 py-2 text-gray-600 font-medium">About Us</a>
-        <a href="index.html#how-it-works" class="block px-3 py-2 text-gray-600 font-medium">How It Works</a>
-        <a href="contact.html" class="block px-3 py-2 text-gray-600 font-medium">Contact</a>
-        <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="block px-3 py-2 text-indigo-600 font-bold">Book Strategy Call</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- Legal Content -->
-  <section class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto fade-in">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-8">
-      Privacy Policy
-    </h1>
-    
-    <div class="prose prose-lg text-gray-600 max-w-none">
-      <p>Last Updated: October 2024</p>
-      
-      <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Information We Collect</h3>
-      <p>At PublishMint, we believe in minimal data collection. We only collect the following personal information when you contact us or use our services:</p>
-      <ul class="list-disc pl-6 mb-4">
-        <li>Your Name</li>
-        <li>Email Address</li>
-        <li>Phone Number</li>
-      </ul>
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-primary mt-4">Book Strategy Call</a>
+  </div>
 
-      <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">2. How We Use Your Information</h3>
-      <p>The information we collect is used strictly for the following purposes:</p>
-      <ul class="list-disc pl-6 mb-4">
-        <li>To deliver digital files and assets you have purchased or requested.</li>
-        <li>To communicate with you regarding your project, strategy session, or support inquiries.</li>
-        <li>To improve our services and customer experience.</li>
-      </ul>
+  <main>
 
-      <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">3. Payment Processing</h3>
-      <p>We use Razorpay as our secure payment processor. When you make a payment, Razorpay handles your payment data securely. PublishMint does not store, process, or have access to your full credit card details or sensitive payment information.</p>
+    <!-- Legal Content -->
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <h1 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 2rem;">Privacy Policy</h1>
+        <p style="color: var(--clr-muted); margin-bottom: 2rem;">Last Updated: October 2024</p>
 
-      <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Data Sharing and Selling</h3>
-      <p><strong>We do not sell your data.</strong> Your personal information is kept confidential and is never sold, rented, or traded to third parties for marketing purposes.</p>
-
-      <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Security Measures</h3>
-      <p>We implement a variety of security measures to maintain the safety of your personal information. We use secure servers and encrypted communication channels to protect data during transmission.</p>
-
-      <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">6. Contact Us</h3>
-      <p>If you have any questions regarding this privacy policy, you may contact us using the information below:</p>
-      <p>Email: kousaralom.6505@gmail.com<br>Phone: 8134979150</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-50 border-t border-gray-200 pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-        <div class="col-span-1 md:col-span-2">
-          <a href="index.html" class="text-2xl font-bold text-indigo-600 tracking-tighter mb-4 block">PublishMint</a>
-          <p class="text-gray-500 max-w-sm">
-            We transform your audience insights into high-converting digital products to resell.
-          </p>
-        </div>
-        <div>
-          <h4 class="font-semibold text-gray-900 mb-4">Company</h4>
-          <ul class="space-y-2">
-            <li><a href="index.html" class="text-gray-500 hover:text-indigo-600 footer-link">Home</a></li>
-            <li><a href="about.html" class="text-gray-500 hover:text-indigo-600 footer-link">About Us</a></li>
-            <li><a href="index.html#how-it-works" class="text-gray-500 hover:text-indigo-600 footer-link">How It Works</a></li>
-            <li><a href="contact.html" class="text-gray-500 hover:text-indigo-600 footer-link">Contact</a></li>
+        <div style="background: var(--clr-card); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); padding: 2.5rem;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">1. Information We Collect</h3>
+          <p style="margin-bottom: 1rem;">At PublishMint, we believe in minimal data collection. We only collect the following personal information when you contact us or use our services:</p>
+          <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 2rem; color: var(--clr-muted);">
+            <li>Your Name</li>
+            <li>Email Address</li>
+            <li>Phone Number</li>
           </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold text-gray-900 mb-4">Legal</h4>
-          <ul class="space-y-2">
-            <li><a href="terms.html" class="text-gray-500 hover:text-indigo-600 footer-link">Terms & Conditions</a></li>
-            <li><a href="privacy.html" class="text-indigo-600 footer-link">Privacy Policy</a></li>
-            <li><a href="refund.html" class="text-gray-500 hover:text-indigo-600 footer-link">Refund Policy</a></li>
+
+          <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">2. How We Use Your Information</h3>
+          <p style="margin-bottom: 1rem;">The information we collect is used strictly for the following purposes:</p>
+          <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 2rem; color: var(--clr-muted);">
+            <li>To deliver digital files and assets you have purchased or requested.</li>
+            <li>To communicate with you regarding your project, strategy session, or support inquiries.</li>
+            <li>To improve our services and customer experience.</li>
           </ul>
+
+          <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">3. Payment Processing</h3>
+          <p style="margin-bottom: 2rem;">We use Razorpay as our secure payment processor. When you make a payment, Razorpay handles your payment data securely. PublishMint does not store, process, or have access to your full credit card details or sensitive payment information.</p>
+
+          <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">4. Data Sharing and Selling</h3>
+          <p style="margin-bottom: 2rem;"><strong>We do not sell your data.</strong> Your personal information is kept confidential and is never sold, rented, or traded to third parties for marketing purposes.</p>
+
+          <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">5. Security Measures</h3>
+          <p style="margin-bottom: 2rem;">We implement a variety of security measures to maintain the safety of your personal information. We use secure servers and encrypted communication channels to protect data during transmission.</p>
+
+          <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">6. Contact Us</h3>
+          <p>If you have any questions regarding this privacy policy, you may contact us using the information below:</p>
+          <p>Email: kousaralom.6505@gmail.com<br>Phone: 8134979150</p>
         </div>
       </div>
-      <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <div class="flex space-x-6 mb-4 md:mb-0 text-sm text-gray-500">
-          <a href="mailto:kousaralom.6505@gmail.com" class="hover:text-indigo-600 transition-colors">kousaralom.6505@gmail.com</a>
-          <a href="tel:8134979150" class="hover:text-indigo-600 transition-colors">8134979150</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+            PublishMint
+          </div>
+          <p>We transform your audience insights into high-converting digital products to resell.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
-        <p class="text-gray-400 text-sm">
-          &copy; 2024 PublishMint. All rights reserved.
-        </p>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home fa-fw"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user fa-fw"></i> About Us</a></li>
+            <li><a href="index.html#how-it-works"><i class="fas fa-map-signs fa-fw"></i> How It Works</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope fa-fw"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="terms.html"><i class="fas fa-file-contract fa-fw"></i> Terms & Conditions</a></li>
+            <li><a href="privacy.html"><i class="fas fa-lock fa-fw"></i> Privacy Policy</a></li>
+            <li><a href="refund.html"><i class="fas fa-undo-alt fa-fw"></i> Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <div class="footer-contact-item">
+            <span class="ic"><i class="fas fa-envelope"></i></span>
+            <span><a href="mailto:kousaralom.6505@gmail.com">kousaralom.6505@gmail.com</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="ic"><i class="fas fa-phone"></i></span>
+            <span><a href="tel:8134979150">8134979150</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> PublishMint. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="refund.html">Refund Policy</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- Scroll to top button -->
+  <button id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
