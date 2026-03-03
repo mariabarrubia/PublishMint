@@ -1,129 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | PublishMint</title>
-  <meta name="description" content="Learn more about PublishMint and how we help creators build digital products to resell.">
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Learn more about PublishMint and how we help creators build digital products to resell." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="antialiased">
-  <!-- Header -->
-  <nav class="bg-white/80 backdrop-blur-md fixed w-full z-50 border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-        <div class="flex-shrink-0 flex items-center">
-          <a href="index.html" class="text-2xl font-bold text-indigo-600 tracking-tighter">PublishMint</a>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">
+          <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+          PublishMint
+        </a>
+
+        <ul class="navbar-nav">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About Us</a></li>
+          <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="navbar-actions">
+          <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-primary">
+            <i class="fas fa-calendar-check"></i> Book Strategy Call
+          </a>
         </div>
-        <div class="hidden md:flex space-x-8 items-center">
-          <a href="index.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Home</a>
-          <a href="about.html" class="text-indigo-600 font-medium transition-colors">About Us</a>
-          <a href="index.html#how-it-works" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">How It Works</a>
-          <a href="contact.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Contact</a>
-          <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="bg-indigo-600 text-white px-6 py-2.5 rounded-full font-medium btn-glow">Book Strategy Call</a>
-        </div>
-        <div class="md:hidden flex items-center">
-          <button id="menu-btn" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="index.html" class="block px-3 py-2 text-gray-600 font-medium">Home</a>
-        <a href="about.html" class="block px-3 py-2 text-indigo-600 font-medium">About Us</a>
-        <a href="index.html#how-it-works" class="block px-3 py-2 text-gray-600 font-medium">How It Works</a>
-        <a href="contact.html" class="block px-3 py-2 text-gray-600 font-medium">Contact</a>
-        <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="block px-3 py-2 text-indigo-600 font-bold">Book Strategy Call</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- About Section -->
-  <section class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto fade-in">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-8 text-center">
-      Built by an Insider, for Creators.
-    </h1>
-    
-    <div class="prose prose-lg text-gray-600 mx-auto space-y-6">
-      <p>
-        PublishMint was founded by Kousar Alom Laskar, a self-published author and digital product advertiser. I began publishing books across Amazon, IngramSpark, and Google Play Books, learning firsthand what works in digital distribution.
-      </p>
-      <p>
-        Later, I worked behind the scenes promoting digital products as an advertiser across marketplaces like Digistore24, JVZoo, Clickbank, Awin, ShareASale, and WarriorPlus.
-      </p>
-      <p>
-        Through years of experience with affiliates and product creators, I identified a gap: influencers with strong audiences struggled to create simple, profitable digital assets.
-      </p>
-      <p class="font-semibold text-gray-900 text-xl border-l-4 border-indigo-600 pl-4 my-8">
-        PublishMint bridges that gap.
-      </p>
-      <p>
-        We combine affiliate marketplace data with deep audience analysis to build <a href="index.html" class="text-indigo-600 hover:underline">digital products to resell</a> that already have proven demand.
-      </p>
-      <p class="font-semibold text-gray-900">
-        We don’t build tools.<br/>
-        We build scalable income assets.
-      </p>
-    </div>
-  </section>
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link active">About Us</a>
+    <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-primary mt-4">Book Strategy Call</a>
+  </div>
 
-  <!-- Final CTA -->
-  <section class="py-24 bg-animated-gradient text-white text-center fade-in">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl md:text-5xl font-bold mb-8">Ready to build an asset your audience actually wants to buy?</h2>
-      <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="inline-block bg-white text-indigo-600 px-10 py-5 rounded-full font-bold text-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-        Claim Your Strategy Session
-      </a>
-    </div>
-  </section>
+  <main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-50 border-t border-gray-200 pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-        <div class="col-span-1 md:col-span-2">
-          <a href="index.html" class="text-2xl font-bold text-indigo-600 tracking-tighter mb-4 block">PublishMint</a>
-          <p class="text-gray-500 max-w-sm">
-            We transform your audience insights into high-converting digital products to resell.
+    <!-- About Section -->
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <h1 class="gradient-text text-center" style="font-size: 2.5rem; margin-bottom: 2rem;">Built by an Insider, for Creators.</h1>
+
+        <div style="background: var(--clr-card); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); padding: 2.5rem; line-height: 1.8;">
+          <p style="margin-bottom: 1.5rem;">
+            PublishMint was founded by Kousar Alom Laskar, a self-published author and digital product advertiser. I began publishing books across Amazon, IngramSpark, and Google Play Books, learning firsthand what works in digital distribution.
+          </p>
+          <p style="margin-bottom: 1.5rem;">
+            Later, I worked behind the scenes promoting digital products as an advertiser across marketplaces like Digistore24, JVZoo, Clickbank, Awin, ShareASale, and WarriorPlus.
+          </p>
+          <p style="margin-bottom: 1.5rem;">
+            Through years of experience with affiliates and product creators, I identified a gap: influencers with strong audiences struggled to create simple, profitable digital assets.
+          </p>
+          <p style="margin: 2rem 0; font-size: 1.3rem; font-weight: 600; border-left: 4px solid var(--clr-primary); padding-left: 1.5rem; color: var(--clr-white);">
+            PublishMint bridges that gap.
+          </p>
+          <p style="margin-bottom: 1.5rem;">
+            We combine affiliate marketplace data with deep audience analysis to build <a href="index.html" class="text-link">digital products to resell</a> that already have proven demand.
+          </p>
+          <p style="font-weight: 600; color: var(--clr-white);">
+            We don't build tools.<br/>
+            We build scalable income assets.
           </p>
         </div>
-        <div>
-          <h4 class="font-semibold text-gray-900 mb-4">Company</h4>
-          <ul class="space-y-2">
-            <li><a href="index.html" class="text-gray-500 hover:text-indigo-600 footer-link">Home</a></li>
-            <li><a href="about.html" class="text-gray-500 hover:text-indigo-600 footer-link">About Us</a></li>
-            <li><a href="index.html#how-it-works" class="text-gray-500 hover:text-indigo-600 footer-link">How It Works</a></li>
-            <li><a href="contact.html" class="text-gray-500 hover:text-indigo-600 footer-link">Contact</a></li>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <div class="cta-gradient-bg" aria-hidden="true"></div>
+      <div class="cta-ring cta-ring-1" aria-hidden="true"></div>
+      <div class="cta-ring cta-ring-2" aria-hidden="true"></div>
+      <div class="cta-ring cta-ring-3" aria-hidden="true"></div>
+      <div class="container">
+        <h2>Ready to build an asset your audience actually wants to buy?</h2>
+        <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-accent btn-lg">
+          <i class="fas fa-calendar-star"></i> Claim Your Strategy Session
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+            PublishMint
+          </div>
+          <p>We transform your audience insights into high-converting digital products to resell.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home fa-fw"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user fa-fw"></i> About Us</a></li>
+            <li><a href="index.html#how-it-works"><i class="fas fa-map-signs fa-fw"></i> How It Works</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope fa-fw"></i> Contact</a></li>
           </ul>
         </div>
-        <div>
-          <h4 class="font-semibold text-gray-900 mb-4">Legal</h4>
-          <ul class="space-y-2">
-            <li><a href="terms.html" class="text-gray-500 hover:text-indigo-600 footer-link">Terms & Conditions</a></li>
-            <li><a href="privacy.html" class="text-gray-500 hover:text-indigo-600 footer-link">Privacy Policy</a></li>
-            <li><a href="refund.html" class="text-gray-500 hover:text-indigo-600 footer-link">Refund Policy</a></li>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="terms.html"><i class="fas fa-file-contract fa-fw"></i> Terms & Conditions</a></li>
+            <li><a href="privacy.html"><i class="fas fa-lock fa-fw"></i> Privacy Policy</a></li>
+            <li><a href="refund.html"><i class="fas fa-undo-alt fa-fw"></i> Refund Policy</a></li>
           </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <div class="footer-contact-item">
+            <span class="ic"><i class="fas fa-envelope"></i></span>
+            <span><a href="mailto:kousaralom.6505@gmail.com">kousaralom.6505@gmail.com</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="ic"><i class="fas fa-phone"></i></span>
+            <span><a href="tel:8134979150">8134979150</a></span>
+          </div>
         </div>
       </div>
-      <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <div class="flex space-x-6 mb-4 md:mb-0 text-sm text-gray-500">
-          <a href="mailto:kousaralom.6505@gmail.com" class="hover:text-indigo-600 transition-colors">kousaralom.6505@gmail.com</a>
-          <a href="tel:8134979150" class="hover:text-indigo-600 transition-colors">8134979150</a>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> PublishMint. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="refund.html">Refund Policy</a>
         </div>
-        <p class="text-gray-400 text-sm">
-          &copy; 2024 PublishMint. All rights reserved.
-        </p>
       </div>
     </div>
   </footer>
 
+  <!-- Scroll to top button -->
+  <button id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
