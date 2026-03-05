@@ -12,25 +12,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Mini style for pricing note (keeps design consistent) -->
+  <!-- inline style addition to ensure pricing blends perfectly (matches existing design tokens) -->
   <style>
-    .pricing-note {
-      background: #f0f5ff;
-      padding: 1rem 0;
+    /* extra inline consistency – uses the same gradient & badge patterns as the main stylesheet */
+    .pricing-module {
+      margin-bottom: 2rem;
       text-align: center;
-      border-top: 1px solid #d9e2ef;
-      border-bottom: 1px solid #d9e2ef;
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: #1e2c4a;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem 1.5rem;
+      background: rgba(255,255,255,0.03);
+      padding: 1rem 1.5rem;
+      border-radius: 60px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.1);
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .pricing-note p {
-      margin: 0;
-    }
-    .pricing-note strong {
+    .pricing-module .badge {
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      color: white;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
       font-weight: 700;
-      color: #0a1a3a;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 8px 20px rgba(99,102,241,0.3);
     }
+    .pricing-module .price-item {
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      font-size: 1.2rem;
+    }
+    .pricing-module .price-highlight {
+      font-weight: 800;
+      color: #fbbf24; /* warm amber like accent */
+      background: rgba(0,0,0,0.2);
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      margin-left: 4px;
+    }
+    .pricing-module .price-negotiable {
+      opacity: 0.75;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 640px) {
+      .pricing-module {
+        flex-direction: column;
+        gap: 0.6rem;
+        border-radius: 30px;
+        padding: 1.2rem;
+      }
+    }
+    /* footer social removal is handled by deleting the block – no extra style needed */
   </style>
 </head>
 <body>
@@ -234,20 +274,25 @@
       </div>
     </section>
 
-    <!-- BRIEF PRICING NOTE (added above final CTA) -->
-    <div class="pricing-note">
-      <div class="container">
-        <p><strong>Pricing:</strong> If your audience size is below 20k, we charge $200. If above 20k, $400 (negotiable).</p>
-      </div>
-    </div>
-
-    <!-- Final CTA -->
+    <!-- Final CTA (with pricing added above heading) -->
     <section class="final-cta">
       <div class="cta-gradient-bg" aria-hidden="true"></div>
       <div class="cta-ring cta-ring-1" aria-hidden="true"></div>
       <div class="cta-ring cta-ring-2" aria-hidden="true"></div>
       <div class="cta-ring cta-ring-3" aria-hidden="true"></div>
       <div class="container">
+        <!-- ==========  PRICING INFO ADDED ABOVE HEADING ========== -->
+        <div class="pricing-module">
+          <span class="badge"><i class="fas fa-tag"></i> flat‑rate pricing</span>
+          <span class="price-item">
+            <span class="price-highlight">$200</span> audience &#60; 20k
+          </span>
+          <span class="price-item">
+            <span class="price-highlight">$400</span> audience &#62; 20k
+            <span class="price-negotiable">(negotiable)</span>
+          </span>
+        </div>
+        <!-- original heading stays exactly as it was -->
         <h2>Ready to build an asset your audience actually wants to buy?</h2>
         <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-accent btn-lg">
           <i class="fas fa-calendar-star"></i> Claim Your Strategy Session
@@ -257,7 +302,7 @@
 
   </main>
 
-  <!-- Footer (social media icons removed) -->
+  <!-- Footer (social media icons removed as requested) -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -267,7 +312,7 @@
             PublishMint
           </div>
           <p>We transform your audience insights into high-converting digital products to resell.</p>
-          <!-- social-links div completely removed as requested -->
+          <!-- SOCIAL LINKS DIV REMOVED (icons deleted) -->
         </div>
         <div class="footer-col">
           <h5>Company</h5>
@@ -317,4 +362,4 @@
   </script>
   <script src="assets/js/main.js"></script>
 </body>
-          </html>
+</html>
