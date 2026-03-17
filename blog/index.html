@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PublishMint - Digital Products & Affiliate Strategies</title>
+  <meta name="description" content="Actionable insights to build profitable digital assets. Affiliate marketing, monetization, and high-converting digital products to resell." />
+
+  <!-- Fonts & Icons (exact copy from homepage) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <!-- AdSense (same as homepage) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5470469605050608" crossorigin="anonymous"></script>
+
+  <!-- Minimal blog-specific adjustments – uses existing design tokens, no new CSS system -->
+  <style>
+    /* Make entire card clickable while preserving card look */
+    a.create-card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    a.create-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.3);
+    }
+    /* "Read More" style – matches gradient text / primary color */
+    .read-more {
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #6366f1; /* --primary equivalent */
+      transition: color 0.2s;
+    }
+    .read-more::after {
+      content: " →";
+      transition: margin 0.2s;
+    }
+    a.create-card:hover .read-more {
+      color: #a855f7; /* --primary-dark or accent */
+    }
+    /* Ensure no unwanted underline */
+    .create-card h4,
+    .create-card p {
+      margin-bottom: 0.5rem;
+    }
+    /* Keep same card inner spacing */
+    .create-card {
+      padding: 2rem 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVBAR (exact copy from homepage, active set to Blog) ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="/index.html" class="navbar-logo">
+          <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+          PublishMint
+        </a>
+
+        <ul class="navbar-nav">
+          <li><a href="/index.html" class="nav-link">Home</a></li>
+          <li><a href="/about.html" class="nav-link">About Us</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="/blog/index.html" class="nav-link active">Blog</a></li>
+          <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="navbar-actions">
+          <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-primary">
+            <i class="fas fa-calendar-check"></i> Book Strategy Call
+          </a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation (exact copy with Blog added) -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/index.html" class="nav-link">Home</a>
+    <a href="/about.html" class="nav-link">About Us</a>
+    <a href="#how-it-works" class="nav-link">How It Works</a>
+    <a href="/blog/index.html" class="nav-link active">Blog</a>
+    <a href="/contact.html" class="nav-link">Contact</a>
+    <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-primary mt-4">Book Strategy Call</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ========== HERO SECTION (same gradient + orb style) ========== -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-grid-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>
+            Insights to Build <br class="hidden-md" />
+            <span class="gradient-text">Profitable Digital Assets</span>
+          </h1>
+          <p>
+            Actionable strategies for affiliate marketing, digital products, and audience monetization — no fluff, just what works.
+          </p>
+          <div class="hero-btns">
+            <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-primary btn-lg">
+              <i class="fas fa-calendar-check"></i> Free Monetization Audit
+            </a>
+            <a href="#blog-grid" class="btn btn-secondary btn-lg">
+              <i class="fas fa-newspaper"></i> Read Articles
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BLOG GRID (21 cards: 1 featured + 20 more) ========== -->
+    <section class="section" id="blog-grid">
+      <div class="container">
+        <!-- optional subtle heading, same design language -->
+        <div class="section-header text-center">
+          <div class="badge"><i class="fas fa-pen-fancy"></i> latest strategies</div>
+          <h2>Fresh <span class="gradient-text">monetization</span> insights</h2>
+          <p>Real-world tactics to turn your audience into recurring revenue.</p>
+        </div>
+
+        <div class="create-grid">
+          <!-- POST 1 (featured) – post1.html -->
+          <a href="post1.html" class="create-card">
+            <h4>High Commission Affiliate Products List USA 2026</h4>
+            <p>Curated list of top-paying affiliate programs for US traffic. Updated for 2026 commissions.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 2 – post2.html -->
+          <a href="post2.html" class="create-card">
+            <h4>How to Choose Profitable Digital Products to Resell</h4>
+            <p>Niche research, demand validation, and licensing must-knows for passive income.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 3 – post3.html -->
+          <a href="post3.html" class="create-card">
+            <h4>The Ultimate Guide to Affiliate Marketing for Beginners</h4>
+            <p>Start from zero: picking offers, creating content, and getting first commission.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 4 – post4.html -->
+          <a href="post4.html" class="create-card">
+            <h4>10 High-Ticket Affiliate Programs That Pay Recurring</h4>
+            <p>Software, membership, and SaaS programs with recurring commissions.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 5 – post5.html -->
+          <a href="post5.html" class="create-card">
+            <h4>Monetizing Your Email List with Digital Downloads</h4>
+            <p>Convert subscribers into buyers with low-cost ebooks, templates, and checklists.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 6 – post6.html -->
+          <a href="post6.html" class="create-card">
+            <h4>Creating a Premium Newsletter: Monetization Strategies</h4>
+            <p>Paid subscriptions, sponsored content, and product launches inside newsletters.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 7 – post7.html -->
+          <a href="post7.html" class="create-card">
+            <h4>Best PLR Rights Products for Quick Resell</h4>
+            <p>Where to find quality PLR, how to rebrand, and avoid common pitfalls.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 8 – post8.html -->
+          <a href="post8.html" class="create-card">
+            <h4>How to Price Your Digital Products for Maximum Profit</h4>
+            <p>Psychological pricing, anchoring, and testing price points.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 9 – post9.html -->
+          <a href="post9.html" class="create-card">
+            <h4>Affiliate SEO: Ranking Product Reviews on Google</h4>
+            <p>Keyword research, review schema, and backlink strategies for affiliate sites.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 10 – post10.html -->
+          <a href="post10.html" class="create-card">
+            <h4>Using AI to Generate Digital Product Ideas</h4>
+            <p>ChatGPT and AI tools to brainstorm, validate, and outline profitable products.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 11 – post11.html -->
+          <a href="post11.html" class="create-card">
+            <h4>The Psychology of High-Converting Sales Pages</h4>
+            <p>Copywriting patterns that trigger buying decisions for digital offers.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 12 – post12.html -->
+          <a href="post12.html" class="create-card">
+            <h4>Top Niches for Digital Products in 2026</h4>
+            <p>Emerging niches with hungry audiences and low competition.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 13 – post13.html -->
+          <a href="post13.html" class="create-card">
+            <h4>How to Build an Affiliate Funnel That Converts</h4>
+            <p>Lead magnets, email sequences, and tripwires to maximize affiliate earnings.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 14 – post14.html -->
+          <a href="post14.html" class="create-card">
+            <h4>Maximizing Revenue with Tripwire Offers</h4>
+            <p>Low-cost upsells that turn freebies into paying customers.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 15 – post15.html -->
+          <a href="post15.html" class="create-card">
+            <h4>Case Study: From Zero to $10k with a Digital Planner</h4>
+            <p>How a simple planner generated $10k in 60 days using organic reach.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 16 – post16.html -->
+          <a href="post16.html" class="create-card">
+            <h4>Legal Must-Knows for Selling Digital Products</h4>
+            <p>Terms, disclaimers, copyright, and tax basics for product creators.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 17 – post17.html -->
+          <a href="post17.html" class="create-card">
+            <h4>Affiliate Marketing vs. Digital Products: Which is Better?</h4>
+            <p>Pros, cons, and how to combine both for diversified income.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 18 – post18.html -->
+          <a href="post18.html" class="create-card">
+            <h4>How to Get Affiliates to Promote Your Products</h4>
+            <p>Recruitment, affiliate manager tips, and creating irresistible offers.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 19 – post19.html -->
+          <a href="post19.html" class="create-card">
+            <h4>The Best Tools for Creating Digital Products Fast</h4>
+            <p>Design, writing, hosting, and delivery tools used by top creators.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 20 – post20.html -->
+          <a href="post20.html" class="create-card">
+            <h4>Creating a Low-Ticket Product That Upsells</h4>
+            <p>Entry-level offers that lead to high-ticket backend sales.</p>
+            <span class="read-more">Read article</span>
+          </a>
+
+          <!-- POST 21 – post21.html -->
+          <a href="post21.html" class="create-card">
+            <h4>Exit Strategy: Selling Your Digital Product Business</h4>
+            <p>How to build a sellable asset and find buyers for your digital products.</p>
+            <span class="read-more">Read article</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FINAL CTA (exact same style as homepage final-cta, ad-friendly) ========== -->
+    <section class="final-cta">
+      <div class="cta-gradient-bg" aria-hidden="true"></div>
+      <div class="cta-ring cta-ring-1" aria-hidden="true"></div>
+      <div class="cta-ring cta-ring-2" aria-hidden="true"></div>
+      <div class="cta-ring cta-ring-3" aria-hidden="true"></div>
+      <div class="container">
+        <h2>Turn your audience into revenue (no matter the size)</h2>
+        <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-accent btn-lg">
+          <i class="fas fa-calendar-star"></i> Book Free Consult
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER (exact copy from homepage) ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+            PublishMint
+          </div>
+          <p>We transform your audience insights into high-converting digital products to resell.</p>
+          <!-- SOCIAL LINKS DIV REMOVED (as per homepage) -->
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="/index.html"><i class="fas fa-home fa-fw"></i> Home</a></li>
+            <li><a href="/about.html"><i class="fas fa-user fa-fw"></i> About Us</a></li>
+            <li><a href="/#how-it-works"><i class="fas fa-map-signs fa-fw"></i> How It Works</a></li>
+            <li><a href="/contact.html"><i class="fas fa-envelope fa-fw"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="/terms.html"><i class="fas fa-file-contract fa-fw"></i> Terms & Conditions</a></li>
+            <li><a href="/privacy.html"><i class="fas fa-lock fa-fw"></i> Privacy Policy</a></li>
+            <li><a href="/refund.html"><i class="fas fa-undo-alt fa-fw"></i> Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <div class="footer-contact-item">
+            <span class="ic"><i class="fas fa-envelope"></i></span>
+            <span><a href="mailto:kousaralom.6505@gmail.com">kousaralom.6505@gmail.com</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="ic"><i class="fas fa-phone"></i></span>
+            <span><a href="tel:8134979150">8134979150</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> PublishMint. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="/terms.html">Terms</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/refund.html">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+  </html>
