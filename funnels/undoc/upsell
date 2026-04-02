@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 2: AI Guide & Community – complete your protection</title>
+    
+    <!-- Tailwind + Font Awesome + same custom styles as frontend salespage -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: #f8fafc;  /* subtle background like salespage */
+            scroll-behavior: smooth;
+        }
+        
+        /* custom button & utility classes from original salespage */
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #ffffff 100%);
+        }
+        
+        .cta-primary {
+            background-color: #dc2626;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(220, 38, 38, 0.3);
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(220, 38, 38, 0.4);
+        }
+        
+        .cta-blue {
+            background-color: #1e40af;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(30, 64, 175, 0.3);
+        }
+        
+        .cta-blue:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(30, 64, 175, 0.4);
+        }
+        
+        .cta-green {
+            background-color: #059669;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
+        }
+        
+        .cta-green:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(5, 150, 105, 0.4);
+        }
+        
+        .trust-badge {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+            flex: 0 0 300px;
+            scroll-snap-align: start;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .value-card {
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .guarantee-section {
+            background: linear-gradient(135deg, #dcfce7 0%, #ffffff 100%);
+        }
+        
+        .counter {
+            animation: countUp 1s ease-out;
+        }
+        
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .trust-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .payment-logo {
+            height: 30px;
+            object-fit: contain;
+            filter: grayscale(100%) contrast(0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .payment-logo:hover {
+            filter: none;
+        }
+        
+        .ssl-badge {
+            font-size: 0.75rem;
+            padding-top: 4px;
+        }
+        
+        .ssl-badge i {
+            font-size: 0.9em;
+            margin-right: 4px;
+        }
+        
+        .warning-box {
+            border-left: 4px solid #dc2626;
+            background-color: #fef2f2;
+        }
+        
+        .control-box {
+            border-left: 4px solid #059669;
+            background-color: #f0fdf4;
+        }
+        
+        .fact-box {
+            border-left: 4px solid #b91c1c;
+            background: linear-gradient(145deg, #fee2e2 0%, #fff5f5 100%);
+            box-shadow: 0 10px 15px -3px rgba(185, 28, 28, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .last-section {
+            background: linear-gradient(145deg, #0b1e3a 0%, #1a2f4f 50%, #2a3f5f 100%);
+            position: relative;
+            overflow: hidden;
+            color: #f0f4fa;
+        }
+        
+        .last-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.05"><polygon points="0,0 100,0 50,100" fill="white"/></svg>');
+            background-size: cover;
+            pointer-events: none;
+        }
+        
+        .last-section .content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .last-section .cta-glow {
+            background: linear-gradient(145deg, #fbbf24, #f59e0b);
+            color: #0b1e3a;
+            font-weight: 800;
+            box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.5);
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .last-section .cta-glow:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px -5px rgba(245, 158, 11, 0.7);
+            background: linear-gradient(145deg, #fcd34d, #fbbf24);
+        }
+        
+        .category-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,215,0,0.2);
+            transition: all 0.2s ease;
+        }
+        
+        .category-card:hover {
+            border-color: rgba(255,215,0,0.5);
+            background: rgba(255,255,255,0.12);
+        }
+        
+        .last-section .badge-icon {
+            background: rgba(255,255,255,0.1);
+            border-radius: 40px;
+            padding: 0.25rem 0.75rem;
+            backdrop-filter: blur(4px);
+        }
+        
+        .bonus-list-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #e5e7eb;
+        }
+        .bonus-list-item:last-child {
+            border-bottom: none;
+        }
+
+        /* additional upsell-specific tweaks */
+        .decline-link {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            border-bottom: 1px dashed #d1d5db;
+            text-decoration: none;
+        }
+        .decline-link:hover {
+            color: #6b7280;
+            border-bottom-color: #9ca3af;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800 py-10 px-4">
+
+    <!-- UPSELL SECTION – fully redesigned with salespage styling, content intact -->
+    <div class="container mx-auto max-w-4xl">
+        <!-- main premium card -->
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+            
+            <!-- inner padding -->
+            <div class="p-6 md:p-10">
+                
+                <!-- step badge (like trust-badge but simpler) -->
+                <div class="inline-block bg-blue-100 text-blue-800 font-bold py-1.5 px-5 rounded-full text-sm mb-6 tracking-wide shadow-sm">
+                    <i class="fas fa-robot mr-2 text-blue-600"></i> STEP 2: ADD THE Ai GUIDE
+                </div>
+
+                <!-- headline -->
+                <h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-4">
+                    Final Step: <span class="text-blue-800">A Personal Guide That Never Sleeps.</span>
+                </h1>
+
+                <!-- intro paragraphs -->
+                <p class="text-lg text-gray-700 mb-4">
+                    The protection system you just secured is your foundation. But, <span class="font-semibold">the situation on the ground changes and escalates every single day.</span>
+                </p>
+                <p class="text-gray-600 mb-6">
+                    To make sure you are never left guessing, I’ve built a specialized <strong>AI Immigration Helper</strong> (access within ChatGPT or Gemini). Think of it as having the most informed person in the community in your pocket, ready to answer your questions 24/7.
+                </p>
+
+                <!-- highlighted info box (how it helps) -->
+                <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-green-500 mb-8 control-box" style="background-color: #f0fdf4;">
+                    <h3 class="font-bold text-xl text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-magic text-green-600 mr-2"></i> How it helps you today:
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1 text-xl flex-shrink-0"></i>
+                            <span><strong class="font-semibold">Instant Clarity:</strong> Ask it anything about the protection documents, "What do I say if...?" or "What does this legal term mean?" and get answers in seconds.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1 text-xl flex-shrink-0"></i>
+                            <span><strong class="font-semibold">Policy Tracking:</strong> It stays updated on the 2026 enforcement changes so you don't have to spend hours scrolling through confusing news.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1 text-xl flex-shrink-0"></i>
+                            <span><strong class="font-semibold">No Monthly Fees:</strong> Most AI tools charge $20 every single month. For our community, it's <strong>one-time access for life.</strong></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- price / CTA area -->
+                <div class="text-center my-8">
+                    <p class="font-semibold text-sm text-red-600 uppercase tracking-wider mb-2">
+                        <i class="fas fa-heart mr-1"></i> Help yourself. Help others.
+                    </p>
+
+                    <!-- main CTA button (blue, large) – updated price to $27 and new link -->
+                    <a href="https://whop.com/checkout/plan_rUuYGtb0apXcY" class="cta-blue inline-block w-full md:w-auto px-10 py-5 rounded-xl text-xl font-bold shadow-lg hover:shadow-2xl transition-all">
+                        <i class="fas fa-robot mr-2"></i> Add AI Helper & Forum Access — $27
+                    </a>
+                    
+                    <p class="text-sm text-gray-500 mt-3 flex items-center justify-center">
+                        <i class="fas fa-infinity mr-1 text-gray-400"></i> One-time payment. Never a monthly bill.
+                    </p>
+                </div>
+
+                <!-- community bonus card (green border, like control-box) -->
+                <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-xl mt-8 mb-8">
+                    <h3 class="text-xl font-bold text-green-800 mb-3 flex items-center">
+                        <i class="fas fa-users mr-2"></i> Bonus: The U.S. Immigration Forum Access
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        When you add the AI Helper, you also get <strong>Free Lifetime Membership</strong> to the forum. This is a member-led Community where everyone shares what's actually happening in different cities, crucial information, report new checkpoints, and support one another.
+                    </p>
+                    <p class="font-bold text-gray-800 mb-3">You'll have instantly accessible (no cost) -</p>
+                    
+                    <!-- resource grid (2 columns) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check-circle text-green-600 mr-2"></i> Verified Aid Networks</div>
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check-circle text-green-600 mr-2"></i> 24/7 Legal Hotlines</div>
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check-circle text-green-600 mr-2"></i> Mutual aid Groups</div>
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check-circle text-green-600 mr-2"></i> Direct Policy Tracking and more</div>
+                    </div>
+                </div>
+
+                <!-- quote + unworthy decline button (updated href) -->
+                <div class="mt-12 pt-6 border-t border-dashed border-gray-300 text-center">
+                    <p class="text-xl text-gray-600 italic font-medium mb-3">
+                        “We are much stronger together than apart”
+                    </p>
+                    
+                    <!-- decline link – intentionally made less attractive, gray & subtle, now points to new URL -->
+                    <div class="mt-2">
+                        <a href="https://thanks-og-un.onrender.com" class="decline-link text-sm inline-flex items-center opacity-70 hover:opacity-100 transition">
+                            <i class="fas fa-arrow-right mr-1 text-gray-400 text-xs"></i> No thanks, I'll pass on this extra protection
+                        </a>
+                    </div>
+                    <!-- subtle note: unworthy button blends in, no emphasis -->
+                </div>
+
+                <!-- tiny trust / guarantee strip (optional but adds professionalism) -->
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs text-gray-400">
+                    <span class="flex items-center"><i class="fas fa-lock mr-1 text-gray-300"></i> 256-bit SSL</span>
+                    <span class="flex items-center"><i class="fas fa-shield-alt mr-1 text-gray-300"></i> 30-day money-back</span>
+                    <span class="flex items-center"><i class="fas fa-clock mr-1 text-gray-300"></i> Instant access</span>
+                </div>
+            </div>
+
+            <!-- optional footer note (like a subtle badge) -->
+            <div class="bg-gray-50 px-6 py-3 text-center text-xs text-gray-400 border-t border-gray-100">
+                <span>🇺🇸 Trusted by 2,800+ families • 2026 enforcement-ready</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- tiny script to keep any interactivity (optional, no FAQ needed but we include the salespage js for consistency) -->
+    <script>
+        // optional: any leftover interactivity (not needed here, but keep for harmony)
+        document.addEventListener('DOMContentLoaded', () => {
+            // you could simulate a dynamic counter, but not necessary for upsell
+            // we just keep the design intact
+        });
+    </script>
+</body>
+</html>
