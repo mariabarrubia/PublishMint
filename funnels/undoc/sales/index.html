@@ -434,10 +434,12 @@
             background: white;
             width: 100%;
             max-width: 900px;
-            height: 80vh;
+            height: 85vh;
             border-radius: 12px;
             overflow: hidden;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         .book-preview-close {
@@ -455,6 +457,21 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .book-preview-frame {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .book-preview-footer {
+            padding: 16px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: center;
         }
 
         @media (max-width: 640px) {
@@ -480,7 +497,7 @@
                 height: 44px;
             }
             .book-preview-content {
-                height: 70vh;
+                height: 90vh;
             }
         }
 
@@ -493,8 +510,6 @@
             touch-action: pan-y pinch-zoom !important;
         }
     </style>
-<base target="_blank">
-<base target="_blank">
 <base target="_blank">
 </head>
 <body class="antialiased text-gray-800">
@@ -584,11 +599,18 @@
             <button class="book-preview-close" onclick="closeBookPreview()">
                 <i class="fas fa-times text-gray-700"></i>
             </button>
-            <iframe src="https://simplebooklet.com/embed.php?wpKey=GUnqa8uCDlFc9Yh8V0RJ51&source=embed" 
+            <iframe src='https://simplebooklet.com/embed.php?wpKey=GUnqa8uCDlFc9Yh8V0RJ51&source=embed' 
                     allowfullscreen 
-                    class="w-full h-full"
-                    style="border: 0;" 
-                    scrolling="no"></iframe>
+                    width='100%' 
+                    height='100%' 
+                    style='border: 0; overflow: hidden;' 
+                    scrolling='no'
+                    class="book-preview-frame"></iframe>
+            <div class="book-preview-footer">
+                <button onclick="closeBookPreview()" class="cta-blue font-bold py-3 px-8 rounded-lg">
+                    <i class="fas fa-times mr-2"></i>Close Preview
+                </button>
+            </div>
         </div>
     </div>
 
@@ -651,8 +673,9 @@
                     <div class="md:hidden mb-8">
                         <div class="relative">
                             <!-- Larger header image -->
-                            <img src="/images/family.jpg" alt="Family protection image" class="rounded-xl shadow-2xl w-full mb-6" style="max-height: 500px; object-fit: cover;">
-                           
+                            <img src="/images/family.jpg" alt="Family protection image" class="rounded-xl shadow-2xl w-full mb-6" style="max-height: 500px; object-fit: cover;" loading="lazy">
+                           </div>
+                    </div>
 
                     <p class="italic text-gray-600 mb-8">"58% of mixed-status families avoid medical care due to status fears. 4.1 million U.S. citizen children could face separation. This isn't hypothetical - it's happening now."</p>
 
@@ -666,12 +689,12 @@
                         <a href="https://whop.com/checkout/plan_043u2Mataj4gt" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl">
                             SECURE MY PROTECTION SYSTEM - $47
                         </a>
-                        <!-- Payment Icons - Big Size -->
+                        <!-- Payment Icons - Big Size with Visa & Apple Pay Larger -->
                         <div class="flex items-center justify-center mt-4 gap-4">
-                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none;">
-                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none;">
-                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none;">
-                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none;">
+                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
+                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
                         </div>
                     </div>
                     <p class="text-center text-gray-600">100% Risk-Free: 30-Day Money-Back Guarantee</p>
@@ -687,7 +710,7 @@
                 <div class="md:w-1/2 flex justify-center hidden md:block">
                     <div class="relative">
                         <!-- Larger header image for desktop -->
-                        <img src="/images/family.jpg" alt="Family protection image" class="rounded-xl shadow-2xl w-full" style="max-height: 600px; object-fit: cover;">
+                        <img src="/images/family.jpg" alt="Family protection image" class="rounded-xl shadow-2xl w-full" style="max-height: 600px; object-fit: cover;" loading="eager">
                         <!-- Updated text below image -->
                         <p class="text-center text-sm text-gray-600 mt-2 italic">Liquidators (Asset-Heavy Undocumented immigrants)</p>
                     </div>
@@ -836,12 +859,12 @@
                     </a>
                 </div>
 
-                <!-- Payment Icons Below 4th Button - Large -->
+                <!-- Payment Icons Below 4th Button - Large with Visa & Apple Pay Larger -->
                 <div class="flex items-center justify-center mt-4 gap-4">
-                    <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none;">
-                    <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none;">
-                    <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none;">
-                    <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none;">
+                    <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                    <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
+                    <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                    <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
                 </div>
 
                 <p class="text-gray-600 mt-4">100% Risk Free • Lifetime Access • Money-Back Guarantee</p>
@@ -999,7 +1022,7 @@
             <div class="testimonial-carousel mb-12">
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="https://i.ibb.co/gZCCKmWm/Gabriel-Torres.jpg" alt="Gabriel Torres" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://i.ibb.co/gZCCKmWm/Gabriel-Torres.jpg" alt="Gabriel Torres" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
                         <div>
                             <p class="font-bold">Gabriel Torres</p>
                             <p class="text-sm text-gray-500">Houston, TX</p>
@@ -1013,7 +1036,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="https://i.ibb.co/BKr3pbx0/Maria-Teresa-Flores.jpg" alt="Maria Teresa Flores" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://i.ibb.co/BKr3pbx0/Maria-Teresa-Flores.jpg" alt="Maria Teresa Flores" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
                         <div>
                             <p class="font-bold">Maria Teresa Flores</p>
                             <p class="text-sm text-gray-500">Fresno, CA</p>
@@ -1027,7 +1050,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="https://i.ibb.co/yB4zyC8R/David-Johnston.jpg" alt="David Johnston" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://i.ibb.co/yB4zyC8R/David-Johnston.jpg" alt="David Johnston" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
                         <div>
                             <p class="font-bold">David Johnston</p>
                             <p class="text-sm text-gray-500">Hialeah, FL</p>
@@ -1041,7 +1064,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="https://i.ibb.co/fV5pz0tJ/Elina-Vasquez.jpg" alt="Elena Vasquez" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://i.ibb.co/fV5pz0tJ/Elina-Vasquez.jpg" alt="Elena Vasquez" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
                         <div>
                             <p class="font-bold">Elena Vasquez</p>
                             <p class="text-sm text-gray-500">Phoenix, AZ</p>
@@ -1055,7 +1078,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="https://i.ibb.co/3Y9rpV4q/Trevon-Williams.jpg" alt="Trevon D. Williams" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://i.ibb.co/3Y9rpV4q/Trevon-Williams.jpg" alt="Trevon D. Williams" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
                         <div>
                             <p class="font-bold">Trevon D. Williams</p>
                             <p class="text-sm text-gray-500">McAllen, TX</p>
@@ -1069,7 +1092,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="https://i.ibb.co/XrDn3Fzw/Ana-Patricia-Orellana.jpg" alt="Ana Patricia Orellana" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://i.ibb.co/XrDn3Fzw/Ana-Patricia-Orellana.jpg" alt="Ana Patricia Orellana" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
                         <div>
                             <p class="font-bold">Ana Patricia Orellana</p>
                             <p class="text-sm text-gray-500">Chicago, IL</p>
@@ -1083,7 +1106,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="https://i.ibb.co/PsrxGHXF/Leila-Amini.jpg" alt="Leila Amini" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://i.ibb.co/PsrxGHXF/Leila-Amini.jpg" alt="Leila Amini" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
                         <div>
                             <p class="font-bold">Leila Amini</p>
                             <p class="text-sm text-gray-500">Anaheim, CA</p>
@@ -1097,7 +1120,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="https://i.ibb.co/7tC2mGB0/Tomasz-s.jpg" alt="Tomasz" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://i.ibb.co/7tC2mGB0/Tomasz-s.jpg" alt="Tomasz" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
                         <div>
                             <p class="font-bold">Tomasz</p>
                             <p class="text-sm text-gray-500">Chicago, IL</p>
@@ -1111,7 +1134,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="https://i.ibb.co/twqG4bxV/Lisha-Leng.jpg" alt="Lisha Leng" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://i.ibb.co/twqG4bxV/Lisha-Leng.jpg" alt="Lisha Leng" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
                         <div>
                             <p class="font-bold">Lisha Leng</p>
                             <p class="text-sm text-gray-500">Edison, NJ</p>
@@ -1125,7 +1148,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="https://i.ibb.co/Y7HBLY6J/Juan-Carlos-Ayala.jpg" alt="Juan Carlos Ayala" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://i.ibb.co/Y7HBLY6J/Juan-Carlos-Ayala.jpg" alt="Juan Carlos Ayala" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
                         <div>
                             <p class="font-bold">Juan Carlos Ayala</p>
                             <p class="text-sm text-gray-500">Los Angeles, CA</p>
@@ -1229,10 +1252,10 @@
 
                     <div class="flex flex-col items-center">
                         <div class="flex items-center justify-center mb-2 gap-4">
-                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none;">
-                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none;">
-                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none;">
-                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none;">
+                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
+                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
                         </div>
                         <p class="ssl-badge text-xs text-green-600 font-medium flex items-center justify-center">
                             <i class="fas fa-lock"></i> 256-bit SSL Encryption • Your Privacy Protected
@@ -1431,7 +1454,7 @@
         }
 
         function closeBookPreview(event) {
-            if (!event || event.target.id === 'bookPreviewPopup' || event.target.closest('.book-preview-close')) {
+            if (!event || event.target.id === 'bookPreviewPopup' || event.target.closest('.book-preview-close') || event.target.closest('.book-preview-footer')) {
                 document.getElementById('bookPreviewPopup').classList.remove('active');
                 document.body.style.overflow = '';
             }
