@@ -13,7 +13,8 @@
         body {
             font-family: 'Inter', Arial, sans-serif;
             scroll-behavior: smooth;
-            padding-top: 60px; /* Space for fixed trust badge */
+            padding-top: 40px; /* Reduced space for smaller top badge */
+            padding-bottom: 50px; /* Space for bottom badge */
         }
 
         .hero-gradient {
@@ -56,6 +57,7 @@
             box-shadow: 0 6px 8px rgba(5, 150, 105, 0.4);
         }
 
+        /* New Digistore24-style top badge */
         .trust-badge-top {
             position: fixed;
             top: 0;
@@ -64,22 +66,41 @@
             background: white;
             z-index: 1000;
             border-bottom: 1px solid #e5e7eb;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .trust-badge-content {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 12px;
+            padding: 8px;
             cursor: pointer;
             transition: background-color 0.2s;
+            gap: 12px;
         }
 
         .trust-badge-content:hover {
             background-color: #f9fafb;
         }
 
+        /* Bottom trust badge - smaller and leaner */
+        .trust-badge-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 1000;
+            border-top: 1px solid #e5e7eb;
+            box-shadow: 0 -1px 3px rgba(0,0,0,0.05);
+        }
+
+        .trust-badge-bottom .trust-badge-content {
+            padding: 6px;
+            font-size: 13px;
+        }
+
+        /* Professional popup styling like Digistore24 */
         .trust-popup {
             display: none;
             position: fixed;
@@ -90,8 +111,10 @@
             background: rgba(0,0,0,0.5);
             z-index: 1001;
             justify-content: center;
-            align-items: center;
-            padding: 20px;
+            align-items: flex-start; /* Position at top */
+            padding-top: 80px; /* Below the top badge */
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         .trust-popup.active {
@@ -100,13 +123,25 @@
 
         .trust-popup-content {
             background: white;
-            max-width: 450px;
+            max-width: 420px;
             width: 100%;
             border-radius: 8px;
             padding: 0;
             position: relative;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .trust-popup-header {
@@ -138,31 +173,53 @@
             color: #111827;
         }
 
+        .trust-popup-subheader {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px;
+            padding-bottom: 16px;
+        }
+
+        .vertical-line {
+            width: 1px;
+            height: 30px;
+            background-color: #d1d5db;
+            margin-left: 11px;
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+
         .trust-popup-body {
-            padding: 32px 24px;
-            text-align: center;
-        }
-
-        .trust-lock-icon {
-            width: 48px;
-            height: 48px;
-            margin: 0 auto 16px;
-            color: #fbbf24;
-        }
-
-        .trust-popup-body h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 24px;
-            letter-spacing: 0.5px;
+            padding: 0 24px 24px 24px;
         }
 
         .trust-popup-body p {
-            color: #4b5563;
+            color: #374151;
             font-size: 15px;
             line-height: 1.6;
             margin-bottom: 12px;
+        }
+
+        .trust-popup-footer {
+            padding: 16px 24px 24px 24px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .got-it-btn {
+            background-color: #2563eb;
+            color: white;
+            font-weight: 600;
+            padding: 8px 24px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .got-it-btn:hover {
+            background-color: #1d4ed8;
         }
 
         .testimonial-card {
@@ -203,6 +260,28 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
+        /* Smaller value cards as requested */
+        .value-card-compact {
+            padding: 1.25rem;
+        }
+
+        .value-card-compact h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card-compact p {
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card-compact .feature-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
         .guarantee-section {
             background: linear-gradient(135deg, #dcfce7 0%, #ffffff 100%);
         }
@@ -225,6 +304,12 @@
             object-fit: contain;
             filter: grayscale(100%) contrast(0.5);
             transition: all 0.3s ease;
+        }
+
+        /* Larger payment icons for specific buttons */
+        .payment-logo-large {
+            height: 56px;
+            filter: none;
         }
 
         .payment-logo:hover {
@@ -326,10 +411,57 @@
             border-bottom: none;
         }
 
+        /* Book preview popup */
+        .book-preview-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 1002;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .book-preview-popup.active {
+            display: flex;
+        }
+
+        .book-preview-content {
+            background: white;
+            width: 100%;
+            max-width: 900px;
+            height: 80vh;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .book-preview-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
         @media (max-width: 640px) {
             body {
                 font-size: 14px;
-                padding-top: 50px;
+                padding-top: 36px;
+                padding-bottom: 40px;
             }
             .container {
                 padding-left: 0.75rem;
@@ -344,6 +476,12 @@
             .payment-logo {
                 height: 32px;
             }
+            .payment-logo-large {
+                height: 44px;
+            }
+            .book-preview-content {
+                height: 70vh;
+            }
         }
 
         .book-preview-section {
@@ -357,69 +495,113 @@
     </style>
 <base target="_blank">
 <base target="_blank">
+<base target="_blank">
 </head>
 <body class="antialiased text-gray-800">
-    <!-- Fixed Trust Badge at Top -->
-    <div class="trust-badge-top">
-        <div class="trust-badge-content" onclick="openTrustPopup()">
-            <div style="display: flex; align-items: center; gap: 12px;">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #2563eb;">
+    <!-- Fixed Trust Badge at Top - Digistore24 Style -->
+    <div class="trust-badge-top" onclick="openTrustPopup()">
+        <div class="trust-badge-content">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #2563eb;">
                     <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
+                <span style="font-weight: 600; color: #111827; font-size: 14px; letter-spacing: -0.3px;">whop</span>
+            </div>
+            <span style="color: #374151; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">Secure Order</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #fbbf24;">
+                <rect x="5" y="11" width="14" height="10" rx="2" fill="currentColor"/>
+                <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="12" cy="16" r="1" fill="#374151"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Fixed Trust Badge at Bottom - Smaller & Leaner -->
+    <div class="trust-badge-bottom" onclick="openTrustPopup()">
+        <div class="trust-badge-content">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #2563eb;">
+                <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-weight: 600; color: #059669; font-size: 12px;">Whop Approved</span>
+            <span style="color: #9ca3af; font-size: 11px;">|</span>
+            <span style="color: #6b7280; font-size: 11px;">24/7 Support Available</span>
+        </div>
+    </div>
+
+    <!-- Professional Trust Popup - Digistore24 Style -->
+    <div id="trustPopup" class="trust-popup" onclick="closeTrustPopup(event)">
+        <div class="trust-popup-content" onclick="event.stopPropagation()">
+            <div class="trust-popup-header">
                 <div style="display: flex; align-items: center; gap: 8px;">
-                    <span style="font-weight: 700; color: #111827; font-size: 15px;">Whop</span>
-                    <span style="color: #6b7280; font-size: 13px;">(United States)</span>
-                    <span style="font-weight: 600; color: #059669; font-size: 15px; margin-left: 4px;">Secure Order</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #111827;">
+                        <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span style="font-weight: 700; color: #111827; font-size: 18px;">whop</span>
                 </div>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #f59e0b; margin-left: 4px;">
-                    <path d="M12 2L3 7V12C3 16.5 6 20.26 12 22C18 20.26 21 16.5 21 12V7L12 2Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 8V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="12" cy="16" r="1" fill="currentColor"/>
-                </svg>
+                <button class="trust-popup-close" onclick="closeTrustPopup()">×</button>
+            </div>
+            
+            <div class="trust-popup-subheader">
+                <div style="position: relative;">
+                    <div class="vertical-line"></div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #fbbf24;">
+                        <rect x="5" y="11" width="14" height="10" rx="2" fill="currentColor"/>
+                        <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="12" cy="16" r="1" fill="#374151"/>
+                    </svg>
+                </div>
+                <span style="font-weight: 700; color: #111827; font-size: 16px; letter-spacing: 0.5px; text-transform: uppercase;">Secure Order</span>
+            </div>
+
+            <div style="border-top: 1px solid #e5e7eb; margin: 0 20px;"></div>
+            
+            <div class="trust-popup-body">
+                <p style="font-weight: 500; color: #111827; margin-bottom: 12px;">
+                    Maria is approved by Whop for offering this product.
+                </p>
+                
+                <p style="color: #4b5563; font-size: 14px; margin-bottom: 8px;">
+                    You can purchase with confidence knowing that Whop will handle the checkout securely. 
+                </p>
+                
+                <p style="color: #4b5563; font-size: 14px;">
+                    And support is available 24/7 at your disposal.
+                </p>
+            </div>
+
+            <div class="trust-popup-footer">
+                <button class="got-it-btn" onclick="closeTrustPopup()">Got It</button>
             </div>
         </div>
     </div>
 
-    <!-- Trust Popup -->
-    <div id="trustPopup" class="trust-popup" onclick="closeTrustPopup(event)">
-        <div class="trust-popup-content" onclick="event.stopPropagation()">
-            <div class="trust-popup-header">
-                <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 12C0 5.373 5.373 0 12 0h56c6.627 0 12 5.373 12 12s-5.373 12-12 12H12C5.373 24 0 18.627 0 12z" fill="#111827"/>
-                    <text x="8" y="17" font-family="Arial" font-size="12" font-weight="700" fill="white">Whop</text>
-                </svg>
-                <button class="trust-popup-close" onclick="closeTrustPopup()">×</button>
-            </div>
-            
-            <div class="trust-popup-body">
-                <svg class="trust-lock-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="5" y="11" width="14" height="10" rx="2" fill="#fbbf24" fill-opacity="0.2" stroke="#fbbf24" stroke-width="2"/>
-                    <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="12" cy="16" r="1" fill="#fbbf24"/>
-                </svg>
-                
-                <h3>SECURE ORDER</h3>
-                
-                <p style="font-weight: 500; color: #111827; margin-bottom: 16px;">
-                    Whop is the reseller for Maria.
-                </p>
-                
-                <p style="color: #6b7280; font-size: 14px;">
-                    You can order in confidence, knowing that Whop's customer support is here to help you along the way if needed.
-                </p>
-            </div>
+    <!-- Book Preview Popup -->
+    <div id="bookPreviewPopup" class="book-preview-popup" onclick="closeBookPreview(event)">
+        <div class="book-preview-content" onclick="event.stopPropagation()">
+            <button class="book-preview-close" onclick="closeBookPreview()">
+                <i class="fas fa-times text-gray-700"></i>
+            </button>
+            <iframe src="https://simplebooklet.com/embed.php?wpKey=GUnqa8uCDlFc9Yh8V0RJ51&source=embed" 
+                    allowfullscreen 
+                    class="w-full h-full"
+                    style="border: 0;" 
+                    scrolling="no"></iframe>
         </div>
     </div>
 
     <!-- Hero Section -->
-    <section class="trust-section pt-4 pb-16 px-4">
+    <section class="trust-section pt-6 pb-16 px-4">
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
-                    <!-- Reduced space above badge -->
-                    <div class="bg-green-100 text-green-800 font-semibold py-2 px-4 rounded-full inline-flex items-center text-sm mb-4">
-                        <i class="fas fa-shield-alt mr-2"></i>Protection System Bought by 2,847+ People
+                    <!-- Reduced size and added space above -->
+                    <div class="mt-2 mb-4">
+                        <div class="bg-green-100 text-green-800 font-semibold py-1.5 px-3 rounded-full inline-flex items-center text-xs mb-2">
+                            <i class="fas fa-shield-alt mr-2"></i>Protection System Bought by 2,847+ People
+                        </div>
                     </div>
 
                     <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
@@ -470,6 +652,8 @@
                         <div class="relative">
                             <!-- Larger header image -->
                             <img src="/images/family.jpg" alt="Family protection image" class="rounded-xl shadow-2xl w-full" style="max-height: 500px; object-fit: cover;">
+                            <!-- Updated text below image -->
+                            <p class="text-center text-sm text-gray-600 mt-2 italic">Liquidators (Asset-Heavy Undocumented immigrants)</p>
                         </div>
                     </div>
 
@@ -487,10 +671,10 @@
                         </a>
                         <!-- Payment Icons - Big Size -->
                         <div class="flex items-center justify-center mt-4 gap-4">
-                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo" style="height: 48px; filter: none;">
-                            <img src="/images/visa.svg" alt="Visa" class="payment-logo" style="height: 56px; filter: none;">
-                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo" style="height: 56px; filter: none;">
-                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo" style="height: 48px; filter: none;">
+                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none;">
+                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none;">
+                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none;">
+                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none;">
                         </div>
                     </div>
                     <p class="text-center text-gray-600">100% Risk-Free: 30-Day Money-Back Guarantee</p>
@@ -507,25 +691,24 @@
                     <div class="relative">
                         <!-- Larger header image for desktop -->
                         <img src="/images/family.jpg" alt="Family protection image" class="rounded-xl shadow-2xl w-full" style="max-height: 600px; object-fit: cover;">
+                        <!-- Updated text below image -->
+                        <p class="text-center text-sm text-gray-600 mt-2 italic">Liquidators (Asset-Heavy Undocumented immigrants)</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Book Preview Section -->
+    <!-- Book Preview Section with Button -->
     <section class="py-12 px-4 bg-gray-50 border-t border-b border-gray-200 book-preview-section">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">📖 Book Preview</h2>
-            <div class="relative w-full h-[300px] md:h-[500px] rounded-lg overflow-hidden shadow-xl">
-                <iframe src="https://simplebooklet.com/embed.php?wpKey=GUnqa8uCDlFc9Yh8V0RJ51&source=embed" 
-                        allowfullscreen 
-                        class="absolute top-0 left-0 w-full h-full"
-                        style="border: 0; overflow: hidden;" 
-                        scrolling="no"></iframe>
-            </div>
-            <!-- Updated text below book preview -->
-            <p class="text-center text-gray-600 mt-4 text-sm">Flip through the book's preview — you'll have an idea what's inside</p>
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">📖 Book Preview</h2>
+            <p class="text-gray-600 mb-6">Take a look inside before you buy</p>
+            <button onclick="openBookPreview()" class="cta-blue font-bold py-3 px-8 rounded-lg inline-flex items-center gap-2">
+                <i class="fas fa-book-open"></i>
+                Preview Book
+            </button>
+            <p class="text-center text-gray-500 mt-4 text-sm">Click to flip through the book's preview — you'll have an idea what's inside</p>
         </div>
     </section>
 
@@ -555,48 +738,49 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Your Complete Family & Asset Protection System</h2>
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Not just information. Actual working systems tested against 2026 enforcement reality.</p>
 
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="value-card bg-white p-8 rounded-xl shadow-md">
-                    <div class="text-blue-500 text-3xl mb-4">
+            <!-- Compact Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                <div class="value-card value-card-compact bg-white p-5 rounded-xl shadow-md">
+                    <div class="text-blue-500 text-2xl mb-2">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-blue-800">Asset Protection Blueprint</h3>
-                    <p class="text-gray-600 mb-4">Step-by-step guide to legally shield your home, business, and savings from seizure. Includes power of attorney templates, nominee ownership warnings, and foreclosure prevention checklist.</p>
+                    <h3 class="text-lg font-bold mb-2 text-blue-800">Asset Protection Blueprint</h3>
+                    <p class="text-gray-600 text-sm mb-2">Step-by-step guide to legally shield your home, business, and savings from seizure.</p>
                     <div class="text-right">
-                        <span class="text-xl font-bold text-gray-500">Prevents $100,000+ in losses</span>
+                        <span class="text-sm font-bold text-gray-500">Prevents $100k+ losses</span>
                     </div>
                 </div>
 
-                <div class="value-card bg-white p-8 rounded-xl shadow-md">
-                    <div class="text-green-500 text-3xl mb-4">
+                <div class="value-card value-card-compact bg-white p-5 rounded-xl shadow-md">
+                    <div class="text-green-500 text-2xl mb-2">
                         <i class="fas fa-child"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-blue-800">Family Safety Protocol</h3>
-                    <p class="text-gray-600 mb-4">Emergency guardianship documents schools and hospitals actually accept. Includes state-specific forms, caregiver authorization affidavits, and "go-bag" checklist that works.</p>
+                    <h3 class="text-lg font-bold mb-2 text-blue-800">Family Safety Protocol</h3>
+                    <p class="text-gray-600 text-sm mb-2">Emergency guardianship documents schools and hospitals actually accept.</p>
                     <div class="text-right">
-                        <span class="text-xl font-bold text-gray-500">Prevents CPS/foster care entry</span>
+                        <span class="text-sm font-bold text-gray-500">Prevents CPS entry</span>
                     </div>
                 </div>
 
-                <div class="value-card bg-white p-8 rounded-xl shadow-md">
-                    <div class="text-red-500 text-3xl mb-4">
+                <div class="value-card value-card-compact bg-white p-5 rounded-xl shadow-md">
+                    <div class="text-red-500 text-2xl mb-2">
                         <i class="fas fa-exclamation-triangle"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-blue-800">Enforcement Response System</h3>
-                    <p class="text-gray-600 mb-4">Exactly what to do during traffic stops, home encounters, and workplace visits. Scripts, document requirements, and how to exercise rights without triggering expedited removal.</p>
+                    <h3 class="text-lg font-bold mb-2 text-blue-800">Enforcement Response System</h3>
+                    <p class="text-gray-600 text-sm mb-2">Exactly what to do during traffic stops, home encounters, and workplace visits.</p>
                     <div class="text-right">
-                        <span class="text-xl font-bold text-gray-500">Based on 2025-2026 ICE tactics</span>
+                        <span class="text-sm font-bold text-gray-500">2025-2026 ICE tactics</span>
                     </div>
                 </div>
 
-                <div class="value-card bg-white p-8 rounded-xl shadow-md">
-                    <div class="text-purple-500 text-3xl mb-4">
+                <div class="value-card value-card-compact bg-white p-5 rounded-xl shadow-md">
+                    <div class="text-purple-500 text-2xl mb-2">
                         <i class="fas fa-file-contract"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-blue-800">Document & Proof System</h3>
-                    <p class="text-gray-600 mb-4">What to carry to prove 2+ years residence (to avoid expedited removal). What NOT to carry. Digital and physical document organization that actually works in crisis.</p>
+                    <h3 class="text-lg font-bold mb-2 text-blue-800">Document & Proof System</h3>
+                    <p class="text-gray-600 text-sm mb-2">What to carry to prove 2+ years residence. The "24-hour deportation" shield.</p>
                     <div class="text-right">
-                        <span class="text-xl font-bold text-gray-500">The "24-hour deportation" shield</span>
+                        <span class="text-sm font-bold text-gray-500">Avoid fast deportation</span>
                     </div>
                 </div>
             </div>
@@ -656,12 +840,12 @@
                     </a>
                 </div>
 
-                <!-- Payment Icons Below 4th Button -->
+                <!-- Payment Icons Below 4th Button - Large -->
                 <div class="flex items-center justify-center mt-4 gap-4">
-                    <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo" style="height: 48px; filter: none;">
-                    <img src="/images/visa.svg" alt="Visa" class="payment-logo" style="height: 56px; filter: none;">
-                    <img src="/images/paypal.svg" alt="PayPal" class="payment-logo" style="height: 56px; filter: none;">
-                    <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo" style="height: 48px; filter: none;">
+                    <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none;">
+                    <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none;">
+                    <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none;">
+                    <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none;">
                 </div>
 
                 <p class="text-gray-600 mt-4">100% Risk Free • Lifetime Access • Money-Back Guarantee</p>
@@ -1049,10 +1233,10 @@
 
                     <div class="flex flex-col items-center">
                         <div class="flex items-center justify-center mb-2 gap-4">
-                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo" style="height: 56px; filter: none;">
-                            <img src="/images/visa.svg" alt="Visa" class="payment-logo" style="height: 72px; filter: none;">
-                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo" style="height: 56px; filter: none;">
-                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo" style="height: 72px; filter: none;">
+                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none;">
+                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none;">
+                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none;">
+                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none;">
                         </div>
                         <p class="ssl-badge text-xs text-green-600 font-medium flex items-center justify-center">
                             <i class="fas fa-lock"></i> 256-bit SSL Encryption • Your Privacy Protected
@@ -1240,6 +1424,19 @@
         function closeTrustPopup(event) {
             if (!event || event.target.id === 'trustPopup' || event.target.closest('.trust-popup-close') || event.target.classList.contains('got-it-btn')) {
                 document.getElementById('trustPopup').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Book preview popup functions
+        function openBookPreview() {
+            document.getElementById('bookPreviewPopup').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookPreview(event) {
+            if (!event || event.target.id === 'bookPreviewPopup' || event.target.closest('.book-preview-close')) {
+                document.getElementById('bookPreviewPopup').classList.remove('active');
                 document.body.style.overflow = '';
             }
         }
