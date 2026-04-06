@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family & Asset Protection System: When The Knock Comes, You're Ready</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js ');
+    fbq('init', '1254941480107539');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1254941480107539&ev=PageView&noscript=1 "
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            scroll-behavior: smooth;
+            padding-top: 40px; /* Reduced space for smaller top badge */
+            padding-bottom: 50px; /* Space for bottom badge */
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #ffffff 100%);
+        }
+
+        .cta-primary {
+            background-color: #dc2626;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(220, 38, 38, 0.3);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(220, 38, 38, 0.4);
+        }
+
+        .cta-blue {
+            background-color: #1e40af;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(30, 64, 175, 0.3);
+        }
+
+        .cta-blue:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(30, 64, 175, 0.4);
+        }
+
+        .cta-green {
+            background-color: #059669;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
+        }
+
+        .cta-green:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(5, 150, 105, 0.4);
+        }
+
+        /* New Digistore24-style top badge */
+        .trust-badge-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 1000;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .trust-badge-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            gap: 12px;
+        }
+
+        .trust-badge-content:hover {
+            background-color: #f9fafb;
+        }
+
+        /* Bottom trust badge - smaller and leaner */
+        .trust-badge-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 1000;
+            border-top: 1px solid #e5e7eb;
+            box-shadow: 0 -1px 3px rgba(0,0,0,0.05);
+        }
+
+        .trust-badge-bottom .trust-badge-content {
+            padding: 6px;
+            font-size: 13px;
+        }
+
+        /* Professional popup styling like Digistore24 */
+        .trust-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1001;
+            justify-content: center;
+            align-items: flex-start; /* Position at top */
+            padding-top: 80px; /* Below the top badge */
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .trust-popup.active {
+            display: flex;
+        }
+
+        .trust-popup-content {
+            background: white;
+            max-width: 420px;
+            width: 100%;
+            border-radius: 8px;
+            padding: 0;
+            position: relative;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .trust-popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .trust-popup-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #9ca3af;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.2s;
+            padding: 0;
+        }
+
+        .trust-popup-close:hover {
+            background-color: #f3f4f6;
+            color: #111827;
+        }
+
+        .trust-popup-subheader {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px;
+            padding-bottom: 16px;
+        }
+
+        .vertical-line {
+            width: 1px;
+            height: 30px;
+            background-color: #d1d5db;
+            margin-left: 11px;
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+
+        .trust-popup-body {
+            padding: 0 24px 24px 24px;
+        }
+
+        .trust-popup-body p {
+            color: #374151;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .trust-popup-footer {
+            padding: 16px 24px 24px 24px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .got-it-btn {
+            background-color: #2563eb;
+            color: white;
+            font-weight: 600;
+            padding: 8px 24px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .got-it-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+            flex: 0 0 300px;
+            scroll-snap-align: start;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding: 10px 0;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .value-card {
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Smaller value cards as requested */
+        .value-card-compact {
+            padding: 1.25rem;
+        }
+
+        .value-card-compact h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card-compact p {
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card-compact .feature-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .guarantee-section {
+            background: linear-gradient(135deg, #dcfce7 0%, #ffffff 100%);
+        }
+
+        .counter {
+            animation: countUp 1s ease-out;
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .trust-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .payment-logo {
+            height: 40px;
+            object-fit: contain;
+            filter: grayscale(100%) contrast(0.5);
+            transition: all 0.3s ease;
+        }
+
+        /* Larger payment icons for specific buttons */
+        .payment-logo-large {
+            height: 56px;
+            filter: none;
+        }
+
+        .payment-logo:hover {
+            filter: none;
+        }
+
+        .ssl-badge {
+            font-size: 0.75rem;
+            padding-top: 4px;
+        }
+
+        .ssl-badge i {
+            font-size: 0.9em;
+            margin-right: 4px;
+        }
+
+        .warning-box {
+            border-left: 4px solid #dc2626;
+            background-color: #fef2f2;
+        }
+
+        .control-box {
+            border-left: 4px solid #059669;
+            background-color: #f0fdf4;
+        }
+
+        .fact-box {
+            border-left: 4px solid #b91c1c;
+            background: linear-gradient(145deg, #fee2e2 0%, #fff5f5 100%);
+            box-shadow: 0 10px 15px -3px rgba(185, 28, 28, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .last-section {
+            background: linear-gradient(145deg, #0b1e3a 0%, #1a2f4f 50%, #2a3f5f 100%);
+            position: relative;
+            overflow: hidden;
+            color: #f0f4fa;
+        }
+
+        .last-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.05"><polygon points="0,0 100,0 50,100" fill="white"/></svg>');
+            background-size: cover;
+            pointer-events: none;
+        }
+
+        .last-section .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .last-section .cta-glow {
+            background: linear-gradient(145deg, #fbbf24, #f59e0b);
+            color: #0b1e3a;
+            font-weight: 800;
+            box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.5);
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .last-section .cta-glow:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px -5px rgba(245, 158, 11, 0.7);
+            background: linear-gradient(145deg, #fcd34d, #fbbf24);
+        }
+
+        .category-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,215,0,0.2);
+            transition: all 0.2s ease;
+        }
+
+        .category-card:hover {
+            border-color: rgba(255,215,0,0.5);
+            background: rgba(255,255,255,0.12);
+        }
+
+        .last-section .badge-icon {
+            background: rgba(255,255,255,0.1);
+            border-radius: 40px;
+            padding: 0.25rem 0.75rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .bonus-list-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #e5e7eb;
+        }
+
+        .bonus-list-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Book Preview Popup - FIXED: ensures iframe loads fully */
+        .book-preview-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 1002;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .book-preview-popup.active {
+            display: flex;
+        }
+
+        .book-preview-content {
+            background: white;
+            width: 100%;
+            max-width: 1000px;
+            height: 85vh;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+
+        .book-preview-iframe-wrapper {
+            flex: 1;
+            width: 100%;
+            position: relative;
+            background: #f1f5f9;
+        }
+
+        .book-preview-iframe-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .book-preview-footer {
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .book-preview-done-btn {
+            background-color: #2563eb;
+            color: white;
+            font-weight: 600;
+            padding: 8px 28px;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .book-preview-done-btn:hover {
+            background-color: #1d4ed8;
+            transform: scale(1.02);
+        }
+
+        .book-preview-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                font-size: 14px;
+                padding-top: 36px;
+                padding-bottom: 40px;
+            }
+            .container {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .payment-logo {
+                height: 32px;
+            }
+            .payment-logo-large {
+                height: 44px;
+            }
+            .book-preview-content {
+                height: 70vh;
+            }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body class="antialiased text-gray-800">
+    <!-- Fixed Trust Badge at Top - Digistore24 Style -->
+    <div class="trust-badge-top" onclick="openTrustPopup()">
+        <div class="trust-badge-content">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #2563eb;">
+                    <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span style="font-weight: 600; color: #111827; font-size: 14px; letter-spacing: -0.3px;">whop</span>
+            </div>
+            <span style="color: #374151; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">Secure Order</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #fbbf24;">
+                <rect x="5" y="11" width="14" height="10" rx="2" fill="currentColor"/>
+                <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="12" cy="16" r="1" fill="#374151"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Fixed Trust Badge at Bottom - Smaller & Leaner -->
+    <div class="trust-badge-bottom" onclick="openTrustPopup()">
+        <div class="trust-badge-content">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #2563eb;">
+                <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-weight: 600; color: #059669; font-size: 12px;">Whop Approved</span>
+            <span style="color: #9ca3af; font-size: 11px;">|</span>
+            <span style="color: #6b7280; font-size: 11px;">24/7 Support Available</span>
+        </div>
+    </div>
+
+    <!-- Professional Trust Popup - Digistore24 Style -->
+    <div id="trustPopup" class="trust-popup" onclick="closeTrustPopup(event)">
+        <div class="trust-popup-content" onclick="event.stopPropagation()">
+            <div class="trust-popup-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #111827;">
+                        <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span style="font-weight: 700; color: #111827; font-size: 18px;">whop</span>
+                </div>
+                <button class="trust-popup-close" onclick="closeTrustPopup()">×</button>
+            </div>
+            
+            <div class="trust-popup-subheader">
+                <div style="position: relative;">
+                    <div class="vertical-line"></div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #fbbf24;">
+                        <rect x="5" y="11" width="14" height="10" rx="2" fill="currentColor"/>
+                        <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="12" cy="16" r="1" fill="#374151"/>
+                    </svg>
+                </div>
+                <span style="font-weight: 700; color: #111827; font-size: 16px; letter-spacing: 0.5px; text-transform: uppercase;">Secure Order</span>
+            </div>
+
+            <div style="border-top: 1px solid #e5e7eb; margin: 0 20px;"></div>
+            
+            <div class="trust-popup-body">
+                <p style="font-weight: 500; color: #111827; margin-bottom: 12px;">
+                    Maria is approved by Whop for offering this product.
+                </p>
+                
+                <p style="color: #4b5563; font-size: 14px; margin-bottom: 8px;">
+                    You can purchase with confidence knowing that Whop will handle the checkout securely. 
+                </p>
+                
+                <p style="color: #4b5563; font-size: 14px;">
+                    And support is available 24/7 at your disposal.
+                </p>
+            </div>
+
+            <div class="trust-popup-footer">
+                <button class="got-it-btn" onclick="closeTrustPopup()">Got It</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Preview Popup - FIXED with Done button & improved loading -->
+    <div id="bookPreviewPopup" class="book-preview-popup" onclick="closeBookPreview(event)">
+        <div class="book-preview-content" onclick="event.stopPropagation()">
+            <button class="book-preview-close" onclick="closeBookPreview()"><i class="fas fa-times text-gray-700"></i></button>
+            <div class="book-preview-iframe-wrapper">
+                <iframe src="https://simplebooklet.com/embed.php?wpKey=GUnqa8uCDlFc9Yh8V0RJ51&source=embed" 
+                        allowfullscreen 
+                        loading="lazy"
+                        title="Book Preview"
+                        style="border:0; width:100%; height:100%;"></iframe>
+            </div>
+            <div class="book-preview-footer">
+                <button class="book-preview-done-btn" onclick="closeBookPreview()"><i class="fas fa-check-circle"></i> Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="trust-section pt-6 pb-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <!-- Reduced size and added space above -->
+                    <div class="mt-2 mb-4">
+                        <div class="bg-green-100 text-green-800 font-semibold py-1.5 px-3 rounded-full inline-flex items-center text-xs mb-2">
+                            <i class="fas fa-shield-alt mr-2"></i>Protection System Bought by 2,847+ People
+                        </div>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                        When The Knock Comes, <br>
+                        <span class="text-blue-800">Will Your Family Be Protected?</span>
+                    </h1>
+
+                    <div class="text-xl mb-6 space-y-4">
+                        <p><strong>Your home, your business, your children's safety</strong> - everything you've built in 10+ years could vanish in 24 hours under current enforcement.</p>
+                    </div>
+
+                    <!-- Updated source date to 2025-26 -->
+                    <div class="fact-box p-5 rounded-lg mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-exclamation-triangle text-red-600 mr-3 mt-1 text-xl"></i>
+                            <div>
+                                <p class="font-bold text-red-800">Fact: Street arrests increased 600% in 2025. 70% of detainees have no criminal record.</p>
+                                <p class="text-sm text-red-700 mt-1">(Source: Deportation Data Project, ICE Statistics 2025-26)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <div>
+                                <span class="font-bold">Stop Asset Seizure Before It Happens</span>
+                                <p class="text-sm text-gray-600">Legally protect your home, business, and savings from forfeiture</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <div>
+                                <span class="font-bold">Prevent Family Separation</span>
+                                <p class="textsm text-gray-600">Emergency guardianship systems that work when you can't be there</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <div>
+                                <span class="font-bold">Avoid $10,000+ Legal Traps</span>
+                                <p class="text-sm text-gray-600">Spot notario fraud and predatory contracts that target desperate families</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:hidden mb-8">
+                        <div class="relative">
+                            <!-- Larger header image -->
+                            <img src="/images/family.jpg" alt="Family protection image" class="rounded-xl shadow-2xl w-full mb-6" style="max-height: 500px; object-fit: cover;" loading="lazy">
+                           </div>
+                    </div>
+
+                    <p class="italic text-gray-600 mb-8">"58% of mixed-status families avoid medical care due to status fears. 4.1 million U.S. citizen children could face separation. This isn't hypothetical - it's happening now."</p>
+
+                    <!-- 1st CTA with Save $10k above and payment icons below -->
+                    <div class="text-center mb-6">
+                        <div class="mb-3">
+                            <span class="inline-block bg-green-100 text-green-800 font-bold py-2 px-4 rounded-full text-sm">
+                                Save $10,000+ in Legal Mistakes
+                            </span>
+                        </div>
+                        <a href="https://whop.com/checkout/plan_043u2Mataj4gt" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl">
+                            SECURE MY PROTECTION SYSTEM - $47
+                        </a>
+                        <!-- Payment Icons - Big Size with Visa & Apple Pay Larger -->
+                        <div class="flex items-center justify-center mt-4 gap-4">
+                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
+                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-600">100% Risk-Free: 30-Day Money-Back Guarantee</p>
+
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 text-center mt-6">
+                        <p class="text-sm font-medium text-blue-800">
+                            <i class="fas fa-exclamation-circle mr-2"></i>
+                            <strong>Critical:</strong> The "2-Year Rule" means you could be deported in 24 hours without proof of residence. Are you carrying the right documents?
+                        </p>
+                        <p class="font-bold text-blue-900 mt-2">We got this covered</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center hidden md:block">
+                    <div class="relative">
+                        <!-- Larger header image for desktop -->
+                        <img src="/images/family.jpg" alt="Family protection image" class="rounded-xl shadow-2xl w-full" style="max-height: 600px; object-fit: cover;" loading="eager">
+                        <!-- Updated text below image -->
+                        <p class="text-center text-sm text-gray-600 mt-2 italic">Liquidators (Asset-Heavy Undocumented immigrants)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Preview Section -->
+    <section class="py-12 px-4 bg-gray-50 border-t border-b border-gray-200">
+        <div class="container mx-auto max-w-4xl text-center"><h2 class="text-2xl md:text-3xl font-bold mb-6">📖 Book Preview</h2><p class="text-gray-600 mb-6">Take a look inside before you buy</p><button onclick="openBookPreview()" class="cta-blue font-bold py-3 px-8 rounded-lg inline-flex items-center gap-2"><i class="fas fa-book-open"></i>Preview Book</button><p class="text-center text-gray-500 mt-4 text-sm">Click to flip through the book's preview — you'll have an idea what's inside</p></div>
+    </section>
+
+    <!-- Resources Validated Section -->
+    <section class="py-8 bg-white border-t border-b border-gray-200">
+        <div class="container mx-auto max-w-6xl px-4">
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                <p class="text-sm text-gray-600 font-medium">System validated against current 2026 enforcement data:</p>
+                <div class="flex flex-wrap justify-center gap-4 items-center">
+                    <div class="bg-gray-100 px-4 py-2 rounded-full text-xs font-semibold text-gray-700 flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>ICE Enforcement Patterns
+                    </div>
+                    <div class="bg-gray-100 px-4 py-2 rounded-full text-xs font-semibold text-gray-700 flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Asset Protection Law
+                    </div>
+                    <div class="bg-gray-100 px-4 py-2 rounded-full text-xs font-semibold text-gray-700 flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Family Court Protocols
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Get Inside Section (Moved Up) -->
+    <section id="whats-inside" class="py-20 bg-blue-50 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Your Complete Family & Asset Protection System</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Not just information. Actual working systems tested against 2026 enforcement reality.</p>
+
+            <!-- Compact Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                <div class="value-card value-card-compact bg-white p-5 rounded-xl shadow-md">
+                    <div class="text-blue-500 text-2xl mb-2">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-blue-800">Asset Protection Blueprint</h3>
+                    <p class="text-gray-600 text-sm mb-2">Step-by-step guide to legally shield your home, business, and savings from seizure.</p>
+                    <div class="text-right">
+                        <span class="text-sm font-bold text-gray-500">Prevents $100k+ losses</span>
+                    </div>
+                </div>
+
+                <div class="value-card value-card-compact bg-white p-5 rounded-xl shadow-md">
+                    <div class="text-green-500 text-2xl mb-2">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-blue-800">Family Safety Protocol</h3>
+                    <p class="text-gray-600 text-sm mb-2">Emergency guardianship documents schools and hospitals actually accept.</p>
+                    <div class="text-right">
+                        <span class="text-sm font-bold text-gray-500">Prevents CPS entry</span>
+                    </div>
+                </div>
+
+                <div class="value-card value-card-compact bg-white p-5 rounded-xl shadow-md">
+                    <div class="text-red-500 text-2xl mb-2">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-blue-800">Enforcement Response System</h3>
+                    <p class="text-gray-600 text-sm mb-2">Exactly what to do during traffic stops, home encounters, and workplace visits.</p>
+                    <div class="text-right">
+                        <span class="text-sm font-bold text-gray-500">2025-2026 ICE tactics</span>
+                    </div>
+                </div>
+
+                <div class="value-card value-card-compact bg-white p-5 rounded-xl shadow-md">
+                    <div class="text-purple-500 text-2xl mb-2">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-blue-800">Document & Proof System</h3>
+                    <p class="text-gray-600 text-sm mb-2">What to carry to prove 2+ years residence. The "24-hour deportation" shield.</p>
+                    <div class="text-right">
+                        <span class="text-sm font-bold text-gray-500">Avoid fast deportation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-md mb-8">
+                <h3 class="text-2xl font-bold mb-6 text-center">Crafted into these Immediate Action Formats</h3>
+
+                <div class="space-y-3 max-w-xl mx-auto">
+                    <div class="bonus-list-item flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                        <span class="flex-1"><strong>The Core Ebook (140+ Pages)</strong></span>
+                        <span class="font-bold text-gray-700">$199 Value</span>
+                    </div>
+                    <div class="bonus-list-item flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                        <span class="flex-1"><strong>Video Overview</strong></span>
+                        <span class="font-bold text-gray-700">$75 Value</span>
+                    </div>
+                    <div class="bonus-list-item flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                        <span class="flex-1"><strong>Exclusive Podcast Episode</strong></span>
+                        <span class="font-bold text-gray-700">$97 Value</span>
+                    </div>
+                    <div class="bonus-list-item flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                        <span class="flex-1"><strong>Resource Website Access</strong></span>
+                        <span class="font-bold text-gray-700">$79 Value</span>
+                    </div>
+                    <div class="bonus-list-item flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                        <span class="flex-1"><strong>Community Support Network</strong></span>
+                        <span class="font-bold text-gray-700">$149 Value</span>
+                    </div>
+                    <div class="bonus-list-item flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                        <span class="flex-1"><strong>Ebooks & Official Materials</strong> – <span class="text-green-600 font-bold">FREE</span></span>
+                        <span class="font-bold text-gray-700"><span class="line-through">$75</span> FREE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Protection Value Card - 4th Buy Button -->
+            <div class="bg-white p-8 rounded-xl shadow-md text-center max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4">Total Protection Value: $599 Or <span class="line-through text-gray-500">PRICELESS</span></h3>
+                <p class="text-gray-600 mb-6">What's your home equity worth? Your business? Your children's safety?</p>
+
+                <!-- Save $10k above button -->
+                <div class="mb-3">
+                    <span class="inline-block bg-green-100 text-green-800 font-bold py-2 px-4 rounded-full text-sm">
+                        Save $10,000+ in Legal Mistakes
+                    </span>
+                </div>
+
+                <div class="text-center mb-2">
+                    <a href="https://whop.com/checkout/plan_043u2Mataj4gt" class="cta-blue font-bold py-4 px-8 rounded-lg text-center inline-block">
+                        CLAIM IT All NOW – $47
+                    </a>
+                </div>
+
+                <!-- Payment Icons Below 4th Button - Large with Visa & Apple Pay Larger -->
+                <div class="flex items-center justify-center mt-4 gap-4">
+                    <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                    <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
+                    <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                    <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
+                </div>
+
+                <p class="text-gray-600 mt-4">100% Risk Free • Lifetime Access • Money-Back Guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Agitation Section -->
+    <section class="py-20 bg-white px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">The <span class="text-red-600">Silent Crisis</span> No One Talks About</h2>
+
+            <div class="space-y-6 mb-10">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <p class="font-bold mb-2">Right now, you're in what researchers call "The Asset Trap":</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Your $300,000 home could be seized because you can't make payments from detention</li>
+                        <li>Your business equipment could be liquidated at 50% value in a "fire sale"</li>
+                        <li>Your U.S. citizen children could enter foster care within 24 hours if you're detained</li>
+                        <li>Your bank accounts could be frozen, leaving your family without resources</li>
+                    </ul>
+                </div>
+
+                <p>When I faced deportation, my biggest fear wasn't leaving the country. It was what would happen to:</p>
+
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <p class="font-bold text-red-700">1. My Home</p>
+                        <p class="text-sm">Mortgage default in 30 days. Foreclosure in 90. Years of equity gone.</p>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <p class="font-bold text-red-700">2. My Children</p>
+                        <p class="text-sm">Who picks them up from school? Who has legal authority to care for them?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4 mb-12">
+                <div class="flex items-start">
+                    <span class="text-red-500 mr-3 text-xl">⚠️</span>
+                    <div>
+                        <span class="font-medium">"Liquidators" holding $6.6 trillion in housing wealth face immediate liquidity crisis upon detention</span>
+                        <p class="text-sm text-gray-600">(Forensic Intelligence Report 2026)</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-red-500 mr-3 text-xl">⚠️</span>
+                    <div>
+                        <span class="font-medium">Release rates dropped from 16% to 3%. Once detained, you're likely staying detained.</span>
+                        <p class="text-sm text-gray-600">(ICE Statistics 2025-2026)</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-red-500 mr-3 text-xl">⚠️</span>
+                    <div>
+                        <span class="font-medium">48% of undocumented immigrants avoid medical care due to status fears, creating public health risks</span>
+                        <p class="text-sm text-gray-600">(Behavioral Systems Mapping 2026)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 mb-10">
+                <h3 class="text-2xl font-bold text-center mb-6">ICE can't Destroy everything, but You unknowingly Might</h3>
+                <div class="bg-gray-200 rounded-lg overflow-hidden shadow-xl">
+                    <div class="sp-embed-player" data-id="cOnDqcn00xj" data-aspect-ratio="1.927711" data-padding-top="51.875000%" style="position:relative;width:100%;padding-top:51.875000%;height:0;"><script src="https://go.screenpal.com/player/appearance/cOnDqcn00xj"></script><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" scrolling="no" src="https://go.screenpal.com/player/cOnDqcn00xj?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allowfullscreen="true"></iframe></div>
+                </div>
+                <p class="text-center text-gray-700 mt-4 italic">i have covered this especially, in details</p>
+            </div>
+
+            <div class="bg-green-50 p-6 rounded-lg mb-8 control-box">
+                <h3 class="font-bold text-green-800 text-lg mb-3">Here's What Changes When You Take Control:</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                        <span>Your home has legal protection against immediate seizure</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                        <span>Your children have designated guardians with legal authority</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                        <span>Your business can continue operating through proper power of attorney</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                        <span>You know exactly what to do in the first 24 hours of any enforcement encounter</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-center">
+                <a href="https://whop.com/checkout/plan_043u2Mataj4gt" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block">
+                    Claim My Safety and Clarity Now
+                </a>
+                <p class="mt-3 text-gray-600">The $47 you spend today could protect $300,000 in home equity tomorrow</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority & Warning Section -->
+    <section class="py-20 bg-gray-100 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-6">Why I'm Warning You About "Notarios" & Fake Lawyers</h2>
+
+            <div class="mb-10">
+                <p class="text-center text-gray-600 mb-8">I lost $4,200 to a "notario" who promised me "special connections." He filed fraudulent asylum applications that nearly got me permanently banned from the U.S.</p>
+
+                <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="font-bold text-red-600 text-xl mb-4">Scam Alert: Current Patterns Targeting Our Community</h3>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-times-circle text-red-500 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-bold">"Notario Público" Fraud</p>
+                                <p class="text-sm text-gray-600">In Latin America, "notario" means lawyer. Here, they're just signature witnesses. They charge $6,000-$15,000 for worthless paperwork.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-times-circle text-red-500 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-bold">ICE Impersonation Scams</p>
+                                <p class="text-sm text-gray-600">Phone calls demanding $1,000-$10,000 to "avoid arrest." Real ICE doesn't call for money.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-times-circle text-red-500 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-bold">"Special Programs" That Don't Exist</p>
+                                <p class="text-sm text-gray-600">WhatsApp messages about "new amnesty" or "work permit shortcuts" - all fake.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-blue-800 text-lg mb-3">⚠️ Critical Distinction:</h3>
+                    <p><strong>"Notario Público" in the U.S.</strong> = Can only witness signatures. <strong>NOT</strong> a lawyer.</p>
+                    <p><strong>Only licensed attorneys or DOJ-accredited representatives</strong> can give legal advice.</p>
+                    <p class="mt-3 text-sm">73 immigrants in LA were scammed by one operator. $222,793 in restitution ordered, but victims were still deported due to fraudulent filings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">Customer reviews:</h2>
+            <p class="text-center text-gray-600 mb-8">Don't just take my words</p>
+
+            <div class="testimonial-carousel mb-12">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="https://i.ibb.co/gZCCKmWm/Gabriel-Torres.jpg" alt="Gabriel Torres" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
+                        <div>
+                            <p class="font-bold">Gabriel Torres</p>
+                            <p class="text-sm text-gray-500">Houston, TX</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="far fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">Was much helpful, showed me how to make my brother my power of attorney. He's a citizen. Now if something happens, he can sign payroll, pay my mortgage, keep shit running. Cost me $30 to notarize as guided.</p>
+                    <p class="text-xs text-gray-400 mt-2">2 days ago</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="https://i.ibb.co/BKr3pbx0/Maria-Teresa-Flores.jpg" alt="Maria Teresa Flores" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
+                        <div>
+                            <p class="font-bold">Maria Teresa Flores</p>
+                            <p class="text-sm text-gray-500">Fresno, CA</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">Just few Days before The school called me at work. ICE checkpoint was near the school. And i couldn't leave. My sister went to pick up my girls and i had no string of worry cause i had assigned her as caregiver through Caregiver's Authorization as directed in the book.</p>
+                    <p class="text-xs text-gray-400 mt-2">few days ago</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="https://i.ibb.co/yB4zyC8R/David-Johnston.jpg" alt="David Johnston" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
+                        <div>
+                            <p class="font-bold">David Johnston</p>
+                            <p class="text-sm text-gray-500">Hialeah, FL</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">A notario in my neighbour wanted $1600 to "protect" my restaurant. Said he'd put it in my son's name. Said its the best thing to do. Had a good luck that day to find this offer. Turns out what he was gonna do is literally a federal crime now. Something called Corporate Transparency Act. If I did that, government could seize everything. I turn the business to a LLC as guided. My son is manager if I'm gone. And best part is I still own it.</p>
+                    <p class="text-xs text-gray-400 mt-2">4 days ago</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="https://i.ibb.co/fV5pz0tJ/Elina-Vasquez.jpg" alt="Elena Vasquez" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
+                        <div>
+                            <p class="font-bold">Elena Vasquez</p>
+                            <p class="text-sm text-gray-500">Phoenix, AZ</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="far fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">I was gonna sell my landscaping equipments for $35k. Worth probably $50k. A guy on the Marketplace offered cash. I almost took it. I got to know about "nominee ownership" here. I was about to put my house in my cousin's name to "protect" it. This explained that if I did that, and he got divorced or died, his wife or his kids would get my house. Not my kids. Instead I did a living trust. Cost less than $800 with a lawyer. My cousin can manage it but can't take it. I still have my house. I still have my business.</p>
+                    <p class="text-xs text-gray-400 mt-2">few days ago</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="https://i.ibb.co/3Y9rpV4q/Trevon-Williams.jpg" alt="Trevon D. Williams" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
+                        <div>
+                            <p class="font-bold">Trevon D. Williams</p>
+                            <p class="text-sm text-gray-500">McAllen, TX</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="far fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">I have DACA. Thought I was safe. Driving to San Antonio, hit a checkpoint outside Laredo. Agent asked if I'm citizen. I said DACA. A Dumb move. 2 hours in secondary. At a point this agent goes "prove you been here 2 years or we process your expedited removal." I remembered the checklist from this. Kept a folder in my trunk with lease, bills, pay stubs, my kids school records with my name. I asked if i am free to leave, and on the slightest gesture i left as quick as possible.</p>
+                    <p class="text-xs text-gray-400 mt-2">3 days ago</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="https://i.ibb.co/XrDn3Fzw/Ana-Patricia-Orellana.jpg" alt="Ana Patricia Orellana" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
+                        <div>
+                            <p class="font-bold">Ana Patricia Orellana</p>
+                            <p class="text-sm text-gray-500">Chicago, IL</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="far fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">My friend sent me this. I didn't expect much. I previously Paid $400 to a person who said they could get me a permit. But This wasn't promising me papers. It gave clarity, which is much needed & specifically how to deal with those scammers.</p>
+                    <p class="text-xs text-gray-400 mt-2">1 week ago</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="https://i.ibb.co/PsrxGHXF/Leila-Amini.jpg" alt="Leila Amini" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
+                        <div>
+                            <p class="font-bold">Leila Amini</p>
+                            <p class="text-sm text-gray-500">Anaheim, CA</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="far fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">I'm a mom. My kids are citizens. I'm not. I used the caregiver form and the instructions. My friend Leila (yes same name lol) is now authorized. I submitted it in the school. Last week I was 45 minutes late from work. She picked them up. No questions. That's all I ever wanted.</p>
+                    <p class="text-xs text-gray-400 mt-2">few days ago</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="https://i.ibb.co/7tC2mGB0/Tomasz-s.jpg" alt="Tomasz" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
+                        <div>
+                            <p class="font-bold">Tomasz</p>
+                            <p class="text-sm text-gray-500">Chicago, IL</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="far fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">I gave this 3 stars because some of it didn't apply to me. I don't own a house. I don't have a business. But the part about what to carry? And the red card? And what to say at a stop? That alone was worth it. My friend got detained at a courthouse last month. He went for a traffic ticket and ICE was just waiting there. I don't want that to be me. So 3 stars. But yeah, I'd buy it again.</p>
+                    <p class="text-xs text-gray-400 mt-2">1 week ago</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="https://i.ibb.co/twqG4bxV/Lisha-Leng.jpg" alt="Lisha Leng" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
+                        <div>
+                            <p class="font-bold">Lisha Leng</p>
+                            <p class="text-sm text-gray-500">Edison, NJ</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">My husband runs a small grocery. We been here 13 years. Our kids are citizens. We pay taxes. We never thought about what happens if he's not here. This made us prepare for any uncertainty. We picked a guardian. We got the papers right. We made a gobag. I hope we never use it. And its Definitely worth more than $47.</p>
+                    <p class="text-xs text-gray-400 mt-2">few days ago</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="https://i.ibb.co/Y7HBLY6J/Juan-Carlos-Ayala.jpg" alt="Juan Carlos Ayala" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy">
+                        <div>
+                            <p class="font-bold">Juan Carlos Ayala</p>
+                            <p class="text-sm text-gray-500">Los Angeles, CA</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="far fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">The website was bit hard to navigate on my phone. I'm not very good with tech. But i guess it was helpful.</p>
+                    <p class="text-xs text-gray-400 mt-2">2 weeks ago</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <p class="text-red-600 font-bold text-xl mb-4 counter">87 People Bought This Week</p>
+                <a href="https://whop.com/checkout/plan_043u2Mataj4gt" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block">
+                    Get Instant Access - $47
+                </a>
+                <p class="mt-3 text-gray-600">Less than 1% of what you'd lose in a forced liquidation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Works Section -->
+    <section class="py-20 bg-white px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-6">Built From Experience, Validated By Reality</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">I'm not a lawyer. I'm someone who faced exactly what you fear, found what actually works, and survived to create this system.</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Tested Against "Fire Sale" Reality</h3>
+                    <p class="text-gray-600">When panic hits, people sell homes at 30% below value. This system prevents that.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Guardianship That Actually Works</h3>
+                    <p class="text-gray-600">Not theoretical forms. Documents schools and hospitals accept immediately.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-green-500 text-4xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24-Hour Response Ready</h3>
+                    <p class="text-gray-600">From traffic stop to home encounter - you know exactly what to do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Guarantee Section -->
+    <section id="pricing" class="py-20 guarantee-section px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Will you leave everything to Uncertainty Or Take this Step?</h2>
+
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden max-w-md mx-auto">
+                <div class="p-8">
+                    <div class="text-center mb-6">
+                        <span class="text-gray-500 line-through text-xl">Legal Consultation: $300/hr</span>
+                        <span class="text-4xl font-bold text-blue-800 block mt-2">Complete System: $47</span>
+                        <div class="mt-4 p-3 bg-green-50 rounded-lg">
+                            <p class="text-green-700 font-bold">Save $10,000+ in legal mistakes</p>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span><strong>Asset Protection Blueprint</strong> - Home, business, savings shield</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span><strong>Family Safety Protocol</strong> - Working guardianship system</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span><strong>Enforcement Response System</strong> - 2026 tactics coverage</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span><strong>Document Proof System</strong> - Avoid 24-hour deportation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span><strong>Private Community + Free Resources</strong> - Verified information only</span>
+                        </li>
+                    </ul>
+
+                    <div class="text-center mb-6">
+                        <a href="https://whop.com/checkout/plan_043u2Mataj4gt" class="cta-blue font-bold py-4 px-8 rounded-lg text-center inline-block w-full text-xl">
+                            GET PROTECTED NOW - $47
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center mb-2 gap-4">
+                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
+                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none; height: 56px;">
+                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none; height: 72px;">
+                        </div>
+                        <p class="ssl-badge text-xs text-green-600 font-medium flex items-center justify-center">
+                            <i class="fas fa-lock"></i> 256-bit SSL Encryption • Your Privacy Protected
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-green-100 text-green-800 p-6 text-center">
+                    <div class="flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-2xl mr-3"></i>
+                        <div>
+                            <p class="font-bold text-lg">
+                                100% Risk-Free 30-Day Guarantee
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-red-600 font-bold mt-6 counter">87 People Bought This Week</p>
+
+            <div class="mt-8 p-4 bg-red-50 rounded-lg text-center max-w-lg mx-auto">
+                <p class="font-bold text-red-700">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                    Every day without this system increases your risk exposure
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-2xl font-bold text-center mb-16">Questions Families Like Yours Are Asking</h2>
+
+            <div class="space-y-4">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>Is this legal advice?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3"><strong>No, this is not legal advice.</strong> This is a complete blueprint with practical information based on my personal experience navigating the U.S. immigration system and research. While I've consulted with immigration attorneys to <strong>ensure accuracy</strong>, you should always consult with a qualified immigration lawyer for your specific case. Think of this as the complete "what to expect" guide you'd get from a friend who's been through the process.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>How do I access the materials after purchasing?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3"><strong>Immediately</strong> after completing your Secure Checkout, you'll receive an email with download links for all materials. The ebook is in PDF format (readable on any device), the Podcast is in MP3 format, the Video overview, Free resources are all downloadable and you'll get instant access to our private resource website and community forum. <strong>You can access everything on your computer, phone, or tablet.</strong></p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>My home is in my name with an ITIN. Can this really protect it?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3"><strong>Yes.</strong> The system includes specific power of attorney templates that allow a trusted person to manage your property if you cannot. This prevents mortgage default and gives time for proper transfer.</p>
+                        <p>We also show you the warning signs of predatory "nominee ownership" schemes that could cause you to lose your home entirely.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>What happens to my business if I'm deported? I have employees who depend on me.</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3">Your business can survive if you set it up right (i've covered in details). First, form an LLC (not an S-Corp-S-Corp dies if you lose status). Then write an Operating Agreement that says what happens if you're "unavailable" (include detention/deportation). Then give a Durable Business Power of Attorney to a manager you trust. They can sign checks, pay employees, file taxes, keep things running. Without this, your business dies in weeks. I've watched it happen. Don't let that be you</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>If I get detained, who pays my mortgage?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3">You need a Durable Power of Attorney (POA). Now. Not tomorrow.</p>
+                        <p class="mb-3">Pick someone you trust - your wife, a sibling, a grown kid and give them legal authority to access your bank accounts and pay your bills. Without it, your mortgage goes unpaid, late fees stack up, and the bank starts foreclosure. I've seen it happen. A POA costs a few hundred bucks with a lawyer "I shared a way to get it Free" & Get it notarized online at most affordable cost. After done - Give copies to your agent and your bank. Source: https://www.ilrc.org/resources</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>$47 seems too cheap. Any strings attached?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3"><strong>No catch.</strong> I kept prices least because:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>This is digital delivery - no printing or shipping costs</li>
+                            <li>I am not the lawyer charging $300/hour</li>
+                            <li>I believe this critical information should be accessible to everyone in need</li>
+                            <li>And Of 47 most goes in marketing & maintenance.</li>
+                        </ul>
+                        <p class="mt-3">i just hope it helps</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>I'm worried about my family if something happens to me. Do you cover that?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3"><strong>This system hammers on it.</strong> We lay out concrete steps for protecting your loved ones, your assets, and even your digital life. It's about empowering you to build a <strong>robust family protection plan</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>Immigration policy changes all the time. Will this guide quickly become outdated?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3"><strong>No.</strong> While policies shift, the core strategies for protecting your rights, preparing for emergencies & Uncertainties, and understanding the system's agenda are timeless. We focus on equipping you for any shift, not just the current ones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-gray-50 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">The Most Dangerous Decision <br>Is Doing Nothing</h2>
+            <p class="text-xl text-gray-600 mb-10">Right now, you're in one of two categories:</p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-10">
+                <div class="bg-red-50 p-6 rounded-lg shadow-sm border border-red-100">
+                    <h3 class="font-bold text-2xl mb-3 text-red-700">Category 1</h3>
+                    <p class="text-gray-700 mb-4">Waiting, hoping, crossing fingers that enforcement won't reach you. No plan. No documents. No protection.</p>
+                    <p class="font-bold text-red-600 text-lg">Risk: Total loss</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg shadow-sm border border-green-100">
+                    <h3 class="font-bold text-2xl mb-3 text-green-700">Category 2</h3>
+                    <p class="text-gray-700 mb-4">Taking control today. Having systems in place. Knowing your family and assets are protected no matter what happens.</p>
+                    <p class="font-bold text-green-600 text-lg">Result: Peace of mind</p>
+                </div>
+            </div>
+
+            <p class="text-2xl font-light italic mb-8">Which category do you want to be in tonight when you go to sleep?</p>
+
+            <div class="mb-6">
+                <a href="https://whop.com/checkout/plan_043u2Mataj4gt" class="cta-primary font-bold py-4 px-8 rounded-lg inline-block text-xl">
+                    PROCEED SECURELY - $47
+                </a>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 text-sm mb-6">
+                <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full flex items-center"><i class="fas fa-shield-alt mr-2"></i>30-Day Money Back Guarantee</span>
+                <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full flex items-center"><i class="fas fa-lock mr-2"></i>Secure SSL Encryption</span>
+                <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full flex items-center"><i class="fas fa-users mr-2"></i>2,847+ People Bought</span>
+            </div>
+
+            <div class="p-4 bg-yellow-50 rounded-lg border border-yellow-200 max-w-lg mx-auto">
+                <p class="font-bold text-yellow-800"><i class="fas fa-clock mr-2 text-yellow-600"></i>Enforcement doesn't wait. Your preparation shouldn't either.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('#faq button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.classList.toggle('hidden');
+                const icon = button.querySelector('i');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Trust popup functions
+        function openTrustPopup() {
+            document.getElementById('trustPopup').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeTrustPopup(event) {
+            if (!event || event.target.id === 'trustPopup' || event.target.closest('.trust-popup-close') || event.target.classList.contains('got-it-btn')) {
+                document.getElementById('trustPopup').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Book preview popup functions
+        function openBookPreview() {
+            document.getElementById('bookPreviewPopup').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookPreview(event) {
+            if (!event || event.target.id === 'bookPreviewPopup' || event.target.closest('.book-preview-close') || event.target.closest('.book-preview-done-btn')) {
+                document.getElementById('bookPreviewPopup').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Dynamic counter
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.counter');
+            const baseCount = 87;
+            const randomAddition = Math.floor(Math.random() * 20);
+            const finalCount = baseCount + randomAddition;
+
+            counters.forEach(counter => {
+                counter.textContent = `${finalCount} People Bought This Week`;
+            });
+
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 60,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
