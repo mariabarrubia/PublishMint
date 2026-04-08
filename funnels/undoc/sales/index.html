@@ -552,6 +552,16 @@
         }
     </style>
 <base target="_blank">
+    <script>
+(function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const fbclid = urlParams.get('fbclid');
+
+  if (fbclid) {
+    document.cookie = "_fbc=" + fbclid + "; path=/; max-age=2592000";
+  }
+})();
+    </script>
 </head>
 <body class="antialiased text-gray-800">
     <!-- Fixed Trust Badge at Top - Digistore24 Style -->
