@@ -350,11 +350,33 @@
 
     <!-- tiny script to keep any interactivity (optional, no FAQ needed but we include the salespage js for consistency) -->
     <script>
-        // optional: any leftover interactivity (not needed here, but keep for harmony)
-        document.addEventListener('DOMContentLoaded', () => {
-            // you could simulate a dynamic counter, but not necessary for upsell
-            // we just keep the design intact
-        });
-    </script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    // ===== YOUR EXISTING CODE =====
+    // (keep this even if empty)
+
+    // ===== PURCHASE TRACKING =====
+
+    function firePurchase() {
+
+        if (localStorage.getItem("purchase_tracked")) return;
+
+        localStorage.setItem("purchase_tracked", "true");
+
+        if (window.zaraz && typeof zaraz.track === "function") {
+            zaraz.track("purchase", {
+                value: 47,
+                currency: "USD"
+            });
+        } else {
+            console.log("Zaraz not loaded");
+        }
+    }
+
+    // wait until full load
+    window.addEventListener("load", firePurchase);
+
+});
+</script>
 </body>
 </html>
