@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step 2: AI Guide & Community – complete your protection</title>
+    <title>Step 2: AI Helper & Community – complete your protection</title>
     
     <!-- Tailwind + Font Awesome + same custom styles as frontend salespage -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,8 +13,10 @@
         
         body {
             font-family: 'Inter', Arial, sans-serif;
-            background: #f8fafc;  /* subtle background like salespage */
+            background: #f8fafc;
             scroll-behavior: smooth;
+            padding-top: 40px;   /* space for top trust badge */
+            padding-bottom: 50px; /* space for bottom trust badge */
         }
         
         /* custom button & utility classes from original salespage */
@@ -57,6 +59,164 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 8px rgba(5, 150, 105, 0.4);
         }
+        
+        /* ===== WHOP TRUST BADGE STYLES (replicated from inspiration) ===== */
+        .trust-badge-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 1000;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .trust-badge-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            gap: 12px;
+        }
+
+        .trust-badge-content:hover {
+            background-color: #f9fafb;
+        }
+
+        .trust-badge-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 1000;
+            border-top: 1px solid #e5e7eb;
+            box-shadow: 0 -1px 3px rgba(0,0,0,0.05);
+        }
+
+        .trust-badge-bottom .trust-badge-content {
+            padding: 6px;
+            font-size: 13px;
+        }
+
+        .trust-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1001;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 80px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .trust-popup.active {
+            display: flex;
+        }
+
+        .trust-popup-content {
+            background: white;
+            max-width: 420px;
+            width: 100%;
+            border-radius: 8px;
+            padding: 0;
+            position: relative;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .trust-popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .trust-popup-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #9ca3af;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.2s;
+            padding: 0;
+        }
+
+        .trust-popup-close:hover {
+            background-color: #f3f4f6;
+            color: #111827;
+        }
+
+        .trust-popup-subheader {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px;
+            padding-bottom: 16px;
+        }
+
+        .vertical-line {
+            width: 1px;
+            height: 30px;
+            background-color: #d1d5db;
+            margin-left: 11px;
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+
+        .trust-popup-body {
+            padding: 0 24px 24px 24px;
+        }
+
+        .trust-popup-body p {
+            color: #374151;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .trust-popup-footer {
+            padding: 16px 24px 24px 24px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .got-it-btn {
+            background-color: #2563eb;
+            color: white;
+            font-weight: 600;
+            padding: 8px 24px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .got-it-btn:hover {
+            background-color: #1d4ed8;
+        }
+        /* ===== END TRUST BADGE STYLES ===== */
         
         .trust-badge {
             background: linear-gradient(135deg, #059669 0%, #047857 100%);
@@ -222,19 +382,102 @@
 
         /* additional upsell-specific tweaks */
         .decline-link {
-            color: #9ca3af;
-            font-size: 0.9rem;
+            color: #6b7280;
+            font-size: 1.05rem;        /* larger and visible */
+            font-weight: 500;
             transition: color 0.2s;
-            border-bottom: 1px dashed #d1d5db;
+            border-bottom: 1px dashed #9ca3af;
             text-decoration: none;
+            padding: 0.2rem 0.5rem;
+            background-color: #f3f4f6;
+            border-radius: 4px;
         }
         .decline-link:hover {
-            color: #6b7280;
-            border-bottom-color: #9ca3af;
+            color: #374151;
+            background-color: #e5e7eb;
+            border-bottom-color: #6b7280;
         }
     </style>
 </head>
 <body class="antialiased text-gray-800 py-10 px-4">
+
+    <!-- ===== FIXED WHOP TRUST BADGE (TOP) – REPLICATED FROM INSPIRATION ===== -->
+    <div class="trust-badge-top" onclick="openTrustPopup()">
+        <div class="trust-badge-content">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #2563eb;">
+                    <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span style="font-weight: 600; color: #111827; font-size: 14px; letter-spacing: -0.3px;">whop</span>
+            </div>
+            <span style="color: #374151; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">Secure Order</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #fbbf24;">
+                <rect x="5" y="11" width="14" height="10" rx="2" fill="currentColor"/>
+                <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="12" cy="16" r="1" fill="#374151"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- ===== FIXED WHOP TRUST BADGE (BOTTOM) ===== -->
+    <div class="trust-badge-bottom" onclick="openTrustPopup()">
+        <div class="trust-badge-content">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #2563eb;">
+                <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-weight: 600; color: #059669; font-size: 12px;">Whop Approved</span>
+            <span style="color: #9ca3af; font-size: 11px;">|</span>
+            <span style="color: #6b7280; font-size: 11px;">24/7 Support Available</span>
+        </div>
+    </div>
+
+    <!-- ===== TRUST POPUP (Digistore24 style) ===== -->
+    <div id="trustPopup" class="trust-popup" onclick="closeTrustPopup(event)">
+        <div class="trust-popup-content" onclick="event.stopPropagation()">
+            <div class="trust-popup-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #111827;">
+                        <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span style="font-weight: 700; color: #111827; font-size: 18px;">whop</span>
+                </div>
+                <button class="trust-popup-close" onclick="closeTrustPopup()">×</button>
+            </div>
+            
+            <div class="trust-popup-subheader">
+                <div style="position: relative;">
+                    <div class="vertical-line"></div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #fbbf24;">
+                        <rect x="5" y="11" width="14" height="10" rx="2" fill="currentColor"/>
+                        <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="12" cy="16" r="1" fill="#374151"/>
+                    </svg>
+                </div>
+                <span style="font-weight: 700; color: #111827; font-size: 16px; letter-spacing: 0.5px; text-transform: uppercase;">Secure Order</span>
+            </div>
+
+            <div style="border-top: 1px solid #e5e7eb; margin: 0 20px;"></div>
+            
+            <div class="trust-popup-body">
+                <p style="font-weight: 500; color: #111827; margin-bottom: 12px;">
+                    Maria is approved by Whop for offering this product.
+                </p>
+                <p style="color: #4b5563; font-size: 14px; margin-bottom: 8px;">
+                    You can purchase with confidence knowing that Whop will handle the checkout securely. 
+                </p>
+                <p style="color: #4b5563; font-size: 14px;">
+                    And support is available 24/7 at your disposal.
+                </p>
+            </div>
+
+            <div class="trust-popup-footer">
+                <button class="got-it-btn" onclick="closeTrustPopup()">Got It</button>
+            </div>
+        </div>
+    </div>
 
     <!-- UPSELL SECTION – fully redesigned with salespage styling, content intact -->
     <div class="container mx-auto max-w-4xl">
@@ -244,9 +487,9 @@
             <!-- inner padding -->
             <div class="p-6 md:p-10">
                 
-                <!-- step badge (like trust-badge but simpler) -->
+                <!-- step badge (changed GUIDE to HELPER) -->
                 <div class="inline-block bg-blue-100 text-blue-800 font-bold py-1.5 px-5 rounded-full text-sm mb-6 tracking-wide shadow-sm">
-                    <i class="fas fa-robot mr-2 text-blue-600"></i> STEP 2: ADD THE Ai GUIDE
+                    <i class="fas fa-robot mr-2 text-blue-600"></i> STEP 2: ADD THE Ai HELPER
                 </div>
 
                 <!-- headline -->
@@ -254,12 +497,12 @@
                     Final Step: <span class="text-blue-800">A Personal Guide That Never Sleeps.</span>
                 </h1>
 
-                <!-- intro paragraphs -->
+                <!-- intro paragraphs – second para: removed 'or Gemini' -->
                 <p class="text-lg text-gray-700 mb-4">
                     The protection system you just secured is your foundation. But, <span class="font-semibold">the situation on the ground changes and escalates every single day.</span>
                 </p>
                 <p class="text-gray-600 mb-6">
-                    To make sure you are never left guessing, I’ve built a specialized <strong>AI Immigration Helper</strong> (access within ChatGPT or Gemini). Think of it as having the most informed person in the community in your pocket, ready to answer your questions 24/7.
+                    To make sure you are never left guessing, I’ve built a specialized <strong>AI Immigration Helper</strong> (access within ChatGPT). Think of it as having the most informed person in the community in your pocket, ready to answer your questions 24/7.
                 </p>
 
                 <!-- highlighted info box (how it helps) -->
@@ -289,13 +532,17 @@
                         <i class="fas fa-heart mr-1"></i> Help yourself. Help others.
                     </p>
 
-                    <!-- main CTA button (blue, large) – updated price to $27 and new link -->
-                    <a href="https://whop.com/checkout/plan_rUuYGtb0apXcY" class="cta-blue inline-block w-full md:w-auto px-10 py-5 rounded-xl text-xl font-bold shadow-lg hover:shadow-2xl transition-all">
+                    <!-- main CTA button (blue, large) – updated link to plan_aOqFArtaQQZSU -->
+                    <a href="https://whop.com/checkout/plan_aOqFArtaQQZSU" class="cta-blue inline-block w-full md:w-auto px-10 py-5 rounded-xl text-xl font-bold shadow-lg hover:shadow-2xl transition-all">
                         <i class="fas fa-robot mr-2"></i> Add AI Helper & Forum Access — $27
                     </a>
                     
                     <p class="text-sm text-gray-500 mt-3 flex items-center justify-center">
                         <i class="fas fa-infinity mr-1 text-gray-400"></i> One-time payment. Never a monthly bill.
+                    </p>
+                    <!-- Added line as requested -->
+                    <p class="text-sm font-medium text-gray-700 mt-1">
+                        <i class="fas fa-box-open mr-1 text-blue-500"></i> You'll receive all the items together
                     </p>
                 </div>
 
@@ -318,22 +565,21 @@
                     </div>
                 </div>
 
-                <!-- quote + unworthy decline button (updated href) -->
+                <!-- quote + rejection button (changed text & style) -->
                 <div class="mt-12 pt-6 border-t border-dashed border-gray-300 text-center">
                     <p class="text-xl text-gray-600 italic font-medium mb-3">
                         “We are much stronger together than apart”
                     </p>
                     
-                    <!-- decline link – intentionally made less attractive, gray & subtle, now points to new URL -->
-                    <div class="mt-2">
-                        <a href="https://thanks-og-un.onrender.com" class="decline-link text-sm inline-flex items-center opacity-70 hover:opacity-100 transition">
-                            <i class="fas fa-arrow-right mr-1 text-gray-400 text-xs"></i> No thanks, I'll pass on this extra protection
+                    <!-- Reject button: new text, larger, visible, "ugly" (no frills) -->
+                    <div class="mt-3">
+                        <a href="https://thanks-og-un.onrender.com" class="decline-link inline-flex items-center px-4 py-2 bg-gray-200 text-gray-700 rounded-md border border-gray-300 hover:bg-gray-300 transition text-base font-medium">
+                            <i class="fas fa-times mr-2 text-gray-500"></i> No, i don't want it. Provide me the items i purchased
                         </a>
                     </div>
-                    <!-- subtle note: unworthy button blends in, no emphasis -->
                 </div>
 
-                <!-- tiny trust / guarantee strip (optional but adds professionalism) -->
+                <!-- tiny trust / guarantee strip -->
                 <div class="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs text-gray-400">
                     <span class="flex items-center"><i class="fas fa-lock mr-1 text-gray-300"></i> 256-bit SSL</span>
                     <span class="flex items-center"><i class="fas fa-shield-alt mr-1 text-gray-300"></i> 30-day money-back</span>
@@ -341,42 +587,49 @@
                 </div>
             </div>
 
-            <!-- optional footer note (like a subtle badge) -->
+            <!-- optional footer note -->
             <div class="bg-gray-50 px-6 py-3 text-center text-xs text-gray-400 border-t border-gray-100">
                 <span>🇺🇸 Trusted by 2,800+ families • 2026 enforcement-ready</span>
             </div>
         </div>
     </div>
 
-    <!-- tiny script to keep any interactivity (optional, no FAQ needed but we include the salespage js for consistency) -->
+    <!-- scripts: trust popup functionality + existing purchase tracking -->
     <script>
-document.addEventListener('DOMContentLoaded', () => {
-
-    // ===== YOUR EXISTING CODE =====
-    // (keep this even if empty)
-
-    // ===== PURCHASE TRACKING =====
-
-    function firePurchase() {
-
-        if (localStorage.getItem("purchase_tracked")) return;
-
-        localStorage.setItem("purchase_tracked", "true");
-
-        if (window.zaraz && typeof zaraz.track === "function") {
-            zaraz.track("purchase", {
-                value: 47,
-                currency: "USD"
-            });
-        } else {
-            console.log("Zaraz not loaded");
+        // ===== TRUST POPUP FUNCTIONS (replicated from inspiration) =====
+        function openTrustPopup() {
+            document.getElementById('trustPopup').classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
-    }
 
-    // wait until full load
-    window.addEventListener("load", firePurchase);
+        function closeTrustPopup(event) {
+            if (!event || event.target.id === 'trustPopup' || event.target.closest('.trust-popup-close') || event.target.classList.contains('got-it-btn')) {
+                document.getElementById('trustPopup').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
 
-});
-</script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // ===== PURCHASE TRACKING (keep as is) =====
+            function firePurchase() {
+                if (localStorage.getItem("purchase_tracked")) return;
+                localStorage.setItem("purchase_tracked", "true");
+
+                if (window.zaraz && typeof zaraz.track === "function") {
+                    zaraz.track("purchase", {
+                        value: 47,
+                        currency: "USD"
+                    });
+                } else {
+                    console.log("Zaraz not loaded");
+                }
+            }
+
+            window.addEventListener("load", firePurchase);
+
+            // Optional: smooth scroll for any internal links (if needed)
+        });
+    </script>
 </body>
 </html>
