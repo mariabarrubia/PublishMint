@@ -1,0 +1,13 @@
+# robots.txt for PublishMint
+# https://mariabarrubia.github.io/PublishMint/
+
+User-agent: *
+Allow: /
+
+# Disallow internal/build directories
+Disallow: /assets/
+Disallow: /public/
+Disallow: /funnels/
+
+# Sitemap location
+Sitemap: https://mariabarrubia.github.io/PublishMint/sitemap.xml
