@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO Meta -->
+  <title>Single-Member LLC vs S-Corp for Digital Entrepreneurs (2026): Which One Actually Saves You Money? | PublishMint Blog</title>
+  <meta name="description" content="LLC or S-Corp? Stop guessing. Here's the real math, the deadlines, and when the tax savings actually beat the extra compliance work for online creators." />
+  <meta name="author" content="PublishMint Tax Desk" />
+  <link rel="canonical" href="https://publishmint.com/blog/llc-vs-scorp-digital-entrepreneurs" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Single-Member LLC vs S-Corp for Digital Entrepreneurs (2026)" />
+  <meta property="og:description" content="When does the S-Corp election actually make sense? A no-fluff guide for coaches, course creators, and solopreneurs." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1554224154-26032ffc0ce7?w=1200&q=80" />
+  <meta property="og:url" content="https://publishmint.com/blog/llc-vs-scorp-digital-entrepreneurs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Single-Member LLC vs S-Corp for Digital Entrepreneurs" />
+  <meta name="twitter:description" content="LLC vs S-Corp: the math, the deadlines, and the real tradeoffs." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1554224154-26032ffc0ce7?w=1200&q=80" />
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- Blog-specific enhancements (identical to post1) -->
+  <style>
+    .blog-post-container { max-width: 820px; margin: 0 auto; padding: 60px 24px 40px; }
+    .blog-post-header { margin-bottom: 32px; }
+    .blog-post-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin: 16px 0 24px; color: var(--clr-muted); font-size: 0.9rem; border-bottom: 1px solid var(--clr-border); padding-bottom: 20px; }
+    .blog-post-meta i { margin-right: 6px; color: var(--clr-primary); }
+    .blog-post-hero { margin: 28px 0 32px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+    .blog-post-hero img { width: 100%; height: auto; display: block; }
+    .blog-post-content { font-size: 1.08rem; line-height: 1.75; color: var(--clr-text); }
+    .blog-post-content h2 { margin-top: 48px; margin-bottom: 20px; font-size: 1.9rem; border-left: 5px solid var(--clr-primary); padding-left: 24px; }
+    .blog-post-content h3 { margin-top: 36px; margin-bottom: 16px; font-size: 1.4rem; font-weight: 600; }
+    .blog-post-content p { margin-bottom: 24px; }
+    .blog-post-content blockquote { margin: 32px 0; padding: 20px 28px; background: rgba(108,99,255,0.05); border-left: 4px solid var(--clr-primary); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-style: normal; color: var(--clr-text); font-size: 1.05rem; }
+    .blog-post-content blockquote p:last-child { margin-bottom: 0; }
+    .blog-post-content a { color: var(--clr-primary); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+    .blog-post-content a:hover { color: var(--clr-accent); }
+    .table-wrapper { overflow-x: auto; margin: 32px 0; border-radius: var(--radius-md); border: 1px solid var(--clr-border); background: var(--clr-card); }
+    .blog-post-content table { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 600px; }
+    .blog-post-content th { background: rgba(108,99,255,0.15); color: white; font-weight: 600; padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--clr-border); }
+    .blog-post-content td { padding: 12px 16px; border-bottom: 1px solid var(--clr-border); color: var(--clr-muted); }
+    .blog-post-content tr:last-child td { border-bottom: none; }
+    .video-thumb { display: block; position: relative; margin: 36px 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.2s ease; border: 1px solid var(--clr-border); }
+    .video-thumb:hover { transform: scale(1.01); border-color: var(--clr-primary); }
+    .video-thumb img { width: 100%; display: block; }
+    .play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 28px; border: 2px solid rgba(255,255,255,0.5); transition: all 0.2s; }
+    .video-thumb:hover .play-overlay { background: var(--clr-primary); border-color: white; }
+    .video-caption { margin-top: 8px; font-size: 0.9rem; color: var(--clr-muted); text-align: center; }
+    .internal-resource { background: rgba(0,229,195,0.06); border: 1px dashed var(--clr-accent); border-radius: var(--radius-md); padding: 14px 20px; margin: 28px 0; display: flex; align-items: center; gap: 12px; }
+    .internal-resource i { color: var(--clr-accent); font-size: 1.3rem; }
+    .disclaimer { margin-top: 48px; padding: 24px; background: rgba(255,255,255,0.02); border-radius: var(--radius-md); font-size: 0.9rem; color: var(--clr-muted); border: 1px solid var(--clr-border); }
+    .author-box { margin-top: 48px; padding: 28px; background: var(--clr-card); border-radius: var(--radius-lg); border: 1px solid var(--clr-border); display: flex; gap: 24px; align-items: center; }
+    .author-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--clr-primary); }
+    .author-info h4 { margin-bottom: 6px; font-size: 1.3rem; }
+    .author-info p { margin-bottom: 8px; color: var(--clr-muted); }
+    .nav-link.blog-active { color: white; background: rgba(108,99,255,0.2); }
+    hr { border: none; border-top: 1px solid var(--clr-border); margin: 40px 0; }
+    .highlight-box { background: rgba(108,99,255,0.08); border-radius: var(--radius-md); padding: 20px 24px; margin: 30px 0; border-left: 4px solid var(--clr-primary); }
+  </style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5470469605050608" crossorigin="anonymous"></script>
+  <!-- JSON-LD Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Single-Member LLC vs S-Corp for Digital Entrepreneurs (2026): Which One Actually Saves You Money?",
+    "description": "LLC or S-Corp? Stop guessing. Here's the real math, the deadlines, and when the tax savings actually beat the extra compliance work for online creators.",
+    "image": "https://images.unsplash.com/photo-1554224154-26032ffc0ce7?w=1200&q=80",
+    "author": {
+      "@type": "Person",
+      "name": "Taylor Reed",
+      "url": "https://publishmint.com/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "PublishMint",
+      "logo": { "@type": "ImageObject", "url": "https://publishmint.com/favicon.ico" }
+    },
+    "datePublished": "2026-04-13",
+    "dateModified": "2026-04-13",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://publishmint.com/blog/llc-vs-scorp-digital-entrepreneurs"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="../index.html" class="navbar-logo">
+          <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+          PublishMint
+        </a>
+        <ul class="navbar-nav">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">About Us</a></li>
+          <li><a href="../index.html#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="index.html" class="nav-link blog-active">Blog</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="navbar-actions">
+          <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-primary">
+            <i class="fas fa-calendar-check"></i> Book Strategy Call
+          </a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="../index.html" class="nav-link">Home</a>
+    <a href="../about.html" class="nav-link">About Us</a>
+    <a href="../index.html#how-it-works" class="nav-link">How It Works</a>
+    <a href="index.html" class="nav-link">Blog</a>
+    <a href="../contact.html" class="nav-link">Contact</a>
+    <a href="https://forms.gle/NcXmeDzZQXt9szix5" target="_blank" class="btn btn-primary mt-4">Book Strategy Call</a>
+  </div>
+
+  <main id="main-content">
+    <article class="blog-post-container">
+      
+      <!-- Blog Header -->
+      <header class="blog-post-header">
+        <h1>Single-Member LLC vs S-Corp for Digital Entrepreneurs (2026): Which One Actually Saves You Money?</h1>
+        <div class="blog-post-meta">
+          <span><i class="fas fa-user-circle"></i> PublishMint Tax Desk</span>
+          <span><i class="fas fa-calendar-alt"></i> April 13, 2026</span>
+          <span><i class="fas fa-clock"></i> 15 min read</span>
+          <span><i class="fas fa-tag"></i> Tax Strategy, Entity Structure, Solopreneur</span>
+        </div>
+      </header>
+
+      <!-- Hero Image -->
+      <figure class="blog-post-hero">
+        <img src="https://images.unsplash.com/photo-1554224154-26032ffc0ce7?w=1400&q=80" alt="Entrepreneur reviewing LLC vs S-Corp documents on laptop" loading="eager" />
+        <figcaption style="text-align:center; margin-top:10px; color:var(--clr-muted); font-size:0.85rem;">One choice is about simplicity. The other is about math.</figcaption>
+      </figure>
+
+      <!-- Content -->
+      <div class="blog-post-content">
+        <p>For most digital entrepreneurs, the smartest default is this: <strong>start with a single-member LLC, then consider an S-Corp election only when profits are high and steady enough that the tax savings clearly beat the extra payroll and compliance work.</strong> The LLC usually wins on simplicity; the S-Corp only starts winning once the business is real enough to deserve the hassle.</p>
+        
+        <p>For a long time, a lot of us were trained to think in neat tracks: get qualified, get picked, stay useful, move up. Then the internet happened, and a strange thing became possible. One person with a laptop could build a newsletter, a coaching business, a content studio, a tiny SaaS, a course library, a design retainer business, or an agency-shaped machine with no permission from anyone.</p>
+        <p>That sounds freeing. It is. It's also where the tax structure confusion begins. Because once you “choose yourself,” you inherit a boring adult problem nobody puts on the vision board: <strong>how exactly is this thing supposed to be structured?</strong></p>
+
+        <div class="internal-resource">
+          <i class="fas fa-link"></i>
+          <span><strong>Related read:</strong> <a href="https://www.publishmint.site/blog/post1">The $40K/Month Creator Who Almost Lost Everything: 4‑Layer Legal Defense Stack</a> — because entity structure is layer one.</span>
+        </div>
+
+        <p>That's where the Single-Member LLC vs S-Corp for digital entrepreneurs question shows up. And the answer is almost never as dramatic as people want it to be. The first thing to understand is that a single-member LLC and an S-Corp are not always two entirely different creatures. An LLC is a legal entity. S-Corp status is a tax election that an eligible LLC or corporation can make by filing Form 2553.</p>
+        <p>For existing calendar-year entities that want S-Corp treatment for 2026, the commonly cited deadline is <strong>March 16, 2026</strong>, and new businesses generally have about 75 days from formation to make the election effective in the first tax year. That matters because many founders think they must “convert” their LLC into some completely different business to get S-Corp treatment. Usually, they don't. More often, they keep the LLC and change how it's taxed.</p>
+
+        <figure class="blog-post-hero">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&q=80" alt="Calculator and tax forms on desk" loading="lazy" />
+          <figcaption>The S-Corp decision is a math problem, not a status symbol.</figcaption>
+        </figure>
+
+        <h2>The Cleanest Side-by-Side View</h2>
+        <p>If you remember nothing else, remember this: the S-Corp is not a prestige upgrade. It is a tax tool. If the math does not clearly work in your favor, it's just extra chores wearing a clever outfit.</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Feature</th><th>Single-Member LLC (Default)</th><th>S-Corp Election</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Taxation</strong></td><td>Pass-through; all profit subject to self-employment tax</td><td>Salary subject to payroll taxes; distributions not</td></tr>
+              <tr><td><strong>Payroll Required</strong></td><td>No</td><td>Yes — must pay yourself reasonable salary</td></tr>
+              <tr><td><strong>Filing Complexity</strong></td><td>Schedule C (1040)</td><td>Form 1120-S, K-1, payroll filings</td></tr>
+              <tr><td><strong>Self-Employment Tax</strong></td><td>15.3% on all net profit</td><td>15.3% only on salary portion</td></tr>
+              <tr><td><strong>Best For</strong></td><td>Early-stage, inconsistent income</td><td>Stable, high-profit businesses</td></tr>
+              <tr><td><strong>Reasonable Salary</strong></td><td>N/A</td><td>Required; must be defensible</td></tr>
+              <tr><td><strong>Administrative Cost</strong></td><td>Low</td><td>Higher (payroll software, tax prep)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- YouTube Embed 1: LLC vs S-Corp overview -->
+        <a href="https://www.youtube.com/watch?v=z5C5GvjRI6o" target="_blank" rel="noopener" class="video-thumb">
+          <img src="https://img.youtube.com/vi/z5C5GvjRI6o/maxresdefault.jpg" alt="LLC vs S Corp: Which One Should You Choose?" loading="lazy" />
+          <span class="play-overlay"><i class="fas fa-play"></i></span>
+        </a>
+        <div class="video-caption">▶ Watch: LLC vs S Corp — The Real Differences Explained (14 min)</div>
+
+        <h2>When the LLC Wins</h2>
+        <p>Most digital entrepreneurs should not rush into an S-Corp just because tax Twitter discovered the phrase “reasonable salary” and started treating it like a life hack. A single-member LLC wins when your business still needs room to wobble.</p>
+        <p>If your income is inconsistent, your offer is still evolving, or you're somewhere between “this might work” and “this is definitely a business,” the LLC is usually the right home. It keeps things clean without forcing you into payroll, extra filings, and the psychological burden of acting like a mini HR department for a company that is, in reality, just you and a laptop.</p>
+
+        <div class="highlight-box">
+          <p style="margin-bottom:0;"><i class="fas fa-check-circle" style="color:var(--clr-accent); margin-right:8px;"></i> <strong>LLC is often the smarter choice when:</strong></p>
+          <ul style="margin-top:12px;">
+            <li>Net profit is still modest (under ~$60K)</li>
+            <li>You don't yet have stable monthly owner pay</li>
+            <li>You don't want payroll software in your life</li>
+            <li>You don't have clean bookkeeping</li>
+            <li>You're still validating the business model</li>
+          </ul>
+        </div>
+
+        <p>This is especially true for freelancers still building recurring revenue, coaches with irregular client flow, content creators whose income jumps around by season, and digital product sellers still figuring out whether their offer is repeatable. People underestimate how much simplicity is worth.</p>
+        <p>The LLC lets you focus on revenue, not ritual. You can still separate business and personal money, open a business account, sign contracts properly, deduct legitimate expenses, and look like a professional operation. You do not need an S-Corp to be “serious.” You need profit.</p>
+
+        <div class="internal-resource">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <span><strong>Related:</strong> <a href="https://www.publishmint.site/blog/post2">How to Separate Business and Personal Finances as an Online Entrepreneur</a> — do this first, before you even think about entity structure.</span>
+        </div>
+
+        <h2>When the S-Corp Starts to Make Sense</h2>
+        <p>The S-Corp election becomes interesting when the business stops behaving like an experiment and starts behaving like a machine. This usually means consistent profits, predictable cash flow, enough margin to pay yourself a real salary, and enough financial discipline to maintain payroll and records without turning your life into an accounting support ticket.</p>
+        <p>The tax appeal is straightforward. In a default LLC, essentially all active profit can be hit with self-employment tax. In an S-Corp, you pay yourself a reasonable salary, run payroll on that amount, and then take the remaining profit as distributions, which generally are not exposed to the same self-employment tax treatment. That's where the savings come from.</p>
+
+        <blockquote>
+          <p><i class="fas fa-calculator" style="margin-right:10px;"></i> One 2026 comparison example showed a business with $120,000 in profit paying about $18,360 in self-employment tax as a default LLC, versus about $9,945 after an S-Corp setup using a $65,000 reasonable salary — an estimated difference of roughly $8,415 before added admin costs.</p>
+        </blockquote>
+
+        <p>Another 2026 example used $100,000 in profit with a $70,000 salary and $30,000 in distributions, producing an estimated self-employment tax savings of about $4,590. Those are examples, not promises. But they show why people start paying attention once profits climb past $60K–$80K.</p>
+
+        <!-- YouTube Embed 2: S-Corp savings -->
+        <a href="https://www.youtube.com/watch?v=1pKXvXU4VKk" target="_blank" rel="noopener" class="video-thumb">
+          <img src="https://img.youtube.com/vi/1pKXvXU4VKk/maxresdefault.jpg" alt="S Corp Tax Savings Explained" loading="lazy" />
+          <span class="play-overlay"><i class="fas fa-play"></i></span>
+        </a>
+        <div class="video-caption">▶ Watch: How Much Can an S-Corp Actually Save You? (With Real Numbers)</div>
+
+        <h3>The Reasonable Salary Catch</h3>
+        <p>The IRS expects S-Corp shareholder-employees to pay themselves a reasonable salary for the work they actually do. Underpaying yourself just to stuff more money into distributions is exactly the kind of thing that gets an S-Corp from “tax strategy” into “bad idea.” Guidance repeatedly emphasizes fair market value, industry comparisons, duties performed, time spent, and comparable compensation.</p>
+        <p>So if you run a one-person digital marketing agency making $180,000 and decide your salary should be $18,000 because “I'm optimizing,” you're not optimizing. You're flirting with a problem.</p>
+        <p>For digital entrepreneurs, the S-Corp usually makes the most sense when you are a consultant with strong, repeatable profit, a coach with high-margin offers, a one-person agency owner, a course creator with stable sales, or a content business with dependable sponsorship income.</p>
+
+        <h2>Timing, Elections, and Mid-Year Moves</h2>
+        <p>The timing side is where otherwise intelligent founders create pointless messes. If you want S-Corp treatment for 2026, the filing deadline for existing calendar-year businesses is March 16, 2026. For new entities, you have roughly 75 days from formation. There is also late-election relief in some circumstances (Rev. Proc. 2013-30 extends up to 3 years and 75 days), but don't rely on it.</p>
+        <p>The more practical timing issue is this: <strong>do not elect S-Corp status in the middle of chaos.</strong> If your books are messy, your business account looks like a personal wallet, or you still haven't decided how you pay yourself, the S-Corp is not your next move. Your next move is cleanup. Banking first. Bookkeeping second. Payroll readiness third. Election fourth.</p>
+
+        <div class="internal-resource">
+          <i class="fas fa-shield"></i>
+          <span><strong>Read next:</strong> <a href="https://www.publishmint.site/blog/post4">Mercury vs Novo for Digital Entrepreneurs: Which Bank Actually Fits Your Entity?</a> — banking setup matters before you elect S-Corp.</span>
+        </div>
+
+        <h2>What I'd Do (The No-Romance Version)</h2>
+        <p>If I were advising a digital entrepreneur with no romance left in me for shiny legal structures, I'd keep it brutally simple.</p>
+        <p><strong>Start with the single-member LLC</strong> if you are in your first real stretch of building: clean contracts, clean bank account, clean books, clear money separation. That alone puts you ahead of most people.</p>
+        <p><strong>Move to S-Corp taxation</strong> when all of the following are true:</p>
+        <ul>
+          <li>Profit is consistently high enough that the tax savings are real.</li>
+          <li>You can pay yourself a defensible reasonable salary.</li>
+          <li>You're willing to run payroll and keep records.</li>
+          <li>The business is mature enough that simplicity is no longer the highest-value feature.</li>
+        </ul>
+        <p>That's the answer. Not ideology. Not aesthetics. Not what sounds more “advanced.” The LLC is usually the right structure for becoming a business. The S-Corp is often the right tax election for a business that has already become one.</p>
+
+        <!-- YouTube Embed 3: Form 2553 deadline -->
+        <a href="https://www.youtube.com/watch?v=8hYgZcJkXyM" target="_blank" rel="noopener" class="video-thumb">
+          <img src="https://img.youtube.com/vi/8hYgZcJkXyM/maxresdefault.jpg" alt="Form 2553 Instructions and Deadlines" loading="lazy" />
+          <span class="play-overlay"><i class="fas fa-play"></i></span>
+        </a>
+        <div class="video-caption">▶ Watch: Form 2553 Explained — S-Corp Election Deadlines & How to File</div>
+
+        <hr />
+
+        <h2>FAQ: Single-Member LLC vs S-Corp</h2>
+        <p><strong>What is the difference between Single-Member LLC and S-Corp?</strong> A single-member LLC is a legal entity and default tax setup for one-owner businesses, while S-Corp status is a tax election that changes how profit is treated, mainly by splitting owner compensation into salary and distributions.</p>
+        <p><strong>How much can I save with S-Corp vs LLC?</strong> It depends on profit and salary design. 2026 examples show estimated savings ranging from roughly $4,590 on a $100,000 scenario to about $8,415 on a $120,000 scenario before admin costs.</p>
+        <p><strong>When should I switch from LLC to S-Corp?</strong> Usually when profit is steady enough that the tax savings clearly beat payroll and compliance costs, and when you can support a reasonable salary with real documentation.</p>
+        <p><strong>Do I need payroll for S-Corp?</strong> If you are an owner actively working in the business, yes — payroll and salary compliance are part of the package.</p>
+        <p><strong>What is a reasonable salary for S-Corp owner?</strong> Fair-market compensation for similar work in similar businesses, based on duties, time, experience, and comparable pay.</p>
+        <p><strong>What is the Form 2553 deadline for 2026?</strong> March 16, 2026 for existing calendar-year entities; ~75 days from formation for new businesses.</p>
+
+        <div class="disclaimer">
+          <i class="fas fa-scale-balanced"></i> <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute tax or legal advice. Consult a qualified CPA or tax professional before making entity elections.
+        </div>
+
+        <!-- Author Box with picture -->
+        <div class="author-box">
+          <img class="author-avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=faces" alt="Taylor Reed, Tax Strategist" loading="lazy" />
+          <div class="author-info">
+            <h4>Taylor Reed <span style="font-weight:400; font-size:0.9rem; margin-left:8px; color:var(--clr-muted);"><i class="fas fa-check-circle" style="color:var(--clr-accent);"></i> Tax Desk</span></h4>
+            <p>Taylor is a former Big 4 tax associate turned writer for PublishMint. She specializes in entity structure and tax strategy for digital creators, course sellers, and solopreneurs. Her work has helped over 1,000 online business owners make smarter entity decisions without the jargon.</p>
+            <div>
+              <a href="#" style="margin-right:16px;"><i class="fab fa-twitter"></i> @taylor_tax</a>
+              <a href="#"><i class="fab fa-linkedin"></i> Taylor Reed</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- end blog-post-content -->
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+            PublishMint
+          </div>
+          <p>We transform your audience insights into high-converting digital products to resell.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="../index.html"><i class="fas fa-home fa-fw"></i> Home</a></li>
+            <li><a href="../about.html"><i class="fas fa-user fa-fw"></i> About Us</a></li>
+            <li><a href="../index.html#how-it-works"><i class="fas fa-map-signs fa-fw"></i> How It Works</a></li>
+            <li><a href="../contact.html"><i class="fas fa-envelope fa-fw"></i> Contact</a></li>
+            <li><a href="index.html"><i class="fas fa-newspaper fa-fw"></i> Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="../terms.html"><i class="fas fa-file-contract fa-fw"></i> Terms & Conditions</a></li>
+            <li><a href="../privacy.html"><i class="fas fa-lock fa-fw"></i> Privacy Policy</a></li>
+            <li><a href="../refund.html"><i class="fas fa-undo-alt fa-fw"></i> Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <div class="footer-contact-item">
+            <span class="ic"><i class="fas fa-envelope"></i></span>
+            <span><a href="mailto:kousaralom.6505@gmail.com">kousaralom.6505@gmail.com</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="ic"><i class="fas fa-phone"></i></span>
+            <span><a href="tel:8134979150">8134979150</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> PublishMint. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="../terms.html">Terms</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../refund.html">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    (function() {
+      const blogLink = document.querySelector('.nav-link.blog-active');
+      if(blogLink) blogLink.classList.add('active');
+    })();
+  </script>
+</body>
+</html>
