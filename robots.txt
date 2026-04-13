@@ -1,5 +1,5 @@
 # robots.txt for PublishMint
-# https://publishmint.site/
+# https://www.publishmint.site/
 
 User-agent: *
 Allow: /
@@ -9,4 +9,4 @@ Disallow: /assets/
 Disallow: /public/
 
 # Sitemap location
-Sitemap: https://publishmint.site/sitemap.xml
+Sitemap: https://www.publishmint.site/sitemap.xml
