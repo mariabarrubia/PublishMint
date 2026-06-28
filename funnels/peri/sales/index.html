@@ -10,13 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- Whop preconnects & prefetch – instant checkout popup -->
-    <link rel="preconnect" href="https://js.whop.com" crossorigin>
-    <link rel="dns-prefetch" href="https://js.whop.com">
-    <link rel="preconnect" href="https://checkout.whop.com" crossorigin>
-    <link rel="dns-prefetch" href="https://checkout.whop.com">
-    <link rel="preload" href="https://js.whop.com/static/checkout/loader.js" as="script">
-
     <!-- Font loading: non‑blocking, with instant system fallback -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
@@ -26,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <!-- Preload hero image for LCP -->
-    <link rel="preload" as="image" href="images/perimenopause.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
 
     <!-- Inline critical CSS – all utility classes replicated, zero FOUC -->
     <style>
@@ -652,7 +645,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="trust-section pt-6 pb-16 px-4" style="padding-top:3rem;">
+    <section class="trust-section pt-6 pb-16 px-4" style="padding-top:0.5rem;">
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
@@ -709,7 +702,7 @@
 
                     <div class="md:hidden mb-8">
                         <div class="relative">
-                            <img src="images/perimenopause.webp" alt="Professional woman at work" class="rounded-xl shadow-2xl w-full mb-6" style="max-height: 500px; object-fit: cover;" loading="lazy" decoding="async">
+                            <img src="/images/perimenopause.webp" alt="Professional woman at work" class="rounded-xl shadow-2xl w-full mb-6" style="max-height: 500px; object-fit: cover;" loading="lazy" decoding="async">
                         </div>
                     </div>
 
@@ -731,7 +724,7 @@
                     </div>
                     <p class="text-center text-gray-600">100% Risk-Free: 60-Day Money-Back Guarantee</p>
 
-                    <img src="images/handmockup.webp" alt="Hand mockup" class="rounded-xl shadow-lg w-full max-w-md mx-auto mb-1" loading="lazy" decoding="async">
+                    <img src="/images/handmockup.webp" alt="Hand mockup" class="rounded-xl shadow-lg w-full max-w-md mx-auto mb-1" loading="lazy" decoding="async">
                     <p class="text-center text-xs text-gray-400 italic mb-4">All items are delivered digitally</p>
 
                     <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 text-center mt-6">
@@ -744,7 +737,7 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center hidden md:block">
                     <div class="relative">
-                        <img src="images/perimenopause.webp" alt="Professional woman at work" class="rounded-xl shadow-2xl w-full" style="max-height: 600px; object-fit: cover;" loading="eager" fetchpriority="high">
+                        <img src="/images/perimenopause.webp" alt="Professional woman at work" class="rounded-xl shadow-2xl w-full" style="max-height: 600px; object-fit: cover;" loading="eager" fetchpriority="high">
                         <p class="text-center text-sm text-gray-600 mt-2 italic">The invisible performance cost of perimenopause in high-stakes environments</p>
                     </div>
                 </div>
@@ -758,8 +751,8 @@
             <div class="mb-8">
                 <h3 class="text-2xl font-bold text-center mb-6">For decades, western medicine told women to "expect hot flashes." They completely ignored the brain.</h3>
                 <div class="video-player-wrapper max-w-3xl mx-auto">
-                    <video controls poster="images/perimenopause.webp" preload="none" style="width:100%;display:block;border-radius:0;">
-                        <source src="Perimenopausevideo.mp4" type="video/mp4">
+                    <video controls poster="/images/perimenopause.webp" preload="none" style="width:100%;display:block;border-radius:0;">
+                        <source src="/Perimenopausevideo.mp4" type="video/mp4">
                         Your browser does not support the video player.
                     </video>
                 </div>
@@ -800,19 +793,19 @@
                 <p class="text-sm text-gray-600 font-medium">System validated against current clinical and occupational evidence:</p>
                 <div class="flex flex-wrap justify-center gap-6 items-start">
                     <div class="flex flex-col items-center">
-                        <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmwomeq/91/report.html" target="_blank"><img src="images/hocc.webp" alt="UK Parliament Women and Equalities Committee" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmwomeq/91/report.html" target="_blank"><img src="/images/hocc.webp" alt="UK Parliament Women and Equalities Committee" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">UK Parliament</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://journals.lww.com/menopausejournal/fulltext/2019/10000/the_menopause_transition_and_women_s_health_at.20.aspx" target="_blank"><img src="images/swan.webp" alt="SWAN Longitudinal Study" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://journals.lww.com/menopausejournal/fulltext/2019/10000/the_menopause_transition_and_women_s_health_at.20.aspx" target="_blank"><img src="/images/swan.webp" alt="SWAN Longitudinal Study" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">SWAN Study</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/29315132/" target="_blank"><img src="images/nih.webp" alt="MENOS@Work RCT Data" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/29315132/" target="_blank"><img src="/images/nih.webp" alt="MENOS@Work RCT Data" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">NIH MENOS@Work</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://www.nyp.org/healthmatters/how-to-protect-your-brain-health-during-menopause" target="_blank"><img src="images/neuro.webp" alt="Occupational Neuroscience" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://www.nyp.org/healthmatters/how-to-protect-your-brain-health-during-menopause" target="_blank"><img src="/images/neuro.webp" alt="Occupational Neuroscience" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">NeuroScience</span>
                     </div>
                 </div>
@@ -829,7 +822,7 @@
             <div class="testimonial-carousel mb-12">
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image1.webp" alt="Sarah Mitchell" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image1.webp" alt="Sarah Mitchell" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Sarah Mitchell</p>
                             <p class="text-sm text-gray-500">Senior Consultant, California</p>
@@ -843,7 +836,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image2.webp" alt="Amina Reeves" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image2.webp" alt="Amina Reeves" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Amina Reeves</p>
                             <p class="text-sm text-gray-500">Medical Director, Toronto</p>
@@ -857,7 +850,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image3.webp" alt="Claire Morrison" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image3.webp" alt="Claire Morrison" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Claire Morrison</p>
                             <p class="text-sm text-gray-500">Finance Director, Sydney</p>
@@ -871,7 +864,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image4.webp" alt="Jennifer Taylor" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image4.webp" alt="Jennifer Taylor" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Jennifer Taylor</p>
                             <p class="text-sm text-gray-500">Barrister, Manchester</p>
@@ -885,7 +878,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image5.webp" alt="Leliana Shuzhen" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image5.webp" alt="Leliana Shuzhen" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Leliana Shuzhen</p>
                             <p class="text-sm text-gray-500">Tech Lead, Melbourne</p>
@@ -899,7 +892,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image6.webp" alt="Helen Walker" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image6.webp" alt="Helen Walker" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Helen Walker</p>
                             <p class="text-sm text-gray-500">Operations Director, Edinburgh</p>
@@ -913,7 +906,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image7.webp" alt="Rachel Donovan" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image7.webp" alt="Rachel Donovan" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Rachel Donovan</p>
                             <p class="text-sm text-gray-500">Marketing VP, Vancouver</p>
@@ -927,7 +920,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image8.webp" alt="Diane Lawrence" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image8.webp" alt="Diane Lawrence" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Diane Lawrence</p>
                             <p class="text-sm text-gray-500">Partner, Law Firm, Brisbane</p>
@@ -960,7 +953,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-3 mb-12">
                 <!-- CARD 1: EBOOK -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="images/ebookmockup.webp" alt="Ebook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/ebookmockup.webp" alt="Ebook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
                     <h3 class="text-sm font-bold mb-1 text-blue-800">THE BUSY WOMAN'S PERIMENOPAUSE - EBOOK</h3>
                     <p class="text-gray-600 text-xs mb-2">Every protocol, script, and framework i built for myself after research that included 488 sources. Zero disclosure required. Your operational edge, restored — searchable, private, value packed, available instantly, before the next meeting.</p>
@@ -973,7 +966,7 @@
                 </div>
                 <!-- CARD 2: PODCAST EPISODE (inserted after ebook) -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="images/podcast.webp" alt="Podcast Episode" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/podcast.webp" alt="Podcast Episode" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
                     <h3 class="text-sm font-bold mb-1 text-blue-800">EXCLUSIVE PODCAST EPISODE</h3>
                     <p class="text-gray-600 text-xs mb-2">A researcher Rebekah Brown, who ran her own agency, got misdiagnosed as depressed at 43, rebuilt her own path back, founded a brand, and is now speaking to us in the Podcast.</p>
@@ -986,7 +979,7 @@
                 </div>
                 <!-- CARD 3: AUDIOBOOK -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="images/audiobookmockup.webp" alt="Audiobook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/audiobookmockup.webp" alt="Audiobook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
                     <h3 class="text-sm font-bold mb-1 text-blue-800">THE BUSY WOMAN'S PERIMENOPAUSE - AUDIOBOOK</h3>
                     <p class="text-gray-600 text-xs mb-2">Complete book narrated, for the mornings you can't read. Pre-meeting priming, fog-day commutes, or 4am when your brain is already running threat assessments on the day ahead.</p>
@@ -1000,7 +993,7 @@
                 <!-- CARD 4: WORKOUT -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md relative">
                     <span class="absolute top-0 left-0 bg-yellow-400 text-yellow-900 font-extrabold text-xs px-2 py-1 rounded-br-lg shadow z-10">FREE BONUS</span>
-                    <img src="images/workout.webp" alt="Workout Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/workout.webp" alt="Workout Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-blue-800">QUICK HOME WORKOUT PLAN for PERIMENOPAUSE</h3>
                     <p class="text-gray-600 text-xs mb-2">Strength training specifically calibrated for perimenopause — hormonal resilience, bone density, cognitive stamina. Just 15 minutes. No gym. No Wasting the energy you don't have.</p>
@@ -1008,7 +1001,7 @@
                 </div>
                 <!-- CARD 5: MEAL PLAN -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="images/mealplan.webp" alt="Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/mealplan.webp" alt="Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-blue-800">7-DAY MEAL PLAN</h3>
                     <p class="text-gray-600 text-xs mb-2">A brain-fuel framework. Phytoestrogens, omega-3s, blood-sugar stability — the nutritional architecture your prefrontal cortex needs to perform under hormonal volatility.</p>
@@ -1016,7 +1009,7 @@
                 </div>
                 <!-- CARD 6: VEGAN MEAL PLAN -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="images/vegan.webp" alt="Vegan Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/vegan.webp" alt="Vegan Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-blue-800">7-DAY (VEGAN) MEAL PLAN</h3>
                     <p class="text-gray-600 text-xs mb-2">The brain-fuel architecture, entirely plant-based. B12, iron, and complete protein fully mapped — no compromise on ethics, and no compromise on cognitive function.</p>
@@ -1025,7 +1018,7 @@
             </div>
 
             <div class="bg-white p-8 rounded-xl shadow-md text-center max-w-2xl mx-auto">
-                <img src="images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mb-1" loading="lazy" decoding="async">
+                <img src="/images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mb-1" loading="lazy" decoding="async">
                 <p class="text-xs text-gray-400 italic mb-4">All items are delivered digitally</p>
                 <h3 class="text-2xl font-bold mb-4">Total Value: $161.94</h3>
                 <p class="text-gray-600 mb-6">What is your professional reputation worth? Your earning trajectory? Your peace of mind in the rooms that matter?</p>
@@ -1178,7 +1171,7 @@
                         <span class="text-gray-500 line-through text-xl">Executive Coaching: $500+/month</span>
                         <div class="text-center my-2 font-bold text-gray-700">OR</div>
                         <span class="text-4xl font-bold text-blue-800 block">Complete System: $37</span>
-                        <img src="images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mt-4" loading="lazy" decoding="async">
+                        <img src="/images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mt-4" loading="lazy" decoding="async">
                         <p class="text-xs text-gray-400 italic mt-1">All items are delivered digitally</p>
                         <div class="mt-4 p-3 bg-green-50 rounded-lg">
                             <p class="text-green-700 font-bold">Prevent $5,000+ Loss in Quarterly Earnings</p>
@@ -1333,8 +1326,8 @@
     </section>
 
     <!-- Audio sample elements (hidden) -->
-    <audio id="audioSample" src="audiobooksample.m4a" preload="none"></audio>
-    <audio id="podcastAudio" src="podcastpreview.m4a" preload="none"></audio>
+    <audio id="audioSample" src="/audiobooksample.m4a" preload="none"></audio>
+    <audio id="podcastAudio" src="/podcastpreview.m4a" preload="none"></audio>
 
     <!-- Hidden Whop Checkout Modal (pre‑rendered for instant open) -->
     <div id="whop-checkout-modal" class="checkout-modal-overlay" style="display:none;">
@@ -1358,10 +1351,7 @@
         </div>
     </div>
 
-    <!-- Whop loader – preloaded with high priority for instant checkout -->
-    <script async src="https://js.whop.com/static/checkout/loader.js"></script>
-
-    <!-- Optimized JavaScript (Digistore24 references removed) -->
+    <!-- Optimized JavaScript -->
     <script>
         // Book Preview Lazy Load
         function openBookPreview() {
@@ -1493,11 +1483,11 @@
     <!-- Footer -->
     <footer class="py-6 bg-gray-100 text-center text-xs text-gray-500">
         <div class="container mx-auto px-4">
-            <a href="terms-conditions.html" class="hover:text-gray-800 mx-2">Terms of Service</a> &bull;
-            <a href="privacy-policy.html" class="hover:text-gray-800 mx-2">Privacy Policy</a> &bull;
-            <a href="legal-information.html" class="hover:text-gray-800 mx-2">Legal Information</a>
+            <a href="/terms-conditions.html" class="hover:text-gray-800 mx-2">Terms of Service</a> &bull;
+            <a href="/privacy-policy.html" class="hover:text-gray-800 mx-2">Privacy Policy</a> &bull;
+            <a href="/legal-information.html" class="hover:text-gray-800 mx-2">Legal Information</a>
         </div>
     </footer>
 
 </body>
-  </html>
+                                                                                                                     </html>
