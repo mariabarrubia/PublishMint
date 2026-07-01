@@ -5,31 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Perimenopause Performance System: Protect Your Edge Without Disclosure</title>
 
-    <!-- Preconnect & DNS prefetch for faster connections -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- Font loading: non‑blocking, with instant system fallback -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
-    <!-- Font Awesome (non‑blocking) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <!-- Preload hero image for LCP -->
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
 
-    <!-- Digistore24 Scripts -->
     <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
     <script type="text/javascript">
     digistorePromocode( { "product_id": 692610, "adjust_domain": true } );
     </script>
 
-    <!-- Inline critical CSS – all utility classes replicated, zero FOUC -->
     <style>
-        /* ---------- RESET & BASE ---------- */
         *, *::before, *::after { box-sizing: border-box; }
         body {
             margin: 0;
@@ -47,7 +40,6 @@
         a { color: inherit; text-decoration: none; }
         .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-        /* ---------- CONTAINER ---------- */
         .container { width: 100%; margin-left: auto; margin-right: auto; padding-left: 0.75rem; padding-right: 0.75rem; }
         .max-w-2xl { max-width: 42rem; }
         .max-w-3xl { max-width: 48rem; }
@@ -57,7 +49,6 @@
         .max-w-lg { max-width: 32rem; }
         .mx-auto { margin-left: auto; margin-right: auto; }
 
-        /* ---------- TYPOGRAPHY ---------- */
         .text-xs { font-size: 0.75rem; line-height: 1rem; }
         .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
         .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
@@ -103,7 +94,6 @@
         .text-orange-500 { color: #f97316; }
         .text-white { color: #fff; }
 
-        /* ---------- BACKGROUNDS ---------- */
         .bg-white { background-color: #fff; }
         .bg-gray-50 { background-color: #f9fafb; }
         .bg-gray-100 { background-color: #f3f4f6; }
@@ -115,7 +105,6 @@
         .bg-yellow-50 { background-color: #fefce8; }
         .bg-purple-100 { background-color: #f3e8ff; }
 
-        /* ---------- BORDERS ---------- */
         .border { border-width: 1px; }
         .border-t { border-top-width: 1px; }
         .border-b { border-bottom-width: 1px; }
@@ -131,14 +120,12 @@
         .rounded-2xl { border-radius: 1rem; }
         .rounded-full { border-radius: 9999px; }
 
-        /* ---------- SHADOWS ---------- */
         .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
         .shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); }
         .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); }
         .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
         .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
 
-        /* ---------- SPACING ---------- */
         .m-0 { margin: 0; }
         .mt-1 { margin-top: 0.25rem; }
         .mt-2 { margin-top: 0.5rem; }
@@ -183,7 +170,6 @@
         .pt-6 { padding-top: 1.5rem; }
         .pb-16 { padding-bottom: 4rem; }
 
-        /* ---------- FLEX ---------- */
         .flex { display: flex; }
         .inline-flex { display: inline-flex; }
         .flex-col { flex-direction: column; }
@@ -204,13 +190,11 @@
         .space-y-6 > * + * { margin-top: 1.5rem; }
         .space-x-8 > * + * { margin-left: 2rem; }
 
-        /* ---------- GRID ---------- */
         .grid { display: grid; }
         .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
         .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 
-        /* ---------- WIDTH / HEIGHT ---------- */
         .w-full { width: 100%; }
         .w-1\/2 { width: 50%; }
         .w-3\/4 { width: 75%; }
@@ -220,7 +204,6 @@
         .h-auto { height: auto; }
         .max-w-none { max-width: none; }
 
-        /* ---------- DISPLAY / OVERFLOW ---------- */
         .block { display: block; }
         .inline-block { display: inline-block; }
         .hidden { display: none; }
@@ -239,16 +222,13 @@
         .z-20 { z-index: 20; }
         .pointer-events-none { pointer-events: none; }
 
-        /* ---------- HOVER ---------- */
         .hover\:underline:hover { text-decoration: underline; }
         .hover\:text-gray-800:hover { color: #1f2937; }
         .hover\:bg-gray-50:hover { background-color: #f9fafb; }
 
-        /* ---------- TRANSITIONS ---------- */
         .transition-all { transition: all 0.2s ease; }
         .duration-300 { transition-duration: 300ms; }
 
-        /* ---------- RESPONSIVE (md 768px, lg 1024px) ---------- */
         @media (min-width: 768px) {
             .md\:w-1\/2 { width: 50%; }
             .md\:mb-0 { margin-bottom: 0; }
@@ -272,7 +252,6 @@
             .cta-primary, .cta-blue, .cta-green { width: 100%; text-align: center; }
         }
 
-        /* ---------- CUSTOM COMPONENTS (unchanged) ---------- */
         .hero-gradient { background: linear-gradient(135deg, #1e1b4b 0%, #ffffff 100%); }
         .cta-primary { background-color: #dc2626; color: white; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(220,38,38,0.3); display: inline-block; }
         .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 8px rgba(220,38,38,0.4); }
@@ -324,7 +303,6 @@
         .video-player-wrapper { background: #0f172a; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid #334155; }
         .video-player-wrapper video { width: 100%; display: block; border-radius: 0; }
 
-        /* ---------- ENHANCED PREVIEW BUTTONS ---------- */
         .book-preview-btn {
             display: inline-flex;
             align-items: center;
@@ -367,7 +345,6 @@
         }
         .audio-preview-btn i { font-size: 0.9rem; }
 
-        /* ---------- PULL QUOTE STYLES (kept for reference, but Natalie's testimonial redesigned) ---------- */
         .pull-quote {
             background: #f8fafc;
             border-left: 4px solid #1e40af;
@@ -420,12 +397,21 @@
             color: #6b7280;
             font-style: normal;
         }
+
+        /* Redesigned disclosure trap box - professional & trustable */
+        .disclosure-trap-box {
+            background: #fff;
+            border: 1px solid #fecaca;
+            border-left: 4px solid #dc2626;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
     </style>
     <base target="_blank">
 </head>
 <body class="antialiased text-gray-800">
 
-    <!-- Book Preview Popup (src loaded on click) -->
     <div id="bookPreviewPopup" class="book-preview-popup" onclick="closeBookPreview(event)">
         <div class="book-preview-content" onclick="event.stopPropagation()">
             <button class="book-preview-close" onclick="closeBookPreview()"><i class="fas fa-times text-gray-700"></i></button>
@@ -450,7 +436,7 @@
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
-                    <div class="mt-0 mb-4">
+                    <div class="mt-3 mb-4">
                         <div class="bg-green-100 text-green-800 font-semibold py-1.5 px-3 rounded-full inline-flex items-center text-xs mb-2">
                             <i class="fas fa-shield-alt mr-2"></i>Performance System Bought by 3,200+ Professional Women <span class="text-xs opacity-75 ml-1" style="font-size:0.625rem;">Last Updated: Today</span>
                         </div>
@@ -464,18 +450,19 @@
                         <p><strong>For professional women experiencing perimenopause,</strong> the problem isn't hot flushes in private. It's brain fog in the boardroom. Anxiety before the client call. The silent terror that your professional edge is dulling while everyone watches.</p>
                     </div>
 
-                    <!-- Moved perimenopause.webp header image above disclosure trap box (mobile only) -->
                     <div class="md:hidden mb-4">
                         <img src="/images/perimenopause.webp" alt="Professional woman at work" class="rounded-xl shadow-2xl w-full" style="max-height: 500px; object-fit: cover;" loading="lazy" decoding="async">
                     </div>
 
-                    <!-- Disclosure trap box – made smaller -->
-                    <div class="fact-box p-2 rounded-lg mb-3 text-sm">
-                        <div class="flex items-start">
-                            <i class="fas fa-exclamation-triangle text-red-600 mr-2 mt-1 text-lg"></i>
+                    <!-- Redesigned disclosure trap box – professional & trustable, same red theme -->
+                    <div class="disclosure-trap-box mb-3 text-sm">
+                        <div class="flex items-start gap-3">
+                            <div class="flex-shrink-0 w-7 h-7 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
+                                <i class="fas fa-exclamation-triangle text-red-600 text-xs"></i>
+                            </div>
                             <div>
-                                <p class="font-bold text-red-800 text-sm">The Disclosure Trap: Every major corporate menopause solution treats disclosure as the mandatory first step. This is structurally dangerous.</p>
-                                <p class="text-xs text-gray-500 mt-1 italic">(U.K. House of Commons Committee Report)</p>
+                                <p class="font-semibold text-gray-800 text-sm leading-snug">The Disclosure Trap: Every major corporate menopause solution treats disclosure as the mandatory first step. This is structurally dangerous.</p>
+                                <p class="text-xs text-gray-400 mt-1 italic">(U.K. House of Commons Committee Report)</p>
                             </div>
                         </div>
                     </div>
@@ -502,7 +489,6 @@
                         </div>
                     </div>
 
-                    <!-- Handmockup.webp placed in place of perimenopause.webp above Prevent $5,000+ Loss -->
                     <div class="mb-6">
                         <img src="/images/handmockup.webp" alt="Hand mockup" class="rounded-xl shadow-lg w-full max-w-md mx-auto mb-1" loading="lazy" decoding="async">
                     </div>
@@ -525,19 +511,20 @@
                     </div>
                     <p class="text-center text-gray-600">100% Risk-Free: 60-Day Money-Back Guarantee</p>
 
-                    <!-- Redesigned Natalie Brandt testimonial – more professional, genuine, with "yesterday" -->
-                    <div class="bg-gray-50 border-l-4 border-blue-600 p-4 rounded-r-lg mt-6">
-                        <p class="text-gray-700 italic text-sm mb-2">"I was so worried that I used to Google about early Dementia. I am calm &amp; confident now, and know what to do exactly."</p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-2">
-                                <img src="/images/image9.webp" alt="Natalie Brandt" class="w-8 h-8 rounded-full object-cover border border-gray-300" loading="lazy" decoding="async">
-                                <div>
-                                    <p class="font-semibold text-gray-800 text-xs">Natalie Brandt</p>
-                                    <p class="text-gray-500 text-xs">Senior Litigator, Berlin</p>
-                                </div>
+                    <!-- Recrafted Natalie Brandt testimonial – matching other testimonials design, "yesterday" on bottom left -->
+                    <div class="bg-white p-5 rounded-lg shadow-md border border-gray-100 mt-6">
+                        <div class="flex items-center mb-3">
+                            <img src="/images/image9.webp" alt="Natalie Brandt" class="w-10 h-10 rounded-full mr-3 object-cover bg-gray-300" loading="lazy" decoding="async">
+                            <div>
+                                <p class="font-bold text-sm">Natalie Brandt</p>
+                                <p class="text-xs text-gray-500">Senior Litigator, Berlin</p>
                             </div>
-                            <span class="text-xs text-gray-400">yesterday</span>
                         </div>
+                        <div class="flex mb-2">
+                            <i class="fas fa-star text-yellow-400 text-sm"></i><i class="fas fa-star text-yellow-400 text-sm"></i><i class="fas fa-star text-yellow-400 text-sm"></i><i class="fas fa-star text-yellow-400 text-sm"></i><i class="fas fa-star text-yellow-400 text-sm"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm italic">"I was so worried that I used to Google about early Dementia. I am calm &amp; confident now, and know what to do exactly."</p>
+                        <p class="text-xs text-gray-400 mt-2">yesterday</p>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center hidden md:block">
@@ -756,7 +743,6 @@
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Not symptom tracking. Not wellness advice. An operational system for maintaining executive function, professional credibility, and privacy during the menopausal transition.</p>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-3 mb-12">
-                <!-- CARD 1: EBOOK -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
                     <img src="/images/ebookmockup.webp" alt="Ebook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
@@ -769,7 +755,6 @@
                     </div>
                     <div class="text-right text-xs font-bold text-gray-500">Value $26.99</div>
                 </div>
-                <!-- CARD 2: AUDIOBOOK -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
                     <img src="/images/audiobookmockup.webp" alt="Audiobook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
@@ -782,7 +767,6 @@
                     </div>
                     <div class="text-right text-xs font-bold text-gray-500">Value $33.99</div>
                 </div>
-                <!-- CARD 3: WORKOUT -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md relative">
                     <span class="absolute top-0 left-0 bg-yellow-400 text-yellow-900 font-extrabold text-xs px-2 py-1 rounded-br-lg shadow z-10">FREE BONUS</span>
                     <img src="/images/workout.webp" alt="Workout Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
@@ -791,7 +775,6 @@
                     <p class="text-gray-600 text-xs mb-2">Strength training specifically calibrated for perimenopause — hormonal resilience, bone density, cognitive stamina. Just 15 minutes. No gym. No Wasting the energy you don't have.</p>
                     <div class="text-right text-xs font-bold text-gray-500">Value $22.99</div>
                 </div>
-                <!-- CARD 4: MEAL PLAN -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
                     <img src="/images/mealplan.webp" alt="Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
@@ -799,7 +782,6 @@
                     <p class="text-gray-600 text-xs mb-2">A brain-fuel framework. Phytoestrogens, omega-3s, blood-sugar stability — the nutritional architecture your prefrontal cortex needs to perform under hormonal volatility.</p>
                     <div class="text-right text-xs font-bold text-gray-500">Value $26.99</div>
                 </div>
-                <!-- CARD 5: VEGAN MEAL PLAN -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
                     <img src="/images/vegan.webp" alt="Vegan Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
@@ -835,7 +817,7 @@
         </div>
     </section>
 
-    <!-- Problem Agitation Section – padding reduced -->
+    <!-- Problem Agitation Section -->
     <section class="py-12 bg-white px-4">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">The <span class="text-red-600">Concealment Paradox</span> No One Talks About</h2>
@@ -880,7 +862,6 @@
                             <p class="text-sm text-gray-600">(UK Gov Workplace Literature Review, 2025)</p>
                         </div>
                     </div>
-                    <!-- Deleted the presenteeism bullet point -->
                 </div>
                 <div class="flex justify-center items-center gap-4 md:gap-8 py-6 text-center">
                     <div class="flex flex-col items-center"><i class="fas fa-brain text-3xl text-purple-600"></i><span class="text-xs font-medium mt-1">Brain</span></div>
@@ -963,7 +944,7 @@
                             <p class="text-green-700 font-bold">Prevent being called "weak" or "incompetent"</p>
                         </div>
                     </div>
-                    <ul class="space-y-1 mb-8">
+                    <ul class="space-y-3 mb-8">
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>"The Busy Woman's Perimenopause" Ebook</strong></span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>The Busy Woman's Perimenopause Audiobook</strong></span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>Perimenopause Support 7-Days Meal Plan (Vegan)</strong></span></li>
@@ -1110,12 +1091,9 @@
         </div>
     </section>
 
-    <!-- Audio sample element (hidden) -->
     <audio id="audioSample" src="/audiobooksample.m4a" preload="none"></audio>
 
-    <!-- Optimized JavaScript -->
     <script>
-        // Book Preview Lazy Load
         function openBookPreview() {
             var popup = document.getElementById('bookPreviewPopup');
             var iframe = popup.querySelector('iframe');
@@ -1133,7 +1111,6 @@
             }
         }
 
-        // Toggle audiobook sample playback with title change
         function toggleAudioSample() {
             var audio = document.getElementById('audioSample');
             if (audio.paused) {
@@ -1158,7 +1135,6 @@
                 });
             }
 
-            // FAQ accordion
             document.querySelectorAll('#faq button').forEach(function(button) {
                 button.addEventListener('click', function() {
                     var content = button.nextElementSibling;
@@ -1168,7 +1144,6 @@
                 });
             });
 
-            // Counter & smooth scroll
             var counters = document.querySelectorAll('.counter');
             var baseCount = 124;
             var randomAddition = Math.floor(Math.random() * 15);
@@ -1191,7 +1166,6 @@
         });
     </script>
 
-    <!-- Footer -->
     <footer class="py-6 bg-gray-100 text-center text-xs text-gray-500">
         <div class="container mx-auto px-4">
             <a href="/terms-conditions.html" class="hover:text-gray-800 mx-2">Terms of Service</a> &bull;
