@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>U.S. Immigration Navigator PRO - Where Others Get Stuck, You Move Forward</title>
     
-    <!-- Preconnect & DNS prefetch for faster Digistore24 checkout connections -->
+    <!-- Preconnect & DNS prefetch for Digistore24 checkout -->
     <link rel="preconnect" href="https://www.checkout-ds24.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.checkout-ds24.com">
     <link rel="preconnect" href="https://www.digistore24-scripts.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.digistore24-scripts.com">
     
-    <!-- Preload the Digistore24 checkout script – fetched early, executed later -->
+    <!-- Preload the checkout script so it's fetched early, then used when the parser reaches it later -->
     <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
     
     <!-- Digistore24 Scripts (trusted badge, promo – keep as is) -->
@@ -137,7 +137,6 @@
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
         }
         
-        /* Bigger icons for Visa, Mastercard, Google Pay */
         .payment-logo-big {
             height: 56px;
             width: auto;
@@ -145,7 +144,6 @@
             transition: all 0.3s ease;
         }
         
-        /* Smaller icon for PayPal */
         .payment-logo-small {
             height: 32px;
             width: auto;
@@ -158,7 +156,6 @@
             filter: brightness(0.9);
         }
         
-        /* Book preview popup styles */
         .book-preview-popup {
             display: none;
             position: fixed;
@@ -262,8 +259,9 @@
             margin-right: 4px;
         }
 
-        /* Checkout Popup Styles (invisible but layout-preserving for widget pre‑rendering) */
+        /* Checkout Popup Styles */
         .checkout-popup-overlay {
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
@@ -274,18 +272,9 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
-            /* Hidden but with layout so the multi‑step form can fully render */
-            visibility: hidden;
-            opacity: 0;
-            pointer-events: none;
-            transition: visibility 0s 0.2s, opacity 0.2s ease;
-            display: flex;               /* keep flex so content lays out */
         }
         .checkout-popup-overlay.active {
-            visibility: visible;
-            opacity: 1;
-            pointer-events: auto;
-            transition: visibility 0s 0s, opacity 0.2s ease;
+            display: flex;
         }
         .checkout-popup-content {
             background: white;
@@ -329,12 +318,11 @@
     <script type="text/javascript" src="https://www.digistore24.com/trusted-badge/39913/3vTmVoSYTlXck0g/salespage"></script>
     <!-- End of Digistore24 Trusted Badge Code -->
 
-    <!-- Hero Section - Reduced top spacing (pt-12 instead of pt-32) -->
+    <!-- Hero Section -->
     <section class="trust-section pt-12 pb-20 px-4">
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
-                    <!-- TRUST BADGE with reduced spacing above -->
                     <div class="bg-green-100 text-green-800 font-semibold py-2 px-4 rounded-full inline-flex items-center text-sm mb-6">
                         <i class="fas fa-shield-alt mr-2"></i>Trusted by 2,847+ Immigrant Families
                     </div>
@@ -344,7 +332,6 @@
                         <span class="text-blue-800 text-3xl md:text-4xl">Get Your Immigration Case Approved - Without $10K+ Lawyer Fees or Deportation Fear</span>
                     </h1>
                     <div class="text-lg mb-8 space-y-4">
-                        <!-- DELETED THE SPECIFIED LINE -->
                         <p>After sinking $18,000 into legal fees and battling for 3 long years, I went from a deportation notice staring me in the face to finally securing permanent residency.</p>
                         <p>It wasn't luck; it was learning what to say in those high-stakes interviews, when to file that critical paperwork, and how to dodge the irreversible mistakes that derail so many.</p>
                     </div>
@@ -381,9 +368,7 @@
                     
                     <p class="italic text-gray-600 mb-8">Join 2,847+ immigrants who used our battle-tested system to navigate complex U.S. immigration successfully - even if you've been denied before</p>
                     
-                    <!-- UPDATED CTA SECTION: Badge moved above button, payment logos with fixed white background and resized icons -->
                     <div class="text-center mb-6">
-                        <!-- SAVE $10,000+ IN FEES BADGE - MOVED ABOVE BUTTON -->
                         <div class="mb-3">
                             <span class="inline-block bg-green-100 text-green-800 font-bold py-1 px-3 rounded-full text-sm">
                                 Save $10,000+ in Fees
@@ -392,7 +377,6 @@
                         <a href="https://www.checkout-ds24.com/product/625471" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl">
                             REDUCE THE UNCERTAINTY – $47
                         </a>
-                        <!-- ADDED PAYMENT ICONS with white background wrapper to fix mastercard white background issue, and resized icons -->
                         <div class="flex items-center justify-center mt-4">
                             <div class="bg-white rounded-lg p-2 inline-flex items-center justify-center gap-4 shadow-sm">
                                 <img src="images/gpay.svg" alt="Google Pay" class="payment-logo-big">
@@ -404,7 +388,6 @@
                     </div>
                     <p class="text-center text-gray-600">100% risk Free - 60 day money back policy.</p>
                     
-                    <!-- "YOU'RE SAFE HERE" SECTION -->
                     <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 text-center mt-6">
                         <p class="text-sm font-medium text-blue-800">
                             <i class="fas fa-exclamation-circle mr-2"></i>
@@ -421,7 +404,7 @@
         </div>
     </section>
 
-    <!-- NEW BOOK PREVIEW SECTION WITH POPUP BUTTON -->
+    <!-- Book Preview Section -->
     <section class="py-12 px-4 bg-gray-50 border-t border-b border-gray-200">
         <div class="container mx-auto max-w-4xl text-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-6">📖 Book Preview</h2>
@@ -450,7 +433,7 @@
         </div>
     </div>
 
-    <!-- ADDED RESOURCES VALIDATED SECTION -->
+    <!-- Resources Validated Section -->
     <section class="py-8 bg-white border-t border-b border-gray-200">
         <div class="container mx-auto max-w-6xl px-4">
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
@@ -470,7 +453,7 @@
         </div>
     </section>
 
-    <!-- Problem Agitation Section - UPDATED CONTENT -->
+    <!-- Problem Agitation Section -->
     <section class="py-20 bg-white px-4">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">The <span class="text-red-600">Nightmare</span> You Don't Have to Live Through</h2>
@@ -502,13 +485,11 @@
                 </div>
             </div>
             
-            <!-- ADDED LOCAL BACKLOGS SECTION -->
             <div class="bg-blue-50 p-6 rounded-lg mb-8">
                 <h3 class="font-bold text-blue-800 text-lg mb-3">Local Backlogs Are Even Worse</h3>
                 <p class="text-blue-700">If you're applying in Miami, New York, or Houston, you face some of the longest backlogs. We know because we're in your community and understand these specific challenges.</p>
             </div>
             
-            <!-- UPDATED CTA TEXT AND SUPPORTING TEXT -->
             <div class="text-center">
                 <a href="https://www.checkout-ds24.com/product/625471" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block">
                     Claim my Safety & Clarity
@@ -530,13 +511,12 @@
         </div>
     </section>
 
-    <!-- Testimonials Section - UPDATED TITLE AND SUBTITLE -->
+    <!-- Testimonials Section -->
     <section class="py-20 bg-white px-4">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Hear from Our Community:</h2>
             
             <div class="testimonial-carousel mb-12">
-                <!-- Testimonial 1 - Gabriel Torres (Male) -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <img src="https://i.ibb.co/yBMfDX9m/Young-man.jpg" alt="Gabriel Torres" class="w-12 h-12 rounded-full mr-4 object-cover">
@@ -548,7 +528,6 @@
                     <p class="text-gray-700 italic">"Every lawyer I asked wanted thousands of dollars, but this resource gave me the clarity to file my renewal on my own. It literally saved me months of stress and big money."</p>
                 </div>
                 
-                <!-- Testimonial 2 - Ekaterina Morozova (Female) -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <img src="https://i.ibb.co/S4BVWZjR/images-17.jpg" alt="Ekaterina Morozova" class="w-12 h-12 rounded-full mr-4 object-cover">
@@ -560,7 +539,6 @@
                     <p class="text-gray-700 italic">"The way the guide broke things down gave me peace of mind. I used to cry every night, but now I know which documents to gather and what comes next."</p>
                 </div>
                 
-                <!-- Testimonial 3 - David Karapetyan (Male) -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <img src="https://i.ibb.co/B2GpQQr3/images-13.jpg" alt="David Karapetyan" class="w-12 h-12 rounded-full mr-4 object-cover">
@@ -572,7 +550,6 @@
                     <p class="text-gray-700 italic">"I joined the online community after listening to the podcast. It feels amazing not to feel alone anymore. The conversations are healing and practical at the same time."</p>
                 </div>
                 
-                <!-- Testimonial 4 - Sofia Dimitriou (Female) -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <img src="https://i.ibb.co/j9pn706m/images-16.jpg" alt="Sofia Dimitriou" class="w-12 h-12 rounded-full mr-4 object-cover">
@@ -584,7 +561,6 @@
                     <p class="text-gray-700 italic">"Preparing for the medical exam was confusing until I read this guide. Step by step, everything made sense. I walked into the appointment prepared, with zero stress."</p>
                 </div>
                 
-                <!-- Testimonial 5 - Jorge Alvarez (Male) -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <img src="https://i.ibb.co/tMSdGnL7/images-20.jpg" alt="Jorge Alvarez" class="w-12 h-12 rounded-full mr-4 object-cover">
@@ -596,7 +572,6 @@
                     <p class="text-gray-700 italic">"I had no idea I qualified for work authorization until I watched the video walkthrough on the resource website. Now I'm working legally and sending money home."</p>
                 </div>
                 
-                <!-- Testimonial 6 - Nargis Rahimi (Female) -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <img src="https://i.ibb.co/Y4P6RKRF/images-11.jpg" alt="Nargis Rahimi" class="w-12 h-12 rounded-full mr-4 object-cover">
@@ -611,11 +586,9 @@
             
             <div class="text-center">
                 <p class="text-red-600 font-bold text-xl mb-4 counter">142 People Bought Today</p>
-                <!-- UPDATED CTA TEXT: Join Us - $47  -> Join the Community - $47 -->
                 <a href="https://www.checkout-ds24.com/product/625471" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block">
                     Join the Community - $47
                 </a>
-                <!-- ADDED SUPPORTING TEXT -->
                 <p class="mt-3 text-gray-600">Become a Success Story, not a Statistic</p>
             </div>
         </div>
@@ -672,7 +645,6 @@
             <div class="bg-white p-8 rounded-xl shadow-md text-center max-w-2xl mx-auto">
                 <h3 class="text-2xl font-bold mb-4">Total Value: <span class="line-through text-gray-500">$599</span></h3>
                 <p class="text-gray-600 mb-6">But today, you get everything for just one payment of:</p>
-                <!-- SAVE $10,000+ LEGAL FEES BADGE - MADE SMALLER -->
                 <div class="mb-4">
                     <span class="inline-block bg-green-100 text-green-800 font-bold py-1 px-3 rounded-full text-sm">
                         Save $10,000+ Legal Fees
@@ -683,7 +655,6 @@
                         Claim It All Now – $47 One-Time
                     </a>
                 </div>
-                <!-- ADDED LARGE PAYMENT ICONS (resized: bigger for visa,gpay,mastercard; smaller for paypal) -->
                 <div class="flex items-center justify-center gap-4 mb-4">
                     <img src="images/gpay.svg" alt="Google Pay" class="payment-logo-big">
                     <img src="images/mastercard.svg" alt="Mastercard" class="payment-logo-big">
@@ -729,7 +700,7 @@
         </div>
     </section>
 
-    <!-- Pricing & Bonuses Section (5th CTA + resized payment logos) -->
+    <!-- Pricing & Bonuses Section -->
     <section id="pricing" class="py-20 guarantee-section px-4">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Your No-Brainer Deal – Massive Value, Tiny Price</h2>
@@ -767,14 +738,12 @@
                     </ul>
                     
                     <div class="text-center mb-6">
-                        <!-- 5th CTA text changed as per request -->
                         <a href="https://www.checkout-ds24.com/product/625471" class="cta-blue font-bold py-4 px-8 rounded-lg text-center inline-block w-full">
                             SECURE MY SPOT & BONUSES – $47 INSTANTLY
                         </a>
                     </div>
                     
                     <div class="flex flex-col items-center">
-                        <!-- PAYMENT LOGOS: resized bigger for visa,gpay,mastercard, smaller for paypal -->
                         <div class="flex items-center justify-center mb-2 gap-4">
                             <img src="images/gpay.svg" alt="Google Pay" class="payment-logo-big">
                             <img src="images/mastercard.svg" alt="Mastercard" class="payment-logo-big">
@@ -870,14 +839,13 @@
         </div>
     </section>
 
-    <!-- MOVED TESTIMONIALS SECTION BELOW FAQ -->
+    <!-- Real Solutions Section -->
     <section id="stories" class="py-20 bg-gray-100 px-4">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Real Solutions, Real Results</h2>
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">These are people I helped turn their fear into forward motion. Scroll through their stories.</p>
             
             <div class="testimonial-carousel mb-12">
-                <!-- Testimonial 1 - Mariam Haddad (Female) -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <img src="https://i.ibb.co/fYPnRgz8/images-9.jpg" alt="Mariam Haddad" class="w-12 h-12 rounded-full mr-4 object-cover">
@@ -896,7 +864,6 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial 2 - Alejandro Rojas (Male) -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <img src="https://i.ibb.co/xqB9ZVBR/images-18.jpg" alt="Alejandro Rojas" class="w-12 h-12 rounded-full mr-4 object-cover">
@@ -915,7 +882,6 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial 3 - Natasha Ivanova (Female) -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <img src="https://i.ibb.co/4GFGPY5/images-6.jpg" alt="Natasha Ivanova" class="w-12 h-12 rounded-full mr-4 object-cover">
@@ -934,7 +900,6 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial 4 - Rohim Khan (Male) -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <img src="https://i.ibb.co/VW8frsKJ/images-15.jpg" alt="Rohim Khan" class="w-12 h-12 rounded-full mr-4 object-cover">
@@ -953,7 +918,6 @@
                     </div>
                 </div>
                 
-                <!-- Testimonial 5 - Leila Amini (Female) -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <img src="https://i.ibb.co/RpTcZf0X/images-8.jpg" alt="Leila Amini" class="w-12 h-12 rounded-full mr-4 object-cover">
@@ -972,12 +936,10 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- REMOVED CTA BUTTON AS REQUESTED -->
         </div>
     </section>
 
-    <!-- Final CTA - UPDATED TEXT -->
+    <!-- Final CTA -->
     <section class="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div class="container mx-auto max-w-4xl text-center">
             <h2 class="text-3xl font-bold mb-8">Don't Navigate the Immigration System Blindfolded</h2>
@@ -996,18 +958,22 @@
         </div>
     </section>
 
-    <!-- Checkout Popup Overlay (invisible but layout-preserving for full widget pre‑rendering) -->
+    <!-- Digistore24 multi-step order form loader (placed exactly as in original to ensure proper initialization) -->
+    <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
+
+    <!-- Checkout Popup Overlay – moved to the very end so the embed code remains unchanged -->
     <div id="checkoutPopupOverlay" class="checkout-popup-overlay">
         <div class="checkout-popup-content">
             <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
-            <!-- Begin of digistore multi-step order box code (kept untouched) -->
+            <!-- Begin of digistore multi-step order box code (unchanged) -->
+            <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
             <my-order-form product-id="625471" order-form-id="242195" base-url="https://www.checkout-ds24.com"></my-order-form>
             <!-- End of digistore multi-step order box code -->
         </div>
     </div>
 
     <script>
-        // FAQ toggle functionality
+        // FAQ toggle
         document.querySelectorAll('#faq button').forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
@@ -1017,7 +983,7 @@
             });
         });
 
-        // Book Preview Popup functions
+        // Book Preview Popup
         function openBookPreview() {
             document.getElementById('bookPreviewPopup').classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -1030,7 +996,7 @@
             }
         }
 
-        // Checkout Popup functions
+        // Checkout Popup
         function openCheckoutPopup(e) {
             e.preventDefault();
             document.getElementById('checkoutPopupOverlay').classList.add('active');
@@ -1042,51 +1008,27 @@
             document.body.style.overflow = '';
         }
 
-        // Attach popup to all Digistore24 buy buttons
+        // Attach popup to all buy buttons
         document.addEventListener('DOMContentLoaded', function() {
             const buttons = document.querySelectorAll('a[href="https://www.checkout-ds24.com/product/625471"]');
             buttons.forEach(btn => {
                 btn.addEventListener('click', openCheckoutPopup);
             });
 
-            // Close popup when clicking outside the content area
+            // Close popup when clicking outside content
             document.getElementById('checkoutPopupOverlay').addEventListener('click', function(e) {
                 if (e.target === this) {
                     closeCheckoutPopup();
                 }
             });
 
-            // Dynamic counter (simulated)
+            // Dynamic counter
             const counters = document.querySelectorAll('.counter');
-            const randomCount = Math.floor(Math.random() * 100) + 100; // Random between 100-200
+            const randomCount = Math.floor(Math.random() * 100) + 100;
             counters.forEach(counter => {
                 counter.textContent = `${randomCount} People Bought Today`;
             });
         });
-
-        // ═══════════════════════════════════════════════════════════
-        //  BACKGROUND PREFETCH: Load the Digistore24 checkout script
-        //  after the page is fully interactive, so the popup appears
-        //  instantly when any buy button is clicked.
-        //  The overlay is already layout‑preserving (visibility hidden)
-        //  so the multi‑step form can fully render in the background.
-        // ═══════════════════════════════════════════════════════════
-        (function() {
-            function loadCheckoutScript() {
-                var script = document.createElement('script');
-                script.src = 'https://www.checkout-ds24.com/service/digistore.js';
-                // Already preloaded, so it will be fetched from cache instantly
-                script.async = true;
-                document.body.appendChild(script);
-            }
-
-            // Use requestIdleCallback for the lightest possible impact
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(loadCheckoutScript);
-            } else {
-                setTimeout(loadCheckoutScript, 50);
-            }
-        })();
     </script>
 </body>
 </html>
