@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>U.S. Immigration Navigator PRO - Where Others Get Stuck, You Move Forward</title>
     
-    <!-- Digistore24 Scripts -->
+    <!-- Preconnect & DNS prefetch for faster Digistore24 checkout connections -->
+    <link rel="preconnect" href="https://www.checkout-ds24.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.checkout-ds24.com">
+    <link rel="preconnect" href="https://www.digistore24-scripts.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.digistore24-scripts.com">
+    
+    <!-- Preload the Digistore24 checkout script – fetched early, executed later -->
+    <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
+    
+    <!-- Digistore24 Scripts (trusted badge, promo – keep as is) -->
     <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
     <script type="text/javascript">
     digistorePromocode( { "product_id": 625471, "adjust_domain": true } );
@@ -979,14 +988,11 @@
         </div>
     </section>
 
-    <!-- Digistore24 multi-step order form (loaded once) -->
-    <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
-    
-    <!-- Checkout Popup Overlay -->
+    <!-- Checkout Popup Overlay (the <my-order-form> is kept untouched; the script is loaded lazily after page load) -->
     <div id="checkoutPopupOverlay" class="checkout-popup-overlay">
         <div class="checkout-popup-content">
             <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
-            <!-- Begin of digistore multi-step order box code -->
+            <!-- Begin of digistore multi-step order box code (unchanged) -->
             <my-order-form product-id="625471" order-form-id="242195" base-url="https://www.checkout-ds24.com"></my-order-form>
             <!-- End of digistore multi-step order box code -->
         </div>
@@ -1049,6 +1055,30 @@
                 counter.textContent = `${randomCount} People Bought Today`;
             });
         });
+
+        // ═══════════════════════════════════════════════════════════
+        //  BACKGROUND PREFETCH: Load the Digistore24 checkout script
+        //  after the page is fully interactive, so the popup appears
+        //  instantly when any buy button is clicked.
+        // ═══════════════════════════════════════════════════════════
+        (function() {
+            function loadCheckoutScript() {
+                var script = document.createElement('script');
+                script.src = 'https://www.checkout-ds24.com/service/digistore.js';
+                // The script is already preloaded via <link rel="preload">,
+                // so it will be fetched from cache immediately.
+                script.async = true;  // execute as soon as downloaded, non-blocking
+                document.body.appendChild(script);
+            }
+
+            // Use requestIdleCallback if available for the lightest possible impact
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadCheckoutScript);
+            } else {
+                // Fallback: wait a tiny bit after DOM ready, then run
+                setTimeout(loadCheckoutScript, 50);
+            }
+        })();
     </script>
 </body>
-                        </html>
+    </html>
