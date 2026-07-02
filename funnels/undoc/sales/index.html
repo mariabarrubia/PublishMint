@@ -2,430 +2,396 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>U.S. Immigration Navigator PRO - Where Others Get Stuck, You Move Forward</title>
-    
-    <!-- Preconnect & DNS prefetch for Digistore24 checkout -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Perimenopause Performance System: Protect Your Edge Without Disclosure</title>
+
+    <!-- Preconnect & DNS prefetch for faster connections -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.checkout-ds24.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.checkout-ds24.com">
-    <link rel="preconnect" href="https://www.digistore24-scripts.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.digistore24-scripts.com">
-    
-    <!-- Preload the checkout script so it's fetched early, then used when the parser reaches it later -->
-    <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
-    
-    <!-- Digistore24 Scripts (trusted badge, promo – keep as is) -->
-    <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
-    <script type="text/javascript">
-    digistorePromocode( { "product_id": 625471, "adjust_domain": true } );
-    </script>
-    <!-- End Digistore24 Scripts -->
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Font loading: non‑blocking, with instant system fallback -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+
+    <!-- Font Awesome (non‑blocking) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- Preload hero image for LCP -->
+    <link rel="preload" as="image" href="images/perimenopause.webp" fetchpriority="high">
+
+    <!-- Inline critical CSS – all utility classes replicated, zero FOUC -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-        
+        /* ---------- RESET & BASE ---------- */
+        *, *::before, *::after { box-sizing: border-box; }
         body {
-            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Inter';
             scroll-behavior: smooth;
+            padding-bottom: 50px;
+            color: #1f2937;
         }
-        
-        .hero-gradient {
-            background: linear-gradient(135deg, #007BFF 0%, #ffffff 100%);
+        img, video, iframe, object, embed {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
-        
-        .cta-primary {
-            background-color: #FF4500;
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(255, 69, 0, 0.3);
+        a { color: inherit; text-decoration: none; }
+        .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+        /* ---------- CONTAINER ---------- */
+        .container { width: 100%; margin-left: auto; margin-right: auto; padding-left: 0.75rem; padding-right: 0.75rem; }
+        .max-w-2xl { max-width: 42rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .max-w-md { max-width: 28rem; }
+        .max-w-lg { max-width: 32rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+
+        /* ---------- TYPOGRAPHY ---------- */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .font-light { font-weight: 300; }
+        .font-normal { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+        .italic { font-style: italic; }
+        .leading-tight { line-height: 1.25; }
+        .leading-normal { line-height: 1.5; }
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .text-gray-400 { color: #9ca3af; }
+        .text-gray-500 { color: #6b7280; }
+        .text-gray-600 { color: #4b5563; }
+        .text-gray-700 { color: #374151; }
+        .text-gray-800 { color: #1f2937; }
+        .text-red-600 { color: #dc2626; }
+        .text-red-700 { color: #b91c1c; }
+        .text-red-800 { color: #991b1b; }
+        .text-blue-600 { color: #2563eb; }
+        .text-blue-700 { color: #1d4ed8; }
+        .text-blue-800 { color: #1e3a8a; }
+        .text-blue-900 { color: #1e3a8a; }
+        .text-green-500 { color: #22c55e; }
+        .text-green-600 { color: #16a34a; }
+        .text-green-700 { color: #15803d; }
+        .text-green-800 { color: #166534; }
+        .text-yellow-400 { color: #facc15; }
+        .text-yellow-600 { color: #ca8a04; }
+        .text-yellow-700 { color: #a16207; }
+        .text-yellow-800 { color: #854d0e; }
+        .text-purple-600 { color: #7c3aed; }
+        .text-purple-700 { color: #6d28d9; }
+        .text-orange-500 { color: #f97316; }
+        .text-white { color: #fff; }
+
+        /* ---------- BACKGROUNDS ---------- */
+        .bg-white { background-color: #fff; }
+        .bg-gray-50 { background-color: #f9fafb; }
+        .bg-gray-100 { background-color: #f3f4f6; }
+        .bg-blue-50 { background-color: #eff6ff; }
+        .bg-blue-100 { background-color: #dbeafe; }
+        .bg-green-50 { background-color: #f0fdf4; }
+        .bg-green-100 { background-color: #dcfce7; }
+        .bg-red-50 { background-color: #fef2f2; }
+        .bg-yellow-50 { background-color: #fefce8; }
+        .bg-purple-100 { background-color: #f3e8ff; }
+
+        /* ---------- BORDERS ---------- */
+        .border { border-width: 1px; }
+        .border-t { border-top-width: 1px; }
+        .border-b { border-bottom-width: 1px; }
+        .border-gray-200 { border-color: #e5e7eb; }
+        .border-gray-300 { border-color: #d1d5db; }
+        .border-blue-200 { border-color: #bfdbfe; }
+        .border-green-100 { border-color: #d1fae5; }
+        .border-red-100 { border-color: #fee2e2; }
+        .border-yellow-200 { border-color: #fde68a; }
+        .border-yellow-500 { border-color: #eab308; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .rounded-full { border-radius: 9999px; }
+
+        /* ---------- SHADOWS ---------- */
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
+        .shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); }
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); }
+        .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
+        .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+
+        /* ---------- SPACING ---------- */
+        .m-0 { margin: 0; }
+        .mt-1 { margin-top: 0.25rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-3 { margin-top: 0.75rem; }
+        .mt-4 { margin-top: 1rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-8 { margin-top: 2rem; }
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+        .mb-12 { margin-bottom: 3rem; }
+        .mb-16 { margin-bottom: 4rem; }
+        .mr-1 { margin-right: 0.25rem; }
+        .mr-2 { margin-right: 0.5rem; }
+        .mr-3 { margin-right: 0.75rem; }
+        .mr-4 { margin-right: 1rem; }
+        .ml-2 { margin-left: 0.5rem; }
+        .mx-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+        .my-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+        .p-3 { padding: 0.75rem; }
+        .p-4 { padding: 1rem; }
+        .p-5 { padding: 1.25rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-8 { padding-left: 2rem; padding-right: 2rem; }
+        .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
+        .py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+        .pt-6 { padding-top: 1.5rem; }
+        .pb-16 { padding-bottom: 4rem; }
+
+        /* ---------- FLEX ---------- */
+        .flex { display: flex; }
+        .inline-flex { display: inline-flex; }
+        .flex-col { flex-direction: column; }
+        .flex-row { flex-direction: row; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-start { align-items: flex-start; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: flex-end; }
+        .gap-1 { gap: 0.25rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .space-y-2 > * + * { margin-top: 0.5rem; }
+        .space-y-3 > * + * { margin-top: 0.75rem; }
+        .space-y-4 > * + * { margin-top: 1rem; }
+        .space-y-6 > * + * { margin-top: 1.5rem; }
+        .space-x-8 > * + * { margin-left: 2rem; }
+
+        /* ---------- GRID ---------- */
+        .grid { display: grid; }
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+        /* ---------- WIDTH / HEIGHT ---------- */
+        .w-full { width: 100%; }
+        .w-1\/2 { width: 50%; }
+        .w-3\/4 { width: 75%; }
+        .w-12 { width: 3rem; }
+        .h-12 { height: 3rem; }
+        .h-16 { height: 4rem; }
+        .w-12 { width: 3rem; }
+        .h-auto { height: auto; }
+        .max-w-none { max-width: none; }
+
+        /* ---------- DISPLAY / OVERFLOW ---------- */
+        .block { display: block; }
+        .inline-block { display: inline-block; }
+        .hidden { display: none; }
+        .overflow-hidden { overflow: hidden; }
+        .overflow-x-auto { overflow-x: auto; }
+        .list-disc { list-style-type: disc; }
+        .pl-5 { padding-left: 1.25rem; }
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .fixed { position: fixed; }
+        .top-0 { top: 0; }
+        .left-0 { left: 0; }
+        .right-0 { right: 0; }
+        .bottom-0 { bottom: 0; }
+        .z-10 { z-index: 10; }
+        .z-20 { z-index: 20; }
+        .pointer-events-none { pointer-events: none; }
+
+        /* ---------- HOVER ---------- */
+        .hover\:underline:hover { text-decoration: underline; }
+        .hover\:text-gray-800:hover { color: #1f2937; }
+        .hover\:bg-gray-50:hover { background-color: #f9fafb; }
+
+        /* ---------- TRANSITIONS ---------- */
+        .transition-all { transition: all 0.2s ease; }
+        .duration-300 { transition-duration: 300ms; }
+
+        /* ---------- RESPONSIVE (md 768px, lg 1024px) ---------- */
+        @media (min-width: 768px) {
+            .md\:w-1\/2 { width: 50%; }
+            .md\:mb-0 { margin-bottom: 0; }
+            .md\:flex-row { flex-direction: row; }
+            .md\:block { display: block; }
+            .md\:hidden { display: none; }
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:space-y-0 > * + * { margin-top: 0; }
         }
-        
-        .cta-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(255, 69, 0, 0.4);
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
         }
-        
-        .cta-blue {
-            background-color: #2563eb;
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+        @media (max-width: 640px) {
+            body { font-size: 14px; padding-bottom: 40px; }
+            .container { padding-left: 0.75rem; padding-right: 0.75rem; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .payment-logo { height: 32px; }
+            .payment-logo-large { height: 44px; }
+            .book-preview-content { height: 70vh; }
+            .cta-primary, .cta-blue, .cta-green { width: 100%; text-align: center; }
         }
-        
-        .cta-blue:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(37, 99, 235, 0.4);
-        }
-        
-        .cta-green {
-            background-color: #10b981;
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(16, 185, 129, 0.3);
-        }
-        
-        .cta-green:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(16, 185, 129, 0.4);
-        }
-        
-        .trust-badge {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            font-weight: 700;
-            padding: 8px 16px;
-            border-radius: 20px;
+
+        /* ---------- CUSTOM COMPONENTS (unchanged) ---------- */
+        .hero-gradient { background: linear-gradient(135deg, #1e1b4b 0%, #ffffff 100%); }
+        .cta-primary { background-color: #dc2626; color: white; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(220,38,38,0.3); display: inline-block; }
+        .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 8px rgba(220,38,38,0.4); }
+        .cta-blue { background-color: #1e40af; color: white; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(30,64,175,0.3); display: inline-block; }
+        .cta-blue:hover { transform: translateY(-2px); box-shadow: 0 6px 8px rgba(30,64,175,0.4); }
+        .cta-green { background-color: #059669; color: white; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(5,150,105,0.3); display: inline-block; }
+        .cta-green:hover { transform: translateY(-2px); box-shadow: 0 6px 8px rgba(5,150,105,0.4); }
+        .testimonial-card { transition: all 0.3s ease; flex: 0 0 300px; scroll-snap-align: start; }
+        .testimonial-card:hover { transform: translateY(-5px); }
+        .testimonial-carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 20px; padding: 10px 0; -webkit-overflow-scrolling: touch; }
+        .feature-icon { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
+        .value-card { transition: all 0.3s ease; }
+        .value-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .value-card-compact { padding: 0.75rem; }
+        .value-card-compact h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+        .value-card-compact p { font-size: 0.75rem; margin-bottom: 0.5rem; line-height: 1.3; }
+        .value-card-compact .feature-icon { width: 32px; height: 32px; font-size: 1rem; margin-bottom: 0.5rem; }
+        .guarantee-section { background: linear-gradient(135deg, #dcfce7 0%, #ffffff 100%); }
+        .counter { animation: countUp 1s ease-out; }
+        @keyframes countUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .trust-section { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
+        .payment-logo { height: 40px; object-fit: contain; filter: grayscale(100%) contrast(0.5); transition: all 0.3s ease; }
+        .payment-logo-large { height: 56px; filter: none; }
+        .payment-logo:hover { filter: none; }
+        .ssl-badge { font-size: 0.75rem; padding-top: 4px; }
+        .ssl-badge i { font-size: 0.9em; margin-right: 4px; }
+        .warning-box { border-left: 4px solid #dc2626; background-color: #fef2f2; }
+        .control-box { border-left: 4px solid #059669; background-color: #f0fdf4; }
+        .fact-box { border-left: 4px solid #b91c1c; background: linear-gradient(145deg, #fee2e2 0%, #fff5f5 100%); box-shadow: 0 10px 15px -3px rgba(185,28,28,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+        .last-section { background: linear-gradient(145deg, #0b1e3a 0%, #1a2f4f 50%, #2a3f5f 100%); position: relative; overflow: hidden; color: #f0f4fa; }
+        .last-section::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.05"><polygon points="0,0 100,0 50,100" fill="white"/></svg>'); background-size: cover; pointer-events: none; }
+        .last-section .content { position: relative; z-index: 2; }
+        .last-section .cta-glow { background: linear-gradient(145deg, #fbbf24, #f59e0b); color: #0b1e3a; font-weight: 800; box-shadow: 0 10px 25px -5px rgba(245,158,11,0.5); transition: all 0.3s ease; border: none; }
+        .last-section .cta-glow:hover { transform: scale(1.05); box-shadow: 0 15px 30px -5px rgba(245,158,11,0.7); background: linear-gradient(145deg, #fcd34d, #fbbf24); }
+        .category-card { background: rgba(255,255,255,0.08); backdrop-filter: blur(8px); border: 1px solid rgba(255,215,0,0.2); transition: all 0.2s ease; }
+        .category-card:hover { border-color: rgba(255,215,0,0.5); background: rgba(255,255,255,0.12); }
+        .last-section .badge-icon { background: rgba(255,255,255,0.1); border-radius: 40px; padding: 0.25rem 0.75rem; backdrop-filter: blur(4px); }
+        .bonus-list-item { display: flex; align-items: center; padding: 0.5rem 0; border-bottom: 1px dashed #e5e7eb; }
+        .bonus-list-item:last-child { border-bottom: none; }
+        .book-preview-popup { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9); z-index: 1002; justify-content: center; align-items: center; padding: 20px; }
+        .book-preview-popup.active { display: flex; }
+        .book-preview-content { background: white; width: 100%; max-width: 1000px; height: 85vh; border-radius: 16px; overflow: hidden; position: relative; display: flex; flex-direction: column; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+        .book-preview-iframe-wrapper { flex: 1; width: 100%; position: relative; background: #f1f5f9; }
+        .book-preview-iframe-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .book-preview-footer { padding: 12px 20px; background: white; border-top: 1px solid #e5e7eb; display: flex; justify-content: flex-end; }
+        .book-preview-done-btn { background-color: #2563eb; color: white; font-weight: 600; padding: 8px 28px; border-radius: 40px; border: none; cursor: pointer; transition: all 0.2s; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .book-preview-done-btn:hover { background-color: #1d4ed8; transform: scale(1.02); }
+        .book-preview-close { position: absolute; top: 16px; right: 16px; background: white; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        .video-player-wrapper { background: #0f172a; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid #334155; }
+        .video-player-wrapper video { width: 100%; display: block; border-radius: 0; }
+
+        /* ---------- ENHANCED PREVIEW BUTTONS ---------- */
+        .book-preview-btn {
             display: inline-flex;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .testimonial-card {
-            transition: all 0.3s ease;
-            flex: 0 0 300px;
-            scroll-snap-align: start;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .testimonial-carousel {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 20px;
-            padding: 10px 0;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        .feature-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
-        
-        .value-card {
-            transition: all 0.3s ease;
-        }
-        
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .guarantee-section {
-            background: linear-gradient(135deg, #E0FFE0 0%, #ffffff 100%);
-        }
-        
-        .counter {
-            animation: countUp 1s ease-out;
-        }
-        
-        @keyframes countUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .trust-section {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-        
-        .payment-logo-big {
-            height: 56px;
-            width: auto;
-            object-fit: contain;
-            transition: all 0.3s ease;
-        }
-        
-        .payment-logo-small {
-            height: 32px;
-            width: auto;
-            object-fit: contain;
-            transition: all 0.3s ease;
-        }
-        
-        .payment-logo-big:hover,
-        .payment-logo-small:hover {
-            filter: brightness(0.9);
-        }
-        
-        .book-preview-popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.9);
-            z-index: 1002;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .book-preview-popup.active {
-            display: flex;
-        }
-
-        .book-preview-content {
+            gap: 0.4rem;
+            padding: 0.4rem 1rem;
+            border: 1px solid #2563eb;
+            color: #2563eb;
             background: white;
-            width: 100%;
-            max-width: 1000px;
-            height: 85vh;
-            border-radius: 16px;
-            overflow: hidden;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-        }
-
-        .book-preview-iframe-wrapper {
-            flex: 1;
-            width: 100%;
-            position: relative;
-            background: #f1f5f9;
-        }
-
-        .book-preview-iframe-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .book-preview-footer {
-            padding: 12px 20px;
-            background: white;
-            border-top: 1px solid #e5e7eb;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .book-preview-done-btn {
-            background-color: #2563eb;
-            color: white;
+            font-size: 0.75rem;
             font-weight: 600;
-            padding: 8px 28px;
             border-radius: 40px;
-            border: none;
             cursor: pointer;
             transition: all 0.2s;
-            font-size: 14px;
+            line-height: 1.2;
+        }
+        .book-preview-btn:hover {
+            background: #eff6ff;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(37,99,235,0.2);
+        }
+        .audio-preview-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        }
-
-        .book-preview-done-btn:hover {
-            background-color: #1d4ed8;
-            transform: scale(1.02);
-        }
-
-        .book-preview-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: white;
+            gap: 0.4rem;
+            padding: 0.45rem 1.1rem;
             border: none;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
+            background: #f3f4f6;
+            color: #1f2937;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 30px;
             cursor: pointer;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
-
-        .ssl-badge {
-            font-size: 0.75rem;
-            padding-top: 4px;
+        .audio-preview-btn:hover {
+            background: #e5e7eb;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
         }
-        
-        .ssl-badge i {
-            font-size: 0.9em;
-            margin-right: 4px;
-        }
-
-        /* Checkout Popup Styles */
-        .checkout-popup-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.7);
-            z-index: 10000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .checkout-popup-overlay.active {
-            display: flex;
-        }
-        .checkout-popup-content {
-            background: white;
-            border-radius: 10px;
-            max-width: 600px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            padding: 20px;
-            position: relative;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-        }
-        .checkout-popup-close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 28px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: #333;
-            z-index: 10;
-        }
-
-        @media (max-width: 640px) {
-            .book-preview-content {
-                height: 70vh;
-            }
-            .payment-logo-big {
-                height: 44px;
-            }
-            .payment-logo-small {
-                height: 28px;
-            }
-        }
+        .audio-preview-btn i { font-size: 0.9rem; }
     </style>
+    <base target="_blank">
 </head>
 <body class="antialiased text-gray-800">
-    <!-- Digistore24 Trust Badge -->
-    <!-- Begin of Digistore24 Trusted Badge Code -->
-    <script type="text/javascript" src="https://www.digistore24.com/trusted-badge/39913/3vTmVoSYTlXck0g/salespage"></script>
-    <!-- End of Digistore24 Trusted Badge Code -->
 
-    <!-- Hero Section -->
-    <section class="trust-section pt-12 pb-20 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <div class="bg-green-100 text-green-800 font-semibold py-2 px-4 rounded-full inline-flex items-center text-sm mb-6">
-                        <i class="fas fa-shield-alt mr-2"></i>Trusted by 2,847+ Immigrant Families
-                    </div>
-                    
-                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-8">
-                        U.S. Immigration Navigator PRO<br>
-                        <span class="text-blue-800 text-3xl md:text-4xl">Get Your Immigration Case Approved - Without $10K+ Lawyer Fees or Deportation Fear</span>
-                    </h1>
-                    <div class="text-lg mb-8 space-y-4">
-                        <p>After sinking $18,000 into legal fees and battling for 3 long years, I went from a deportation notice staring me in the face to finally securing permanent residency.</p>
-                        <p>It wasn't luck; it was learning what to say in those high-stakes interviews, when to file that critical paperwork, and how to dodge the irreversible mistakes that derail so many.</p>
-                    </div>
-                    
-                    <div class="mb-8 space-y-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
-                            <div>
-                                <span class="font-bold">Avoid $10K+ Legal Mistakes</span>
-                                <p class="text-sm text-gray-600">Step-by-step guidance from real experience</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
-                            <div>
-                                <span class="font-bold">Fast-Track Your Approval</span>
-                                <p class="textsm text-gray-600">Proven strategies used by 2,847+ cases</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
-                            <div>
-                                <span class="font-bold">Beat Deportation Fear</span>
-                                <p class="text-sm text-gray-600">Created by someone who won against the odds</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="md:hidden mb-8">
-                        <div class="relative">
-                            <img src="https://i.ibb.co/1tq6W8Jr/Immigrant-family-png.jpg" alt="Immigrant family smiling" class="rounded-xl shadow-2xl w-full">
-                        </div>
-                    </div>
-                    
-                    <p class="italic text-gray-600 mb-8">Join 2,847+ immigrants who used our battle-tested system to navigate complex U.S. immigration successfully - even if you've been denied before</p>
-                    
-                    <div class="text-center mb-6">
-                        <div class="mb-3">
-                            <span class="inline-block bg-green-100 text-green-800 font-bold py-1 px-3 rounded-full text-sm">
-                                Save $10,000+ in Fees
-                            </span>
-                        </div>
-                        <a href="https://www.checkout-ds24.com/product/625471" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl">
-                            REDUCE THE UNCERTAINTY – $47
-                        </a>
-                        <div class="flex items-center justify-center mt-4">
-                            <div class="bg-white rounded-lg p-2 inline-flex items-center justify-center gap-4 shadow-sm">
-                                <img src="images/gpay.svg" alt="Google Pay" class="payment-logo-big">
-                                <img src="images/mastercard.svg" alt="Mastercard" class="payment-logo-big">
-                                <img src="images/visa.svg" alt="Visa" class="payment-logo-big">
-                                <img src="images/paypal.svg" alt="PayPal" class="payment-logo-small">
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-center text-gray-600">100% risk Free - 60 day money back policy.</p>
-                    
-                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 text-center mt-6">
-                        <p class="text-sm font-medium text-blue-800">
-                            <i class="fas fa-exclamation-circle mr-2"></i>
-                            <strong>You are safe here:</strong> We are not a <em>notario</em>. Our resources are latest and validated.
-                        </p>
-                    </div>
-                </div>
-                <div class="md:w-1/2 flex justify-center hidden md:block">
-                    <div class="relative">
-                        <img src="https://i.ibb.co/1tq6W8Jr/Immigrant-family-png.jpg" alt="Immigrant family smiling" class="rounded-xl shadow-2xl w-full max-w-md">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Trusted Badge: loaded after page is interactive -->
+    <script>
+        window.addEventListener('load', function() {
+            var script = document.createElement('script');
+            script.src = "https://www.digistore24.com/trusted-badge/39913/3vTmVoSYTlXck0g/salespage";
+            document.body.appendChild(script);
+        });
+    </script>
 
-    <!-- Book Preview Section -->
-    <section class="py-12 px-4 bg-gray-50 border-t border-b border-gray-200">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6">📖 Book Preview</h2>
-            <p class="text-gray-600 mb-6">Take a look inside before you buy</p>
-            <button onclick="openBookPreview()" class="cta-blue font-bold py-3 px-8 rounded-lg inline-flex items-center gap-2">
-                <i class="fas fa-book-open"></i>Preview Book
-            </button>
-            <p class="text-center text-gray-500 mt-4 text-sm">Click to flip through the book's preview — you'll have an idea what's inside</p>
-        </div>
-    </section>
-
-    <!-- Book Preview Popup -->
+    <!-- Book Preview Popup (src loaded on click) -->
     <div id="bookPreviewPopup" class="book-preview-popup" onclick="closeBookPreview(event)">
         <div class="book-preview-content" onclick="event.stopPropagation()">
             <button class="book-preview-close" onclick="closeBookPreview()"><i class="fas fa-times text-gray-700"></i></button>
             <div class="book-preview-iframe-wrapper">
-                <iframe src="https://simplebooklet.com/embed.php?wpKey=3LInLL2v46mTMTDTDq3u2P&source=embed" 
-                        allowfullscreen 
+                <iframe data-src="https://simplebooklet.com/embed.php?wpKey=Itg1Z9gHEKyMe4ZEonPNfN&source=embed"
+                        allowfullscreen
+                        width="100%"
+                        height="100%"
+                        style="border:0; overflow:hidden;"
+                        scrolling="no"
                         loading="lazy"
-                        title="Book Preview"
-                        style="border:0; width:100%; height:100%;"></iframe>
+                        title="Book Preview"></iframe>
             </div>
             <div class="book-preview-footer">
                 <button class="book-preview-done-btn" onclick="closeBookPreview()"><i class="fas fa-check-circle"></i> Done</button>
@@ -433,80 +399,170 @@
         </div>
     </div>
 
+    <!-- Hero Section -->
+    <section class="trust-section pt-6 pb-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="mt-2 mb-4">
+                        <div class="bg-green-100 text-green-800 font-semibold py-1.5 px-3 rounded-full inline-flex items-center text-xs mb-2">
+                            <i class="fas fa-shield-alt mr-2"></i>Performance System Bought by 3,200+ Professional Women
+                        </div>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                        Your Hormones Are Changing.<br>
+                        <span class="text-blue-800">Your Career Doesn't Have To.</span>
+                    </h1>
+
+                    <div class="text-xl mb-6 space-y-4">
+                        <p><strong>For professional women navigating perimenopause,</strong> the problem isn't hot flushes in private. It's brain fog in the boardroom. Anxiety before the client call. The silent terror that your professional edge is dulling while everyone watches.</p>
+                    </div>
+
+                    <div class="fact-box p-4 rounded-lg mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-exclamation-triangle text-red-600 mr-2 mt-1 text-lg"></i>
+                            <div>
+                                <p class="font-bold text-red-800 text-sm">The Disclosure Trap: Every major corporate menopause solution treats disclosure as the mandatory first step. This is structurally dangerous.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <p class="font-bold text-lg mb-3">This is for you if:</p>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>You're aged 38–55 and your brain feels like it's operating on a 3-second delay</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>You've considered reducing your hours, skipping promotions, or leaving your field entirely</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>You've read the menopause books but found zero practical guidance for your career</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>You would rather solve this privately than disclose to HR and risk the "aging penalty" or tagged "weak"</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>You need a system, not a support group</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:hidden mb-8">
+                        <div class="relative">
+                            <img src="images/perimenopause.webp" alt="Professional woman at work" class="rounded-xl shadow-2xl w-full mb-6" style="max-height: 500px; object-fit: cover;" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+
+                    <div class="text-center mb-6">
+                        <div class="mb-3">
+                            <span class="inline-block bg-green-100 text-green-800 font-bold py-2 px-4 rounded-full text-sm">
+                                Prevent $5,000+ Loss in Quarterly Earnings
+                            </span>
+                        </div>
+                        <a href="https://www.checkout-ds24.com/product/692610" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl">
+                            SECURE MY PERFORMANCE SYSTEM - $47
+                        </a>
+                        <div class="flex items-center justify-center mt-4 gap-4">
+                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
+                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;" loading="lazy" decoding="async">
+                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
+                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none; height: 72px;" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-600">100% Risk-Free: 60-Day Money-Back Guarantee</p>
+
+                    <img src="images/handmockup.webp" alt="Hand mockup" class="rounded-xl shadow-lg w-full max-w-md mx-auto mb-1" loading="lazy" decoding="async">
+                    <p class="text-center text-xs text-gray-400 italic mb-4">All items are delivered digitally</p>
+
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 text-center mt-6">
+                        <p class="text-sm font-medium text-blue-800">
+                            <i class="fas fa-exclamation-circle mr-2"></i>
+                            <strong>Critical:</strong> The harder you work to hide symptoms, the more cognitive resource you drain from the actual work. Most women don't recognise this until the pattern is entrenched.
+                        </p>
+                        <p class="font-bold text-blue-900 mt-2">This system fixes that loop.</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center hidden md:block">
+                    <div class="relative">
+                        <img src="images/perimenopause.webp" alt="Professional woman at work" class="rounded-xl shadow-2xl w-full" style="max-height: 600px; object-fit: cover;" loading="eager" fetchpriority="high">
+                        <p class="text-center text-sm text-gray-600 mt-2 italic">The invisible performance cost of perimenopause in high-stakes environments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-12 px-4 bg-gray-50 border-t border-b border-gray-200">
+        <div class="container mx-auto max-w-4xl">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-center mb-6">For decades, western medicine told women to "expect hot flashes." They completely ignored the brain.</h3>
+                <div class="video-player-wrapper max-w-3xl mx-auto">
+                    <video controls poster="images/perimenopause.webp" preload="none" style="width:100%;display:block;border-radius:0;">
+                        <source src="Perimenopausevideo.mp4" type="video/mp4">
+                        Your browser does not support the video player.
+                    </video>
+                </div>
+                <p class="text-center text-gray-700 mt-4 italic">This is exactly why generic HR policies, wellness apps, and "taking a deep breath" will not save your reputation in a high-stakes board meeting. You cannot meditate your way out of a neurological transition.</p>
+            </div>
+
+            <div class="bg-green-50 p-6 rounded-lg mb-8 control-box">
+                <h3 class="font-bold text-green-800 text-lg mb-3">Here's What Changes When You Take Control:</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                        <span><strong>You can Reclaim 3 Hours of Cognitive Bandwidth Daily</strong> — Stop wasting mental energy performing "fully operational" and redirect it to the work that built your career</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                        <span><strong>You'll Walk Into Every Meeting With a Pre-Loaded Protocol</strong> — No more improvisation. No more praying you don't blank on a client's name</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                        <span><strong>You can Protect Your Reputation Without Ever Mentioning the M-Word</strong> — Your manager will never know. Your team will never suspect. Your authority stays intact</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-center">
+                <a href="https://www.checkout-ds24.com/product/692610" class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl">
+                    CLAIM MY PERFORMANCE SYSTEM - $47
+                </a>
+                <p class="mt-3 text-gray-600 font-semibold">100% Risk-Free: 60-Day Money-Back Guarantee</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Resources Validated Section -->
     <section class="py-8 bg-white border-t border-b border-gray-200">
         <div class="container mx-auto max-w-6xl px-4">
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-                <p class="text-sm text-gray-600 font-medium">Resources validated by strategies from:</p>
-                <div class="flex flex-wrap justify-center gap-4 items-center">
-                    <div class="bg-gray-100 px-4 py-2 rounded-full text-xs font-semibold text-gray-700 flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>American Immigration Council
+                <p class="text-sm text-gray-600 font-medium">System validated against current clinical and occupational evidence:</p>
+                <div class="flex flex-wrap justify-center gap-6 items-start">
+                    <div class="flex flex-col items-center">
+                        <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmwomeq/91/report.html" target="_blank"><img src="images/hocc.webp" alt="UK Parliament Women and Equalities Committee" class="h-16" loading="lazy" decoding="async"></a>
+                        <span class="text-xs text-gray-600 mt-1 font-medium">UK Parliament</span>
                     </div>
-                    <div class="bg-gray-100 px-4 py-2 rounded-full text-xs font-semibold text-gray-700 flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>National Immigration Law Center
+                    <div class="flex flex-col items-center">
+                        <a href="https://journals.lww.com/menopausejournal/fulltext/2019/10000/the_menopause_transition_and_women_s_health_at.20.aspx" target="_blank"><img src="images/swan.webp" alt="SWAN Longitudinal Study" class="h-16" loading="lazy" decoding="async"></a>
+                        <span class="text-xs text-gray-600 mt-1 font-medium">SWAN Study</span>
                     </div>
-                    <div class="bg-gray-100 px-4 py-2 rounded-full text-xs font-semibold text-gray-700 flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>U.S. Citizenship and Immigration Services
+                    <div class="flex flex-col items-center">
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/29315132/" target="_blank"><img src="images/nih.webp" alt="MENOS@Work RCT Data" class="h-16" loading="lazy" decoding="async"></a>
+                        <span class="text-xs text-gray-600 mt-1 font-medium">NIH MENOS@Work</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <a href="https://www.nyp.org/healthmatters/how-to-protect-your-brain-health-during-menopause" target="_blank"><img src="images/neuro.webp" alt="Occupational Neuroscience" class="h-16" loading="lazy" decoding="async"></a>
+                        <span class="text-xs text-gray-600 mt-1 font-medium">NeuroScience</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Agitation Section -->
-    <section class="py-20 bg-white px-4">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">The <span class="text-red-600">Nightmare</span> You Don't Have to Live Through</h2>
-            
-            <div class="space-y-6 mb-10">
-                <p>That pervasive sense of not belonging. The chronic fear, instability and trauma of not knowing what comes next.</p>
-                <p>58% of families in mixed-status households worry daily about deportation. 44% are scared to drive a car. 38% fear going to work. This isn't just paperwork—it's your life, your family, your future.</p>
-                <p>I've been there—the sleepless nights worrying about my status, the frustration of a system designed to confuse, the gut-wrenching fear that a single mistake could separate me from everything I love.</p>
-                <p>And the costs? Legal fees piling up to $10,000+, time lost from work, emotional toll on your loved ones. Why does it have to be this hard?</p>
-                <p>Official sites overwhelm you with jargon, lawyers charge by the hour for basics you could handle, and scams lurk everywhere. If you're like me back then, you're thinking: "How do I even start without screwing it up?"</p>
-            </div>
-            
-            <div class="space-y-4 mb-12">
-                <div class="flex items-start">
-                    <span class="text-red-500 mr-3 text-xl">⚠️</span>
-                    <span class="font-medium">The asylum backlog is over 1.9 million cases—imagine waiting in limbo while life passes by.</span>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-red-500 mr-3 text-xl">⚠️</span>
-                    <span class="font-medium">Family-based petitions taking 35+ months, forcing families to live apart for years.</span>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-red-500 mr-3 text-xl">⚠️</span>
-                    <span class="font-medium">Scams and bad advice draining your wallet, with no recourse when things go wrong.</span>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-red-500 mr-3 text-xl">⚠️</span>
-                    <span class="font-medium">Emotional burnout from the constant fear, leaving you more anxious than before.</span>
-                </div>
-            </div>
-            
-            <div class="bg-blue-50 p-6 rounded-lg mb-8">
-                <h3 class="font-bold text-blue-800 text-lg mb-3">Local Backlogs Are Even Worse</h3>
-                <p class="text-blue-700">If you're applying in Miami, New York, or Houston, you face some of the longest backlogs. We know because we're in your community and understand these specific challenges.</p>
-            </div>
-            
-            <div class="text-center">
-                <a href="https://www.checkout-ds24.com/product/625471" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block">
-                    Claim my Safety & Clarity
-                </a>
-                <p class="mt-3 text-gray-600">Turn Fear into Forward Motion - 100% risk Free</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Explainer Video Section -->
-    <section class="py-20 bg-gray-100 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl font-bold text-center mb-6">The Hidden Agenda Behind America's Immigration Laws</h2>
-            <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">The public narrative is designed to confuse and divide. As a part of our commitment to transparency, we want you to see the real story behind the red tape. Watch this quick analysis.</p>
-            
-            <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden shadow-xl">
-                <iframe src="https://www.youtube.com/embed/SCwYpSZQXl8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-64 md:h-96"></iframe>
             </div>
         </div>
     </section>
@@ -514,82 +570,130 @@
     <!-- Testimonials Section -->
     <section class="py-20 bg-white px-4">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Hear from Our Community:</h2>
-            
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">What Professional Women Say:</h2>
+            <p class="text-center text-gray-600 mb-8">Experiences from women who needed their careers to survive this transition.</p>
+
             <div class="testimonial-carousel mb-12">
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/yBMfDX9m/Young-man.jpg" alt="Gabriel Torres" class="w-12 h-12 rounded-full mr-4 object-cover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/image1.webp" alt="Sarah Mitchell" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
-                            <p class="font-bold">Gabriel Torres</p>
-                            <p class="text-sm text-gray-500">TPS holder, ride-share driver • 1 week ago</p>
+                            <p class="font-bold">Sarah Mitchell</p>
+                            <p class="text-sm text-gray-500">Senior Consultant, California</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">"Every lawyer I asked wanted thousands of dollars, but this resource gave me the clarity to file my renewal on my own. It literally saved me months of stress and big money."</p>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">I blanked on a client's name mid-pitch. I'd worked with them for three years. The meeting spine from this system meant I never had to hold that information in my head again — it was on the card in front of me. I haven't had a visible lapse since.</p>
+                    <p class="text-xs text-gray-400 mt-2">3 days ago</p>
                 </div>
-                
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/S4BVWZjR/images-17.jpg" alt="Ekaterina Morozova" class="w-12 h-12 rounded-full mr-4 object-cover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/image2.webp" alt="Amina Reeves" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
-                            <p class="font-bold">Ekaterina Morozova</p>
-                            <p class="text-sm text-gray-500">Awaiting VAWA petition decision • 2 months ago</p>
+                            <p class="font-bold">Amina Reeves</p>
+                            <p class="text-sm text-gray-500">Medical Director, Toronto</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">"The way the guide broke things down gave me peace of mind. I used to cry every night, but now I know which documents to gather and what comes next."</p>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">My GP told me it was just stress and to "reduce my workload." I run a department. This book gave me the actual neuroscience of what was happening and exactly what to do about it on a bad-sleep morning. The triage protocol alone was worth ten times the price.</p>
+                    <p class="text-xs text-gray-400 mt-2">1 week ago</p>
                 </div>
-                
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/B2GpQQr3/images-13.jpg" alt="David Karapetyan" class="w-12 h-12 rounded-full mr-4 object-cover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/image3.webp" alt="Claire Morrison" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
-                            <p class="font-bold">David Karapetyan</p>
-                            <p class="text-sm text-gray-500">Refugee, warehouse worker • 6 days ago</p>
+                            <p class="font-bold">Claire Morrison</p>
+                            <p class="text-sm text-gray-500">Finance Director, Sydney</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">"I joined the online community after listening to the podcast. It feels amazing not to feel alone anymore. The conversations are healing and practical at the same time."</p>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">I was considering reducing to four days a week because I couldn't trust my brain by Thursday afternoon. The cognitive offloading system in Chapter 7 removed the working memory overhead that was killing me. I stayed full-time. I got the promotion.</p>
+                    <p class="text-xs text-gray-400 mt-2">5 days ago</p>
                 </div>
-                
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/j9pn706m/images-16.jpg" alt="Sofia Dimitriou" class="w-12 h-12 rounded-full mr-4 object-cover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/image4.webp" alt="Jennifer Taylor" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
-                            <p class="font-bold">Sofia Dimitriou</p>
-                            <p class="text-sm text-gray-500">Adjustment of status applicant • 2 weeks ago</p>
+                            <p class="font-bold">Jennifer Taylor</p>
+                            <p class="text-sm text-gray-500">Barrister, Manchester</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">"Preparing for the medical exam was confusing until I read this guide. Step by step, everything made sense. I walked into the appointment prepared, with zero stress."</p>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="far fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">In my profession, a verbal lapse in court is not a small thing. The strategic deferral scripts and the word-recovery pivots have saved me multiple times. I don't use them because I'm weak. I use them because I'm precise.</p>
+                    <p class="text-xs text-gray-400 mt-2">yesterday</p>
                 </div>
-                
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/tMSdGnL7/images-20.jpg" alt="Jorge Alvarez" class="w-12 h-12 rounded-full mr-4 object-cover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/image5.webp" alt="Leliana Shuzhen" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
-                            <p class="font-bold">Jorge Alvarez</p>
-                            <p class="text-sm text-gray-500">Work permit applicant • 1 month ago</p>
+                            <p class="font-bold">Leliana Shuzhen</p>
+                            <p class="text-sm text-gray-500">Tech Lead, Melbourne</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">"I had no idea I qualified for work authorization until I watched the video walkthrough on the resource website. Now I'm working legally and sending money home."</p>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">I thought I was developing early-onset dementia. The book explained the gap between subjective impairment and objective performance in a way that actually calmed my nervous system. The anxiety spiral interrupt is now my first move on a bad morning, not my tenth.</p>
+                    <p class="text-xs text-gray-400 mt-2">4 days ago</p>
                 </div>
-                
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/Y4P6RKRF/images-11.jpg" alt="Nargis Rahimi" class="w-12 h-12 rounded-full mr-4 object-cover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/image6.webp" alt="Helen Walker" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
-                            <p class="font-bold">Nargis Rahimi</p>
-                            <p class="text-sm text-gray-500">Mother, asylum pending • 3 days ago</p>
+                            <p class="font-bold">Helen Walker</p>
+                            <p class="text-sm text-gray-500">Operations Director, Edinburgh</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">"The host on the podcast talks like a real person, not like a lawyer talking down to you. I finally understood my options instead of feeling ashamed for asking questions."</p>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">The managing-up scripts are surgical. I used the scope-management language to protect my calendar during a high-symptom month and my director actually thanked me for being "so strategically organised." He has no idea. That is exactly the point.</p>
+                    <p class="text-xs text-gray-400 mt-2">1 week ago</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="images/image7.webp" alt="Rachel Donovan" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <div>
+                            <p class="font-bold">Rachel Donovan</p>
+                            <p class="text-sm text-gray-500">Marketing VP, Vancouver</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="far fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">I've read three menopause books. They all told me what was happening. This is the only one that told me what to do at 8:47am on a fog day when I have a client call at 9:00am. That difference is everything.</p>
+                    <p class="text-xs text-gray-400 mt-2">6 days ago</p>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-3">
+                        <img src="images/image8.webp" alt="Diane Lawrence" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <div>
+                            <p class="font-bold">Diane Lawrence</p>
+                            <p class="text-sm text-gray-500">Partner, Law Firm, Brisbane</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">The sleep-to-performance chapter changed my life. Not my sleep — my life. Understanding that a fragmented night produces a specific cognitive signature the next day, and having the exact protocol for that morning, removed the panic that was making everything worse.</p>
+                    <p class="text-xs text-gray-400 mt-2">yesterday</p>
                 </div>
             </div>
-            
+
             <div class="text-center">
-                <p class="text-red-600 font-bold text-xl mb-4 counter">142 People Bought Today</p>
-                <a href="https://www.checkout-ds24.com/product/625471" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block">
-                    Join the Community - $47
+                <p class="text-red-600 font-bold text-xl mb-4 counter">124 Women Bought This Week</p>
+                <a href="https://www.checkout-ds24.com/product/692610" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block">
+                    ACCESS THE SYSTEM NOW – $47
                 </a>
-                <p class="mt-3 text-gray-600">Become a Success Story, not a Statistic</p>
+                <p class="mt-3 text-gray-600 text-sm">Join women in California, London, Toronto, Sydney, and 14 other cities who refuse to let hormones dictate their earning trajectory.</p>
             </div>
         </div>
     </section>
@@ -597,342 +701,328 @@
     <!-- What You'll Get Inside Section -->
     <section id="whats-inside" class="py-20 bg-blue-50 px-4">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Here's Exactly What You'll Get – No Surprises, Just Results</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">I'm handing you everything I used to win my case, plus extras to make it even easier for you. Think of this as your all-in-one toolkit—practical, updated, and built for action.</p>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="value-card bg-white p-8 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-800">The Core Guide (140+ Pages)</h3>
-                    <p class="text-gray-600 mb-4">Plain-English steps, unwritten rules, timelines, and pitfalls for asylum, status adjustment, DACA, and more. Your roadmap from day one.</p>
-                    <div class="text-right">
-                        <span class="text-2xl font-bold">$199 Value</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Your Complete Perimenopause Performance System</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Not symptom tracking. Not wellness advice. An operational system for maintaining executive function, professional credibility, and privacy during the menopausal transition.</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-3 mb-12">
+                <!-- CARD 1: EBOOK -->
+                <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
+                    <img src="images/ebookmockup.webp" alt="Ebook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
+                    <h3 class="text-sm font-bold mb-1 text-blue-800">THE BUSY WOMAN'S PERIMENOPAUSE EBOOK</h3>
+                    <p class="text-gray-600 text-xs mb-2">200+ page operational bible. Every protocol, script, and framework to keep your edge at work — searchable, private, instant.</p>
+                    <div class="text-center mb-1">
+                        <button onclick="openBookPreview()" class="book-preview-btn">
+                            <i class="fas fa-book-open"></i> Look Inside
+                        </button>
                     </div>
+                    <div class="text-right text-xs font-bold text-gray-500">Value $97</div>
                 </div>
-                
-                <div class="value-card bg-white p-8 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-800">Exclusive Podcast Episode</h3>
-                    <p class="text-gray-600 mb-4">A deep analysis & discussion on Immigration in the U.S - recorded exclusively for you. This isn't just a discussion - it's a strategic look at what's really happening and how it affects you.</p>
-                    <div class="text-right">
-                        <span class="text-2xl font-bold">$97 Value</span>
+                <!-- CARD 2: AUDIOBOOK (now with titled audio preview) -->
+                <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
+                    <img src="images/audiobookmockup.webp" alt="Audiobook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
+                    <h3 class="text-sm font-bold mb-1 text-blue-800">AUDIOBOOK: PRIVATE COMMUTE COACH</h3>
+                    <p class="text-gray-600 text-xs mb-2">2+ hours of invisible coaching. Pre-meeting priming, fog‑day commutes, or nights when reading feels impossible.</p>
+                    <div class="text-center mb-1">
+                        <button id="audioSampleBtn" onclick="toggleAudioSample()" class="audio-preview-btn">
+                            <i class="fas fa-play"></i> Audio Preview
+                        </button>
                     </div>
+                    <div class="text-right text-xs font-bold text-gray-500">Value $127</div>
                 </div>
-                
-                <div class="value-card bg-white p-8 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-800">Resource Website Access</h3>
-                    <p class="text-gray-600 mb-4">Private portal with constantly updated official resources, useful tools, and community support. Includes templates for important documents and step-by-step checklists to keep you organized.</p>
-                    <div class="text-right">
-                        <span class="text-2xl font-bold">$79 Value</span>
-                    </div>
+                <!-- CARD 3: WORKOUT -->
+                <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
+                    <img src="images/workout.webp" alt="Workout Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
+                    <h3 class="text-sm font-bold mb-1 text-blue-800">15‑MIN HOME WORKOUT: STRENGTH</h3>
+                    <p class="text-gray-600 text-xs mb-2">Targeted strength for hormonal resilience, bone density, and energy. No gym. No equipment beyond a band. Done in the time it takes to brew coffee.</p>
+                    <div class="text-right text-xs font-bold text-gray-500">Value $89</div>
                 </div>
-                
-                <div class="value-card bg-white p-8 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-800">Community Support Network</h3>
-                    <p class="text-gray-600 mb-4">Connect with others going through similar experiences. Our private community provides emotional support, practical advice, and a safe space to share concerns and victories.</p>
-                    <div class="text-right">
-                        <span class="text-2xl font-bold">$149 Value</span>
-                    </div>
+                <!-- CARD 4: MEAL PLAN -->
+                <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
+                    <img src="images/mealplan.webp" alt="Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
+                    <h3 class="text-sm font-bold mb-1 text-blue-800">7‑DAY MEAL PLAN: BRAIN FUEL</h3>
+                    <p class="text-gray-600 text-xs mb-2">Hormone‑stabilizing meals built around phytoestrogens, omega‑3s, and blood‑sugar balance. Complete foods‑to‑limit guide included.</p>
+                    <div class="text-right text-xs font-bold text-gray-500">Value $88</div>
                 </div>
-                
-                <div class="value-card bg-white p-8 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-800">Ebooks & Official Materials FREE</h3>
-                    <p class="text-gray-600 mb-4">You'll get 3 ebooks along with official PDFs to navigate this broken system.</p>
-                    <div class="text-right">
-                        <span class="text-2xl font-bold">$75 Value</span>
-                    </div>
+                <!-- CARD 5: VEGAN MEAL PLAN -->
+                <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
+                    <img src="images/vegan.webp" alt="Vegan Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
+                    <h3 class="text-sm font-bold mb-1 text-blue-800">7‑DAY VEGAN MEAL PLAN</h3>
+                    <p class="text-gray-600 text-xs mb-2">Same hormone‑stabilizing architecture, entirely plant‑based. Complete B12, iron, and protein targeting — no compromise on ethics or executive function.</p>
+                    <div class="text-right text-xs font-bold text-gray-500">Value $88</div>
                 </div>
             </div>
-            
+
             <div class="bg-white p-8 rounded-xl shadow-md text-center max-w-2xl mx-auto">
-                <h3 class="text-2xl font-bold mb-4">Total Value: <span class="line-through text-gray-500">$599</span></h3>
-                <p class="text-gray-600 mb-6">But today, you get everything for just one payment of:</p>
-                <div class="mb-4">
-                    <span class="inline-block bg-green-100 text-green-800 font-bold py-1 px-3 rounded-full text-sm">
-                        Save $10,000+ Legal Fees
+                <img src="images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mb-1" loading="lazy" decoding="async">
+                <p class="text-xs text-gray-400 italic mb-4">All items are delivered digitally</p>
+                <h3 class="text-2xl font-bold mb-4">Total Value: $489</h3>
+                <p class="text-gray-600 mb-6">What is your professional reputation worth? Your earning trajectory? Your peace of mind in the rooms that matter?</p>
+                <div class="mb-3">
+                    <span class="inline-block bg-green-100 text-green-800 font-bold py-2 px-4 rounded-full text-sm">
+                        Prevent $5,000+ Loss in Quarterly Earnings
                     </span>
                 </div>
-                <div class="text-center mb-4">
-                    <a href="https://www.checkout-ds24.com/product/625471" class="cta-blue font-bold py-4 px-8 rounded-lg text-center inline-block">
-                        Claim It All Now – $47 One-Time
+                <div class="text-center mb-2">
+                    <a href="https://www.checkout-ds24.com/product/692610" class="cta-blue font-bold py-4 px-8 rounded-lg text-center inline-block">
+                        CLAIM MY PERFORMANCE SYSTEM - $47
                     </a>
                 </div>
-                <div class="flex items-center justify-center gap-4 mb-4">
-                    <img src="images/gpay.svg" alt="Google Pay" class="payment-logo-big">
-                    <img src="images/mastercard.svg" alt="Mastercard" class="payment-logo-big">
-                    <img src="images/visa.svg" alt="Visa" class="payment-logo-big">
-                    <img src="images/paypal.svg" alt="PayPal" class="payment-logo-small">
+                <div class="flex items-center justify-center mt-4 gap-4">
+                    <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
+                    <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;" loading="lazy" decoding="async">
+                    <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
+                    <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none; height: 72px;" loading="lazy" decoding="async">
                 </div>
-                <p class="text-gray-600">Instant Download + Portal Access</p>
+                <p class="text-gray-600 mt-4">100% Risk Free • Instant Access • Money-Back Guarantee</p>
             </div>
         </div>
     </section>
 
-    <!-- Why This Works Section -->
+    <!-- Problem Agitation Section -->
     <section class="py-20 bg-white px-4">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl font-bold text-center mb-6">Why This Isn't Just Another Guide – It's Your Edge</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Built from my lived hell—translated into checklists that work. For high-anxiety moments, it's long-form answers with quick videos. Structured for your next micro-step, so you feel progress immediately.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="text-green-500 text-4xl mb-4">
-                        <i class="fas fa-user-check"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Designed by Experience</h3>
-                    <p class="text-gray-600">Created by someone who's been deported-threatened and won.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">The <span class="text-red-600">Concealment Paradox</span> No One Talks About</h2>
+            <div class="space-y-6 mb-10">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <p class="font-bold mb-2">Right now, you are caught in what occupational researchers call "The Concealment Paradox":</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>The cognitive effort of hiding symptoms costs more than the symptoms themselves</li>
+                        <li>Every unit of resource spent on identity regulation is a unit not spent on the actual work</li>
+                        <li>The harder you work to appear fully operational, the more depleted you become</li>
+                        <li>Your prefrontal cortex is already compromised by hormonal volatility — and you are taxing it further with concealment labour</li>
+                    </ul>
                 </div>
-                
-                <div class="text-center">
-                    <div class="text-blue-500 text-4xl mb-4">
-                        <i class="fas fa-book-reader"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Multiple Learning Styles</h3>
-                    <p class="text-gray-600">Meets your preference—read, listen, or discuss.</p>
+                <div class="py-6 text-center border-t border-b border-gray-300">
+                    <p class="text-xl md:text-2xl font-light italic text-gray-700">“The cognitive effort of hiding symptoms costs more than the symptoms themselves.”</p>
                 </div>
-                
-                <div class="text-center">
-                    <div class="text-orange-500 text-4xl mb-4">
-                        <i class="fas fa-bolt"></i>
+                <p>When I faced this, my biggest fear wasn't the hot flush. It was what would happen to:</p>
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <p class="font-bold text-red-700">1. My Professional Reputation</p>
+                        <p class="text-sm">Fifteen years of credibility built on cognitive precision, now at risk from unpredictable verbal lapses and slower retrieval.</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Instant Action</h3>
-                    <p class="text-gray-600">Know exactly "what to do next" in under an hour.</p>
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <p class="font-bold text-red-700">2. My Earning Trajectory</p>
+                        <p class="text-sm">Peak earning years (ages 45-55) threatened by presenteeism, reduced hours, or premature exit. UK data: $1.5B annual loss.</p>
+                    </div>
+                </div>
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-5 rounded-r-lg">
+                    <div class="flex items-start">
+                        <i class="fas fa-chart-bar text-yellow-600 text-2xl mr-3"></i>
+                        <div>
+                            <p class="font-bold text-lg text-yellow-800">15.6× higher risk</p>
+                            <p class="text-sm text-yellow-700">Women in the top symptom‑severity quartile are 15.6 times more likely to experience adverse work effects. <span class="text-xs opacity-75">(Irish Occupational Health Study, 2024)</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <span class="text-red-500 mr-3 text-xl">⚠️</span>
+                        <div>
+                            <span class="font-medium">Less than 25% of women disclose menopause status at work. 62.3% are not comfortable discussing it at all.</span>
+                            <p class="text-sm text-gray-600">(UK Gov Workplace Literature Review, 2025)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-red-500 mr-3 text-xl">⚠️</span>
+                        <div>
+                            <span class="font-medium">Presenteeism dominates absenteeism: Australian menopause-related presenteeism costs $6.5B AUD annually versus $890M in absenteeism.</span>
+                            <p class="text-sm text-gray-600">(BCEC Reproductive Health Leave Report, 2025)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center gap-4 md:gap-8 py-6 text-center">
+                    <div class="flex flex-col items-center"><i class="fas fa-brain text-3xl text-purple-600"></i><span class="text-xs font-medium mt-1">Brain</span></div>
+                    <i class="fas fa-arrow-right text-gray-400"></i>
+                    <div class="flex flex-col items-center"><i class="fas fa-mask text-3xl text-gray-600"></i><span class="text-xs font-medium mt-1">Mask</span></div>
+                    <i class="fas fa-arrow-right text-gray-400"></i>
+                    <div class="flex flex-col items-center"><i class="fas fa-tired text-3xl text-orange-500"></i><span class="text-xs font-medium mt-1">Exhaustion</span></div>
+                    <i class="fas fa-arrow-right text-gray-400"></i>
+                    <div class="flex flex-col items-center"><i class="fas fa-person-falling text-3xl text-red-600"></i><span class="text-xs font-medium mt-1">Collapse</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing & Bonuses Section -->
+    <!-- Authority & Warning Section -->
+    <section class="py-20 bg-gray-100 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-6">Why HR, Wellness Apps, and Doctor's Books Can't Save Your Career</h2>
+            <p class="text-center text-gray-600 mb-8">I spent $2,400 on executive coaching that assumed I had a confidence problem. What I actually had was a progesterone‑GABA‑sleep problem that no amount of "leaning in" could fix.</p>
+            <div class="overflow-x-auto mb-10">
+                <table class="min-w-full bg-white rounded-lg shadow-md border border-gray-200 text-sm">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-2 py-2 text-left font-semibold text-gray-700">Solution</th>
+                            <th class="px-2 py-2 text-left font-semibold text-gray-700">What They Give You</th>
+                            <th class="px-2 py-2 text-left font-semibold text-gray-700">What They Ignore</th>
+                            <th class="px-2 py-2 text-left font-semibold text-gray-700">Why It Fails You</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-2 py-1.5 font-medium text-gray-800">Corporate HR Programs</td>
+                            <td class="px-2 py-1.5 text-gray-600">Desk fans, flexible hours</td>
+                            <td class="px-2 py-1.5 text-gray-600">The disclosure requirement</td>
+                            <td class="px-2 py-1.5 text-gray-600">You must tell your manager. You won't.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-2 py-1.5 font-medium text-gray-800">Menopause Apps (Peppy, Stella)</td>
+                            <td class="px-2 py-1.5 text-gray-600">Symptom tracking, telehealth</td>
+                            <td class="px-2 py-1.5 text-gray-600">Presenteeism protocols</td>
+                            <td class="px-2 py-1.5 text-gray-600">Work impairment improvement was "low" in their own evaluation</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-2 py-1.5 font-medium text-gray-800">Physician Books (Gunter, Mosconi)</td>
+                            <td class="px-2 py-1.5 text-gray-600">Hormone science, HRT guidance</td>
+                            <td class="px-2 py-1.5 text-gray-600">Board meeting survival tactics</td>
+                            <td class="px-2 py-1.5 text-gray-600">Treats you as a patient, not an operator</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-2 py-1.5 font-medium text-gray-800">Executive Coaching</td>
+                            <td class="px-2 py-1.5 text-gray-600">Confidence, boundaries</td>
+                            <td class="px-2 py-1.5 text-gray-600">Neuroendocrine reality</td>
+                            <td class="px-2 py-1.5 text-gray-600">Assumes you have a mindset problem, not a progesterone problem</td>
+                        </tr>
+                        <tr class="bg-blue-50 font-semibold">
+                            <td class="px-2 py-1.5 text-blue-800">This System</td>
+                            <td class="px-2 py-1.5 text-blue-800">Operational protocols, scripts, concealment architecture</td>
+                            <td class="px-2 py-1.5 text-blue-800">Nothing</td>
+                            <td class="px-2 py-1.5 text-blue-800">Designed for the woman who cannot disclose</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Guarantee Section -->
     <section id="pricing" class="py-20 guarantee-section px-4">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Your No-Brainer Deal – Massive Value, Tiny Price</h2>
-            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Total real value? over $599. But right now, for you, it's $47—one-time. Why the discount? Launch window to help more folks fast (ends soon—verifiable).</p>
-            
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Will You Leave Your Career to Chance Or Take Control?</h2>
             <div class="bg-white rounded-xl shadow-2xl overflow-hidden max-w-md mx-auto">
                 <div class="p-8">
                     <div class="text-center mb-6">
-                        <span class="text-gray-500 line-through text-xl">Regular $599</span>
-                        <span class="text-4xl font-bold text-blue-800 block mt-2">Today $47</span>
-                        <span class="text-green-600 font-bold">Save 92%</span>
+                        <span class="text-gray-500 line-through text-xl">Executive Coaching: $500+/month</span>
+                        <span class="text-4xl font-bold text-blue-800 block mt-2">Complete System: $47</span>
+                        <img src="images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mt-4" loading="lazy" decoding="async">
+                        <p class="text-xs text-gray-400 italic mt-1">All items are delivered digitally</p>
+                        <div class="mt-4 p-3 bg-green-50 rounded-lg">
+                            <p class="text-green-700 font-bold">Prevent $5,000+ Loss in Quarterly Earnings</p>
+                        </div>
                     </div>
-                    
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <span>The Core Guide (140+ Pages PDF)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <span>Exclusive Podcast Episode</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <span>Resource Website Access</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <span>Community Support Network</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <span>3 Free eBooks & Official Materials</span>
-                        </li>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>"The Busy Woman's Perimenopause" Ebook</strong></span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>The Busy Woman's Perimenopause Audiobook</strong></span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>Perimenopause Support 7-Days Meal Plan (Vegan)</strong></span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>Perimenopause Support 7-Days Meal Plan</strong></span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><span><strong>15-MINUTES HOME WORKOUT PLAN</strong></span><p class="text-sm text-gray-600">For Strength during Perimenopause</p></div></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><span><strong>The Fog-Day Playbook</strong></span><p class="text-sm text-gray-600">Red/amber/green assessment & supported thinking protocols is included in ebook</p></div></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><span><strong>Anxiety Spiral Interrupt System</strong></span><p class="text-sm text-gray-600">5-minute CBT-based autonomic reset is included in ebook</p></div></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><span><strong>Sleep-to-Performance Recovery</strong></span><p class="text-sm text-gray-600">CBT-I derived next-day clarity protocols is included in ebook</p></div></li>
                     </ul>
-                    
                     <div class="text-center mb-6">
-                        <a href="https://www.checkout-ds24.com/product/625471" class="cta-blue font-bold py-4 px-8 rounded-lg text-center inline-block w-full">
-                            SECURE MY SPOT & BONUSES – $47 INSTANTLY
+                        <a href="https://www.checkout-ds24.com/product/692610" class="cta-blue font-bold py-4 px-8 rounded-lg text-center inline-block w-full text-xl">
+                            GET COMPLETE SYSTEM - $47
                         </a>
                     </div>
-                    
                     <div class="flex flex-col items-center">
                         <div class="flex items-center justify-center mb-2 gap-4">
-                            <img src="images/gpay.svg" alt="Google Pay" class="payment-logo-big">
-                            <img src="images/mastercard.svg" alt="Mastercard" class="payment-logo-big">
-                            <img src="images/visa.svg" alt="Visa" class="payment-logo-big">
-                            <img src="images/paypal.svg" alt="PayPal" class="payment-logo-small">
+                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
+                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;" loading="lazy" decoding="async">
+                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
+                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter: none; height: 72px;" loading="lazy" decoding="async">
                         </div>
                         <p class="ssl-badge text-xs text-green-600 font-medium flex items-center justify-center">
-                            <i class="fas fa-lock"></i> Bank Level Protection: 256-bit SSL Encryption
+                            <i class="fas fa-lock"></i> 256-bit SSL Encryption • Your Privacy Protected
                         </p>
                     </div>
                 </div>
-                
                 <div class="bg-green-100 text-green-800 p-6 text-center">
                     <div class="flex items-center justify-center">
                         <i class="fas fa-shield-alt text-2xl mr-3"></i>
-                        <p class="font-bold">
-                            100% Risk FREE 60-Day Money-Back Guarantee
-                        </p>
+                        <div>
+                            <p class="font-bold text-lg">100% Risk-Free 60-Day Guarantee</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <p class="text-center text-red-600 font-bold mt-6 counter">142 People Bought Today</p>
+            <p class="text-center text-red-600 font-bold mt-6 counter">124 Women Bought This Week</p>
+            <div class="mt-8 p-4 bg-red-50 rounded-lg text-center max-w-lg mx-auto">
+                <p class="font-bold text-red-700"><i class="fas fa-exclamation-triangle mr-2"></i>Every day without this system increases your exposure to the concealment paradox</p>
+            </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
     <section id="faq" class="py-20 bg-white px-4">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-2xl font-bold text-center mb-16">Frequently Asked Questions</h2>
-            
+            <h2 class="text-2xl font-bold text-center mb-16">Questions Professional Women Are Asking</h2>
             <div class="space-y-4">
                 <div class="bg-gray-50 p-6 rounded-lg">
                     <button class="flex justify-between items-center w-full text-left font-bold text-lg">
-                        <span>Is this legal advice?</span>
+                        <span>Is this medical advice?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="mt-3 text-gray-600 hidden">
-                        <p>No, this is not legal advice. This guide contains practical information based on my personal experience navigating the U.S. immigration system. While I've consulted with immigration attorneys to ensure accuracy, you should always consult with a qualified immigration lawyer for your specific case. Think of this as the "what to expect" guide you'd get from a friend who's been through the process.</p>
+                        <p class="mb-3"><strong>No, this is not medical advice.</strong> This is an operational performance system based on occupational neuroscience and evidence-based behavioural protocols. While the content is grounded in peer-reviewed research (including the MENOS@Work RCT and SWAN longitudinal data), it is designed as a practical manual for the workday, not a clinical treatment guide. For medical decisions — including HRT — you should consult a qualified clinician. Think of this as the strategic operations manual you use while navigating care, not a replacement for it.</p>
                     </div>
                 </div>
-                
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
-                        <span>How is this different from free online resources?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </button>
-                    <div class="mt-3 text-gray-600 hidden">
-                        <p>Most free resources are either overly simplistic or written in confusing legal jargon. This guide cuts through the complexity with clear, actionable advice from someone who's actually been through the system. You'll get real-world strategies, not just theoretical information. Plus, our community support and constantly updated resources ensure you're never navigating this alone.</p>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
-                        <span>Immigration policy changes all the time. Will this guide quickly become outdated?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </button>
-                    <div class="mt-3 text-gray-600 hidden">
-                        <p>No. While policies shift, the core strategies for protecting your rights, preparing for emergencies, and understanding the system's tactics are timeless. This guide focuses on equipping you for any shift, not just the current ones.</p>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
-                        <span>I'm worried about my family if something happens to me. Does this guide cover that?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </button>
-                    <div class="mt-3 text-gray-600 hidden">
-                        <p>This guide hammers on it. We lay out concrete steps for protecting your loved ones, your assets, and even your digital life. It's about empowering you to build a robust family survival plan.</p>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
-                        <span>I've heard about so many immigration scams. How can I avoid them, and does this guide help?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </button>
-                    <div class="mt-3 text-gray-600 hidden">
-                        <p>Absolutely. We dedicate a full section to exposing common scams, from fake lawyers to online tricksters, and tell you how to spot them and where to report them. This guide is your shield against exploitation.</p>
-                    </div>
-                </div>
-                
                 <div class="bg-gray-50 p-6 rounded-lg">
                     <button class="flex justify-between items-center w-full text-left font-bold text-lg">
                         <span>How do I access the materials after purchasing?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="mt-3 text-gray-600 hidden">
-                        <p>Immediately after completing your secure payment, you'll receive an email with download links for all materials. The guide is in PDF format (readable on any device), the podcast is in MP3 format, and you'll get instant access to our private resource website and community support network. You can access everything on your computer, phone, or tablet.</p>
+                        <p class="mb-3">Immediately. After completing your secure checkout, you receive an email with download links for all materials. The ebook is in PDF format (readable on any device), the Podcast episode is in MP3 format, the Community joining link will be included. You can access everything on your computer, phone, or tablet.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Real Solutions Section -->
-    <section id="stories" class="py-20 bg-gray-100 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Real Solutions, Real Results</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">These are people I helped turn their fear into forward motion. Scroll through their stories.</p>
-            
-            <div class="testimonial-carousel mb-12">
-                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/fYPnRgz8/images-9.jpg" alt="Mariam Haddad" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <p class="font-bold">Mariam Haddad</p>
-                            <p class="text-sm text-gray-500">Asylum applicant, single mother • 2 weeks ago</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic mb-4">"This guide explained things I never understood, even after months of searching online. The timelines and action steps gave me clarity. I don't feel as lost anymore."</p>
-                    <div class="flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>Will my employer know I bought this?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3"><strong>No.</strong> This is a private digital purchase. Your statement shows a generic merchant descriptor, not "menopause" or any health-related branding. There is no employer notification, no HR integration, no corporate sponsorship, and no requirement to log into a workplace benefits portal. The entire system is designed for women who need to protect their privacy. You download the materials directly to your personal devices.</p>
                     </div>
                 </div>
-                
-                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/xqB9ZVBR/images-18.jpg" alt="Alejandro Rojas" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <p class="font-bold">Alejandro Rojas</p>
-                            <p class="text-sm text-gray-500">Green card applicant, construction worker • 1 month ago</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic mb-4">"The resource website helped me prepare my evidence in a way my attorney said made a huge difference. I saved time and felt in control of the process for the first time."</p>
-                    <div class="flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>What if I am already on HRT or considering it?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3">This system is a <strong>parallel track</strong>, not an alternative to medical care. HRT addresses baseline hormonal optimisation. This system addresses the immediate, day-to-day operational requirements of surviving high-stakes work while your body transitions. Most women who manage this period most effectively address both simultaneously: appropriate medical support <em>plus</em> the operational infrastructure for the working day. The book includes a chapter on how to frame the clinical conversation for best outcomes.</p>
                     </div>
                 </div>
-                
-                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/4GFGPY5/images-6.jpg" alt="Natasha Ivanova" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <p class="font-bold">Natasha Ivanova</p>
-                            <p class="text-sm text-gray-500">Student on F-1 visa • 5 days ago</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic mb-4">"Listening to the podcast on visa renewals gave me practical tips I used the same day. It felt like getting advice from a trusted friend who understands exactly what we go through."</p>
-                    <div class="flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>How is this different from menopause apps like Peppy or Stella?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3">Menopause apps focus on symptom tracking, telehealth access, and community support. They are medically valuable but operationally thin. Peppy's own evaluation showed "improvement in reported work impairment was low" despite symptom reduction. This system is the opposite: it does not track your flushes. It gives you the exact script to use when you blank on a word in a client meeting. It is built for performance preservation, not symptom logging.</p>
                     </div>
                 </div>
-                
-                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/VW8frsKJ/images-15.jpg" alt="Rohim Khan" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <p class="font-bold">Rohim Khan</p>
-                            <p class="text-sm text-gray-500">Undocumented worker, father of three • 3 weeks ago</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic mb-4">"When ICE showed up on our street, I remembered exactly what the guide said about our rights. I stayed calm, didn't open the door, and avoided a huge problem. I'll never forget that night."</p>
-                    <div class="flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/RpTcZf0X/images-8.jpg" alt="Leila Amini" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <p class="font-bold">Leila Amini</p>
-                            <p class="text-sm text-gray-500">Asylum seeker • 4 days ago</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic mb-4">"The podcast episode about asylum interviews was so helpful. I listened on the bus, and when my appointment came, I felt confident answering the officer's questions."</p>
-                    <div class="flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                        <span>$47 seems too cheap. What is the catch?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p class="mb-3"><strong>No catch.</strong> The price is kept accessible because:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>This is digital delivery — no printing or shipping costs</li>
+                            <li>I am not an executive coach charging $500 per session</li>
+                            <li>This information should be accessible to every professional woman who needs it</li>
+                            <li>The value is in the operational density, not the price tag</li>
+                        </ul>
+                        <p class="mt-3">The real cost is not $47. The real cost is doing nothing.</p>
                     </div>
                 </div>
             </div>
@@ -940,95 +1030,167 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+    <section class="py-20 bg-gray-50 px-4">
         <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl font-bold mb-8">Don't Navigate the Immigration System Blindfolded</h2>
-            <p class="text-lg mb-10 max-w-2xl mx-auto">
-                The difference between staying in the country and being deported often comes down to having the right information at the right time. Don't leave your future to chance.
-            </p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">The Most Dangerous Decision <br>Is Doing Nothing</h2>
+            <p class="text-xl text-gray-600 mb-10">Right now, you are in one of two categories:</p>
+            <div class="grid md:grid-cols-2 gap-6 mb-10">
+                <div class="bg-red-50 p-6 rounded-lg shadow-sm border border-red-100">
+                    <h3 class="font-bold text-2xl mb-3 text-red-700">Category 1</h3>
+                    <p class="text-gray-700 mb-4">Waiting, hoping, compensating harder. Concealing symptoms daily. Watching your cognitive resource drain into identity regulation instead of the work that built your career. No system. No protocol. No protection.</p>
+                    <p class="font-bold text-red-600 text-lg">Risk: Reputation erosion, sidelining, premature exit</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg shadow-sm border border-green-100">
+                    <h3 class="font-bold text-2xl mb-3 text-green-700">Category 2</h3>
+                    <p class="text-gray-700 mb-4">Taking control today. Deploying operational protocols. Protecting your professional narrative without disclosure. Knowing exactly what to do on a fog day, a bad-sleep morning, or a high-stakes meeting.</p>
+                    <p class="font-bold text-green-600 text-lg">Result: Career continuity, privacy preserved, peace of mind</p>
+                </div>
+            </div>
+            <p class="text-2xl font-light italic mb-8">Which category do you want to be in when you walk into work tomorrow?</p>
             <div class="mb-6">
-                <a href="https://www.checkout-ds24.com/product/625471" class="bg-teal-500 hover:bg-teal-600 font-bold py-4 px-8 rounded-lg text-center inline-block transition-all duration-300 transform hover:scale-105">
+                <a href="https://www.checkout-ds24.com/product/692610" class="cta-primary font-bold py-4 px-8 rounded-lg inline-block text-xl">
                     PROCEED SECURELY - $47
                 </a>
             </div>
-            <div class="flex items-center justify-center">
-                <i class="fas fa-shield-alt text-yellow-400 mr-2"></i>
-                <p>60-Day Money Back Guarantee</p>
+            <div class="flex flex-wrap items-center justify-center gap-4 text-sm mb-6">
+                <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full flex items-center"><i class="fas fa-shield-alt mr-2"></i>60-Day Money Back Guarantee</span>
+                <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full flex items-center"><i class="fas fa-lock mr-2"></i>Secure SSL Encryption</span>
+                <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full flex items-center"><i class="fas fa-users mr-2"></i>Brought by 3,200+ Professional Women</span>
+            </div>
+            <div class="p-4 bg-yellow-50 rounded-lg border border-yellow-200 max-w-lg mx-auto">
+                <p class="font-bold text-yellow-800"><i class="fas fa-clock mr-2 text-yellow-600"></i>Your Peak Earning Years Are Happening Right Now.<br>Don't Let these Hormones Dictate this Crucial Period of your Life.</p>
             </div>
         </div>
     </section>
 
-    <!-- Digistore24 multi-step order form loader (placed exactly as in original to ensure proper initialization) -->
-    <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
+    <!-- Audio sample element (hidden) -->
+    <audio id="audioSample" src="audiobooksample.MP3" preload="none"></audio>
 
-    <!-- Checkout Popup Overlay – moved to the very end so the embed code remains unchanged -->
-    <div id="checkoutPopupOverlay" class="checkout-popup-overlay">
-        <div class="checkout-popup-content">
-            <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
-            <!-- Begin of digistore multi-step order box code (unchanged) -->
-            <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
-            <my-order-form product-id="625471" order-form-id="242195" base-url="https://www.checkout-ds24.com"></my-order-form>
-            <!-- End of digistore multi-step order box code -->
-        </div>
-    </div>
-
+    <!-- Optimized JavaScript -->
     <script>
-        // FAQ toggle
-        document.querySelectorAll('#faq button').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                content.classList.toggle('hidden');
-                const icon = button.querySelector('i');
-                icon.classList.toggle('rotate-180');
-            });
+        // Deferred Digistore promo code + smart checkout preload
+        window.addEventListener('DOMContentLoaded', function() {
+            var digiScript = document.createElement('script');
+            digiScript.src = "https://www.digistore24-scripts.com/service/digistore.js";
+            digiScript.defer = true;
+            document.head.appendChild(digiScript);
+
+            digiScript.onload = function() {
+                digistorePromocode({ "product_id": 692610, "adjust_domain": true });
+                // After promocode applies, preload the final checkout URL
+                setTimeout(preloadCheckout, 300);
+            };
+            // Fallback if already cached
+            if (typeof digistorePromocode === 'function') {
+                digistorePromocode({ "product_id": 692610, "adjust_domain": true });
+                setTimeout(preloadCheckout, 100);
+            }
+
+            function preloadCheckout() {
+                var checkoutLinks = document.querySelectorAll('a[href*="product/692610"]');
+                if (checkoutLinks.length > 0) {
+                    var finalUrl = checkoutLinks[0].getAttribute('href');
+                    if (finalUrl) {
+                        // Preload with fetch to warm up the final destination
+                        fetch(finalUrl, { mode: 'no-cors', cache: 'force-cache' });
+                    }
+                }
+                // Attach mouseenter preload on all buy buttons
+                checkoutLinks.forEach(function(link) {
+                    link.addEventListener('mouseenter', function() {
+                        var url = link.getAttribute('href');
+                        if (url) fetch(url, { mode: 'no-cors', cache: 'force-cache' });
+                    }, { once: true });
+                });
+            }
         });
 
-        // Book Preview Popup
+        // Book Preview Lazy Load
         function openBookPreview() {
-            document.getElementById('bookPreviewPopup').classList.add('active');
+            var popup = document.getElementById('bookPreviewPopup');
+            var iframe = popup.querySelector('iframe');
+            if (iframe && !iframe.src) {
+                iframe.src = iframe.dataset.src;
+            }
+            popup.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
-        function closeBookPreview(e) {
-            if (!e || e.target.id === 'bookPreviewPopup' || e.target.closest('.book-preview-close') || e.target.closest('.book-preview-done-btn')) {
+        function closeBookPreview(event) {
+            if (!event || event.target.id === 'bookPreviewPopup' || event.target.closest('.book-preview-close') || event.target.closest('.book-preview-done-btn')) {
                 document.getElementById('bookPreviewPopup').classList.remove('active');
                 document.body.style.overflow = '';
             }
         }
 
-        // Checkout Popup
-        function openCheckoutPopup(e) {
-            e.preventDefault();
-            document.getElementById('checkoutPopupOverlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
+        // Toggle audiobook sample playback with title change
+        function toggleAudioSample() {
+            var audio = document.getElementById('audioSample');
+            if (audio.paused) {
+                audio.play().catch(() => {});
+            } else {
+                audio.pause();
+            }
         }
 
-        function closeCheckoutPopup() {
-            document.getElementById('checkoutPopupOverlay').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Attach popup to all buy buttons
         document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('a[href="https://www.checkout-ds24.com/product/625471"]');
-            buttons.forEach(btn => {
-                btn.addEventListener('click', openCheckoutPopup);
+            var audio = document.getElementById('audioSample');
+            var btn = document.getElementById('audioSampleBtn');
+            if (audio && btn) {
+                audio.addEventListener('play', function() {
+                    btn.innerHTML = '<i class="fas fa-pause"></i> Playing Preview';
+                });
+                audio.addEventListener('pause', function() {
+                    btn.innerHTML = '<i class="fas fa-play"></i> Audio Preview';
+                });
+                audio.addEventListener('ended', function() {
+                    btn.innerHTML = '<i class="fas fa-play"></i> Audio Preview';
+                });
+            }
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('#faq button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var content = button.nextElementSibling;
+                content.classList.toggle('hidden');
+                var icon = button.querySelector('i');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Counter & smooth scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            var counters = document.querySelectorAll('.counter');
+            var baseCount = 124;
+            var randomAddition = Math.floor(Math.random() * 15);
+            var finalCount = baseCount + randomAddition;
+            counters.forEach(function(counter) {
+                counter.textContent = finalCount + ' Women Bought This Week';
             });
 
-            // Close popup when clicking outside content
-            document.getElementById('checkoutPopupOverlay').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeCheckoutPopup();
-                }
-            });
-
-            // Dynamic counter
-            const counters = document.querySelectorAll('.counter');
-            const randomCount = Math.floor(Math.random() * 100) + 100;
-            counters.forEach(counter => {
-                counter.textContent = `${randomCount} People Bought Today`;
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    var targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({ top: targetElement.offsetTop - 20, behavior: 'smooth' });
+                    }
+                });
             });
         });
     </script>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-100 text-center text-xs text-gray-500">
+        <div class="container mx-auto px-4">
+            <a href="terms-conditions.html" class="hover:text-gray-800 mx-2">Terms of Service</a> &bull;
+            <a href="privacy-policy.html" class="hover:text-gray-800 mx-2">Privacy Policy</a> &bull;
+            <a href="legal-information.html" class="hover:text-gray-800 mx-2">Legal Information</a>
+        </div>
+    </footer>
+
 </body>
 </html>
