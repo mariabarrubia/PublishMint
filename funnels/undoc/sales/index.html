@@ -262,9 +262,8 @@
             margin-right: 4px;
         }
 
-        /* Checkout Popup Styles */
+        /* Checkout Popup Styles (invisible but layout-preserving for widget pre‑rendering) */
         .checkout-popup-overlay {
-            display: none;
             position: fixed;
             top: 0;
             left: 0;
@@ -275,9 +274,18 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
+            /* Hidden but with layout so the multi‑step form can fully render */
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: visibility 0s 0.2s, opacity 0.2s ease;
+            display: flex;               /* keep flex so content lays out */
         }
         .checkout-popup-overlay.active {
-            display: flex;
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            transition: visibility 0s 0s, opacity 0.2s ease;
         }
         .checkout-popup-content {
             background: white;
@@ -988,11 +996,11 @@
         </div>
     </section>
 
-    <!-- Checkout Popup Overlay (the <my-order-form> is kept untouched; the script is loaded lazily after page load) -->
+    <!-- Checkout Popup Overlay (invisible but layout-preserving for full widget pre‑rendering) -->
     <div id="checkoutPopupOverlay" class="checkout-popup-overlay">
         <div class="checkout-popup-content">
             <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
-            <!-- Begin of digistore multi-step order box code (unchanged) -->
+            <!-- Begin of digistore multi-step order box code (kept untouched) -->
             <my-order-form product-id="625471" order-form-id="242195" base-url="https://www.checkout-ds24.com"></my-order-form>
             <!-- End of digistore multi-step order box code -->
         </div>
@@ -1060,25 +1068,25 @@
         //  BACKGROUND PREFETCH: Load the Digistore24 checkout script
         //  after the page is fully interactive, so the popup appears
         //  instantly when any buy button is clicked.
+        //  The overlay is already layout‑preserving (visibility hidden)
+        //  so the multi‑step form can fully render in the background.
         // ═══════════════════════════════════════════════════════════
         (function() {
             function loadCheckoutScript() {
                 var script = document.createElement('script');
                 script.src = 'https://www.checkout-ds24.com/service/digistore.js';
-                // The script is already preloaded via <link rel="preload">,
-                // so it will be fetched from cache immediately.
-                script.async = true;  // execute as soon as downloaded, non-blocking
+                // Already preloaded, so it will be fetched from cache instantly
+                script.async = true;
                 document.body.appendChild(script);
             }
 
-            // Use requestIdleCallback if available for the lightest possible impact
+            // Use requestIdleCallback for the lightest possible impact
             if ('requestIdleCallback' in window) {
                 requestIdleCallback(loadCheckoutScript);
             } else {
-                // Fallback: wait a tiny bit after DOM ready, then run
                 setTimeout(loadCheckoutScript, 50);
             }
         })();
     </script>
 </body>
-    </html>
+</html>
