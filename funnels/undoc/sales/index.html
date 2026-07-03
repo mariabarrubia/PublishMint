@@ -9,9 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- Whop Checkout loader – early, non‑blocking, only once -->
-    <script async defer src="https://js.whop.com/static/checkout/loader.js"></script>
-
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
@@ -460,6 +457,7 @@
         }
     </style>
     <base target="_blank">
+<base target="_blank">
 </head>
 <body class="antialiased text-gray-800">
 
@@ -1148,11 +1146,25 @@
 
     <audio id="audioSample" src="/audiobooksample.m4a" preload="none"></audio>
 
-    <!-- ---------- CHECKOUT POPUP (Whop embed injected dynamically) ---------- -->
+    <!-- ---------- CHECKOUT POPUP (Whop embed preloaded in background) ---------- -->
     <div id="checkoutPopupOverlay" class="checkout-popup-overlay">
         <div class="checkout-popup-content">
             <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
-            <div id="whopCheckoutContainer" style="min-height: 500px; width: 100%;"></div>
+            <div id="whopCheckoutContainer" style="min-height: 500px; width: 100%;">
+                <div
+                  data-whop-checkout-plan-id="plan_Owi4yDISl2dt8"
+                  data-whop-checkout-theme="light"
+                  data-whop-checkout-theme-accent-color="#3556cc"
+                  data-whop-checkout-theme-border-radius="10"
+                  data-whop-checkout-theme-button-text="Complete Checkout"
+                  data-whop-checkout-setup-future-usage="off_session"
+                  data-whop-checkout-collect-phone-numbers="false"
+                  data-whop-checkout-hide-address="true"
+                  data-whop-checkout-hide-email="true"
+                  data-whop-checkout-hide-tos="true"
+                ></div>
+            </div>
+            <script async src="https://js.whop.com/static/checkout/loader.js"></script>
         </div>
     </div>
 
@@ -1185,26 +1197,10 @@
             }
         }
 
-        // Whop checkout popup – dynamically injects the exact embed code you provided
+        // Whop checkout popup – embed preloaded in background, simply reveal on click
         function openCheckoutPopup(e) {
             if (e) e.preventDefault();
             var overlay = document.getElementById('checkoutPopupOverlay');
-            var container = document.getElementById('whopCheckoutContainer');
-            container.innerHTML = ''; // clear previous
-
-            // Create the embed div with the EXACT attributes you supplied – no alterations
-            var embedDiv = document.createElement('div');
-            embedDiv.setAttribute('data-whop-checkout-plan-id', 'plan_Owi4yDISl2dt8');
-            embedDiv.setAttribute('data-whop-checkout-theme', 'light');
-            embedDiv.setAttribute('data-whop-checkout-theme-accent-color', '#3574d4');
-            embedDiv.setAttribute('data-whop-checkout-theme-button-text', 'Get Access');
-            embedDiv.setAttribute('data-whop-checkout-setup-future-usage', 'off_session');
-            embedDiv.setAttribute('data-whop-checkout-collect-phone-numbers', 'false');
-            embedDiv.setAttribute('data-whop-checkout-hide-address', 'true');
-            embedDiv.setAttribute('data-whop-checkout-hide-tos', 'true');
-
-            container.appendChild(embedDiv);
-
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
@@ -1213,10 +1209,6 @@
             var overlay = document.getElementById('checkoutPopupOverlay');
             overlay.classList.remove('active');
             document.body.style.overflow = '';
-            // Clean up embed after transition
-            setTimeout(function() {
-                document.getElementById('whopCheckoutContainer').innerHTML = '';
-            }, 300);
         }
 
         document.addEventListener('DOMContentLoaded', function() {
