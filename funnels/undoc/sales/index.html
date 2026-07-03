@@ -9,13 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- Preload Digistore24 checkout for instant popup -->
-    <link rel="preconnect" href="https://www.checkout-ds24.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.checkout-ds24.com">
-    <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
-
-    <!-- Preconnect for promocode script -->
-    <link rel="dns-prefetch" href="https://www.digistore24-scripts.com">
+    <!-- Whop Checkout loader – early, non‑blocking, only once -->
+    <script async defer src="https://js.whop.com/static/checkout/loader.js"></script>
 
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
@@ -25,20 +20,7 @@
 
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
 
-    <!-- Promocode script will load after DOMContentLoaded – non‑blocking -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var promoS = document.createElement('script');
-            promoS.src = "https://www.digistore24-scripts.com/service/digistore.js";
-            promoS.defer = true;
-            document.head.appendChild(promoS);
-            promoS.onload = function() {
-                if (typeof digistorePromocode === 'function') {
-                    digistorePromocode({ "product_id": 692610, "adjust_domain": true });
-                }
-            };
-        });
-    </script>
+    <!-- No Digistore24 scripts – all removed -->
 
     <style>
         *, *::before, *::after { box-sizing: border-box; }
@@ -568,7 +550,7 @@
                                 Prevent $5,000+ Loss in Quarterly Earnings
                             </span>
                         </div>
-                        <a href="https://www.checkout-ds24.com/product/692610" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl">
+                        <a href="#" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl js-buy-button">
                             SECURE MY PERFORMANCE SYSTEM - $47
                         </a>
                         <div class="flex items-center justify-center mt-4 gap-4">
@@ -643,7 +625,7 @@
             </div>
 
             <div class="text-center">
-                <a href="https://www.checkout-ds24.com/product/692610" class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl">
+                <a href="#" class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
                     CLAIM MY PERFORMANCE SYSTEM - $47
                 </a>
                 <p class="mt-3 text-gray-600 font-semibold">100% Risk-Free: 60-Day Money-Back Guarantee</p>
@@ -801,7 +783,7 @@
 
             <div class="text-center">
                 <p class="text-red-600 font-bold text-xl mb-4 counter">124 Women Bought This Week</p>
-                <a href="https://www.checkout-ds24.com/product/692610" class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl">
+                <a href="#" class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
                     ACCESS THE SYSTEM NOW – $47
                 </a>
                 <p class="mt-3 text-gray-600 text-sm">Join women in California, London, Toronto, Sydney, and 14 other cities who refuse to let hormones dictate their earning trajectory.</p>
@@ -875,7 +857,7 @@
                     </span>
                 </div>
                 <div class="text-center mb-2">
-                    <a href="https://www.checkout-ds24.com/product/692610" class="cta-blue font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl">
+                    <a href="#" class="cta-blue font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
                         CLAIM IT ALL NOW - $47 (One Time)
                     </a>
                 </div>
@@ -1028,7 +1010,7 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><span><strong>Sleep-to-Performance Recovery</strong></span><p class="text-sm text-gray-600" style="margin-top:0.125rem;">CBT-I derived next-day clarity protocols is included in ebook</p></div></li>
                     </ul>
                     <div class="text-center mb-6">
-                        <a href="https://www.checkout-ds24.com/product/692610" class="cta-blue font-bold py-4 px-8 rounded-lg text-center inline-block w-full text-xl">
+                        <a href="#" class="cta-blue font-bold py-4 px-8 rounded-lg text-center inline-block w-full text-xl js-buy-button">
                             GET COMPLETE SYSTEM - $47
                         </a>
                     </div>
@@ -1149,7 +1131,7 @@
             </div>
             <p class="text-2xl font-light italic mb-8">Which category do you want to be in when you walk into work tomorrow?</p>
             <div class="mb-6">
-                <a href="https://www.checkout-ds24.com/product/692610" class="cta-primary font-bold py-4 px-8 rounded-lg inline-block text-xl">
+                <a href="#" class="cta-primary font-bold py-4 px-8 rounded-lg inline-block text-xl js-buy-button">
                     PROCEED SECURELY - $47
                 </a>
             </div>
@@ -1166,38 +1148,16 @@
 
     <audio id="audioSample" src="/audiobooksample.m4a" preload="none"></audio>
 
-    <!-- ---------- CHECKOUT POPUP (full preload – always in DOM, invisible until activated) ---------- -->
+    <!-- ---------- CHECKOUT POPUP (Whop embed injected dynamically) ---------- -->
     <div id="checkoutPopupOverlay" class="checkout-popup-overlay">
         <div class="checkout-popup-content">
             <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
-            <!-- Wrapper hidden until the custom element is defined, preventing partial render -->
-            <div id="checkoutEmbedWrapper" style="visibility: hidden; opacity: 0; transition: opacity 0.15s;">
-                <!-- Begin of digistore multi-step order box code (product 692610) -->
-                <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
-                <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
-                <!-- End of digistore multi-step order box code -->
-            </div>
+            <div id="whopCheckoutContainer" style="min-height: 500px; width: 100%;"></div>
         </div>
     </div>
 
     <script>
-        // Reveal checkout embed once the custom element is fully defined (no more half-loaded state)
-        (function() {
-            function revealEmbed() {
-                var wrapper = document.getElementById('checkoutEmbedWrapper');
-                if (wrapper) {
-                    wrapper.style.visibility = 'visible';
-                    wrapper.style.opacity = '1';
-                }
-            }
-            if (window.customElements && customElements.whenDefined) {
-                customElements.whenDefined('my-order-form').then(revealEmbed).catch(revealEmbed);
-            } else {
-                // Fallback for older browsers
-                window.addEventListener('load', revealEmbed);
-            }
-        })();
-
+        // Book preview
         function openBookPreview() {
             var popup = document.getElementById('bookPreviewPopup');
             var iframe = popup.querySelector('iframe');
@@ -1215,6 +1175,7 @@
             }
         }
 
+        // Audio sample
         function toggleAudioSample() {
             var audio = document.getElementById('audioSample');
             if (audio.paused) {
@@ -1224,19 +1185,42 @@
             }
         }
 
-        // Checkout Popup – uses class‑based activation (overlay is always present but invisible)
+        // Whop checkout popup – dynamically injects the exact embed code you provided
         function openCheckoutPopup(e) {
-            e.preventDefault();
-            document.getElementById('checkoutPopupOverlay').classList.add('active');
+            if (e) e.preventDefault();
+            var overlay = document.getElementById('checkoutPopupOverlay');
+            var container = document.getElementById('whopCheckoutContainer');
+            container.innerHTML = ''; // clear previous
+
+            // Create the embed div with the EXACT attributes you supplied – no alterations
+            var embedDiv = document.createElement('div');
+            embedDiv.setAttribute('data-whop-checkout-plan-id', 'plan_Owi4yDISl2dt8');
+            embedDiv.setAttribute('data-whop-checkout-theme', 'light');
+            embedDiv.setAttribute('data-whop-checkout-theme-accent-color', '#3574d4');
+            embedDiv.setAttribute('data-whop-checkout-theme-button-text', 'Get Access');
+            embedDiv.setAttribute('data-whop-checkout-setup-future-usage', 'off_session');
+            embedDiv.setAttribute('data-whop-checkout-collect-phone-numbers', 'false');
+            embedDiv.setAttribute('data-whop-checkout-hide-address', 'true');
+            embedDiv.setAttribute('data-whop-checkout-hide-tos', 'true');
+
+            container.appendChild(embedDiv);
+
+            overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
         function closeCheckoutPopup() {
-            document.getElementById('checkoutPopupOverlay').classList.remove('active');
+            var overlay = document.getElementById('checkoutPopupOverlay');
+            overlay.classList.remove('active');
             document.body.style.overflow = '';
+            // Clean up embed after transition
+            setTimeout(function() {
+                document.getElementById('whopCheckoutContainer').innerHTML = '';
+            }, 300);
         }
 
         document.addEventListener('DOMContentLoaded', function() {
+            // Audio button state
             var audio = document.getElementById('audioSample');
             var btn = document.getElementById('audioSampleBtn');
             if (audio && btn) {
@@ -1251,6 +1235,7 @@
                 });
             }
 
+            // FAQ accordion
             document.querySelectorAll('#faq button').forEach(function(button) {
                 button.addEventListener('click', function() {
                     var content = button.nextElementSibling;
@@ -1260,6 +1245,7 @@
                 });
             });
 
+            // Counter animation
             var counters = document.querySelectorAll('.counter');
             var baseCount = 124;
             var randomAddition = Math.floor(Math.random() * 15);
@@ -1268,8 +1254,13 @@
                 counter.textContent = finalCount + ' Women Bought This Week';
             });
 
+            // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
                 anchor.addEventListener('click', function(e) {
+                    // Don't interfere with js-buy-button (they have href="#")
+                    if (this.classList.contains('js-buy-button')) {
+                        return; // let the openCheckoutPopup handler take over
+                    }
                     e.preventDefault();
                     var targetId = this.getAttribute('href');
                     if (targetId === '#') return;
@@ -1280,8 +1271,8 @@
                 });
             });
 
-            // Attach checkout popup to all buy buttons
-            var buyButtons = document.querySelectorAll('a[href="https://www.checkout-ds24.com/product/692610"]');
+            // Attach checkout popup to all buy buttons (we added class js-buy-button)
+            var buyButtons = document.querySelectorAll('.js-buy-button');
             buyButtons.forEach(function(btn) {
                 btn.addEventListener('click', openCheckoutPopup);
             });
