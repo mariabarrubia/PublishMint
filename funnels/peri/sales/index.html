@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- Preload Digistore24 checkout for instant popup -->
+    <!-- Preload Digistore24 checkout for instant embed -->
     <link rel="preconnect" href="https://www.checkout-ds24.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.checkout-ds24.com">
     <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
@@ -1102,7 +1102,8 @@
                 </div>
             </div>
             <p class="text-2xl font-light italic mb-8">Which category do you want to be in when you walk into work tomorrow?</p>
-            <div id="checkout-embed" class="bg-white p-6 rounded-xl shadow-lg max-w-2xl mx-auto my-8">
+            <!-- CHECKOUT EMBED CONTAINER – stable anchor with min-height to prevent layout shift -->
+            <div id="checkout-embed" class="bg-white p-6 rounded-xl shadow-lg max-w-2xl mx-auto my-8" style="min-height: 420px;">
                 <!-- Begin of digistore multi-step order box code -->
                 <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
                 <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
@@ -1180,6 +1181,7 @@
                 counter.textContent = finalCount + ' Women Bought This Week';
             });
 
+            // Smooth scroll for all internal anchor links – exactly to the target, with a small offset
             document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -1187,7 +1189,8 @@
                     if (targetId === '#') return;
                     var targetElement = document.querySelector(targetId);
                     if (targetElement) {
-                        window.scrollTo({ top: targetElement.offsetTop - 20, behavior: 'smooth' });
+                        // Recalculate position just before scroll to catch any layout shift
+                        window.scrollTo({ top: targetElement.getBoundingClientRect().top + window.pageYOffset - 20, behavior: 'smooth' });
                     }
                 });
             });
