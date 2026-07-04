@@ -17,7 +17,8 @@
 
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
 
-    <!-- No Digistore24 scripts – all removed -->
+    <!-- Preload Whop loader script for faster background loading -->
+    <link rel="preload" href="https://js.whop.com/static/checkout/loader.js" as="script" crossorigin>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; }
@@ -395,7 +396,6 @@
             font-style: normal;
         }
 
-        /* Redesigned disclosure trap box */
         .disclosure-trap-box {
             background: rgba(254, 242, 242, 0.7);
             backdrop-filter: blur(6px);
@@ -417,21 +417,19 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.7);
-            z-index: -1;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.25s ease, z-index 0s 0.25s;
+            transition: opacity 0.25s ease;
         }
         .checkout-popup-overlay.active {
             opacity: 1;
             pointer-events: auto;
-            z-index: 10000;
-            transition: opacity 0.25s ease, z-index 0s 0s;
         }
         .checkout-popup-content {
             background: white;
@@ -442,7 +440,7 @@
             overflow-y: auto;
             padding: 20px;
             position: relative;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
         }
         .checkout-popup-close {
             position: absolute;
@@ -455,9 +453,14 @@
             color: #333;
             z-index: 10;
         }
+        /* Ensure Whop embed container has proper dimensions during preload */
+        #whopCheckoutContainer {
+            min-height: 500px;
+            width: 100%;
+        }
+        /* Whop embed renders inside this container — it will be fully loaded in background */
     </style>
     <base target="_blank">
-<base target="_blank">
 </head>
 <body class="antialiased text-gray-800">
 
@@ -1151,6 +1154,7 @@
         <div class="checkout-popup-content">
             <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
             <div id="whopCheckoutContainer" style="min-height: 500px; width: 100%;">
+                <!-- Whop embed code – kept fully intact -->
                 <div
                   data-whop-checkout-plan-id="plan_Owi4yDISl2dt8"
                   data-whop-checkout-theme="light"
@@ -1164,6 +1168,7 @@
                   data-whop-checkout-hide-tos="true"
                 ></div>
             </div>
+            <!-- Whop loader script – kept fully intact -->
             <script async src="https://js.whop.com/static/checkout/loader.js"></script>
         </div>
     </div>
@@ -1197,7 +1202,7 @@
             }
         }
 
-        // Whop checkout popup – embed preloaded in background, simply reveal on click
+        // Whop checkout popup – embed is preloaded in background via CSS (opacity:0, z-index:10000)
         function openCheckoutPopup(e) {
             if (e) e.preventDefault();
             var overlay = document.getElementById('checkoutPopupOverlay');
@@ -1263,7 +1268,7 @@
                 });
             });
 
-            // Attach checkout popup to all buy buttons (we added class js-buy-button)
+            // Attach checkout popup to all buy buttons (class js-buy-button)
             var buyButtons = document.querySelectorAll('.js-buy-button');
             buyButtons.forEach(function(btn) {
                 btn.addEventListener('click', openCheckoutPopup);
