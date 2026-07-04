@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Promocode script placed as high as possible for perfect tracking – do not alter -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var promoS = document.createElement('script');
+            promoS.src = "https://www.digistore24-scripts.com/service/digistore.js";
+            promoS.defer = true;
+            document.head.appendChild(promoS);
+            promoS.onload = function() {
+                if (typeof digistorePromocode === 'function') {
+                    digistorePromocode({ "product_id": 692610, "adjust_domain": true });
+                }
+            };
+        });
+    </script>
     <title>The Perimenopause Performance System: Protect Your Edge Without Disclosure</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- Preload Digistore24 checkout for instant embed -->
+    <!-- Preload Digistore24 checkout for instant popup -->
     <link rel="preconnect" href="https://www.checkout-ds24.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.checkout-ds24.com">
     <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
@@ -24,21 +38,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
-
-    <!-- Promocode script will load after DOMContentLoaded – non‑blocking -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var promoS = document.createElement('script');
-            promoS.src = "https://www.digistore24-scripts.com/service/digistore.js";
-            promoS.defer = true;
-            document.head.appendChild(promoS);
-            promoS.onload = function() {
-                if (typeof digistorePromocode === 'function') {
-                    digistorePromocode({ "product_id": 692610, "adjust_domain": true });
-                }
-            };
-        });
-    </script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; }
@@ -429,6 +428,11 @@
         }
         .disclosure-trap-box:hover {
             box-shadow: 0 8px 12px -3px rgba(220, 38, 38, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+        }
+
+        /* Ensure checkout embed is positioned correctly when scrolled to */
+        #checkout-embed {
+            scroll-margin-top: 20px;
         }
     </style>
     <base target="_blank">
@@ -1102,8 +1106,7 @@
                 </div>
             </div>
             <p class="text-2xl font-light italic mb-8">Which category do you want to be in when you walk into work tomorrow?</p>
-            <!-- CHECKOUT EMBED CONTAINER – stable anchor with min-height to prevent layout shift -->
-            <div id="checkout-embed" class="bg-white p-6 rounded-xl shadow-lg max-w-2xl mx-auto my-8" style="min-height: 420px;">
+            <div id="checkout-embed" class="bg-white p-6 rounded-xl shadow-lg max-w-2xl mx-auto my-8">
                 <!-- Begin of digistore multi-step order box code -->
                 <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
                 <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
@@ -1179,20 +1182,6 @@
             var finalCount = baseCount + randomAddition;
             counters.forEach(function(counter) {
                 counter.textContent = finalCount + ' Women Bought This Week';
-            });
-
-            // Smooth scroll for all internal anchor links – exactly to the target, with a small offset
-            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    var targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        // Recalculate position just before scroll to catch any layout shift
-                        window.scrollTo({ top: targetElement.getBoundingClientRect().top + window.pageYOffset - 20, behavior: 'smooth' });
-                    }
-                });
             });
         });
     </script>
