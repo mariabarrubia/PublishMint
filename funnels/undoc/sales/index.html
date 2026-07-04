@@ -17,8 +17,7 @@
 
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
 
-    <!-- Preload Whop loader script – does not block rendering -->
-    <link rel="preload" href="https://js.whop.com/static/checkout/loader.js" as="script" crossorigin>
+    <!-- REMOVED: preload for whop loader (unnecessary) -->
 
     <style>
         *, *::before, *::after { box-sizing: border-box; }
@@ -410,7 +409,7 @@
             box-shadow: 0 8px 12px -3px rgba(220, 38, 38, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
         }
 
-        /* Removed all checkout popup styles – they are no longer needed */
+        /* REMOVED: checkout-popup-overlay and related styles */
     </style>
     <base target="_blank">
 </head>
@@ -503,6 +502,7 @@
                                 Prevent $5,000+ Loss in Quarterly Earnings
                             </span>
                         </div>
+                        <!-- Buy button now scrolls to #pricing -->
                         <a href="#" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl js-buy-button">
                             SECURE MY PERFORMANCE SYSTEM - $47
                         </a>
@@ -809,11 +809,24 @@
                         Prevent loss of the opportunities
                     </span>
                 </div>
-                <div class="text-center mb-2">
-                    <a href="#" class="cta-blue font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
-                        CLAIM IT ALL NOW - $47 (One Time)
-                    </a>
+                <!-- ========== WHOP EMBED REPLACES THE OLD BUTTON ========== -->
+                <div class="text-center mb-4">
+                    <div
+                        data-whop-checkout-plan-id="plan_Owi4yDISl2dt8"
+                        data-whop-checkout-return-url="https://ty-peri-frontend.pages.dev/"
+                        data-whop-checkout-theme="light"
+                        data-whop-checkout-theme-accent-color="#3556cc"
+                        data-whop-checkout-theme-border-radius="10"
+                        data-whop-checkout-theme-button-text="Complete Checkout"
+                        data-whop-checkout-setup-future-usage="off_session"
+                        data-whop-checkout-collect-phone-numbers="false"
+                        data-whop-checkout-hide-address="true"
+                        data-whop-checkout-hide-email="true"
+                        data-whop-checkout-hide-tos="true"
+                    ></div>
+                    <script async defer src="https://js.whop.com/static/checkout/loader.js"></script>
                 </div>
+                <!-- ========== END WHOP EMBED ========== -->
                 <div class="flex items-center justify-center mt-4 gap-4">
                     <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
                     <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;" loading="lazy" decoding="async">
@@ -936,10 +949,11 @@
         </div>
     </section>
 
-    <!-- Pricing & Guarantee Section (Whop embed placed inside) -->
+    <!-- Pricing & Guarantee Section (with Whop embed inside) -->
     <section id="pricing" class="py-20 guarantee-section px-4">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Will You Leave Your Career to Chance Or Take Control?</h2>
+            <!-- The card below already contains the embed, so we keep it as is -->
             <div class="bg-white rounded-xl shadow-2xl overflow-hidden max-w-md mx-auto">
                 <div class="p-8">
                     <div class="text-center mb-6">
@@ -962,8 +976,7 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><span><strong>Anxiety Spiral Interrupt System</strong></span><p class="text-sm text-gray-600" style="margin-top:0.125rem;">5-minute CBT-based autonomic reset is included in ebook</p></div></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><span><strong>Sleep-to-Performance Recovery</strong></span><p class="text-sm text-gray-600" style="margin-top:0.125rem;">CBT-I derived next-day clarity protocols is included in ebook</p></div></li>
                     </ul>
-
-                    <!-- REPLACED the "GET COMPLETE SYSTEM" button with Whop embed -->
+                    <!-- ========== WHOP EMBED INSIDE THIS CARD ========== -->
                     <div class="text-center mb-6">
                         <div
                             data-whop-checkout-plan-id="plan_Owi4yDISl2dt8"
@@ -978,9 +991,10 @@
                             data-whop-checkout-hide-email="true"
                             data-whop-checkout-hide-tos="true"
                         ></div>
-                        <script async defer src="https://js.whop.com/static/checkout/loader.js"></script>
+                        <!-- Loader script is already included once in the page (see above), but we keep it here for simplicity -->
+                        <!-- We'll place the script once after the first embed, but we can also put it here -->
                     </div>
-
+                    <!-- ========== END WHOP EMBED ========== -->
                     <div class="flex flex-col items-center">
                         <div class="flex items-center justify-center mb-2 gap-4">
                             <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
@@ -1115,6 +1129,8 @@
 
     <audio id="audioSample" src="/audiobooksample.m4a" preload="none"></audio>
 
+    <!-- REMOVED: old checkout popup overlay completely -->
+
     <script>
         // Book preview
         function openBookPreview() {
@@ -1179,12 +1195,9 @@
                 counter.textContent = finalCount + ' Women Bought This Week';
             });
 
-            // Smooth scroll for anchor links (except js-buy-button)
-            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            // Smooth scroll for anchor links (excluding .js-buy-button)
+            document.querySelectorAll('a[href^="#"]:not(.js-buy-button)').forEach(function(anchor) {
                 anchor.addEventListener('click', function(e) {
-                    if (this.classList.contains('js-buy-button')) {
-                        return; // handled below
-                    }
                     e.preventDefault();
                     var targetId = this.getAttribute('href');
                     if (targetId === '#') return;
@@ -1195,7 +1208,7 @@
                 });
             });
 
-            // All buy buttons scroll to the pricing card (where Whop embed lives)
+            // ========== BUY BUTTONS SCROLL TO PRICING CARD ==========
             document.querySelectorAll('.js-buy-button').forEach(function(btn) {
                 btn.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -1205,6 +1218,9 @@
                     });
                 });
             });
+            // ========== END ==========
+
+            // REMOVED: old popup event listeners
         });
     </script>
 
