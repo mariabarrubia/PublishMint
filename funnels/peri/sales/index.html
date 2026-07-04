@@ -5,37 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Perimenopause Performance System: Protect Your Edge Without Disclosure</title>
 
-    <!-- Preconnect & DNS prefetch for faster connections -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- Whop preconnects & prefetch – instant checkout -->
-    <link rel="preconnect" href="https://js.whop.com" crossorigin>
-    <link rel="dns-prefetch" href="https://js.whop.com">
-    <link rel="preconnect" href="https://checkout.whop.com" crossorigin>
-    <link rel="dns-prefetch" href="https://checkout.whop.com">
-
-    <!-- Font loading: non‑blocking, with instant system fallback -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
-    <!-- Font Awesome (non‑blocking) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <!-- Preload hero image for LCP -->
-    <link rel="preload" as="image" href="images/perimenopause.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
 
-    <!-- Inline critical CSS – all utility classes replicated, zero FOUC -->
+    <!-- Whop loader script – async deferred in head per Whop docs -->
+    <script async defer src="https://js.whop.com/static/checkout/loader.js"></script>
+
     <style>
-        /* ---------- RESET & BASE ---------- */
         *, *::before, *::after { box-sizing: border-box; }
         body {
             margin: 0;
             padding: 0;
-            padding-top: 40px;
-            padding-bottom: 50px;
             overflow-x: hidden;
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Inter';
             scroll-behavior: smooth;
@@ -49,7 +38,6 @@
         a { color: inherit; text-decoration: none; }
         .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-        /* ---------- CONTAINER ---------- */
         .container { width: 100%; margin-left: auto; margin-right: auto; padding-left: 0.75rem; padding-right: 0.75rem; }
         .max-w-2xl { max-width: 42rem; }
         .max-w-3xl { max-width: 48rem; }
@@ -59,7 +47,6 @@
         .max-w-lg { max-width: 32rem; }
         .mx-auto { margin-left: auto; margin-right: auto; }
 
-        /* ---------- TYPOGRAPHY ---------- */
         .text-xs { font-size: 0.75rem; line-height: 1rem; }
         .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
         .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
@@ -105,7 +92,6 @@
         .text-orange-500 { color: #f97316; }
         .text-white { color: #fff; }
 
-        /* ---------- BACKGROUNDS ---------- */
         .bg-white { background-color: #fff; }
         .bg-gray-50 { background-color: #f9fafb; }
         .bg-gray-100 { background-color: #f3f4f6; }
@@ -117,7 +103,6 @@
         .bg-yellow-50 { background-color: #fefce8; }
         .bg-purple-100 { background-color: #f3e8ff; }
 
-        /* ---------- BORDERS ---------- */
         .border { border-width: 1px; }
         .border-t { border-top-width: 1px; }
         .border-b { border-bottom-width: 1px; }
@@ -133,14 +118,12 @@
         .rounded-2xl { border-radius: 1rem; }
         .rounded-full { border-radius: 9999px; }
 
-        /* ---------- SHADOWS ---------- */
         .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
         .shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); }
         .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); }
         .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
         .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
 
-        /* ---------- SPACING ---------- */
         .m-0 { margin: 0; }
         .mt-1 { margin-top: 0.25rem; }
         .mt-2 { margin-top: 0.5rem; }
@@ -185,7 +168,6 @@
         .pt-6 { padding-top: 1.5rem; }
         .pb-16 { padding-bottom: 4rem; }
 
-        /* ---------- FLEX ---------- */
         .flex { display: flex; }
         .inline-flex { display: inline-flex; }
         .flex-col { flex-direction: column; }
@@ -206,13 +188,11 @@
         .space-y-6 > * + * { margin-top: 1.5rem; }
         .space-x-8 > * + * { margin-left: 2rem; }
 
-        /* ---------- GRID ---------- */
         .grid { display: grid; }
         .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
         .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 
-        /* ---------- WIDTH / HEIGHT ---------- */
         .w-full { width: 100%; }
         .w-1\/2 { width: 50%; }
         .w-3\/4 { width: 75%; }
@@ -222,7 +202,6 @@
         .h-auto { height: auto; }
         .max-w-none { max-width: none; }
 
-        /* ---------- DISPLAY / OVERFLOW ---------- */
         .block { display: block; }
         .inline-block { display: inline-block; }
         .hidden { display: none; }
@@ -241,16 +220,13 @@
         .z-20 { z-index: 20; }
         .pointer-events-none { pointer-events: none; }
 
-        /* ---------- HOVER ---------- */
         .hover\:underline:hover { text-decoration: underline; }
         .hover\:text-gray-800:hover { color: #1f2937; }
         .hover\:bg-gray-50:hover { background-color: #f9fafb; }
 
-        /* ---------- TRANSITIONS ---------- */
         .transition-all { transition: all 0.2s ease; }
         .duration-300 { transition-duration: 300ms; }
 
-        /* ---------- RESPONSIVE (md 768px, lg 1024px) ---------- */
         @media (min-width: 768px) {
             .md\:w-1\/2 { width: 50%; }
             .md\:mb-0 { margin-bottom: 0; }
@@ -264,7 +240,7 @@
             .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
         }
         @media (max-width: 640px) {
-            body { font-size: 14px; padding-bottom: 40px; padding-top: 36px; }
+            body { font-size: 14px; }
             .container { padding-left: 0.75rem; padding-right: 0.75rem; }
             h1 { font-size: 2rem; }
             h2 { font-size: 1.5rem; }
@@ -274,7 +250,6 @@
             .cta-primary, .cta-blue, .cta-green { width: 100%; text-align: center; }
         }
 
-        /* ---------- CUSTOM COMPONENTS (unchanged) ---------- */
         .hero-gradient { background: linear-gradient(135deg, #1e1b4b 0%, #ffffff 100%); }
         .cta-primary { background-color: #dc2626; color: white; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(220,38,38,0.3); display: inline-block; }
         .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 8px rgba(220,38,38,0.4); }
@@ -326,7 +301,6 @@
         .video-player-wrapper { background: #0f172a; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid #334155; }
         .video-player-wrapper video { width: 100%; display: block; border-radius: 0; }
 
-        /* ---------- ENHANCED PREVIEW BUTTONS ---------- */
         .book-preview-btn {
             display: inline-flex;
             align-items: center;
@@ -369,247 +343,82 @@
         }
         .audio-preview-btn i { font-size: 0.9rem; }
 
-        /* ===== WHOP TRUST BADGE STYLES (replicated from inspiration) ===== */
-        .trust-badge-top {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            z-index: 1000;
-            border-bottom: 1px solid #e5e7eb;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        .trust-badge-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            gap: 12px;
-        }
-
-        .trust-badge-content:hover {
-            background-color: #f9fafb;
-        }
-
-        .trust-badge-bottom {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            z-index: 1000;
-            border-top: 1px solid #e5e7eb;
-            box-shadow: 0 -1px 3px rgba(0,0,0,0.05);
-        }
-
-        .trust-badge-bottom .trust-badge-content {
-            padding: 6px;
-            font-size: 13px;
-        }
-
-        .trust-popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-            z-index: 10001;
-            justify-content: center;
-            align-items: flex-start;
-            padding-top: 80px;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .trust-popup.active {
-            display: flex;
-        }
-
-        .trust-popup-content {
-            background: white;
-            max-width: 420px;
-            width: 100%;
+        .pull-quote {
+            background: #f8fafc;
+            border-left: 4px solid #1e40af;
             border-radius: 8px;
-            padding: 0;
+            padding: 1.25rem;
             position: relative;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            animation: slideDown 0.3s ease-out;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .pull-quote .quote-mark {
+            font-size: 3rem;
+            color: #1e40af;
+            line-height: 1;
+            position: absolute;
+            top: 0.5rem;
+            left: 0.75rem;
+            opacity: 0.2;
+            font-family: Georgia, serif;
         }
-
-        .trust-popup-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 20px;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .trust-popup-close {
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #9ca3af;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-            transition: all 0.2s;
-            padding: 0;
-        }
-
-        .trust-popup-close:hover {
-            background-color: #f3f4f6;
-            color: #111827;
-        }
-
-        .trust-popup-subheader {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 20px;
-            padding-bottom: 16px;
-        }
-
-        .vertical-line {
-            width: 1px;
-            height: 30px;
-            background-color: #d1d5db;
-            margin-left: 11px;
-            margin-top: -10px;
-            margin-bottom: -10px;
-        }
-
-        .trust-popup-body {
-            padding: 0 24px 24px 24px;
-        }
-
-        .trust-popup-body p {
-            color: #374151;
-            font-size: 15px;
+        .pull-quote blockquote {
+            margin: 0;
+            padding-left: 1rem;
+            font-style: italic;
+            color: #1e293b;
+            font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 12px;
         }
-
-        .trust-popup-footer {
-            padding: 16px 24px 24px 24px;
+        .pull-quote .attribution {
             display: flex;
-            justify-content: flex-end;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        .pull-quote .attribution img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e5e7eb;
+        }
+        .pull-quote .attribution .name {
+            font-weight: 700;
+            color: #1e293b;
+            font-size: 0.85rem;
+            font-style: normal;
+        }
+        .pull-quote .attribution .title {
+            font-size: 0.7rem;
+            color: #6b7280;
+            font-style: normal;
         }
 
-        .got-it-btn {
-            background-color: #2563eb;
-            color: white;
-            font-weight: 600;
-            padding: 8px 24px;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s;
+        .disclosure-trap-box {
+            background: rgba(254, 242, 242, 0.7);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(220, 38, 38, 0.15);
+            border-left: 4px solid #dc2626;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s ease;
+        }
+        .disclosure-trap-box:hover {
+            box-shadow: 0 8px 12px -3px rgba(220, 38, 38, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
         }
 
-        .got-it-btn:hover {
-            background-color: #1d4ed8;
+        /* Whop embed container – minimum height for proper rendering */
+        #whop-embed-container {
+            min-height: 500px;
+            width: 100%;
         }
-        /* ===== END TRUST BADGE STYLES ===== */
     </style>
-    <base target="_blank">
 </head>
 <body class="antialiased text-gray-800">
 
-    <!-- ===== FIXED WHOP TRUST BADGE (TOP) – REPLICATED FROM INSPIRATION ===== -->
-    <div class="trust-badge-top" onclick="openTrustPopup()">
-        <div class="trust-badge-content">
-            <div style="display: flex; align-items: center; gap: 8px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #2563eb;">
-                    <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span style="font-weight: 600; color: #111827; font-size: 14px; letter-spacing: -0.3px;">Whop</span>
-            </div>
-            <span style="color: #374151; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">Secure Order</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #fbbf24;">
-                <rect x="5" y="11" width="14" height="10" rx="2" fill="currentColor"/>
-                <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="12" cy="16" r="1" fill="#374151"/>
-            </svg>
-        </div>
-    </div>
-
-    <!-- ===== FIXED WHOP TRUST BADGE (BOTTOM) ===== -->
-    <div class="trust-badge-bottom" onclick="openTrustPopup()">
-        <div class="trust-badge-content">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #2563eb;">
-                <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span style="font-weight: 600; color: #059669; font-size: 12px;">Whop Approved</span>
-            <span style="color: #9ca3af; font-size: 11px;">|</span>
-            <span style="color: #6b7280; font-size: 11px;">24/7 Support Available</span>
-        </div>
-    </div>
-
-    <!-- ===== TRUST POPUP (Whop style) ===== -->
-    <div id="whop-trust-popup" class="trust-popup" onclick="closeTrustPopup(event)">
-        <div class="trust-popup-content" onclick="event.stopPropagation()">
-            <div class="trust-popup-header">
-                <div style="display: flex; align-items: center; gap: 8px;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #111827;">
-                        <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span style="font-weight: 700; color: #111827; font-size: 18px;">Whop</span>
-                </div>
-                <button class="trust-popup-close" onclick="closeTrustPopup()">&times;</button>
-            </div>
-
-            <div class="trust-popup-subheader">
-                <div style="position: relative;">
-                    <div class="vertical-line"></div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #fbbf24;">
-                        <rect x="5" y="11" width="14" height="10" rx="2" fill="currentColor"/>
-                        <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
-                        <circle cx="12" cy="16" r="1" fill="#374151"/>
-                    </svg>
-                </div>
-                <span style="font-weight: 700; color: #111827; font-size: 16px; letter-spacing: 0.5px; text-transform: uppercase;">Secure Order</span>
-            </div>
-
-            <div style="border-top: 1px solid #e5e7eb; margin: 0 20px;"></div>
-
-            <div class="trust-popup-body">
-                <p style="font-weight: 500; color: #111827; margin-bottom: 12px;">
-                    Christine is approved by Whop for offering this product.
-                </p>
-                <p style="color: #4b5563; font-size: 14px; margin-bottom: 8px;">
-                    You can purchase with confidence knowing that Whop will handle the checkout securely.
-                </p>
-                <p style="color: #4b5563; font-size: 14px;">
-                    And support is available 24/7 at your disposal.
-                </p>
-            </div>
-
-            <div class="trust-popup-footer">
-                <button class="got-it-btn" onclick="closeTrustPopup()">Got It</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Book Preview Popup (src loaded on click) -->
     <div id="bookPreviewPopup" class="book-preview-popup" onclick="closeBookPreview(event)">
         <div class="book-preview-content" onclick="event.stopPropagation()">
             <button class="book-preview-close" onclick="closeBookPreview()"><i class="fas fa-times text-gray-700"></i></button>
@@ -630,31 +439,37 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="trust-section pt-6 pb-16 px-4" style="padding-top:3rem;">
+    <section class="trust-section pt-6 pb-16 px-4" style="padding-top:0.5rem;">
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
-                    <div class="mt-0 mb-4">
+                    <div class="mt-3 mb-4">
                         <div class="bg-green-100 text-green-800 font-semibold py-1.5 px-3 rounded-full inline-flex items-center text-xs mb-2">
                             <i class="fas fa-shield-alt mr-2"></i>Performance System Bought by 3,200+ Professional Women <span class="text-xs opacity-75 ml-1" style="font-size:0.625rem;">Last Updated: Today</span>
                         </div>
                     </div>
 
-                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                        Your Hormones Are Changing.<br>
-                        <span class="text-blue-800">Your Career Doesn't Have To.</span>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6" style="background: linear-gradient(135deg, #1e40af, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                        The Perimenopause Performance System
                     </h1>
 
                     <div class="text-xl mb-6 space-y-4">
                         <p><strong>For professional women experiencing perimenopause,</strong> the problem isn't hot flushes in private. It's brain fog in the boardroom. Anxiety before the client call. The silent terror that your professional edge is dulling while everyone watches.</p>
                     </div>
 
-                    <div class="fact-box p-3 rounded-lg mb-6">
-                        <div class="flex items-start">
-                            <i class="fas fa-exclamation-triangle text-red-600 mr-2 mt-1 text-lg"></i>
+                    <div class="md:hidden mb-4">
+                        <img src="/images/perimenopause.webp" alt="Professional woman at work" class="rounded-xl shadow-2xl w-full" style="max-height: 500px; object-fit: cover;" loading="lazy" decoding="async">
+                    </div>
+
+                    <!-- Redesigned disclosure trap box -->
+                    <div class="disclosure-trap-box mb-3 text-sm">
+                        <div class="flex items-start gap-3">
+                            <div class="flex-shrink-0 w-7 h-7 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
+                                <i class="fas fa-exclamation-triangle text-red-600 text-xs"></i>
+                            </div>
                             <div>
-                                <p class="font-bold text-red-800 text-sm">The Disclosure Trap: Every major corporate menopause solution treats disclosure as the mandatory first step. This is structurally dangerous.</p>
-                                <p class="text-xs text-gray-500 mt-1 italic">(U.K. House of Commons Committee Report)</p>
+                                <p class="font-semibold text-gray-800 text-sm leading-snug">The Disclosure Trap: Every major corporate menopause solution treats disclosure as the mandatory first step. This is structurally dangerous.</p>
+                                <p class="text-xs text-gray-400 mt-1 italic">(U.K. House of Commons Committee Report)</p>
                             </div>
                         </div>
                     </div>
@@ -672,23 +487,17 @@
                             </div>
                             <div class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
-                                <span>You've read the menopause books but found zero practical guidance for your career</span>
+                                <span>You re-read the same email three times and still aren't sure what it said</span>
                             </div>
                             <div class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
                                 <span>You would rather solve this privately than disclose to HR and risk the "aging penalty" or tagged "weak"</span>
                             </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
-                                <span>You need a system, not a support group</span>
-                            </div>
                         </div>
                     </div>
 
-                    <div class="md:hidden mb-8">
-                        <div class="relative">
-                            <img src="images/perimenopause.webp" alt="Professional woman at work" class="rounded-xl shadow-2xl w-full mb-6" style="max-height: 500px; object-fit: cover;" loading="lazy" decoding="async">
-                        </div>
+                    <div class="mb-6">
+                        <img src="/images/handmockup.webp" alt="Hand mockup" class="rounded-xl shadow-lg w-full max-w-md mx-auto mb-1" loading="lazy" decoding="async">
                     </div>
 
                     <div class="text-center mb-6">
@@ -697,9 +506,9 @@
                                 Prevent $5,000+ Loss in Quarterly Earnings
                             </span>
                         </div>
-                        <button class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl js-buy-button">
-                            SECURE MY PERFORMANCE SYSTEM - $37
-                        </button>
+                        <a href="#" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl js-buy-button">
+                            SECURE MY PERFORMANCE SYSTEM - $47
+                        </a>
                         <div class="flex items-center justify-center mt-4 gap-4">
                             <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
                             <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;" loading="lazy" decoding="async">
@@ -709,20 +518,29 @@
                     </div>
                     <p class="text-center text-gray-600">100% Risk-Free: 60-Day Money-Back Guarantee</p>
 
-                    <img src="images/handmockup.webp" alt="Hand mockup" class="rounded-xl shadow-lg w-full max-w-md mx-auto mb-1" loading="lazy" decoding="async">
-                    <p class="text-center text-xs text-gray-400 italic mb-4">All items are delivered digitally</p>
-
-                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 text-center mt-6">
-                        <p class="text-sm font-medium text-blue-800">
-                            <i class="fas fa-exclamation-circle mr-2"></i>
-                            <strong>Critical:</strong> The harder you work to hide symptoms, the more cognitive resource you drain from the actual work. Most women don't recognise this until the pattern is entrenched.
-                        </p>
-                        <p class="font-bold text-blue-900 mt-2">This system fixes that loop.</p>
+                    <!-- Recrafted Natalie Brandt testimonial -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 mt-6">
+                        <div class="flex items-center mb-3">
+                            <img src="/images/image9.webp" alt="Natalie Brandt" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                            <div>
+                                <p class="font-bold text-sm">Natalie Brandt</p>
+                                <p class="text-xs text-gray-500">Senior Litigator, Berlin</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-2">
+                            <i class="fas fa-star text-yellow-400 text-sm"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm italic">"I was so worried that I used to Google about early Dementia. I am calm &amp; confident now, and know what to do exactly."</p>
+                        <p class="text-xs text-gray-400 mt-2">yesterday</p>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center hidden md:block">
                     <div class="relative">
-                        <img src="images/perimenopause.webp" alt="Professional woman at work" class="rounded-xl shadow-2xl w-full" style="max-height: 600px; object-fit: cover;" loading="eager" fetchpriority="high">
+                        <img src="/images/perimenopause.webp" alt="Professional woman at work" class="rounded-xl shadow-2xl w-full" style="max-height: 600px; object-fit: cover;" loading="eager" fetchpriority="high">
                         <p class="text-center text-sm text-gray-600 mt-2 italic">The invisible performance cost of perimenopause in high-stakes environments</p>
                     </div>
                 </div>
@@ -736,8 +554,8 @@
             <div class="mb-8">
                 <h3 class="text-2xl font-bold text-center mb-6">For decades, western medicine told women to "expect hot flashes." They completely ignored the brain.</h3>
                 <div class="video-player-wrapper max-w-3xl mx-auto">
-                    <video controls poster="images/perimenopause.webp" preload="none" style="width:100%;display:block;border-radius:0;">
-                        <source src="Perimenopausevideo.mp4" type="video/mp4">
+                    <video controls poster="/images/perimenopause.webp" preload="none" style="width:100%;display:block;border-radius:0;">
+                        <source src="/Perimenopausevideo.mp4" type="video/mp4">
                         Your browser does not support the video player.
                     </video>
                 </div>
@@ -753,7 +571,7 @@
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                        <span><strong>You'll Walk Into Every Meeting With a Pre-Loaded Protocol</strong> — No more improvisation. No more praying you don't blank on a client's name</span>
+                        <span><strong>You walk into meetings with a protocol, not a prayer</strong> — No more improvisation. No more praying you don't blank on a client's name</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
@@ -763,9 +581,9 @@
             </div>
 
             <div class="text-center">
-                <button class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
-                    CLAIM MY PERFORMANCE SYSTEM - $37
-                </button>
+                <a href="#" class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
+                    CLAIM MY PERFORMANCE SYSTEM - $47
+                </a>
                 <p class="mt-3 text-gray-600 font-semibold">100% Risk-Free: 60-Day Money-Back Guarantee</p>
             </div>
         </div>
@@ -778,19 +596,19 @@
                 <p class="text-sm text-gray-600 font-medium">System validated against current clinical and occupational evidence:</p>
                 <div class="flex flex-wrap justify-center gap-6 items-start">
                     <div class="flex flex-col items-center">
-                        <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmwomeq/91/report.html" target="_blank"><img src="images/hocc.webp" alt="UK Parliament Women and Equalities Committee" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmwomeq/91/report.html" target="_blank"><img src="/images/hocc.webp" alt="UK Parliament Women and Equalities Committee" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">UK Parliament</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://journals.lww.com/menopausejournal/fulltext/2019/10000/the_menopause_transition_and_women_s_health_at.20.aspx" target="_blank"><img src="images/swan.webp" alt="SWAN Longitudinal Study" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://journals.lww.com/menopausejournal/fulltext/2019/10000/the_menopause_transition_and_women_s_health_at.20.aspx" target="_blank"><img src="/images/swan.webp" alt="SWAN Longitudinal Study" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">SWAN Study</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/29315132/" target="_blank"><img src="images/nih.webp" alt="MENOS@Work RCT Data" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/29315132/" target="_blank"><img src="/images/nih.webp" alt="MENOS@Work RCT Data" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">NIH MENOS@Work</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://www.nyp.org/healthmatters/how-to-protect-your-brain-health-during-menopause" target="_blank"><img src="images/neuro.webp" alt="Occupational Neuroscience" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://www.nyp.org/healthmatters/how-to-protect-your-brain-health-during-menopause" target="_blank"><img src="/images/neuro.webp" alt="Occupational Neuroscience" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">NeuroScience</span>
                     </div>
                 </div>
@@ -807,7 +625,7 @@
             <div class="testimonial-carousel mb-12">
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image1.webp" alt="Sarah Mitchell" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image1.webp" alt="Sarah Mitchell" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Sarah Mitchell</p>
                             <p class="text-sm text-gray-500">Senior Consultant, California</p>
@@ -821,7 +639,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image2.webp" alt="Amina Reeves" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image2.webp" alt="Amina Reeves" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Amina Reeves</p>
                             <p class="text-sm text-gray-500">Medical Director, Toronto</p>
@@ -835,7 +653,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image3.webp" alt="Claire Morrison" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image3.webp" alt="Claire Morrison" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Claire Morrison</p>
                             <p class="text-sm text-gray-500">Finance Director, Sydney</p>
@@ -849,7 +667,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image4.webp" alt="Jennifer Taylor" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image4.webp" alt="Jennifer Taylor" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Jennifer Taylor</p>
                             <p class="text-sm text-gray-500">Barrister, Manchester</p>
@@ -863,7 +681,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image5.webp" alt="Leliana Shuzhen" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image5.webp" alt="Leliana Shuzhen" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Leliana Shuzhen</p>
                             <p class="text-sm text-gray-500">Tech Lead, Melbourne</p>
@@ -877,7 +695,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image6.webp" alt="Helen Walker" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image6.webp" alt="Helen Walker" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Helen Walker</p>
                             <p class="text-sm text-gray-500">Operations Director, Edinburgh</p>
@@ -891,7 +709,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image7.webp" alt="Rachel Donovan" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image7.webp" alt="Rachel Donovan" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Rachel Donovan</p>
                             <p class="text-sm text-gray-500">Marketing VP, Vancouver</p>
@@ -905,7 +723,7 @@
                 </div>
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-3">
-                        <img src="images/image8.webp" alt="Diane Lawrence" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
+                        <img src="/images/image8.webp" alt="Diane Lawrence" class="w-12 h-12 rounded-full mr-4 object-cover bg-gray-300" loading="lazy" decoding="async">
                         <div>
                             <p class="font-bold">Diane Lawrence</p>
                             <p class="text-sm text-gray-500">Partner, Law Firm, Brisbane</p>
@@ -921,9 +739,9 @@
 
             <div class="text-center">
                 <p class="text-red-600 font-bold text-xl mb-4 counter">124 Women Bought This Week</p>
-                <button class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
-                    ACCESS THE SYSTEM NOW – $37
-                </button>
+                <a href="#" class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
+                    ACCESS THE SYSTEM NOW – $47
+                </a>
                 <p class="mt-3 text-gray-600 text-sm">Join women in California, London, Toronto, Sydney, and 14 other cities who refuse to let hormones dictate their earning trajectory.</p>
             </div>
         </div>
@@ -936,9 +754,8 @@
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Not symptom tracking. Not wellness advice. An operational system for maintaining executive function, professional credibility, and privacy during the menopausal transition.</p>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-3 mb-12">
-                <!-- CARD 1: EBOOK -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="images/ebookmockup.webp" alt="Ebook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/ebookmockup.webp" alt="Ebook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
                     <h3 class="text-sm font-bold mb-1 text-blue-800">THE BUSY WOMAN'S PERIMENOPAUSE - EBOOK</h3>
                     <p class="text-gray-600 text-xs mb-2">Every protocol, script, and framework i built for myself after research that included 488 sources. Zero disclosure required. Your operational edge, restored — searchable, private, value packed, available instantly, before the next meeting.</p>
@@ -949,22 +766,8 @@
                     </div>
                     <div class="text-right text-xs font-bold text-gray-500">Value $26.99</div>
                 </div>
-                <!-- CARD 2: PODCAST EPISODE (inserted after ebook) -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="images/podcast.webp" alt="Podcast Episode" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
-                    <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
-                    <h3 class="text-sm font-bold mb-1 text-blue-800">EXCLUSIVE PODCAST EPISODE</h3>
-                    <p class="text-gray-600 text-xs mb-2">A researcher Rebekah Brown, who ran her own agency, got misdiagnosed as depressed at 43, rebuilt her own path back, founded a brand, and is now speaking to us in the Podcast.</p>
-                    <div class="text-center mb-1">
-                        <button id="podcastPreviewBtn" onclick="togglePodcastPreview()" class="audio-preview-btn">
-                            <i class="fas fa-play"></i> Podcast Preview
-                        </button>
-                    </div>
-                    <div class="text-right text-xs font-bold text-gray-500">Value $17.99</div>
-                </div>
-                <!-- CARD 3: AUDIOBOOK -->
-                <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="images/audiobookmockup.webp" alt="Audiobook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/audiobookmockup.webp" alt="Audiobook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
                     <h3 class="text-sm font-bold mb-1 text-blue-800">THE BUSY WOMAN'S PERIMENOPAUSE - AUDIOBOOK</h3>
                     <p class="text-gray-600 text-xs mb-2">Complete book narrated, for the mornings you can't read. Pre-meeting priming, fog-day commutes, or 4am when your brain is already running threat assessments on the day ahead.</p>
@@ -975,26 +778,23 @@
                     </div>
                     <div class="text-right text-xs font-bold text-gray-500">Value $33.99</div>
                 </div>
-                <!-- CARD 4: WORKOUT -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md relative">
                     <span class="absolute top-0 left-0 bg-yellow-400 text-yellow-900 font-extrabold text-xs px-2 py-1 rounded-br-lg shadow z-10">FREE BONUS</span>
-                    <img src="images/workout.webp" alt="Workout Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/workout.webp" alt="Workout Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-blue-800">QUICK HOME WORKOUT PLAN for PERIMENOPAUSE</h3>
                     <p class="text-gray-600 text-xs mb-2">Strength training specifically calibrated for perimenopause — hormonal resilience, bone density, cognitive stamina. Just 15 minutes. No gym. No Wasting the energy you don't have.</p>
                     <div class="text-right text-xs font-bold text-gray-500">Value $22.99</div>
                 </div>
-                <!-- CARD 5: MEAL PLAN -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="images/mealplan.webp" alt="Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/mealplan.webp" alt="Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-blue-800">7-DAY MEAL PLAN</h3>
                     <p class="text-gray-600 text-xs mb-2">A brain-fuel framework. Phytoestrogens, omega-3s, blood-sugar stability — the nutritional architecture your prefrontal cortex needs to perform under hormonal volatility.</p>
                     <div class="text-right text-xs font-bold text-gray-500">Value $26.99</div>
                 </div>
-                <!-- CARD 6: VEGAN MEAL PLAN -->
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="images/vegan.webp" alt="Vegan Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/vegan.webp" alt="Vegan Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-blue-800">7-DAY (VEGAN) MEAL PLAN</h3>
                     <p class="text-gray-600 text-xs mb-2">The brain-fuel architecture, entirely plant-based. B12, iron, and complete protein fully mapped — no compromise on ethics, and no compromise on cognitive function.</p>
@@ -1003,19 +803,19 @@
             </div>
 
             <div class="bg-white p-8 rounded-xl shadow-md text-center max-w-2xl mx-auto">
-                <img src="images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mb-1" loading="lazy" decoding="async">
+                <img src="/images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mb-1" loading="lazy" decoding="async">
                 <p class="text-xs text-gray-400 italic mb-4">All items are delivered digitally</p>
-                <h3 class="text-2xl font-bold mb-4">Total Value: $161.94</h3>
+                <h3 class="text-2xl font-bold mb-4"><span style="text-decoration: line-through; color: #9ca3af;">Total Value: $143.95</span></h3>
                 <p class="text-gray-600 mb-6">What is your professional reputation worth? Your earning trajectory? Your peace of mind in the rooms that matter?</p>
                 <div class="mb-3">
                     <span class="inline-block bg-green-100 text-green-800 font-bold py-2 px-4 rounded-full text-sm">
-                        Prevent $5,000+ Loss in Quarterly Earnings
+                        Prevent loss of the opportunities
                     </span>
                 </div>
                 <div class="text-center mb-2">
-                    <button class="cta-blue font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
-                        CLAIM IT ALL NOW - $37 (One Time)
-                    </button>
+                    <a href="#" class="cta-blue font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
+                        CLAIM IT ALL NOW - $47 (One Time)
+                    </a>
                 </div>
                 <div class="flex items-center justify-center mt-4 gap-4">
                     <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
@@ -1029,7 +829,7 @@
     </section>
 
     <!-- Problem Agitation Section -->
-    <section class="py-20 bg-white px-4">
+    <section class="py-12 bg-white px-4">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">The <span class="text-red-600">Concealment Paradox</span> No One Talks About</h2>
             <div class="space-y-6 mb-10">
@@ -1071,13 +871,6 @@
                         <div>
                             <span class="font-medium">Less than 25% of women disclose menopause status at work. 62.3% are not comfortable discussing it at all.</span>
                             <p class="text-sm text-gray-600">(UK Gov Workplace Literature Review, 2025)</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-red-500 mr-3 text-xl">⚠️</span>
-                        <div>
-                            <span class="font-medium">Presenteeism dominates absenteeism: Australian menopause-related presenteeism costs $6.5B AUD annually versus $890M in absenteeism.</span>
-                            <p class="text-sm text-gray-600">(BCEC Reproductive Health Leave Report, 2025)</p>
                         </div>
                     </div>
                 </div>
@@ -1155,16 +948,15 @@
                     <div class="text-center mb-6">
                         <span class="text-gray-500 line-through text-xl">Executive Coaching: $500+/month</span>
                         <div class="text-center my-2 font-bold text-gray-700">OR</div>
-                        <span class="text-4xl font-bold text-blue-800 block">Complete System: $37</span>
-                        <img src="images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mt-4" loading="lazy" decoding="async">
+                        <span class="text-4xl font-bold text-blue-800 block">Complete System: $47</span>
+                        <img src="/images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mt-4" loading="lazy" decoding="async">
                         <p class="text-xs text-gray-400 italic mt-1">All items are delivered digitally</p>
                         <div class="mt-4 p-3 bg-green-50 rounded-lg">
-                            <p class="text-green-700 font-bold">Prevent $5,000+ Loss in Quarterly Earnings</p>
+                            <p class="text-green-700 font-bold">Prevent being called "weak" or "incompetent"</p>
                         </div>
                     </div>
-                    <ul class="space-y-4 mb-8">
+                    <ul class="space-y-3 mb-8">
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>"The Busy Woman's Perimenopause" Ebook</strong></span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>The Midlife, Unmuted - Exclusive Podcast Episode</strong></span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>The Busy Woman's Perimenopause Audiobook</strong></span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>Perimenopause Support 7-Days Meal Plan (Vegan)</strong></span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><span><strong>Perimenopause Support 7-Days Meal Plan</strong></span></li>
@@ -1173,27 +965,22 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><span><strong>Anxiety Spiral Interrupt System</strong></span><p class="text-sm text-gray-600" style="margin-top:0.125rem;">5-minute CBT-based autonomic reset is included in ebook</p></div></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><span><strong>Sleep-to-Performance Recovery</strong></span><p class="text-sm text-gray-600" style="margin-top:0.125rem;">CBT-I derived next-day clarity protocols is included in ebook</p></div></li>
                     </ul>
-                    <div class="text-center mb-6">
-                        <!-- Whop checkout embed replaces the old button -->
-                        <div id="whop-embed-container">
-                            <div
-                                data-whop-checkout-plan-id="plan_Owi4yDISl2dt8"
-                                data-whop-checkout-return-url="https://ty-peri-frontend.pages.dev/"
-                                data-whop-checkout-theme="light"
-                                data-whop-checkout-theme-accent-color="#3556cc"
-                                data-whop-checkout-theme-border-radius="10"
-                                data-whop-checkout-theme-button-text="Complete Checkout"
-                                data-whop-checkout-setup-future-usage="off_session"
-                                data-whop-checkout-collect-phone-numbers="false"
-                                data-whop-checkout-hide-address="true"
-                                data-whop-checkout-hide-email="true"
-                                data-whop-checkout-hide-tos="true"
-                            ></div>
-                            <!-- Single Whop loader script – placed immediately after the div -->
-                            <script async defer src="https://js.whop.com/static/checkout/loader.js"></script>
-                        </div>
+                    <!-- Whop embed container – replaces the old GET COMPLETE SYSTEM button -->
+                    <div id="whop-embed-container" style="min-height: 500px; width: 100%;">
+                        <div
+                            data-whop-checkout-plan-id="plan_Owi4yDISl2dt8"
+                            data-whop-checkout-return-url="https://ty-peri-frontend.pages.dev/checkout/complete"
+                            data-whop-checkout-theme="light"
+                            data-whop-checkout-theme-accent-color="#3556cc"
+                            data-whop-checkout-theme-border-radius="10"
+                            data-whop-checkout-setup-future-usage="off_session"
+                            data-whop-checkout-collect-phone-numbers="false"
+                            data-whop-checkout-hide-address="true"
+                            data-whop-checkout-hide-email="true"
+                            data-whop-checkout-hide-tos="true"
+                        ></div>
                     </div>
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center mt-6">
                         <div class="flex items-center justify-center mb-2 gap-4">
                             <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
                             <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;" loading="lazy" decoding="async">
@@ -1228,11 +1015,18 @@
             <div class="space-y-4">
                 <div class="bg-gray-50 p-6 rounded-lg">
                     <button class="flex justify-between items-center w-full text-left font-bold text-lg">
-                        <span>Is this medical advice?</span>
+                        <span>$47 seems too cheap. What is the catch?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="mt-3 text-gray-600 hidden">
-                        <p class="mb-3"><strong>No, this is not medical advice.</strong> This is an operational performance system based on occupational neuroscience and evidence-based behavioural protocols. While the content is grounded in peer-reviewed research (including the MENOS@Work RCT and SWAN longitudinal data), it is designed as a practical manual for the workday, not a clinical treatment guide. For medical decisions — including HRT — you should consult a qualified clinician. Think of this as the strategic operations manual you use while navigating care, not a replacement for it.</p>
+                        <p class="mb-3"><strong>No catch.</strong> The price is kept accessible because:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>This is digital delivery — no printing or shipping costs</li>
+                            <li>I am not an executive coach charging $500 per session</li>
+                            <li>This information should be accessible to every professional woman who needs it</li>
+                            <li>The value is in the operational density, not the price tag</li>
+                        </ul>
+                        <p class="mt-3">The real cost is not $47. The real cost is doing nothing.</p>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-6 rounded-lg">
@@ -1241,7 +1035,7 @@
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="mt-3 text-gray-600 hidden">
-                        <p class="mb-3"><strong>Instantly.</strong> After completing your secure checkout, you receive an email with download links for all materials. The ebook is in PDF format (readable on any device), the Podcast episode & Audiobook are in MP3 format, the workout & meal plans are in print ready PDFs. You can access everything on your computer, phone, or tablet.</p>
+                        <p class="mb-3"><strong>Instantly.</strong> After completing your secure checkout, you receive an email with download links for all materials. The ebook is in PDF format (readable on any device), the Audiobook is in MP3 format, the workout & meal plans are in print ready PDFs. You can access everything on your computer, phone, or tablet.</p>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-6 rounded-lg">
@@ -1273,18 +1067,11 @@
                 </div>
                 <div class="bg-gray-50 p-6 rounded-lg">
                     <button class="flex justify-between items-center w-full text-left font-bold text-lg">
-                        <span>$37 seems too cheap. What is the catch?</span>
+                        <span>Is this medical advice?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="mt-3 text-gray-600 hidden">
-                        <p class="mb-3"><strong>No catch.</strong> The price is kept accessible because:</p>
-                        <ul class="list-disc pl-5 space-y-1">
-                            <li>This is digital delivery — no printing or shipping costs</li>
-                            <li>I am not an executive coach charging $500 per session</li>
-                            <li>This information should be accessible to every professional woman who needs it</li>
-                            <li>The value is in the operational density, not the price tag</li>
-                        </ul>
-                        <p class="mt-3">The real cost is not $37. The real cost is doing nothing.</p>
+                        <p class="mb-3"><strong>No, this is not medical advice.</strong> This is an operational performance system based on occupational neuroscience and evidence-based behavioural protocols. While the content is grounded in peer-reviewed research (including the MENOS@Work RCT and SWAN longitudinal data), it is designed as a practical manual for the workday, not a clinical treatment guide. For medical decisions — including HRT — you should consult a qualified clinician. Think of this as the strategic operations manual you use while navigating care, not a replacement for it.</p>
                     </div>
                 </div>
             </div>
@@ -1310,9 +1097,9 @@
             </div>
             <p class="text-2xl font-light italic mb-8">Which category do you want to be in when you walk into work tomorrow?</p>
             <div class="mb-6">
-                <button class="cta-primary font-bold py-4 px-8 rounded-lg inline-block text-xl js-buy-button">
-                    PROCEED SECURELY - $37
-                </button>
+                <a href="#" class="cta-primary font-bold py-4 px-8 rounded-lg inline-block text-xl js-buy-button">
+                    PROCEED SECURELY - $47
+                </a>
             </div>
             <div class="flex flex-wrap items-center justify-center gap-4 text-sm mb-6">
                 <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full flex items-center"><i class="fas fa-shield-alt mr-2"></i>60-Day Money Back Guarantee</span>
@@ -1325,13 +1112,10 @@
         </div>
     </section>
 
-    <!-- Audio sample elements (hidden) -->
-    <audio id="audioSample" src="audiobooksample.m4a" preload="none"></audio>
-    <audio id="podcastAudio" src="podcastpreview.m4a" preload="none"></audio>
+    <audio id="audioSample" src="/audiobooksample.m4a" preload="none"></audio>
 
-    <!-- Optimized JavaScript -->
     <script>
-        // Book Preview Lazy Load
+        // Book preview
         function openBookPreview() {
             var popup = document.getElementById('bookPreviewPopup');
             var iframe = popup.querySelector('iframe');
@@ -1349,7 +1133,7 @@
             }
         }
 
-        // Toggle audiobook sample playback with title change
+        // Audio sample
         function toggleAudioSample() {
             var audio = document.getElementById('audioSample');
             if (audio.paused) {
@@ -1359,30 +1143,8 @@
             }
         }
 
-        // Toggle podcast sample playback with title change
-        function togglePodcastPreview() {
-            var audio = document.getElementById('podcastAudio');
-            if (audio.paused) {
-                audio.play().catch(function() {});
-            } else {
-                audio.pause();
-            }
-        }
-
-        // ===== TRUST POPUP FUNCTIONS (replicated from inspiration) =====
-        function openTrustPopup() {
-            document.getElementById('whop-trust-popup').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeTrustPopup(event) {
-            if (!event || event.target.id === 'whop-trust-popup' || event.target.closest('.trust-popup-close') || event.target.classList.contains('got-it-btn')) {
-                document.getElementById('whop-trust-popup').classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        }
-
         document.addEventListener('DOMContentLoaded', function() {
+            // Audio button state
             var audio = document.getElementById('audioSample');
             var btn = document.getElementById('audioSampleBtn');
             if (audio && btn) {
@@ -1397,20 +1159,6 @@
                 });
             }
 
-            var podcastBtn = document.getElementById('podcastPreviewBtn');
-            var podcastAudio = document.getElementById('podcastAudio');
-            if (podcastBtn && podcastAudio) {
-                podcastAudio.addEventListener('play', function() {
-                    podcastBtn.innerHTML = '<i class="fas fa-pause"></i> Playing Preview';
-                });
-                podcastAudio.addEventListener('pause', function() {
-                    podcastBtn.innerHTML = '<i class="fas fa-play"></i> Podcast Preview';
-                });
-                podcastAudio.addEventListener('ended', function() {
-                    podcastBtn.innerHTML = '<i class="fas fa-play"></i> Podcast Preview';
-                });
-            }
-
             // FAQ accordion
             document.querySelectorAll('#faq button').forEach(function(button) {
                 button.addEventListener('click', function() {
@@ -1421,7 +1169,7 @@
                 });
             });
 
-            // Counter & smooth scroll
+            // Counter animation
             var counters = document.querySelectorAll('.counter');
             var baseCount = 124;
             var randomAddition = Math.floor(Math.random() * 15);
@@ -1430,11 +1178,12 @@
                 counter.textContent = finalCount + ' Women Bought This Week';
             });
 
+            // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
                 anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
                     var targetId = this.getAttribute('href');
                     if (targetId === '#') return;
+                    e.preventDefault();
                     var targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         window.scrollTo({ top: targetElement.offsetTop - 20, behavior: 'smooth' });
@@ -1442,7 +1191,7 @@
                 });
             });
 
-            // All buy buttons now scroll smoothly to the Whop embed
+            // All buy buttons scroll to the Whop embed container in the pricing card
             document.querySelectorAll('.js-buy-button').forEach(function(btn) {
                 btn.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -1455,12 +1204,13 @@
         });
     </script>
 
-    <!-- Footer -->
     <footer class="py-6 bg-gray-100 text-center text-xs text-gray-500">
         <div class="container mx-auto px-4">
-            <a href="terms-conditions.html" class="hover:text-gray-800 mx-2">Terms of Service</a> &bull;
-            <a href="privacy-policy.html" class="hover:text-gray-800 mx-2">Privacy Policy</a> &bull;
-            <a href="legal-information.html" class="hover:text-gray-800 mx-2">Legal Information</a>
+            <a href="/terms-conditions.html" class="hover:text-gray-800 mx-2">Terms of Service</a> &bull;
+            <a href="/privacy-policy.html" class="hover:text-gray-800 mx-2">Privacy Policy</a> &bull;
+            <a href="/legal-information.html" class="hover:text-gray-800 mx-2">Legal Information</a> &bull;
+            <a href="/contact-us.html" class="hover:text-gray-800 mx-2">Contact Us</a> &bull;
+            <a href="/refund-policy.html" class="hover:text-gray-800 mx-2">Refund Policy</a>
         </div>
     </footer>
 
