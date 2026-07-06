@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Contact PublishMint – get in touch for support, sales, or general inquiries." />
+    <title>Contact Us | PublishMint</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1f2937;
+            --muted: #4b5563;
+            --border: #e5e7eb;
+            --accent: #111827;
+            --input-bg: #f9fafb;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+        }
+        .wrap {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 56px 20px 72px;
+        }
+        header {
+            padding-bottom: 20px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid var(--border);
+        }
+        h1 {
+            margin: 0 0 10px;
+            font-size: 2rem;
+            line-height: 1.2;
+            color: var(--accent);
+        }
+        .sub {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+        h2 {
+            margin: 34px 0 12px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+        p,
+        li {
+            font-size: 1rem;
+        }
+        ul {
+            margin: 0 0 18px 20px;
+            padding: 0;
+        }
+        .box {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px 18px 6px;
+            background: #fafafa;
+        }
+        .label {
+            font-weight: 700;
+            display: inline-block;
+            min-width: 180px;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        /* ---- Form styles ---- */
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 0.95rem;
+            color: var(--accent);
+        }
+        .form-group .required {
+            color: #b91c1c;
+            margin-left: 2px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px 14px;
+            font-size: 1rem;
+            font-family: inherit;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--input-bg);
+            color: var(--text);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            appearance: none;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+        }
+        textarea.form-control {
+            min-height: 140px;
+            resize: vertical;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 36px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: inherit;
+            color: #fff;
+            background: var(--accent);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.1s;
+            margin-top: 4px;
+        }
+        .btn:hover {
+            background: #2d3748;
+        }
+        .btn:active {
+            transform: scale(0.97);
+        }
+        .form-hint {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 6px;
+        }
+        .contact-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 18px;
+            background: #fafafa;
+        }
+        .contact-card .label-sm {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--muted);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .contact-card .value {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--accent);
+        }
+        .contact-card .value a {
+            text-decoration: none;
+        }
+        .contact-card .value a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .wrap {
+                padding: 32px 16px 48px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .label {
+                min-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <header>
+            <h1>Contact Us</h1>
+            <p class="sub">We’d love to hear from you — reach out for support, sales, or general questions.</p>
+        </header>
+
+        <!-- Quick contact cards -->
+        <div class="contact-grid">
+            <div class="contact-card">
+                <span class="label-sm">Email</span>
+                <span class="value"><a href="mailto:mariabarrymore@outlook.com">mariabarrymore@outlook.com</a></span>
+            </div>
+            <div class="contact-card">
+                <span class="label-sm">Phone</span>
+                <span class="value"><a href="tel:8134979150">8134979150</a></span>
+            </div>
+            <div class="contact-card">
+                <span class="label-sm">Address</span>
+                <span class="value">Barjoha Gaon, Udali Bazar,<br />Lanka, Hojai, 782446, Assam, India</span>
+            </div>
+            <div class="contact-card">
+                <span class="label-sm">Website</span>
+                <span class="value"><a href="https://www.publishmint.site" target="_blank" rel="noopener noreferrer">www.publishmint.site</a></span>
+            </div>
+        </div>
+
+        <!-- Contact form -->
+        <section style="margin-top: 40px;">
+            <h2>Send a Message</h2>
+            <p style="color: var(--muted); margin-bottom: 20px;">
+                Fill in the form below and we’ll get back to you as soon as possible.
+            </p>
+
+            <form action="#" method="POST" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" name="fullName" class="form-control" placeholder="e.g. Ananya Sharma" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address <span class="required">*</span></label>
+                        <input type="email" id="emailAddress" name="emailAddress" class="form-control" placeholder="you@example.com" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subjectLine">Subject</label>
+                    <input type="text" id="subjectLine" name="subjectLine" class="form-control" placeholder="What’s this about?" />
+                </div>
+
+                <div class="form-group">
+                    <label for="messageContent">Message <span class="required">*</span></label>
+                    <textarea id="messageContent" name="messageContent" class="form-control" placeholder="Write your message here…" required></textarea>
+                    <div class="form-hint">We aim to reply within 24–48 hours.</div>
+                </div>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <!-- Simple inline feedback (demo) -->
+            <div id="formFeedback" style="margin-top: 16px; font-size: 0.95rem; display: none;"></div>
+        </section>
+
+        <!-- Business info -->
+        <section style="margin-top: 44px;">
+            <h2>Business Details</h2>
+            <div class="box">
+                <p><span class="label">Business Name:</span> PublishMint</p>
+                <p><span class="label">Address:</span> Barjoha Gaon, Udali Bazar, Lanka, Hojai, 782446, Assam, India</p>
+                <p><span class="label">Phone:</span> <a href="tel:8134979150">8134979150</a></p>
+                <p><span class="label">Email:</span> <a href="mailto:mariabarrymore@outlook.com">mariabarrymore@outlook.com</a></p>
+                <p><span class="label">Website:</span> <a href="https://www.publishmint.site" target="_blank" rel="noopener noreferrer">www.publishmint.site</a></p>
+            </div>
+        </section>
+
+        <!-- Additional contact info -->
+        <section>
+            <h2>Support &amp; Inquiries</h2>
+            <p>
+                For technical support, order issues, or content questions, please email us directly at
+                <a href="mailto:mariabarrymore@outlook.com">mariabarrymore@outlook.com</a>
+                or use the form above. For urgent matters, you can also call us during business hours.
+            </p>
+            <p style="color: var(--muted); font-size: 0.95rem;">
+                <strong>Business hours:</strong> Monday – Friday, 10:00 AM – 6:00 PM (IST)
+            </p>
+        </section>
+
+        <footer>
+            &copy; 2026 PublishMint. All rights reserved.
+        </footer>
+    </main>
+
+    <script>
+        (function() {
+            const form = document.getElementById('contactForm');
+            const feedback = document.getElementById('formFeedback');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('fullName').value.trim();
+                const email = document.getElementById('emailAddress').value.trim();
+                const message = document.getElementById('messageContent').value.trim();
+
+                if (!name || !email || !message) {
+                    feedback.style.display = 'block';
+                    feedback.style.color = '#b91c1c';
+                    feedback.textContent = 'Please fill in all required fields (Name, Email, and Message).';
+                    return;
+                }
+
+                // Simple email validation
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    feedback.style.display = 'block';
+                    feedback.style.color = '#b91c1c';
+                    feedback.textContent = 'Please enter a valid email address.';
+                    return;
+                }
+
+                // Simulate sending
+                feedback.style.display = 'block';
+                feedback.style.color = '#065f46';
+                feedback.textContent = 'Thank you, ' + name + '! Your message has been sent. We’ll get back to you shortly.';
+
+                // Optionally reset
+                // form.reset();
+
+                // In a real implementation you'd POST to a server endpoint here.
+                console.log('Form submitted:', { name, email, message });
+            });
+        })();
+    </script>
+</body>
+</html>
