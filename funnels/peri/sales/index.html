@@ -155,19 +155,10 @@
 
     </div>
 
-    <!-- Digistore24 promocode integration for checkout links -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var s = document.createElement('script');
-            s.src = 'https://www.digistore24-scripts.com/service/digistore.js';
-            s.defer = true;
-            s.onload = function() {
-                if (typeof digistorePromocode === 'function') {
-                    digistorePromocode({ product_id: 692610, adjust_domain: true });
-                }
-            };
-            document.head.appendChild(s);
-        });
+    <!-- Digistore24 promocode integration -->
+    <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
+    <script type="text/javascript">
+        digistorePromocode({ "product_id": 692610, "adjust_domain": true });
     </script>
 
 </body>
