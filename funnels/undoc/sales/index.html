@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Promocode script placed as high as possible for perfect tracking – static loading, no DOMContentLoaded -->
+    <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
+    <script type="text/javascript">
+        digistorePromocode({
+            "product_id": 692610,
+            "adjust_domain": true,
+            "checkout_domain": "www.publishmint.site"
+        });
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1050918547614215');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     <title>The Perimenopause Performance System: Protect Your Edge Without Disclosure</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload Digistore24 checkout for instant popup -->
+    <link rel="preconnect" href="https://www.checkout-ds24.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.checkout-ds24.com">
+    <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
+
+    <!-- Preconnect for promocode script -->
+    <link rel="dns-prefetch" href="https://www.digistore24-scripts.com">
 
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
@@ -16,8 +51,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
-
-    <!-- REMOVED: preload for whop loader (unnecessary) -->
 
     <style>
         *, *::before, *::after { box-sizing: border-box; }
@@ -395,6 +428,7 @@
             font-style: normal;
         }
 
+        /* Redesigned disclosure trap box */
         .disclosure-trap-box {
             background: rgba(254, 242, 242, 0.7);
             backdrop-filter: blur(6px);
@@ -409,7 +443,27 @@
             box-shadow: 0 8px 12px -3px rgba(220, 38, 38, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
         }
 
-        /* REMOVED: checkout-popup-overlay and related styles */
+        /* Ensure checkout embed is positioned correctly when scrolled to */
+        #checkout-embed {
+            scroll-margin-top: 20px;
+            min-height: 980px;
+            overflow: visible;
+        }
+        #checkout-embed my-order-form {
+            display: block;
+            width: 100%;
+            min-height: 900px;
+        }
+        #checkout-embed iframe,
+        #checkout-embed .ds24_payIFrame {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: 100% !important;
+            min-height: 900px !important;
+            border: 0 !important;
+            display: block;
+            background: transparent;
+        }
     </style>
     <base target="_blank">
 </head>
@@ -502,8 +556,7 @@
                                 Prevent $5,000+ Loss in Quarterly Earnings
                             </span>
                         </div>
-                        <!-- Buy button now scrolls to #pricing -->
-                        <a href="#" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl js-buy-button">
+                        <a href="#checkout-embed" target="_self" class="cta-primary font-bold py-4 px-8 rounded-lg text-center inline-block text-xl">
                             SECURE MY PERFORMANCE SYSTEM - $47
                         </a>
                         <div class="flex items-center justify-center mt-4 gap-4">
@@ -578,7 +631,7 @@
             </div>
 
             <div class="text-center">
-                <a href="#" class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
+                <a href="#checkout-embed" target="_self" class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl">
                     CLAIM MY PERFORMANCE SYSTEM - $47
                 </a>
                 <p class="mt-3 text-gray-600 font-semibold">100% Risk-Free: 60-Day Money-Back Guarantee</p>
@@ -736,7 +789,7 @@
 
             <div class="text-center">
                 <p class="text-red-600 font-bold text-xl mb-4 counter">124 Women Bought This Week</p>
-                <a href="#" class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl js-buy-button">
+                <a href="#checkout-embed" target="_self" class="cta-primary font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl">
                     ACCESS THE SYSTEM NOW – $47
                 </a>
                 <p class="mt-3 text-gray-600 text-sm">Join women in California, London, Toronto, Sydney, and 14 other cities who refuse to let hormones dictate their earning trajectory.</p>
@@ -809,24 +862,11 @@
                         Prevent loss of the opportunities
                     </span>
                 </div>
-                <!-- ========== WHOP EMBED REPLACES THE OLD BUTTON ========== -->
-                <div class="text-center mb-4">
-                    <div
-                        data-whop-checkout-plan-id="plan_Owi4yDISl2dt8"
-                        data-whop-checkout-return-url="https://ty-peri-frontend.pages.dev/"
-                        data-whop-checkout-theme="light"
-                        data-whop-checkout-theme-accent-color="#3556cc"
-                        data-whop-checkout-theme-border-radius="10"
-                        data-whop-checkout-theme-button-text="Complete Checkout"
-                        data-whop-checkout-setup-future-usage="off_session"
-                        data-whop-checkout-collect-phone-numbers="false"
-                        data-whop-checkout-hide-address="true"
-                        data-whop-checkout-hide-email="true"
-                        data-whop-checkout-hide-tos="true"
-                    ></div>
-                    <script async defer src="https://js.whop.com/static/checkout/loader.js"></script>
+                <div class="text-center mb-2">
+                    <a href="#checkout-embed" target="_self" class="cta-blue font-bold py-5 px-10 rounded-lg text-center inline-block text-2xl">
+                        CLAIM IT ALL NOW - $47 (One Time)
+                    </a>
                 </div>
-                <!-- ========== END WHOP EMBED ========== -->
                 <div class="flex items-center justify-center mt-4 gap-4">
                     <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
                     <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter: none; height: 72px;" loading="lazy" decoding="async">
@@ -949,11 +989,10 @@
         </div>
     </section>
 
-    <!-- Pricing & Guarantee Section (with Whop embed inside) -->
+    <!-- Pricing & Guarantee Section -->
     <section id="pricing" class="py-20 guarantee-section px-4">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Will You Leave Your Career to Chance Or Take Control?</h2>
-            <!-- The card below already contains the embed, so we keep it as is -->
             <div class="bg-white rounded-xl shadow-2xl overflow-hidden max-w-md mx-auto">
                 <div class="p-8">
                     <div class="text-center mb-6">
@@ -976,25 +1015,11 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><span><strong>Anxiety Spiral Interrupt System</strong></span><p class="text-sm text-gray-600" style="margin-top:0.125rem;">5-minute CBT-based autonomic reset is included in ebook</p></div></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><span><strong>Sleep-to-Performance Recovery</strong></span><p class="text-sm text-gray-600" style="margin-top:0.125rem;">CBT-I derived next-day clarity protocols is included in ebook</p></div></li>
                     </ul>
-                    <!-- ========== WHOP EMBED INSIDE THIS CARD ========== -->
                     <div class="text-center mb-6">
-                        <div
-                            data-whop-checkout-plan-id="plan_Owi4yDISl2dt8"
-                            data-whop-checkout-return-url="https://ty-peri-frontend.pages.dev/"
-                            data-whop-checkout-theme="light"
-                            data-whop-checkout-theme-accent-color="#3556cc"
-                            data-whop-checkout-theme-border-radius="10"
-                            data-whop-checkout-theme-button-text="Complete Checkout"
-                            data-whop-checkout-setup-future-usage="off_session"
-                            data-whop-checkout-collect-phone-numbers="false"
-                            data-whop-checkout-hide-address="true"
-                            data-whop-checkout-hide-email="true"
-                            data-whop-checkout-hide-tos="true"
-                        ></div>
-                        <!-- Loader script is already included once in the page (see above), but we keep it here for simplicity -->
-                        <!-- We'll place the script once after the first embed, but we can also put it here -->
+                        <a href="#checkout-embed" target="_self" class="cta-blue font-bold py-4 px-8 rounded-lg text-center inline-block w-full text-xl">
+                            GET COMPLETE SYSTEM - $47
+                        </a>
                     </div>
-                    <!-- ========== END WHOP EMBED ========== -->
                     <div class="flex flex-col items-center">
                         <div class="flex items-center justify-center mb-2 gap-4">
                             <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter: none; height: 56px;" loading="lazy" decoding="async">
@@ -1111,10 +1136,11 @@
                 </div>
             </div>
             <p class="text-2xl font-light italic mb-8">Which category do you want to be in when you walk into work tomorrow?</p>
-            <div class="mb-6">
-                <a href="#" class="cta-primary font-bold py-4 px-8 rounded-lg inline-block text-xl js-buy-button">
-                    PROCEED SECURELY - $47
-                </a>
+            <div id="checkout-embed" class="bg-white p-6 rounded-xl shadow-lg max-w-2xl mx-auto my-8">
+                <!-- Begin of digistore multi-step order box code -->
+                <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
+                <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
+                <!-- End of digistore multi-step order box code -->
             </div>
             <div class="flex flex-wrap items-center justify-center gap-4 text-sm mb-6">
                 <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full flex items-center"><i class="fas fa-shield-alt mr-2"></i>60-Day Money Back Guarantee</span>
@@ -1129,10 +1155,7 @@
 
     <audio id="audioSample" src="/audiobooksample.m4a" preload="none"></audio>
 
-    <!-- REMOVED: old checkout popup overlay completely -->
-
     <script>
-        // Book preview
         function openBookPreview() {
             var popup = document.getElementById('bookPreviewPopup');
             var iframe = popup.querySelector('iframe');
@@ -1150,7 +1173,6 @@
             }
         }
 
-        // Audio sample
         function toggleAudioSample() {
             var audio = document.getElementById('audioSample');
             if (audio.paused) {
@@ -1161,7 +1183,6 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            // Audio button state
             var audio = document.getElementById('audioSample');
             var btn = document.getElementById('audioSampleBtn');
             if (audio && btn) {
@@ -1176,7 +1197,6 @@
                 });
             }
 
-            // FAQ accordion
             document.querySelectorAll('#faq button').forEach(function(button) {
                 button.addEventListener('click', function() {
                     var content = button.nextElementSibling;
@@ -1186,7 +1206,6 @@
                 });
             });
 
-            // Counter animation
             var counters = document.querySelectorAll('.counter');
             var baseCount = 124;
             var randomAddition = Math.floor(Math.random() * 15);
@@ -1194,33 +1213,6 @@
             counters.forEach(function(counter) {
                 counter.textContent = finalCount + ' Women Bought This Week';
             });
-
-            // Smooth scroll for anchor links (excluding .js-buy-button)
-            document.querySelectorAll('a[href^="#"]:not(.js-buy-button)').forEach(function(anchor) {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    var targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({ top: targetElement.offsetTop - 20, behavior: 'smooth' });
-                    }
-                });
-            });
-
-            // ========== BUY BUTTONS SCROLL TO PRICING CARD ==========
-            document.querySelectorAll('.js-buy-button').forEach(function(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.getElementById('pricing').scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                });
-            });
-            // ========== END ==========
-
-            // REMOVED: old popup event listeners
         });
     </script>
 
