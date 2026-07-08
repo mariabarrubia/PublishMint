@@ -1498,69 +1498,6 @@
         }, 5000);
     })();
 </script>
-    <script>
-        (function () {
-            function getParam(name) {
-                var value = new URLSearchParams(window.location.search).get(name);
-                return value ? value.trim() : '';
-            }
-
-            var billingStatus = getParam('billing_status');
-            if (billingStatus && billingStatus.toLowerCase() !== 'completed') {
-                return;
-            }
-
-            var transactionId = getParam('transaction_id') || getParam('order_id');
-            if (!transactionId) {
-                return;
-            }
-
-            var storageKey = 'ds24_meta_purchase_' + transactionId;
-            try {
-                if (sessionStorage.getItem(storageKey) === '1') {
-                    return;
-                }
-                sessionStorage.setItem(storageKey, '1');
-            } catch (e) {
-                // Ignore storage failures; purchase event can still fire once on page load.
-            }
-
-            var amount = parseFloat(getParam('amount') || '0');
-            var currency = (getParam('currency') || 'USD').toUpperCase();
-            var quantity = parseInt(getParam('quantity') || '1', 10);
-            if (!Number.isFinite(quantity) || quantity < 1) {
-                quantity = 1;
-            }
-
-            var productId = getParam('product_id');
-            var productName = getParam('product_name') || 'The Perimenopause Performance System';
-            var orderId = getParam('order_id');
-
-            var payload = {
-                value: Number.isFinite(amount) ? amount : 47.00,
-                currency: currency,
-                content_name: productName,
-                content_ids: productId ? [productId] : undefined,
-                contents: productId ? [{ id: productId, quantity: quantity }] : undefined,
-                content_type: 'product',
-                num_items: quantity
-            };
-
-            if (orderId) {
-                payload.order_id = orderId;
-            }
-
-            if (typeof fbq === 'function') {
-                fbq('track', 'Purchase', payload, { eventID: transactionId });
-            } else {
-                window.addEventListener('load', function () {
-                    if (typeof fbq === 'function') {
-                        fbq('track', 'Purchase', payload, { eventID: transactionId });
-                    }
-                }, { once: true });
-            }
-        })();
-    </script>
 
 </body>
 </html>
