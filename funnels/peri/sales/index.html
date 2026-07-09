@@ -62,7 +62,7 @@
             scroll-behavior: smooth;
             color: #1f2937;
         }
-        img, video, object, embed {
+        img, video, iframe, object, embed {
             max-width: 100%;
             height: auto;
             display: block;
@@ -446,25 +446,23 @@
         /* Ensure checkout embed is positioned correctly when scrolled to */
         #checkout-embed {
             scroll-margin-top: 20px;
-            min-height: 1250px;
+            min-height: 980px;
             overflow: visible;
         }
         #checkout-embed my-order-form {
             display: block;
             width: 100%;
-            min-height: 1200px;
-            overflow: visible;
+            min-height: 900px;
         }
         #checkout-embed iframe,
         #checkout-embed .ds24_payIFrame {
             width: 100% !important;
             max-width: 100% !important;
-            height: 1200px !important;
-            min-height: 1200px !important;
+            height: 100% !important;
+            min-height: 900px !important;
             border: 0 !important;
             display: block;
             background: transparent;
-            overflow: hidden;
         }
     </style>
     <base target="_blank">
