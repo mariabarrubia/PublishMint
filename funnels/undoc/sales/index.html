@@ -17,13 +17,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://simplebooklet.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.checkout-ds24.com">
     <link rel="dns-prefetch" href="https://www.digistore24-scripts.com">
+    <link rel="dns-prefetch" href="https://simplebooklet.com">
 
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" as="style" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" as="style" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap">
     </noscript>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -101,6 +103,10 @@
         .text-sm {
             font-size: 0.875rem;
             line-height: 1.25rem;
+        }
+        .text-base {
+            font-size: 1rem;
+            line-height: 1.5rem;
         }
         .text-lg {
             font-size: 1.125rem;
@@ -1087,88 +1093,112 @@
             z-index: 0;
         }
 
-        /* ── Floral Garland Top Border ── */
+        /* ── Watercolor Floral Border – Hanging from Top Edge ── */
         .floral-garland {
-            position: relative;
-            width: 100%;
-            height: 160px;
-            overflow: hidden;
-            pointer-events: none;
-            z-index: 1;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(254,252,248,0) 100%);
-        }
-        .floral-garland::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" opacity="0.04"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)"/></svg>');
-            background-size: 200px 100px;
-            mix-blend-mode: multiply;
-        }
-        .garland-cluster {
             position: absolute;
             top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: auto;
+            overflow: visible;
+            pointer-events: none;
+            z-index: 5;
+            line-height: 0;
         }
-        .garland-blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(12px);
-            opacity: 0.7;
+        .floral-garland img {
+            width: 100%;
+            height: auto;
+            display: block;
+            user-select: none;
+            -webkit-user-drag: none;
+            filter: drop-shadow(0 4px 12px rgba(120, 100, 90, 0.08));
         }
-        .garland-petal {
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            background: radial-gradient(circle at 30% 30%, #FFB6C1, #DDA0DD);
-            border-radius: 50% 0 50% 50%;
-            transform: rotate(45deg);
-            filter: blur(2px);
-            opacity: 0.8;
+        @media (max-width: 768px) {
+            .floral-garland img {
+                transform: scaleY(0.85);
+                transform-origin: top center;
+            }
         }
-        .garland-leaf {
-            position: absolute;
-            width: 24px;
-            height: 12px;
-            background: #9DC183;
-            border-radius: 0 100% 0 100%;
-            transform: rotate(-30deg);
-            filter: blur(1.5px);
-            opacity: 0.7;
+        @media (max-width: 480px) {
+            .floral-garland img {
+                transform: scaleY(0.75);
+                transform-origin: top center;
+            }
         }
-        /* cluster positions */
-        .cluster-left-flank {
-            left: 2%;
-            width: 220px;
-            height: 140px;
+        /* Spacer so content flows below the hanging flowers */
+        .floral-garland-spacer {
+            width: 100%;
+            height: 180px;
+            pointer-events: none;
         }
-        .cluster-center-left {
-            left: 18%;
-            width: 260px;
-            height: 150px;
+        @media (max-width: 768px) {
+            .floral-garland-spacer {
+                height: 130px;
+            }
         }
-        .cluster-center-bridge {
-            left: 42%;
-            width: 200px;
-            height: 120px;
+        @media (max-width: 480px) {
+            .floral-garland-spacer {
+                height: 95px;
+            }
         }
-        .cluster-right-main {
-            left: 62%;
-            width: 280px;
-            height: 150px;
+
+        /* ── Title Floral Accents ── */
+        .title-floral-left,
+        .title-floral-right {
+            display: inline-block;
+            font-size: 1.4rem;
+            opacity: 0.5;
+            vertical-align: middle;
+            margin: 0 0.35rem;
+            position: relative;
+            top: -2px;
+            pointer-events: none;
         }
-        .cluster-far-right {
-            right: 2%;
-            left: auto;
-            width: 160px;
-            height: 130px;
+        .title-floral-left {
+            color: #d4a8b8;
+        }
+        .title-floral-right {
+            color: #b8c9a8;
+        }
+        .title-underline {
+            display: block;
+            width: 60px;
+            height: 2px;
+            margin: 6px auto 0;
+            background: linear-gradient(90deg, #d4a8b8, #b8c9a8, #b8c9e8);
+            border-radius: 1px;
+            opacity: 0.55;
+        }
+
+        /* ── Better Subtitle Font ── */
+        .subtitle-caveat {
+            font-family: 'Caveat', 'Segoe Script', 'Comic Sans MS', cursive;
+            font-weight: 600;
+            font-size: 1.55rem;
+            line-height: 1.5;
+            color: #5c4646;
+            letter-spacing: 0.01em;
         }
         @media (max-width: 640px) {
-            .floral-garland {
-                height: 100px;
+            .subtitle-caveat {
+                font-size: 1.25rem;
             }
-            .garland-cluster {
-                transform: scale(0.65);
-                transform-origin: top center;
+        }
+
+        /* ── Better "You are not buying" text ── */
+        .closing-message {
+            font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 1.3rem;
+            line-height: 1.55;
+            color: #4a3a3a;
+            letter-spacing: 0.015em;
+        }
+        @media (max-width: 640px) {
+            .closing-message {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -1176,51 +1206,17 @@
 </head>
 <body class="antialiased text-gray-800">
 
-    <!-- Floral Garland Top Border -->
+    <!-- Watercolor Floral Border – Hanging Flowers from Top Edge -->
     <div class="floral-garland" aria-hidden="true">
-        <div class="garland-cluster cluster-left-flank">
-            <div class="garland-blob" style="width:70px;height:70px;background:radial-gradient(circle,#E6E6FA,#DDA0DD);top:10px;left:20px;"></div>
-            <div class="garland-blob" style="width:50px;height:50px;background:radial-gradient(circle,#FFB6C1,#DDA0DD);top:30px;left:70px;"></div>
-            <div class="garland-petal" style="top:20px;left:50px;"></div>
-            <div class="garland-petal" style="top:45px;left:30px;transform:rotate(70deg);"></div>
-            <div class="garland-leaf" style="top:60px;left:10px;"></div>
-            <div class="garland-leaf" style="top:55px;left:90px;transform:rotate(20deg);"></div>
-        </div>
-        <div class="garland-cluster cluster-center-left">
-            <div class="garland-blob" style="width:100px;height:100px;background:radial-gradient(circle at 40% 30%,#E6E6FA,#DDA0DD,#FFB6C1,#FFFDD0);top:5px;left:40px;"></div>
-            <div class="garland-blob" style="width:80px;height:80px;background:radial-gradient(circle,#DDA0DD,#FFB6C1);top:25px;left:90px;"></div>
-            <div class="garland-petal" style="top:10px;left:70px;"></div>
-            <div class="garland-petal" style="top:50px;left:120px;transform:rotate(100deg);"></div>
-            <div class="garland-leaf" style="top:70px;left:30px;"></div>
-            <div class="garland-leaf" style="top:80px;left:110px;transform:rotate(-50deg);"></div>
-        </div>
-        <div class="garland-cluster cluster-center-bridge">
-            <div class="garland-blob" style="width:50px;height:50px;background:radial-gradient(circle,#FFB6C1,#FFFDD0);top:15px;left:60px;"></div>
-            <div class="garland-petal" style="top:5px;left:80px;"></div>
-            <div class="garland-petal" style="top:35px;left:50px;transform:rotate(15deg);"></div>
-            <div class="garland-leaf" style="top:25px;left:20px;transform:rotate(15deg);"></div>
-        </div>
-        <div class="garland-cluster cluster-right-main">
-            <div class="garland-blob" style="width:110px;height:110px;background:radial-gradient(circle at 30% 20%,#DDA0DD,#4B0082,#E6E6FA,#FFFDD0);top:10px;left:30px;"></div>
-            <div class="garland-blob" style="width:70px;height:70px;background:radial-gradient(circle,#FFB6C1,#FFFDD0);top:45px;left:90px;"></div>
-            <div class="garland-petal" style="top:5px;left:60px;transform:rotate(45deg);"></div>
-            <div class="garland-petal" style="top:60px;left:20px;transform:rotate(110deg);"></div>
-            <div class="garland-leaf" style="top:30px;left:10px;"></div>
-            <div class="garland-leaf" style="top:70px;left:100px;transform:rotate(-35deg);"></div>
-        </div>
-        <div class="garland-cluster cluster-far-right">
-            <div class="garland-blob" style="width:60px;height:60px;background:radial-gradient(circle,#FFB6C1,#DDA0DD);top:20px;left:40px;"></div>
-            <div class="garland-petal" style="top:15px;left:20px;transform:rotate(25deg);"></div>
-            <div class="garland-petal" style="top:50px;left:70px;transform:rotate(80deg);"></div>
-            <div class="garland-leaf" style="top:10px;left:70px;transform:rotate(-15deg);"></div>
-        </div>
+        <img src="/images/floraltop.webp" alt="" loading="eager" decoding="async" fetchpriority="high">
     </div>
+    <div class="floral-garland-spacer" aria-hidden="true"></div>
 
     <div id="bookPreviewPopup" class="book-preview-popup" onclick="closeBookPreview(event)">
         <div class="book-preview-content" onclick="event.stopPropagation()">
             <button class="book-preview-close" onclick="closeBookPreview()"><i class="fas fa-times text-gray-700"></i></button>
             <div class="book-preview-iframe-wrapper">
-                <iframe src="" allowfullscreen width="100%" height="100%" style="border:0;overflow:hidden;" scrolling="no" loading="lazy" title="Book Preview"></iframe>
+                <iframe src="" allowfullscreen width="100%" height="100%" style="border:0;overflow:hidden;" scrolling="no" title="Book Preview"></iframe>
             </div>
             <div class="book-preview-footer">
                 <button class="book-preview-done-btn" onclick="closeBookPreview()"><i class="fas fa-check-circle"></i> Done</button>
@@ -1228,30 +1224,31 @@
         </div>
     </div>
 
-    <section class="trust-section pt-4 pb-8 px-4" style="padding-top:0.5rem;">
+    <section class="trust-section pt-4 pb-8 px-4" style="padding-top:0;margin-top:-70px;position:relative;z-index:1;">
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0">
-                    <div class="mt-3 mb-4">
-                        <div class="bg-green-100 text-green-800 font-semibold py-2 px-3 rounded-full inline-flex flex-col items-center text-xs mb-2" style="display:inline-flex; flex-direction:column; align-items:center; gap:0.25rem;">
+                    <div class="mt-3 mb-4" style="text-align:center;">
+                        <div class="bg-green-100 text-green-800 font-semibold py-2 px-3 rounded-full inline-flex flex-col items-center text-xs mb-2" style="display:inline-flex; flex-direction:column; align-items:center; gap:0.25rem; margin-left:auto; margin-right:auto;">
                             <span class="flex items-center"><i class="fas fa-shield-alt mr-2"></i>Support System Bought by 3,200+ Women</span>
                             <span class="text-xs opacity-75" style="font-size:0.625rem;">Last Updated: Today</span>
                         </div>
                     </div>
 
-                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-3" style="background:linear-gradient(135deg,#7a5f6e,#b8919f,#7a9f7e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
-                        Peri-menopause Support System
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-1 text-center" style="background:linear-gradient(135deg,#7a5f6e,#b8919f,#7a9f7e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+                        <span class="title-floral-left">❀</span>Peri-menopause Support System<span class="title-floral-right">✿</span>
                     </h1>
-                    <p class="text-xl text-gray-600 italic mb-6 font-medium">"This Helped me in my initial Perimenopausal years"</p>
+                    <span class="title-underline"></span>
+                    <p class="text-center text-gray-600 italic mb-6 mt-2 font-medium subtitle-caveat">"This Helped me in my initial Perimenopausal years"</p>
 
                     <div class="md:hidden mb-4">
                         <img src="/images/perimenopause.webp" alt="Woman at peace" class="rounded-2xl shadow-2xl w-full" style="max-height:450px;object-fit:cover;" loading="lazy" decoding="async">
                     </div>
 
-                    <div class="relative bg-gradient-to-br from-rose-50 to-white border border-rose-100 p-6 rounded-2xl shadow-md mb-6">
-                        <span class="absolute -top-3 left-6 text-5xl text-rose-200 opacity-60 font-serif leading-none select-none">“</span>
-                        <div class="text-gray-700 text-lg leading-relaxed italic font-serif" style="font-family:Georgia, 'Times New Roman', serif;">
-                            <p class="mb-3">You might have thought if this is early dementia. If your edge is just gone for good. If the people at work have noticed you're not as good as you were.</p>
+                    <div class="relative bg-gradient-to-br from-rose-50 to-white border border-rose-100 p-5 rounded-2xl shadow-md mb-6">
+                        <span class="absolute -top-3 left-6 text-4xl text-rose-200 opacity-55 font-serif leading-none select-none">"</span>
+                        <div class="text-gray-700 text-sm leading-relaxed italic" style="font-family:Georgia, 'Times New Roman', serif;">
+                            <p class="mb-2">You might have thought if this is early dementia. If your edge is just gone for good. If the people at work have noticed you're not as good as you were.</p>
                             <p>You haven't said any of this out loud, because saying it out loud feels like admitting something you're not ready to admit.</p>
                         </div>
                     </div>
@@ -1543,9 +1540,9 @@
 
             <div class="story-card max-w-3xl mx-auto">
                 <div class="flex items-center gap-4 mb-6">
-                    <img src="/images/christine.webp" alt="Christine" class="w-14 h-14 rounded-full object-cover border-2 border-rose-200 shadow-md" loading="lazy" decoding="async" style="flex-shrink:0;">
+                    <img src="/images/christine.webp" alt="Christine" class="w-12 h-12 rounded-full object-cover border-2 border-rose-200 shadow-md" loading="lazy" decoding="async" style="flex-shrink:0;">
                     <div>
-                        <p class="font-bold text-gray-800 text-lg handwritten" style="font-size:1.4rem;margin:0;">Hii, I'm Christine</p>
+                        <p class="font-bold text-gray-800 text-lg handwritten" style="font-size:1.3rem;margin:0;">Hii, I'm Christine</p>
                         <p class="text-xs text-gray-500">49, married with the love of my life, and 3 beautiful kids</p>
                     </div>
                 </div>
@@ -1672,7 +1669,7 @@
         <span class="section-petal" style="bottom:5px;left:10%;color:#b8c9a8;">✿</span>
         <div class="container mx-auto max-w-3xl text-center relative z-10">
             <img src="/images/handmockup.webp" alt="Hand mockup" class="rounded-2xl shadow-xl w-full max-w-sm mx-auto mb-6" loading="lazy" decoding="async">
-            <p class="text-xl text-gray-700 font-semibold mb-6 leading-relaxed">You are not buying another thing to manage.<br>You are choosing a simpler, more supported way forward.</p>
+            <p class="closing-message mb-6">You are not buying another thing to manage.<br>You are choosing a simpler, more supported way forward.</p>
 
             <p class="text-red-600 font-bold text-xl mb-4 counter">124 Women Bought This Week</p>
 
@@ -1736,10 +1733,10 @@
 
             // Start preloading after a tiny delay to let page finish rendering
             if (document.readyState === 'complete') {
-                setTimeout(preloadBookPreview, 100);
+                setTimeout(preloadBookPreview, 150);
             } else {
                 window.addEventListener('load', function() {
-                    setTimeout(preloadBookPreview, 100);
+                    setTimeout(preloadBookPreview, 150);
                 });
             }
 
@@ -1813,5 +1810,6 @@
             <a href="/refund-policy.html" class="hover:text-gray-800 mx-2">Refund Policy</a>
         </div>
     </footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
