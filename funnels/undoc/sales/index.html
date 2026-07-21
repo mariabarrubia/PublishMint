@@ -61,9 +61,6 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
     <!-- Prefetch book preview URL to load in background -->
     <link rel="prefetch" href="https://simplebooklet.com/embed.php?wpKey=Itg1Z9gHEKyMe4ZEonPNfN&source=embed" as="document">
 
-    <!-- Prefetch checkout page so the embed loads almost instantly -->
-    <link rel="prefetch" href="https://www.checkout-ds24.com/order/checkout.php?product_id=692610&order_form=242231" as="document">
-
     <!-- Preload critical fonts with display swap -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" as="style" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" media="print" onload="this.media='all'">
@@ -77,8 +74,8 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
     <link rel="preload" as="image" href="/images/floraltop.webp" fetchpriority="high">
 
-    <!-- Preload Digistore24 checkout script with high priority for instant embed -->
-    <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js" fetchpriority="high">
+    <!-- Preload Digistore24 checkout script for instant embed -->
+    <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
 
     <style>
         *, *::before, *::after { box-sizing: border-box; }
@@ -454,17 +451,6 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
             border: 0 !important;
             display: block;
             background: transparent;
-        }
-
-        /* Skeleton loader for the checkout embed */
-        #checkout-loader {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 1;
-            pointer-events: none;
         }
     </style>
     <base target="_blank">
@@ -1041,14 +1027,9 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
         </div>
     </section>
 
-    <!-- Digistore24 Checkout Embed (Instant loading, placed at the bottom with async script & skeleton loader) -->
+    <!-- Digistore24 Checkout Embed (loaded dynamically after page load to keep initial render lightning fast) -->
     <div id="checkout-embed" class="bg-white p-6 rounded-xl shadow-lg max-w-2xl mx-auto my-8">
-        <div id="checkout-loader">
-            <i class="fas fa-spinner fa-spin text-2xl text-gray-400"></i>
-            <p class="text-gray-500 mt-2">Loading checkout...</p>
-        </div>
-        <!-- Begin of digistore multi-step order box code (script loaded async, preloaded with high priority) -->
-        <script src="https://www.checkout-ds24.com/service/digistore.js" async></script>
+        <!-- Begin of digistore multi-step order box code – script loaded in background after page load -->
         <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
         <!-- End of digistore multi-step order box code -->
     </div>
@@ -1154,25 +1135,6 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     });
                 }
 
-                // Hide checkout loader when the embed’s iframe appears
-                var checkoutContainer = document.getElementById('checkout-embed');
-                var loader = document.getElementById('checkout-loader');
-                if (checkoutContainer && loader) {
-                    var observer = new MutationObserver(function(mutations) {
-                        mutations.forEach(function(mutation) {
-                            if (mutation.addedNodes.length > 0) {
-                                // Check if an iframe was added
-                                var added = Array.from(mutation.addedNodes);
-                                if (added.some(node => node.tagName === 'IFRAME' || (node.querySelector && node.querySelector('iframe')))) {
-                                    loader.style.display = 'none';
-                                    observer.disconnect(); // no need to watch further
-                                }
-                            }
-                        });
-                    });
-                    observer.observe(checkoutContainer, { childList: true, subtree: true });
-                }
-
                 // Preload book preview iframe after checkout embed is fully loaded (delay 3s)
                 setTimeout(function() {
                     var iframe = document.querySelector('#bookPreviewPopup iframe');
@@ -1181,6 +1143,30 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     }
                 }, 3000);
             });
+
+            // Load checkout embed script in the background, right after initial page rendering,
+            // so that it's fully loaded even if a buy button is clicked immediately.
+            function loadCheckoutEmbed() {
+                var script = document.createElement('script');
+                script.src = 'https://www.checkout-ds24.com/service/digistore.js';
+                script.async = true;
+                document.head.appendChild(script);
+            }
+
+            if (document.readyState === 'complete') {
+                // Page already fully loaded, start immediately
+                loadCheckoutEmbed();
+            } else {
+                // Defer to the next idle moment after DOMContentLoaded for fastest perceived load
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(loadCheckoutEmbed);
+                } else {
+                    // Fallback: run right after DOM is ready, next tick
+                    document.addEventListener('DOMContentLoaded', function() {
+                        setTimeout(loadCheckoutEmbed, 0);
+                    });
+                }
+            }
         })();
     </script>
 
