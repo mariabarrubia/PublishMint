@@ -3,6 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
+}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1050918547614215');
+
+fbq('track', 'PageView');
+
+fbq('track', 'ViewContent', {
+  content_name: 'Perimenopause Support System',
+  content_type: 'product',
+  value: 17,
+  currency: 'USD'
+});
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
     <script src="https://www.digistore24-scripts.com/service/digistore.js" defer>
     </script>
     <script type="text/javascript">
@@ -23,7 +58,7 @@
     <link rel="dns-prefetch" href="https://www.digistore24-scripts.com">
     <link rel="dns-prefetch" href="https://simplebooklet.com">
 
-    <!-- Preload critical fonts -->
+    <!-- Preload critical fonts with display swap -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" as="style" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" media="print" onload="this.media='all'">
     <noscript>
@@ -36,13 +71,16 @@
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
     <link rel="preload" as="image" href="/images/floraltop.webp" fetchpriority="high">
 
+    <!-- Preload Digistore24 checkout script for instant embed -->
+    <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
+
     <style>
         *, *::before, *::after { box-sizing: border-box; }
         body {
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Inter';
             scroll-behavior: smooth;
             color: #3d2e2e;
             background-color: #fefcf8;
@@ -135,6 +173,7 @@
         .border-green-100 { border-color: #d1fae5; }
         .border-rose-100 { border-color: #ffe4e6; }
         .border-rose-200 { border-color: #fecdd3; }
+        .border-rose-300 { border-color: #fda4af; }
         .rounded-lg { border-radius: 0.5rem; }
         .rounded-xl { border-radius: 0.75rem; }
         .rounded-2xl { border-radius: 1rem; }
@@ -271,11 +310,7 @@
             .md\:text-5xl { font-size: 3rem; line-height: 1; }
         }
         @media (min-width: 1024px) {
-            .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-            /* Desktop title safety – push content clearly below garland */
-            .floral-garland-spacer { height: 100px; }
-            /* Professional card layout - larger padding on desktop */
-            .value-card-compact.lg\:p-5 { padding: 1.25rem; }
+            .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
         }
         @media (max-width: 640px) {
             body { font-size: 14px; }
@@ -353,24 +388,57 @@
         .floral-garland img { width: 100%; height: auto; display: block; user-select: none; -webkit-user-drag: none; filter: drop-shadow(0 4px 12px rgba(120,100,90,0.08)); }
         @media (max-width: 768px) { .floral-garland img { transform: scaleY(0.85); transform-origin: top center; } }
         @media (max-width: 480px) { .floral-garland img { transform: scaleY(0.75); transform-origin: top center; } }
-        .floral-garland-spacer { width: 100%; height: 40px; pointer-events: none; }
-        @media (max-width: 768px) { .floral-garland-spacer { height: 30px; } }
-        @media (max-width: 480px) { .floral-garland-spacer { height: 20px; } }
+        .floral-garland-spacer { width: 100%; height: 80px; pointer-events: none; }
+        @media (max-width: 768px) { .floral-garland-spacer { height: 50px; } }
+        @media (max-width: 480px) { .floral-garland-spacer { height: 30px; } }
 
         .title-floral-left, .title-floral-right { display: inline-block; font-size: 1.4rem; opacity: 0.5; vertical-align: middle; margin: 0 0.35rem; position: relative; top: -2px; pointer-events: none; }
         .title-floral-left { color: #d4a8b8; }
         .title-floral-right { color: #b8c9a8; }
         .title-underline { display: block; width: 60px; height: 2px; margin: 6px auto 0; background: linear-gradient(90deg, #d4a8b8, #b8c9a8, #b8c9e8); border-radius: 1px; opacity: 0.55; }
 
-        .subtitle-caveat { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; font-style: italic; font-size: 1.35rem; line-height: 1.5; color: #5c4646; letter-spacing: 0.01em; }
-        @media (max-width: 640px) { .subtitle-caveat { font-size: 1.1rem; } }
+        .subtitle-caveat { font-family: 'Caveat', 'Segoe Script', 'Comic Sans MS', cursive; font-weight: 600; font-size: 1.55rem; line-height: 1.5; color: #5c4646; letter-spacing: 0.01em; }
+        @media (max-width: 640px) { .subtitle-caveat { font-size: 1.25rem; } }
 
-        .professional-quote { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 500; font-style: italic; line-height: 1.7; color: #4a3a3a; }
-        .closing-message { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; font-style: italic; font-size: 1.3rem; line-height: 1.55; color: #4a3a3a; letter-spacing: 0.015em; }
+        .closing-message { font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif; font-weight: 600; font-style: italic; font-size: 1.3rem; line-height: 1.55; color: #4a3a3a; letter-spacing: 0.015em; }
         @media (max-width: 640px) { .closing-message { font-size: 1.1rem; } }
 
         .read-more-btn { display: inline-block; margin-top: 1rem; font-weight: 600; color: #d4677a; border-bottom: 1px dashed #d4677a; cursor: pointer; background: none; border: none; font-size: 1rem; }
         .read-more-btn:hover { color: #b85263; border-color: #b85263; }
+
+        /* Professional, bold text styling for the key message */
+        .key-message { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 500; font-size: 1.05rem; line-height: 1.6; color: #3d2e2e; }
+        @media (max-width: 640px) { .key-message { font-size: 0.95rem; } }
+
+        /* Checkout embed stability */
+        #checkout-embed {
+            width: 100%;
+            min-height: 2800px;
+            position: relative;
+            overflow: visible;
+            overflow-anchor: none;
+            scroll-margin-top: 20px;
+        }
+        #checkout-embed,
+        #checkout-embed *,
+        #checkout-embed::before,
+        #checkout-embed::after {
+            overflow-anchor: none;
+        }
+        #checkout-embed my-order-form {
+            display: block;
+            width: 100%;
+            min-height: 2800px;
+        }
+        #checkout-embed iframe,
+        #checkout-embed .ds24_payIFrame {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-height: 2800px;
+            border: 0 !important;
+            display: block;
+            background: transparent;
+        }
     </style>
     <base target="_blank">
 </head>
@@ -386,7 +454,7 @@
         <div class="book-preview-content" onclick="event.stopPropagation()">
             <button class="book-preview-close" onclick="closeBookPreview()"><i class="fas fa-times text-gray-700"></i></button>
             <div class="book-preview-iframe-wrapper">
-                <iframe src="https://simplebooklet.com/embed.php?wpKey=Itg1Z9gHEKyMe4ZEonPNfN&source=embed" allowfullscreen width="100%" height="100%" style="border:0;overflow:hidden;" scrolling="no" title="Book Preview"></iframe>
+                <iframe data-src="https://simplebooklet.com/embed.php?wpKey=Itg1Z9gHEKyMe4ZEonPNfN&source=embed" allowfullscreen width="100%" height="100%" style="border:0;overflow:hidden;" scrolling="no" loading="lazy" title="Book Preview"></iframe>
             </div>
             <div class="book-preview-footer">
                 <button class="book-preview-done-btn" onclick="closeBookPreview()"><i class="fas fa-check-circle"></i> Done</button>
@@ -394,7 +462,7 @@
         </div>
     </div>
 
-    <section class="trust-section pt-4 pb-8 px-4" style="padding-top:2rem;position:relative;z-index:1;">
+    <section class="trust-section pt-4 pb-8 px-4" style="padding-top:0;margin-top:0;position:relative;z-index:1;">
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0">
@@ -405,14 +473,20 @@
                     <span class="title-underline"></span>
                     <p class="text-center text-gray-600 italic mb-6 mt-2 font-medium subtitle-caveat">"This Helped me in my initial Perimenopausal years"</p>
 
-                    <div class="md:hidden mb-4">
-                        <img src="/images/perimenopause.webp" alt="Woman at peace" class="rounded-2xl shadow-2xl w-full" style="max-height:450px;object-fit:cover;" loading="lazy" decoding="async">
+                    <!-- Professionally added Eleri Owens testimonial -->
+                    <div class="text-right mb-4">
+                        <p class="font-semibold text-sm">— Eleri Owens, HR Manager, Texas</p>
+                        <span class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded-full">
+                            <i class="fas fa-check-circle mr-1"></i> Verified Buyer
+                        </span>
                     </div>
 
-                    <div class="relative bg-gradient-to-br from-rose-50 to-white border border-rose-100 p-5 rounded-2xl shadow-md mb-6">
-                        <span class="absolute -top-3 left-6 text-4xl text-rose-200 opacity-55 font-serif leading-none select-none">"</span>
-                            <p class="mb-2">A private, practical support system for the professional woman quietly holding it all together — so what's happening in your body never shows up in your work.</p>
-                        </div>
+                    <div class="md:hidden mb-4">
+                        <img src="/images/perimenopause.webp" alt="Woman at peace" class="rounded-2xl shadow-2xl w-full" style="max-height:450px;object-fit:cover;" loading="lazy" decoding="async" width="800" height="600">
+                    </div>
+
+                    <div class="bg-gradient-to-br from-rose-50 to-white border-l-4 border-rose-300 p-5 rounded-2xl shadow-md mb-6">
+                        <p class="key-message font-bold">A private & effective support system for the professional woman quietly holding it all together — so what's happening in your body never shows up in your work.</p>
                     </div>
 
                     <div class="mb-8">
@@ -450,7 +524,7 @@
                     </div>
 
                     <div class="text-center mb-6">
-                        <a href="https://www.checkout-ds24.com/product/692610" class="cta-rose font-bold py-4 px-8 rounded-full text-center inline-block text-xl shadow-lg">
+                        <a href="#checkout-embed" target="_self" class="cta-rose font-bold py-4 px-8 rounded-full text-center inline-block text-xl shadow-lg">
                             GET COMPLETE SYSTEM - $17
                         </a>
                         <div class="flex items-center justify-center mt-4 gap-4">
@@ -466,7 +540,7 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center hidden md:block">
                     <div class="relative">
-                        <img src="/images/perimenopause.webp" alt="Woman at peace" class="rounded-2xl shadow-2xl w-full" style="max-height:600px;object-fit:cover;" loading="eager" fetchpriority="high">
+                        <img src="/images/perimenopause.webp" alt="Woman at peace" class="rounded-2xl shadow-2xl w-full" style="max-height:600px;object-fit:cover;" loading="eager" fetchpriority="high" width="800" height="600">
                         <p class="text-center text-sm text-gray-500 mt-2 italic">You are not alone in this. And you don't have to figure it out by yourself.</p>
                     </div>
                 </div>
@@ -477,7 +551,7 @@
     <section class="py-8 bg-white px-4">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">What Women Are Saying:</h2>
-            <p class="text-center text-gray-500 mb-8">Real experiences from women who needed clarity during this transition.</p>
+            <p class="text-center text-gray-500 mb-8">Experiences from women who needed clarity during this transition.</p>
             <div class="testimonial-carousel mb-10">
                 <div class="testimonial-card bg-white p-5 rounded-xl shadow-md">
                     <div class="flex items-center mb-3">
@@ -602,7 +676,7 @@
                     <div class="flex mb-2">
                         <i class="fas fa-star text-yellow-400 text-xs"></i><i class="fas fa-star text-yellow-400 text-xs"></i><i class="fas fa-star text-yellow-400 text-xs"></i><i class="fas fa-star text-yellow-400 text-xs"></i><i class="fas fa-star text-yellow-400 text-xs"></i>
                     </div>
-                    <p class="text-gray-700 text-sm">"I was so worried that I used to Google about early Dementia. I am calm & confident now, and know what to do exactly."</p>
+                    <p class="text-gray-700 text-sm">"I was so worried that I used to Google about early Dementia. I am calm &amp; confident now, and know what to do exactly."</p>
                     <p class="text-xs text-gray-400 mt-2">yesterday</p>
                 </div>
             </div>
@@ -613,11 +687,11 @@
         <span class="section-petal" style="top:10px;right:3%;color:#b8c9e8;">❀</span>
         <span class="section-petal" style="bottom:15px;left:4%;color:#d4a8b8;">✿</span>
         <div class="container mx-auto max-w-6xl relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Your Complete Perimenopause Support System</h2>
-            <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">Not symptom tracking. Not wellness advice. A practical, organised system for feeling less confused, less alone, and more equipped during the menopausal transition.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Here's Exactly What You'll Get – No Surprises, Just Results</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">I'm handing you everything I used to stay my best at work while experiencing peri-menopause, plus extras to make it even easier for you. Think of this as your all-in-one toolkit — practical, updated, and built for action.</p>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-10">
-                <div class="value-card value-card-compact lg:p-5 bg-white p-3 rounded-xl shadow-md">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-3 mb-10">
+                <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
                     <img src="/images/ebookmockup.webp" alt="Ebook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">THE BUSY WOMAN'S PERIMENOPAUSE - EBOOK</h3>
@@ -629,7 +703,7 @@
                     </div>
                     <div class="text-right text-xs font-bold text-gray-500">Value $26.99</div>
                 </div>
-                <div class="value-card value-card-compact lg:p-5 bg-white p-3 rounded-xl shadow-md">
+                <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
                     <img src="/images/audiobookmockup.webp" alt="Audiobook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">THE BUSY WOMAN'S PERIMENOPAUSE - AUDIOBOOK</h3>
@@ -641,22 +715,24 @@
                     </div>
                     <div class="text-right text-xs font-bold text-gray-500">Value $33.99</div>
                 </div>
-                <div class="value-card value-card-compact lg:p-5 bg-white p-3 rounded-xl shadow-md relative">
+                <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md relative">
                     <span class="absolute top-0 left-0 bg-yellow-400 text-yellow-900 font-extrabold text-xs px-2 py-1 rounded-br-lg shadow z-10">FREE BONUS</span>
                     <img src="/images/workout.webp" alt="Workout Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">QUICK HOME WORKOUT PLAN for PERIMENOPAUSE</h3>
                     <p class="text-gray-600 text-xs mb-2">Strength training specifically calibrated for perimenopause — hormonal resilience, bone density, cognitive stamina. Just 15 minutes. No gym.</p>
+                    <div class="bg-yellow-50 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded mt-2">+ FREE Bonus: Yoga Routine for Hormonal Balance</div>
                     <div class="text-right text-xs font-bold text-gray-500">Value $22.99</div>
                 </div>
-                <div class="value-card value-card-compact lg:p-5 bg-white p-3 rounded-xl shadow-md">
+                <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
                     <img src="/images/mealplan.webp" alt="Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">7-DAY MEAL PLAN</h3>
                     <p class="text-gray-600 text-xs mb-2">A brain-fuel framework. Phytoestrogens, omega-3s, blood-sugar stability — the nutritional architecture your prefrontal cortex needs.</p>
+                    <div class="bg-yellow-50 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded mt-2">+ FREE Bonus: Natural Remedies to Relieve Perimenopause Symptoms</div>
                     <div class="text-right text-xs font-bold text-gray-500">Value $26.99</div>
                 </div>
-                <div class="value-card value-card-compact lg:p-5 bg-white p-3 rounded-xl shadow-md">
+                <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
                     <img src="/images/vegan.webp" alt="Vegan Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">7-DAY (VEGAN) MEAL PLAN</h3>
@@ -682,7 +758,7 @@
                     </span>
                 </div>
                 <div class="text-center mb-2">
-                    <a href="https://www.checkout-ds24.com/product/692610" class="cta-green-soft font-bold py-5 px-10 rounded-full text-center inline-block text-2xl">
+                    <a href="#checkout-embed" target="_self" class="cta-green-soft font-bold py-5 px-10 rounded-full text-center inline-block text-2xl">
                         CLAIM IT ALL NOW - $17 (One Time)
                     </a>
                 </div>
@@ -840,6 +916,8 @@
         </div>
     </section>
 
+
+
     <section class="py-16 bg-soft-pink px-4 relative overflow-hidden">
         <span class="section-petal" style="bottom:5px;left:10%;color:#b8c9a8;">✿</span>
         <div class="container mx-auto max-w-3xl text-center relative z-10">
@@ -852,9 +930,9 @@
             <img src="/images/handmockup.webp" alt="Hand mockup" class="rounded-2xl shadow-xl w-full max-w-sm mx-auto mb-6" loading="lazy" decoding="async">
             <p class="closing-message mb-6">You are not buying another thing to manage.<br>You are choosing a simpler, more supported way forward.</p>
 
-            <p class="text-red-600 font-bold text-xl mb-4 counter">124 Women Bought This Week</p>
+            <p class="text-red-600 font-bold text-xl mb-4 counter">107 People Bought Today</p>
 
-            <a href="https://www.checkout-ds24.com/product/692610" class="cta-rose font-bold py-5 px-10 rounded-full text-center inline-block text-2xl shadow-xl">
+            <a href="#checkout-embed" target="_self" class="cta-rose font-bold py-5 px-10 rounded-full text-center inline-block text-2xl shadow-xl">
                 PROCEED SECURELY — $17
             </a>
             <p class="mt-4 text-gray-600 text-sm max-w-md mx-auto">Join women in California, London, Toronto, Sydney, and 14 other cities who refuse to let hormones dictate their earning trajectory.</p>
@@ -904,6 +982,22 @@
         </div>
     </section>
 
+    <!-- Digistore24 Checkout Embed (Instant loading, placed at the bottom) -->
+    <div id="checkout-embed" class="bg-white p-6 rounded-xl shadow-lg max-w-2xl mx-auto my-8">
+        <!-- Begin of digistore multi-step order box code -->
+        <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
+        <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
+        <!-- End of digistore multi-step order box code -->
+    </div>
+    <!-- 100% Risk-Free Guarantee and People Counter -->
+    <div class="text-center mt-6 mb-12">
+        <div class="bg-green-100 text-green-800 p-4 rounded-xl inline-flex items-center justify-center shadow-md">
+            <i class="fas fa-shield-alt text-2xl mr-3"></i>
+            <span class="font-bold text-lg">100% Risk FREE 60-Day Money-Back Guarantee</span>
+        </div>
+        <p class="text-xl font-bold text-gray-800 mt-4">107 People Bought Today</p>
+    </div>
+
     <audio id="audioSample" src="/audiobooksample.m4a" preload="none"></audio>
 
     <script>
@@ -911,6 +1005,10 @@
             const popup = document.getElementById('bookPreviewPopup');
 
             window.openBookPreview = function() {
+                var iframe = popup.querySelector('iframe');
+                if (iframe && !iframe.src) {
+                    iframe.src = iframe.dataset.src;
+                }
                 popup.classList.add('active');
                 document.body.style.overflow = 'hidden';
             };
@@ -970,11 +1068,11 @@
                 });
 
                 var counters = document.querySelectorAll('.counter');
-                var baseCount = 124;
+                var baseCount = 107;
                 var randomAddition = Math.floor(Math.random() * 15);
                 var finalCount = baseCount + randomAddition;
                 counters.forEach(function(counter) {
-                    counter.textContent = finalCount + ' Women Bought This Week';
+                    counter.textContent = finalCount + ' People Bought Today';
                 });
             });
         })();
@@ -989,5 +1087,12 @@
             <a href="/refund-policy.html" class="hover:text-gray-800 mx-2">Refund Policy</a>
         </div>
     </footer>
+<script>
+document.querySelectorAll('a[href*="checkout-ds24.com"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        fbq('track', 'InitiateCheckout');
+    });
+});
+</script>
 </body>
 </html>
