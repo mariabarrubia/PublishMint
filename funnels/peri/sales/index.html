@@ -38,7 +38,7 @@ fbq('track', 'ViewContent', {
 src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
 </noscript>
 <!-- End Meta Pixel Code -->
-    <script src="https://www.digistore24-scripts.com/service/digistore.js" defer>
+    <script src="https://www.digistore24-scripts.com/service/digistore.js">
     </script>
     <script type="text/javascript">
         digistorePromocode({
@@ -1027,9 +1027,10 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
         </div>
     </section>
 
-    <!-- Digistore24 Checkout Embed (loaded dynamically after page load to keep initial render lightning fast) -->
+    <!-- Digistore24 Checkout Embed – loads instantly inline thanks to the preload above -->
     <div id="checkout-embed" class="bg-white p-6 rounded-xl shadow-lg max-w-2xl mx-auto my-8">
-        <!-- Begin of digistore multi-step order box code – script loaded in background after page load -->
+        <!-- Begin of digistore multi-step order box code -->
+        <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
         <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
         <!-- End of digistore multi-step order box code -->
     </div>
@@ -1143,30 +1144,6 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     }
                 }, 3000);
             });
-
-            // Load checkout embed script in the background, right after initial page rendering,
-            // so that it's fully loaded even if a buy button is clicked immediately.
-            function loadCheckoutEmbed() {
-                var script = document.createElement('script');
-                script.src = 'https://www.checkout-ds24.com/service/digistore.js';
-                script.async = true;
-                document.head.appendChild(script);
-            }
-
-            if (document.readyState === 'complete') {
-                // Page already fully loaded, start immediately
-                loadCheckoutEmbed();
-            } else {
-                // Defer to the next idle moment after DOMContentLoaded for fastest perceived load
-                if ('requestIdleCallback' in window) {
-                    requestIdleCallback(loadCheckoutEmbed);
-                } else {
-                    // Fallback: run right after DOM is ready, next tick
-                    document.addEventListener('DOMContentLoaded', function() {
-                        setTimeout(loadCheckoutEmbed, 0);
-                    });
-                }
-            }
         })();
     </script>
 
