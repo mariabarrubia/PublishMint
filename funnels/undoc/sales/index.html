@@ -58,6 +58,12 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
     <link rel="dns-prefetch" href="https://www.digistore24-scripts.com">
     <link rel="dns-prefetch" href="https://simplebooklet.com">
 
+    <!-- Prefetch book preview URL to load in background -->
+    <link rel="prefetch" href="https://simplebooklet.com/embed.php?wpKey=Itg1Z9gHEKyMe4ZEonPNfN&source=embed" as="document">
+
+    <!-- Prefetch checkout page so the embed loads almost instantly -->
+    <link rel="prefetch" href="https://www.checkout-ds24.com/order/checkout.php?product_id=692610&order_form=242231" as="document">
+
     <!-- Preload critical fonts with display swap -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" as="style" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" media="print" onload="this.media='all'">
@@ -71,8 +77,8 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
     <link rel="preload" as="image" href="/images/floraltop.webp" fetchpriority="high">
 
-    <!-- Preload Digistore24 checkout script for instant embed -->
-    <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
+    <!-- Preload Digistore24 checkout script with high priority for instant embed -->
+    <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js" fetchpriority="high">
 
     <style>
         *, *::before, *::after { box-sizing: border-box; }
@@ -410,6 +416,16 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
         .key-message { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 500; font-size: 1.05rem; line-height: 1.6; color: #3d2e2e; }
         @media (max-width: 640px) { .key-message { font-size: 0.95rem; } }
 
+        /* Professional bonus badge */
+        .bonus-badge { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+        .bonus-badge i { font-size: 0.8rem; }
+
+        /* Research sources block */
+        .research-sources { display: none; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-top: 1rem; text-align: left; }
+        .research-sources.visible { display: block; }
+        .research-sources ol { padding-left: 1.25rem; font-size: 0.85rem; color: #374151; line-height: 1.5; }
+        .research-sources li { margin-bottom: 0.35rem; }
+
         /* Checkout embed stability */
         #checkout-embed {
             width: 100%;
@@ -438,6 +454,17 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
             border: 0 !important;
             display: block;
             background: transparent;
+        }
+
+        /* Skeleton loader for the checkout embed */
+        #checkout-loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+            pointer-events: none;
         }
     </style>
     <base target="_blank">
@@ -537,6 +564,8 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     <p class="text-center text-gray-600 font-semibold flex items-center justify-center gap-2">
                         <i class="fas fa-shield-alt text-green-600"></i> <strong>100% Risk-Free: 60-Day Money-Back Guarantee</strong>
                     </p>
+                    <!-- Added counter beneath guarantee line in first buy section -->
+                    <p class="text-red-600 font-bold text-xl mb-4 counter text-center">107 People Bought Today</p>
                 </div>
                 <div class="md:w-1/2 flex justify-center hidden md:block">
                     <div class="relative">
@@ -683,6 +712,17 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
         </div>
     </section>
 
+    <!-- New research finding section added above "Here's Exactly What You'll Get" -->
+    <section class="py-12 bg-white px-4 relative overflow-hidden">
+        <div class="container mx-auto max-w-4xl text-center">
+            <blockquote class="text-xl italic font-medium text-gray-700 max-w-2xl mx-auto leading-relaxed">
+                “Many areas of the brain, including the hippocampus and prefrontal cortex, contain estrogen receptors.”
+            </blockquote>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">This helps explain why our cognition changes during perimenopause.</p>
+            <p class="mt-6 text-gray-500 text-sm">— <em>SWAN Study of Women’s Health</em> (Study of Women’s Health Across the Nation)</p>
+        </div>
+    </section>
+
     <section class="pt-4 pb-16 bg-soft-blue px-4 relative overflow-hidden">
         <span class="section-petal" style="top:10px;right:3%;color:#b8c9e8;">❀</span>
         <span class="section-petal" style="bottom:15px;left:4%;color:#d4a8b8;">✿</span>
@@ -716,12 +756,12 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     <div class="text-right text-xs font-bold text-gray-500">Value $33.99</div>
                 </div>
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md relative">
-                    <span class="absolute top-0 left-0 bg-yellow-400 text-yellow-900 font-extrabold text-xs px-2 py-1 rounded-br-lg shadow z-10">FREE BONUS</span>
+                    <!-- Removed "FREE BONUS" badge -->
                     <img src="/images/workout.webp" alt="Workout Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">QUICK HOME WORKOUT PLAN for PERIMENOPAUSE</h3>
                     <p class="text-gray-600 text-xs mb-2">Strength training specifically calibrated for perimenopause — hormonal resilience, bone density, cognitive stamina. Just 15 minutes. No gym.</p>
-                    <div class="bg-yellow-50 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded mt-2">+ FREE Bonus: Yoga Routine for Hormonal Balance</div>
+                    <div class="bonus-badge mt-2"><i class="fas fa-gift"></i> Bonus: Yoga Routine for Hormonal Balance</div>
                     <div class="text-right text-xs font-bold text-gray-500">Value $22.99</div>
                 </div>
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
@@ -729,7 +769,7 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">7-DAY MEAL PLAN</h3>
                     <p class="text-gray-600 text-xs mb-2">A brain-fuel framework. Phytoestrogens, omega-3s, blood-sugar stability — the nutritional architecture your prefrontal cortex needs.</p>
-                    <div class="bg-yellow-50 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded mt-2">+ FREE Bonus: Natural Remedies to Relieve Perimenopause Symptoms</div>
+                    <div class="bonus-badge mt-2"><i class="fas fa-gift"></i> Bonus: Natural Remedies to Relieve Perimenopause Symptoms</div>
                     <div class="text-right text-xs font-bold text-gray-500">Value $26.99</div>
                 </div>
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
@@ -878,8 +918,8 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="mt-3 text-gray-600 hidden">
-                        <p class="mb-3">That makes complete sense. Many women arrive here after trying supplements, sleep routines, symptom trackers, diet changes, or advice that sounded sensible but did not fit their actual life.</p>
-                        <p>This support system does not ask you to start over. It gives you a practical, organised place to begin—or continue—with less confusion and less noise.</p>
+                        <p class="mb-3"><strong>That makes complete sense.</strong> Many women arrive here after trying supplements, sleep routines, symptom trackers, diet changes, or advice that sounded sensible but did not fit their actual life.</p>
+                        <p><strong>This support system does not ask you to start over. It gives you a practical, organised place to begin—or continue—with less confusion and less noise.</strong></p>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
@@ -909,7 +949,8 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="mt-3 text-gray-600 hidden">
-                        <p class="mb-3"><strong>No, this is not medical advice.</strong> This is a practical support system based on evidence-based research and real lived experience. While the content is grounded in peer-reviewed research, it is designed as a practical manual for daily life, not a clinical treatment guide. For medical decisions — including HRT — you should consult a qualified clinician. Think of this as the companion guide you use while navigating care, not a replacement for it.</p>
+                        <p class="mb-3"><strong>No, this is not medical advice.</strong> <strong>This is a practical support system based on evidence-based research and real lived experience.</strong></p>
+                        <p class="mb-3">While the content is grounded in peer-reviewed research, it is designed as a practical manual for daily life, not a clinical treatment guide. For medical decisions — including HRT — you should consult a qualified clinician. Think of this as the companion guide you use while navigating care, not a replacement for it.</p>
                     </div>
                 </div>
             </div>
@@ -979,23 +1020,45 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     </div>
                 </div>
             </div>
+            <!-- Research sources "see more" toggle -->
+            <div class="text-center mt-6">
+                <button id="toggleResearchBtn" class="text-sm font-semibold text-blue-700 hover:text-blue-900 underline bg-transparent border-none cursor-pointer">
+                    See Research Sources
+                </button>
+                <div id="researchSources" class="research-sources max-w-3xl mx-auto">
+                    <ol>
+                        <li>Greendale GA, Derby CA, and Maki PM. Perimenopause and cognition. Obstetrics and Gynecology Clinics. 2011 Sep 1;38(3):519-35.</li>
+                        <li>Greendale GA, Huang MH, Wight RG, Seeman TE, Luetters C, Avis NE, Johnston J, and Karlamangla AS. Effects of the menopause transition and hormone use on cognitive performance in mid-life women. Neurology 2009; 72: 1850-1857.</li>
+                        <li>Greendale GA, Wight RG, Huang MH, Avis N, Gold E, Joffe H, Seeman T, Vuge M, and Karlamangla AS. Menopause-associated symptoms and cognitive performance: Results from the Study of Women’s Health Across the Nation. Amer J Epidemiol 2010; 171(11): 1214-1224.</li>
+                        <li>Swanson LM, Hood MM, Hall MH, Kravitz HM, Matthews KA, Joffe H, Thurston RC, Butters MA, Ruppert K, Harlow SD. Associations between sleep and cognitive performance in a racially/ethnically diverse cohort: the Study of Women’s Health Across the Nation. Sleep. 2021 Feb;44(2):zsaa182.</li>
+                        <li>Karlamangla AS, Lachman ME, Han W-J, Huang M-H, and Greendale GA. Evidence for cognitive aging in midlife women: Study of Women’s Health Across the Nation. PLoS One 2017 January 3;DOI:10.1371/journal.pone.0169008.</li>
+                        <li>Greendale GA, Han W, Huang M, Upchurch DM, Karvonen-Gutierrez C, Avis NE, and Karlamangla AS. Longitudinal assessment of physical activity and cognitive outcomes among women at midlife. JAMA Netw Open. 2021 Mar 1;4(3):e213227.</li>
+                        <li>Kazlauskaite R, Janssen I, Wilson RS, Appelhans BM, Evans DA, Arvanitakis Z, El Khoudary SR, Kravitz HM. Is midlife metabolic syndrome associated with cognitive function change? The study of women’s health across the nation. The Journal of Clinical Endocrinology & Metabolism. 2020 Apr1;105(4):e1093-105.</li>
+                        <li>Derby CA, Hutchins F, Greendale GA, Matthews KA, Sternfeld B, Everson‐Rose SA, Kazlauskaite R, Whitmer RA, Brooks MM. Cardiovascular risk and midlife cognitive decline in the Study of Women's Health Across the Nation. Alzheimer's & Dementia. 2021 Mar 12.</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Digistore24 Checkout Embed (Instant loading, placed at the bottom) -->
+    <!-- Digistore24 Checkout Embed (Instant loading, placed at the bottom with async script & skeleton loader) -->
     <div id="checkout-embed" class="bg-white p-6 rounded-xl shadow-lg max-w-2xl mx-auto my-8">
-        <!-- Begin of digistore multi-step order box code -->
-        <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
+        <div id="checkout-loader">
+            <i class="fas fa-spinner fa-spin text-2xl text-gray-400"></i>
+            <p class="text-gray-500 mt-2">Loading checkout...</p>
+        </div>
+        <!-- Begin of digistore multi-step order box code (script loaded async, preloaded with high priority) -->
+        <script src="https://www.checkout-ds24.com/service/digistore.js" async></script>
         <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
         <!-- End of digistore multi-step order box code -->
     </div>
-    <!-- 100% Risk-Free Guarantee and People Counter -->
+    <!-- 100% Risk-Free Guarantee and People Counter (replaced with copy of the one above PROCEED SECURELY) -->
     <div class="text-center mt-6 mb-12">
         <div class="bg-green-100 text-green-800 p-4 rounded-xl inline-flex items-center justify-center shadow-md">
             <i class="fas fa-shield-alt text-2xl mr-3"></i>
             <span class="font-bold text-lg">100% Risk FREE 60-Day Money-Back Guarantee</span>
         </div>
-        <p class="text-xl font-bold text-gray-800 mt-4">107 People Bought Today</p>
+        <p class="text-red-600 font-bold text-xl mb-4 counter">107 People Bought Today</p>
     </div>
 
     <audio id="audioSample" src="/audiobooksample.m4a" preload="none"></audio>
@@ -1006,6 +1069,7 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
 
             window.openBookPreview = function() {
                 var iframe = popup.querySelector('iframe');
+                // iframe src is already preloaded in background; fallback to data-src just in case
                 if (iframe && !iframe.src) {
                     iframe.src = iframe.dataset.src;
                 }
@@ -1074,6 +1138,48 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                 counters.forEach(function(counter) {
                     counter.textContent = finalCount + ' People Bought Today';
                 });
+
+                // Research sources toggle
+                var toggleBtn = document.getElementById('toggleResearchBtn');
+                var sourcesDiv = document.getElementById('researchSources');
+                if (toggleBtn && sourcesDiv) {
+                    toggleBtn.addEventListener('click', function() {
+                        if (sourcesDiv.classList.contains('visible')) {
+                            sourcesDiv.classList.remove('visible');
+                            toggleBtn.textContent = 'See Research Sources';
+                        } else {
+                            sourcesDiv.classList.add('visible');
+                            toggleBtn.textContent = 'Hide Research Sources';
+                        }
+                    });
+                }
+
+                // Hide checkout loader when the embed’s iframe appears
+                var checkoutContainer = document.getElementById('checkout-embed');
+                var loader = document.getElementById('checkout-loader');
+                if (checkoutContainer && loader) {
+                    var observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                            if (mutation.addedNodes.length > 0) {
+                                // Check if an iframe was added
+                                var added = Array.from(mutation.addedNodes);
+                                if (added.some(node => node.tagName === 'IFRAME' || (node.querySelector && node.querySelector('iframe')))) {
+                                    loader.style.display = 'none';
+                                    observer.disconnect(); // no need to watch further
+                                }
+                            }
+                        });
+                    });
+                    observer.observe(checkoutContainer, { childList: true, subtree: true });
+                }
+
+                // Preload book preview iframe after checkout embed is fully loaded (delay 3s)
+                setTimeout(function() {
+                    var iframe = document.querySelector('#bookPreviewPopup iframe');
+                    if (iframe && iframe.dataset.src && !iframe.src) {
+                        iframe.src = iframe.dataset.src;
+                    }
+                }, 3000);
             });
         })();
     </script>
