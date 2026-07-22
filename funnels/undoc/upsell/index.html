@@ -78,9 +78,6 @@
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
     <link rel="preload" as="image" href="/images/floraltop.webp" fetchpriority="high">
 
-    <!-- Preload Digistore24 checkout script for instant embed (used in popup) -->
-    <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
-
     <style>
         *, *::before, *::after { box-sizing: border-box; }
         body {
@@ -447,7 +444,7 @@
             position: relative;
         }
         .research-highlight::before {
-            content: "“";
+            content: "\201C";
             position: absolute;
             top: -10px;
             left: 10px;
@@ -468,7 +465,7 @@
         .research-sources ol { padding-left: 1.25rem; font-size: 0.85rem; color: #374151; line-height: 1.5; }
         .research-sources li { margin-bottom: 0.35rem; }
 
-        /* Checkout Popup Styles – exactly as inspiration */
+        /* Checkout Popup Styles */
         .checkout-popup-overlay {
             display: none;
             position: fixed;
@@ -506,6 +503,15 @@
             border: none;
             color: #333;
             z-index: 10;
+        }
+        #checkoutPopupFormContainer {
+            min-height: 400px;
+            width: 100%;
+        }
+        #checkoutPopupFormContainer my-order-form {
+            display: block;
+            width: 100%;
+            min-height: 400px;
         }
     </style>
     <base target="_blank">
@@ -594,7 +600,7 @@
                     </div>
 
                     <div class="text-center mb-6">
-                        <a href="#" class="checkout-trigger cta-rose font-bold py-4 px-8 rounded-full text-center inline-block text-xl shadow-lg">
+                        <a href="javascript:void(0)" class="checkout-trigger cta-rose font-bold py-4 px-8 rounded-full text-center inline-block text-xl shadow-lg">
                             GET COMPLETE SYSTEM - $47
                         </a>
                         <div class="flex items-center justify-center mt-4 gap-4">
@@ -760,11 +766,11 @@
         <div class="container mx-auto max-w-4xl text-center">
             <div class="research-highlight max-w-2xl mx-auto">
                 <blockquote class="text-2xl italic font-medium text-gray-700 leading-relaxed">
-                    “Many areas of the brain, including the hippocampus and prefrontal cortex, contain estrogen receptors.”
+                    "Many areas of the brain, including the hippocampus and prefrontal cortex, contain estrogen receptors."
                 </blockquote>
                 <p class="text-gray-600 mt-4 text-lg">This helps explain why our cognition changes during perimenopause.</p>
             </div>
-            <p class="mt-4 text-gray-500 text-sm">— <em>SWAN Study of Women’s Health</em> (Study of Women’s Health Across the Nation)</p>
+            <p class="mt-4 text-gray-500 text-sm">— <em>SWAN Study of Women's Health</em> (Study of Women's Health Across the Nation)</p>
         </div>
     </section>
 
@@ -826,7 +832,7 @@
                 </div>
             </div>
 
-            <!-- CLAIM IT ALL NOW section with counter moved below guarantee line -->
+            <!-- CLAIM IT ALL NOW section -->
             <div class="bg-white p-8 rounded-2xl shadow-md text-center max-w-2xl mx-auto border border-rose-100">
                 <div class="mb-3 text-center">
                     <div class="bg-green-100 text-green-800 font-semibold py-2 px-3 rounded-full inline-flex flex-col items-center text-xs mb-2" style="display:inline-flex; flex-direction:column; align-items:center; gap:0.25rem;">
@@ -844,7 +850,7 @@
                     </span>
                 </div>
                 <div class="text-center mb-2">
-                    <a href="#" class="checkout-trigger cta-green-soft font-bold py-5 px-10 rounded-full text-center inline-block text-2xl">
+                    <a href="javascript:void(0)" class="checkout-trigger cta-green-soft font-bold py-5 px-10 rounded-full text-center inline-block text-2xl">
                         CLAIM IT ALL NOW - $47 (One Time)
                     </a>
                 </div>
@@ -855,7 +861,6 @@
                     <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async">
                 </div>
                 <p class="text-gray-600 mt-4 font-medium">100% Risk Free • Instant Access • Money-Back Guarantee</p>
-                <!-- Counter moved here -->
                 <p class="text-red-600 font-bold text-xl counter text-center mt-1">107 People Bought Today</p>
             </div>
         </div>
@@ -1019,7 +1024,7 @@
 
             <p class="text-red-600 font-bold text-xl mb-4 counter">107 People Bought Today</p>
 
-            <a href="#" class="checkout-trigger cta-rose font-bold py-5 px-10 rounded-full text-center inline-block text-2xl shadow-xl">
+            <a href="javascript:void(0)" class="checkout-trigger cta-rose font-bold py-5 px-10 rounded-full text-center inline-block text-2xl shadow-xl">
                 PROCEED SECURELY — $47
             </a>
             <p class="mt-4 text-gray-600 text-sm max-w-md mx-auto">Join women in California, London, Toronto, Sydney, and 14 other cities who refuse to let hormones dictate their earning trajectory.</p>
@@ -1031,14 +1036,14 @@
                 <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:54px;" loading="lazy" decoding="async">
             </div>
 
-            <!-- SSL line moved right below payment icons -->
+            <!-- SSL line -->
             <p class="ssl-badge text-xs text-green-600 font-medium flex items-center justify-center mt-3">
                 <i class="fas fa-lock"></i> 256-bit SSL Encryption • Your Privacy Protected
             </p>
 
             <img src="/images/money.webp" alt="Money Back Guarantee" class="mx-auto mb-3 mt-4" style="max-width:150px;" loading="lazy" decoding="async">
 
-            <!-- Guarantee badge replaced with the bottom-of-page style -->
+            <!-- Guarantee badge -->
             <div class="bg-green-100 text-green-800 p-4 rounded-xl inline-flex items-center justify-center shadow-md">
                 <i class="fas fa-shield-alt text-2xl mr-3"></i>
                 <span class="font-bold text-lg">100% Risk FREE 60-Day Money-Back Guarantee</span>
@@ -1078,11 +1083,11 @@
                     <ol>
                         <li>Greendale GA, Derby CA, and Maki PM. Perimenopause and cognition. Obstetrics and Gynecology Clinics. 2011 Sep 1;38(3):519-35.</li>
                         <li>Greendale GA, Huang MH, Wight RG, Seeman TE, Luetters C, Avis NE, Johnston J, and Karlamangla AS. Effects of the menopause transition and hormone use on cognitive performance in mid-life women. Neurology 2009; 72: 1850-1857.</li>
-                        <li>Greendale GA, Wight RG, Huang MH, Avis N, Gold E, Joffe H, Seeman T, Vuge M, and Karlamangla AS. Menopause-associated symptoms and cognitive performance: Results from the Study of Women’s Health Across the Nation. Amer J Epidemiol 2010; 171(11): 1214-1224.</li>
-                        <li>Swanson LM, Hood MM, Hall MH, Kravitz HM, Matthews KA, Joffe H, Thurston RC, Butters MA, Ruppert K, Harlow SD. Associations between sleep and cognitive performance in a racially/ethnically diverse cohort: the Study of Women’s Health Across the Nation. Sleep. 2021 Feb;44(2):zsaa182.</li>
-                        <li>Karlamangla AS, Lachman ME, Han W-J, Huang M-H, and Greendale GA. Evidence for cognitive aging in midlife women: Study of Women’s Health Across the Nation. PLoS One 2017 January 3;DOI:10.1371/journal.pone.0169008.</li>
+                        <li>Greendale GA, Wight RG, Huang MH, Avis N, Gold E, Joffe H, Seeman T, Vuge M, and Karlamangla AS. Menopause-associated symptoms and cognitive performance: Results from the Study of Women's Health Across the Nation. Amer J Epidemiol 2010; 171(11): 1214-1224.</li>
+                        <li>Swanson LM, Hood MM, Hall MH, Kravitz HM, Matthews KA, Joffe H, Thurston RC, Butters MA, Ruppert K, Harlow SD. Associations between sleep and cognitive performance in a racially/ethnically diverse cohort: the Study of Women's Health Across the Nation. Sleep. 2021 Feb;44(2):zsaa182.</li>
+                        <li>Karlamangla AS, Lachman ME, Han W-J, Huang M-H, and Greendale GA. Evidence for cognitive aging in midlife women: Study of Women's Health Across the Nation. PLoS One 2017 January 3;DOI:10.1371/journal.pone.0169008.</li>
                         <li>Greendale GA, Han W, Huang M, Upchurch DM, Karvonen-Gutierrez C, Avis NE, and Karlamangla AS. Longitudinal assessment of physical activity and cognitive outcomes among women at midlife. JAMA Netw Open. 2021 Mar 1;4(3):e213227.</li>
-                        <li>Kazlauskaite R, Janssen I, Wilson RS, Appelhans BM, Evans DA, Arvanitakis Z, El Khoudary SR, Kravitz HM. Is midlife metabolic syndrome associated with cognitive function change? The study of women’s health across the nation. The Journal of Clinical Endocrinology & Metabolism. 2020 Apr1;105(4):e1093-105.</li>
+                        <li>Kazlauskaite R, Janssen I, Wilson RS, Appelhans BM, Evans DA, Arvanitakis Z, El Khoudary SR, Kravitz HM. Is midlife metabolic syndrome associated with cognitive function change? The study of women's health across the nation. The Journal of Clinical Endocrinology & Metabolism. 2020 Apr1;105(4):e1093-105.</li>
                         <li>Derby CA, Hutchins F, Greendale GA, Matthews KA, Sternfeld B, Everson‐Rose SA, Kazlauskaite R, Whitmer RA, Brooks MM. Cardiovascular risk and midlife cognitive decline in the Study of Women's Health Across the Nation. Alzheimer's & Dementia. 2021 Mar 12.</li>
                     </ol>
                 </div>
@@ -1090,17 +1095,12 @@
         </div>
     </section>
 
-    <!-- Digistore24 multi-step order form loader (ensure script is initialized) -->
-    <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
-
-    <!-- Checkout Popup Overlay – exactly replicated from inspiration with correct product/order IDs -->
+    <!-- Checkout Popup Overlay – order form injected dynamically when opened -->
     <div id="checkoutPopupOverlay" class="checkout-popup-overlay">
         <div class="checkout-popup-content">
             <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
-            <!-- Begin of digistore multi-step order box code -->
-            <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
-            <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
-            <!-- End of digistore multi-step order box code -->
+            <!-- Container where the Digistore24 order form will be injected on first open -->
+            <div id="checkoutPopupFormContainer"></div>
         </div>
     </div>
 
@@ -1108,7 +1108,8 @@
 
     <script>
         (function() {
-            const popup = document.getElementById('bookPreviewPopup');
+            var popup = document.getElementById('bookPreviewPopup');
+            var checkoutFormInjected = false;
 
             window.openBookPreview = function() {
                 var iframe = popup.querySelector('iframe');
@@ -1140,22 +1141,42 @@
                 var btn = document.getElementById('readMoreBtn');
                 if (more.style.display === 'none' || more.style.display === '') {
                     more.style.display = 'block';
-                    btn.textContent = 'Show less ↑';
+                    btn.textContent = 'Show less \u2191';
                 } else {
                     more.style.display = 'none';
-                    btn.textContent = 'Read Christine\'s full story →';
+                    btn.textContent = 'Read Christine\'s full story \u2192';
                 }
             };
 
-            // Checkout Popup functions (from inspiration)
+            // Checkout Popup – inject order form dynamically on first open
             window.openCheckoutPopup = function(e) {
                 if (e) e.preventDefault();
-                document.getElementById('checkoutPopupOverlay').classList.add('active');
+                var overlay = document.getElementById('checkoutPopupOverlay');
+                var container = document.getElementById('checkoutPopupFormContainer');
+
+                // Inject the order form only once, when the popup is first opened
+                if (container && !checkoutFormInjected) {
+                    checkoutFormInjected = true;
+                    // Create the my-order-form element (custom element defined by already-loaded digistore.js)
+                    var orderForm = document.createElement('my-order-form');
+                    orderForm.setAttribute('product-id', '692610');
+                    orderForm.setAttribute('order-form-id', '242231');
+                    orderForm.setAttribute('base-url', 'https://www.checkout-ds24.com');
+                    container.appendChild(orderForm);
+                }
+
+                overlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
+
+                // Track checkout initiation
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'InitiateCheckout');
+                }
             };
 
             window.closeCheckoutPopup = function() {
-                document.getElementById('checkoutPopupOverlay').classList.remove('active');
+                var overlay = document.getElementById('checkoutPopupOverlay');
+                overlay.classList.remove('active');
                 document.body.style.overflow = '';
             };
 
@@ -1210,15 +1231,18 @@
 
                 // Attach checkout popup to all buttons with class "checkout-trigger"
                 document.querySelectorAll('.checkout-trigger').forEach(function(btn) {
-                    btn.addEventListener('click', openCheckoutPopup);
+                    btn.addEventListener('click', window.openCheckoutPopup);
                 });
 
                 // Close popup when clicking outside content
-                document.getElementById('checkoutPopupOverlay').addEventListener('click', function(e) {
-                    if (e.target === this) {
-                        closeCheckoutPopup();
-                    }
-                });
+                var checkoutOverlay = document.getElementById('checkoutPopupOverlay');
+                if (checkoutOverlay) {
+                    checkoutOverlay.addEventListener('click', function(e) {
+                        if (e.target === checkoutOverlay) {
+                            window.closeCheckoutPopup();
+                        }
+                    });
+                }
             });
         })();
     </script>
@@ -1232,12 +1256,5 @@
             <a href="/refund-policy.html" class="hover:text-gray-800 mx-2">Refund Policy</a>
         </div>
     </footer>
-    <script>
-        document.querySelectorAll('.checkout-trigger').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                fbq('track', 'InitiateCheckout');
-            });
-        });
-    </script>
 </body>
 </html>
