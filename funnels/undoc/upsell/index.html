@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    
+
     <!-- Meta Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -23,9 +23,7 @@
         'https://connect.facebook.net/en_US/fbevents.js');
 
         fbq('init', '1050918547614215');
-
         fbq('track', 'PageView');
-
         fbq('track', 'ViewContent', {
           content_name: 'Perimenopause Support System',
           content_type: 'product',
@@ -39,17 +37,19 @@
         src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Meta Pixel Code -->
-    
+
     <!-- Digistore24 Scripts (promo) -->
     <script src="https://www.digistore24-scripts.com/service/digistore.js">
     </script>
     <script type="text/javascript">
-        digistorePromocode({
-            "product_id": 692610,
-            "adjust_domain": true
-        });
+        if (typeof digistorePromocode === 'function') {
+            digistorePromocode({
+                "product_id": 692610,
+                "adjust_domain": true
+            });
+        }
     </script>
-    
+
     <title>Peri-menopause Support System – It Helped Me In My Initial Perimenopausal Years</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -77,6 +77,9 @@
     <!-- Preload critical images -->
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
     <link rel="preload" as="image" href="/images/floraltop.webp" fetchpriority="high">
+
+    <!-- Preload Digistore24 checkout script for instant embed (used in popup) -->
+    <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
 
     <style>
         *, *::before, *::after { box-sizing: border-box; }
@@ -301,6 +304,7 @@
         .transition-all { transition: all 0.2s ease; }
         .transition-transform { transition: transform 0.3s ease; }
         .duration-300 { transition-duration: 300ms; }
+        .rotate-180 { transform: rotate(180deg); }
 
         @media (min-width: 768px) {
             .md\:w-1\/2 { width: 50%; }
@@ -444,7 +448,7 @@
             position: relative;
         }
         .research-highlight::before {
-            content: "\201C";
+            content: "“";
             position: absolute;
             top: -10px;
             left: 10px;
@@ -465,7 +469,7 @@
         .research-sources ol { padding-left: 1.25rem; font-size: 0.85rem; color: #374151; line-height: 1.5; }
         .research-sources li { margin-bottom: 0.35rem; }
 
-        /* Checkout Popup Styles */
+        /* Checkout Popup Styles – exactly as inspiration */
         .checkout-popup-overlay {
             display: none;
             position: fixed;
@@ -504,17 +508,7 @@
             color: #333;
             z-index: 10;
         }
-        #checkoutPopupFormContainer {
-            min-height: 400px;
-            width: 100%;
-        }
-        #checkoutPopupFormContainer my-order-form {
-            display: block;
-            width: 100%;
-            min-height: 400px;
-        }
     </style>
-    <base target="_blank">
 </head>
 <body class="antialiased text-gray-800">
 
@@ -600,7 +594,7 @@
                     </div>
 
                     <div class="text-center mb-6">
-                        <a href="javascript:void(0)" class="checkout-trigger cta-rose font-bold py-4 px-8 rounded-full text-center inline-block text-xl shadow-lg">
+                        <a href="#" class="checkout-trigger cta-rose font-bold py-4 px-8 rounded-full text-center inline-block text-xl shadow-lg" role="button">
                             GET COMPLETE SYSTEM - $47
                         </a>
                         <div class="flex items-center justify-center mt-4 gap-4">
@@ -789,7 +783,7 @@
                     <h3 class="text-sm font-bold mb-1 text-gray-800">THE BUSY WOMAN'S PERIMENOPAUSE - EBOOK</h3>
                     <p class="text-gray-600 text-xs mb-2">Every protocol, script, and framework I built for myself after research that included 488 sources. Searchable, private, available instantly.</p>
                     <div class="text-center mb-1">
-                        <button onclick="openBookPreview()" class="book-preview-btn">
+                        <button onclick="openBookPreview()" class="book-preview-btn" type="button">
                             <i class="fas fa-book-open"></i> Preview Book
                         </button>
                     </div>
@@ -801,7 +795,7 @@
                     <h3 class="text-sm font-bold mb-1 text-gray-800">THE BUSY WOMAN'S PERIMENOPAUSE - AUDIOBOOK</h3>
                     <p class="text-gray-600 text-xs mb-2">Complete book narrated, for the mornings you can't read. Pre-meeting priming, fog-day commutes, or 4am when your brain is already running.</p>
                     <div class="text-center mb-1">
-                        <button id="audioSampleBtn" onclick="toggleAudioSample()" class="audio-preview-btn">
+                        <button id="audioSampleBtn" onclick="toggleAudioSample()" class="audio-preview-btn" type="button">
                             <i class="fas fa-play"></i> Audio Preview
                         </button>
                     </div>
@@ -832,7 +826,7 @@
                 </div>
             </div>
 
-            <!-- CLAIM IT ALL NOW section -->
+            <!-- CLAIM IT ALL NOW section with counter moved below guarantee line -->
             <div class="bg-white p-8 rounded-2xl shadow-md text-center max-w-2xl mx-auto border border-rose-100">
                 <div class="mb-3 text-center">
                     <div class="bg-green-100 text-green-800 font-semibold py-2 px-3 rounded-full inline-flex flex-col items-center text-xs mb-2" style="display:inline-flex; flex-direction:column; align-items:center; gap:0.25rem;">
@@ -850,7 +844,7 @@
                     </span>
                 </div>
                 <div class="text-center mb-2">
-                    <a href="javascript:void(0)" class="checkout-trigger cta-green-soft font-bold py-5 px-10 rounded-full text-center inline-block text-2xl">
+                    <a href="#" class="checkout-trigger cta-green-soft font-bold py-5 px-10 rounded-full text-center inline-block text-2xl" role="button">
                         CLAIM IT ALL NOW - $47 (One Time)
                     </a>
                 </div>
@@ -861,6 +855,7 @@
                     <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async">
                 </div>
                 <p class="text-gray-600 mt-4 font-medium">100% Risk Free • Instant Access • Money-Back Guarantee</p>
+                <!-- Counter moved here -->
                 <p class="text-red-600 font-bold text-xl counter text-center mt-1">107 People Bought Today</p>
             </div>
         </div>
@@ -904,7 +899,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <button id="readMoreBtn" class="read-more-btn" onclick="toggleStory()">Read Christine's full story →</button>
+                    <button id="readMoreBtn" class="read-more-btn" onclick="toggleStory()" type="button">Read Christine's full story →</button>
                 </div>
                 <p class="text-center mt-6">
                     <span class="floral-dot dot-rose"></span>
@@ -923,11 +918,11 @@
             <h2 class="text-2xl font-bold text-center mb-12">Questions Women Are Asking</h2>
             <div class="space-y-4">
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg" type="button">
                         <span>$47 seems too cheap. What is the catch?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="mt-3 text-gray-600 hidden">
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
                         <p class="mb-3"><strong> There is No catch.</strong> I kept The price accessible because:</p>
                         <ul class="list-disc pl-5 space-y-1">
                             <li>This is digital delivery — no printing or shipping costs</li>
@@ -939,69 +934,69 @@
                     </div>
                 </div>
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg" type="button">
                         <span>How do I access the materials after purchasing?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="mt-3 text-gray-600 hidden">
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
                         <p class="mb-3"><strong>Instantly.</strong> After completing your secure checkout, you receive an email with download links for all materials. The ebook is in PDF format (readable on any device), the Audiobook is in MP3 format, the workout & meal plans are in print-ready PDFs. You can access everything on your computer, phone, or tablet.</p>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg" type="button">
                         <span>Will anyone know I bought this?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="mt-3 text-gray-600 hidden">
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
                         <p class="mb-3"><strong>No.</strong> This is a private digital purchase. Your statement shows a generic merchant descriptor. There is no employer notification, no HR integration, no corporate sponsorship, and no requirement to log into any workplace portal. The entire system is designed for women who need privacy. You download the materials directly to your personal devices.</p>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg" type="button">
                         <span>What if I am already on HRT or considering it?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="mt-3 text-gray-600 hidden">
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
                         <p class="mb-3">This system is a <strong>parallel track</strong>, not an alternative to medical care. HRT addresses baseline hormonal optimisation. This system addresses the immediate, day-to-day practical requirements of navigating life while your body transitions. Most women manage this period most effectively by addressing both: appropriate medical support <em>plus</em> practical infrastructure for daily life.</p>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg" type="button">
                         <span>I've already tried a lot of stuff</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="mt-3 text-gray-600 hidden">
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
                         <p class="mb-3"><strong>That makes complete sense.</strong> Many women arrive here after trying supplements, sleep routines, symptom trackers, diet changes, or advice that sounded sensible but did not fit their actual life.</p>
                         <p><strong>This support system does not ask you to start over. It gives you a practical, organised place to begin—or continue—with less confusion and less noise.</strong></p>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg" type="button">
                         <span>I won't have time to finish it.</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="mt-3 text-gray-600 hidden">
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
                         <p>That is exactly why I crafted this into multiple formats.</p>
                         <p class="mb-3">Read the eBook when you have space. Listen to the audiobook while walking, commuting, or getting ready. Use the meal plans when decision-making feels like one task too many. Choose a 15-minute workout instead of waiting for the perfect hour.</p>
                         <p>You do not need to do everything at once.</p>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg" type="button">
                         <span>Will this actually make a difference?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="mt-3 text-gray-600 hidden">
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
                         <p class="mb-3">No solution can promise to solve every symptom or replace individual medical advice.</p>
                         <p>What this system can do is help you feel less confused, less alone, and more equipped to make practical next-step decisions. For many women, that shift from panic and self-blame to clarity and action, is where things begin to change.</p>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                    <button class="flex justify-between items-center w-full text-left font-bold text-lg">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-lg" type="button">
                         <span>Is this medical advice?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="mt-3 text-gray-600 hidden">
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
                         <p class="mb-3"><strong>No, this is not medical advice.</strong> <strong>This is a practical support system based on evidence-based research and real lived experience.</strong></p>
                         <p class="mb-3">While the content is grounded in peer-reviewed research, it is designed as a practical manual for daily life, not a clinical treatment guide. For medical decisions — including HRT — you should consult a qualified clinician. Think of this as the companion guide you use while navigating care, not a replacement for it.</p>
                     </div>
@@ -1024,7 +1019,7 @@
 
             <p class="text-red-600 font-bold text-xl mb-4 counter">107 People Bought Today</p>
 
-            <a href="javascript:void(0)" class="checkout-trigger cta-rose font-bold py-5 px-10 rounded-full text-center inline-block text-2xl shadow-xl">
+            <a href="#" class="checkout-trigger cta-rose font-bold py-5 px-10 rounded-full text-center inline-block text-2xl shadow-xl" role="button">
                 PROCEED SECURELY — $47
             </a>
             <p class="mt-4 text-gray-600 text-sm max-w-md mx-auto">Join women in California, London, Toronto, Sydney, and 14 other cities who refuse to let hormones dictate their earning trajectory.</p>
@@ -1036,14 +1031,14 @@
                 <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:54px;" loading="lazy" decoding="async">
             </div>
 
-            <!-- SSL line -->
+            <!-- SSL line moved right below payment icons -->
             <p class="ssl-badge text-xs text-green-600 font-medium flex items-center justify-center mt-3">
                 <i class="fas fa-lock"></i> 256-bit SSL Encryption • Your Privacy Protected
             </p>
 
             <img src="/images/money.webp" alt="Money Back Guarantee" class="mx-auto mb-3 mt-4" style="max-width:150px;" loading="lazy" decoding="async">
 
-            <!-- Guarantee badge -->
+            <!-- Guarantee badge replaced with the bottom-of-page style -->
             <div class="bg-green-100 text-green-800 p-4 rounded-xl inline-flex items-center justify-center shadow-md">
                 <i class="fas fa-shield-alt text-2xl mr-3"></i>
                 <span class="font-bold text-lg">100% Risk FREE 60-Day Money-Back Guarantee</span>
@@ -1058,25 +1053,25 @@
                 <p class="text-sm text-gray-600 font-medium">System validated against current clinical and occupational evidence:</p>
                 <div class="flex flex-wrap justify-center gap-6 items-start">
                     <div class="flex flex-col items-center">
-                        <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmwomeq/91/report.html" target="_blank"><img src="/images/hocc.webp" alt="UK Parliament Women and Equalities Committee" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmwomeq/91/report.html" target="_blank" rel="noopener"><img src="/images/hocc.webp" alt="UK Parliament Women and Equalities Committee" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">UK Parliament</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://journals.lww.com/menopausejournal/fulltext/2019/10000/the_menopause_transition_and_women_s_health_at.20.aspx" target="_blank"><img src="/images/swan.webp" alt="SWAN Longitudinal Study" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://journals.lww.com/menopausejournal/fulltext/2019/10000/the_menopause_transition_and_women_s_health_at.20.aspx" target="_blank" rel="noopener"><img src="/images/swan.webp" alt="SWAN Longitudinal Study" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">SWAN Study</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/29315132/" target="_blank"><img src="/images/nih.webp" alt="MENOS@Work RCT Data" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/29315132/" target="_blank" rel="noopener"><img src="/images/nih.webp" alt="MENOS@Work RCT Data" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">NIH MENOS@Work</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://www.nyp.org/healthmatters/how-to-protect-your-brain-health-during-menopause" target="_blank"><img src="/images/neuro.webp" alt="Occupational Neuroscience" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://www.nyp.org/healthmatters/how-to-protect-your-brain-health-during-menopause" target="_blank" rel="noopener"><img src="/images/neuro.webp" alt="Occupational Neuroscience" class="h-16" loading="lazy" decoding="async"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">NeuroScience</span>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-6">
-                <button id="toggleResearchBtn" class="text-sm font-semibold text-blue-700 hover:text-blue-900 underline bg-transparent border-none cursor-pointer">
+                <button id="toggleResearchBtn" class="text-sm font-semibold text-blue-700 hover:text-blue-900 underline bg-transparent border-none cursor-pointer" type="button">
                     See Research Sources
                 </button>
                 <div id="researchSources" class="research-sources max-w-3xl mx-auto">
@@ -1095,12 +1090,17 @@
         </div>
     </section>
 
-    <!-- Checkout Popup Overlay – order form injected dynamically when opened -->
+    <!-- Digistore24 multi-step order form loader -->
+    <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
+
+    <!-- Checkout Popup Overlay -->
     <div id="checkoutPopupOverlay" class="checkout-popup-overlay">
         <div class="checkout-popup-content">
-            <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
-            <!-- Container where the Digistore24 order form will be injected on first open -->
-            <div id="checkoutPopupFormContainer"></div>
+            <button class="checkout-popup-close" onclick="closeCheckoutPopup()" type="button">&times;</button>
+            <!-- Begin of digistore multi-step order box code -->
+            <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
+            <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
+            <!-- End of digistore multi-step order box code -->
         </div>
     </div>
 
@@ -1108,105 +1108,111 @@
 
     <script>
         (function() {
-            var popup = document.getElementById('bookPreviewPopup');
-            var checkoutFormInjected = false;
+            // ---- Book Preview Popup ----
+            var bookPopup = document.getElementById('bookPreviewPopup');
 
             window.openBookPreview = function() {
-                var iframe = popup.querySelector('iframe');
-                if (iframe && !iframe.src) {
+                if (!bookPopup) return;
+                var iframe = bookPopup.querySelector('iframe');
+                if (iframe && iframe.dataset.src && !iframe.src) {
                     iframe.src = iframe.dataset.src;
                 }
-                popup.classList.add('active');
+                bookPopup.classList.add('active');
                 document.body.style.overflow = 'hidden';
             };
 
             window.closeBookPreview = function(event) {
-                if (!event || event.target.id === 'bookPreviewPopup' || event.target.closest('.book-preview-close') || event.target.closest('.book-preview-done-btn')) {
-                    popup.classList.remove('active');
+                if (!bookPopup) return;
+                // Allow closing via overlay click, close button, or done button
+                if (!event || event.target === bookPopup || (event.target && (event.target.closest('.book-preview-close') || event.target.closest('.book-preview-done-btn')))) {
+                    bookPopup.classList.remove('active');
                     document.body.style.overflow = '';
                 }
             };
 
+            // ---- Audio Sample ----
             window.toggleAudioSample = function() {
                 var audio = document.getElementById('audioSample');
+                if (!audio) return;
                 if (audio.paused) {
-                    audio.play().catch(function() {});
+                    audio.play().catch(function() {
+                        // Autoplay might be blocked; update UI accordingly
+                        updateAudioBtn(false);
+                    });
                 } else {
                     audio.pause();
                 }
             };
 
+            function updateAudioBtn(isPlaying) {
+                var btn = document.getElementById('audioSampleBtn');
+                if (!btn) return;
+                if (isPlaying) {
+                    btn.innerHTML = '<i class="fas fa-pause"></i> Playing Preview';
+                } else {
+                    btn.innerHTML = '<i class="fas fa-play"></i> Audio Preview';
+                }
+            }
+
+            // ---- Story Toggle ----
             window.toggleStory = function() {
                 var more = document.getElementById('storyMore');
                 var btn = document.getElementById('readMoreBtn');
+                if (!more || !btn) return;
                 if (more.style.display === 'none' || more.style.display === '') {
                     more.style.display = 'block';
-                    btn.textContent = 'Show less \u2191';
+                    btn.textContent = 'Show less ↑';
                 } else {
                     more.style.display = 'none';
-                    btn.textContent = 'Read Christine\'s full story \u2192';
+                    btn.textContent = "Read Christine's full story →";
                 }
             };
 
-            // Checkout Popup – inject order form dynamically on first open
+            // ---- Checkout Popup ----
             window.openCheckoutPopup = function(e) {
                 if (e) e.preventDefault();
                 var overlay = document.getElementById('checkoutPopupOverlay');
-                var container = document.getElementById('checkoutPopupFormContainer');
-
-                // Inject the order form only once, when the popup is first opened
-                if (container && !checkoutFormInjected) {
-                    checkoutFormInjected = true;
-                    // Create the my-order-form element (custom element defined by already-loaded digistore.js)
-                    var orderForm = document.createElement('my-order-form');
-                    orderForm.setAttribute('product-id', '692610');
-                    orderForm.setAttribute('order-form-id', '242231');
-                    orderForm.setAttribute('base-url', 'https://www.checkout-ds24.com');
-                    container.appendChild(orderForm);
-                }
-
+                if (!overlay) return;
                 overlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
-
-                // Track checkout initiation
-                if (typeof fbq !== 'undefined') {
+                // Track with Facebook Pixel if available
+                if (typeof fbq === 'function') {
                     fbq('track', 'InitiateCheckout');
                 }
             };
 
             window.closeCheckoutPopup = function() {
                 var overlay = document.getElementById('checkoutPopupOverlay');
+                if (!overlay) return;
                 overlay.classList.remove('active');
                 document.body.style.overflow = '';
             };
 
-            document.addEventListener('DOMContentLoaded', function() {
+            // ---- Initialize Everything on DOM Ready ----
+            function initAll() {
+                // Audio button state listeners
                 var audio = document.getElementById('audioSample');
-                var btn = document.getElementById('audioSampleBtn');
-                if (audio && btn) {
-                    audio.addEventListener('play', function() {
-                        btn.innerHTML = '<i class="fas fa-pause"></i> Playing Preview';
-                    });
-                    audio.addEventListener('pause', function() {
-                        btn.innerHTML = '<i class="fas fa-play"></i> Audio Preview';
-                    });
-                    audio.addEventListener('ended', function() {
-                        btn.innerHTML = '<i class="fas fa-play"></i> Audio Preview';
-                    });
+                var audioBtn = document.getElementById('audioSampleBtn');
+                if (audio && audioBtn) {
+                    audio.addEventListener('play', function() { updateAudioBtn(true); });
+                    audio.addEventListener('pause', function() { updateAudioBtn(false); });
+                    audio.addEventListener('ended', function() { updateAudioBtn(false); });
                 }
 
-                document.querySelectorAll('#faq button').forEach(function(button) {
+                // FAQ accordion toggles
+                document.querySelectorAll('#faq .faq-toggle').forEach(function(button) {
                     button.addEventListener('click', function() {
-                        var content = button.nextElementSibling;
-                        content.classList.toggle('hidden');
-                        var icon = button.querySelector('i');
+                        var answer = this.nextElementSibling;
+                        if (!answer) return;
+                        answer.classList.toggle('hidden');
+                        var icon = this.querySelector('i');
                         if (icon) {
                             icon.classList.toggle('rotate-180');
                         }
                     });
                 });
 
-                // Dynamic counter for all .counter elements
+                // Dynamic counter
                 var counters = document.querySelectorAll('.counter');
                 var baseCount = 107;
                 var randomAddition = Math.floor(Math.random() * 15);
@@ -1215,6 +1221,7 @@
                     counter.textContent = finalCount + ' People Bought Today';
                 });
 
+                // Research sources toggle
                 var toggleBtn = document.getElementById('toggleResearchBtn');
                 var sourcesDiv = document.getElementById('researchSources');
                 if (toggleBtn && sourcesDiv) {
@@ -1229,21 +1236,41 @@
                     });
                 }
 
-                // Attach checkout popup to all buttons with class "checkout-trigger"
+                // Attach checkout popup to all .checkout-trigger buttons
                 document.querySelectorAll('.checkout-trigger').forEach(function(btn) {
-                    btn.addEventListener('click', window.openCheckoutPopup);
+                    btn.addEventListener('click', openCheckoutPopup);
                 });
 
-                // Close popup when clicking outside content
+                // Close checkout popup when clicking outside content
                 var checkoutOverlay = document.getElementById('checkoutPopupOverlay');
                 if (checkoutOverlay) {
                     checkoutOverlay.addEventListener('click', function(e) {
                         if (e.target === checkoutOverlay) {
-                            window.closeCheckoutPopup();
+                            closeCheckoutPopup();
                         }
                     });
                 }
-            });
+
+                // Close book preview with Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        if (bookPopup && bookPopup.classList.contains('active')) {
+                            closeBookPreview();
+                        }
+                        if (checkoutOverlay && checkoutOverlay.classList.contains('active')) {
+                            closeCheckoutPopup();
+                        }
+                    }
+                });
+            }
+
+            // Run initialization when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initAll);
+            } else {
+                // DOM already loaded (e.g., script is at end of body)
+                initAll();
+            }
         })();
     </script>
 
