@@ -4,41 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;
-n.loaded=!0;
-n.version='2.0';
-n.queue=[];
-t=b.createElement(e);
-t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s);
-}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;
+        n.push=n;
+        n.loaded=!0;
+        n.version='2.0';
+        n.queue=[];
+        t=b.createElement(e);
+        t.async=!0;
+        t.src=v;
+        s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s);
+        }(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1050918547614215');
+        fbq('init', '1050918547614215');
 
-fbq('track', 'PageView');
+        fbq('track', 'PageView');
 
-fbq('track', 'ViewContent', {
-  content_name: 'Perimenopause Support System',
-  content_type: 'product',
-  value: 17,
-  currency: 'USD'
-});
-</script>
+        fbq('track', 'ViewContent', {
+          content_name: 'Perimenopause Support System',
+          content_type: 'product',
+          value: 47,
+          currency: 'USD'
+        });
+    </script>
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-    <script src="https://www.digistore24-scripts.com/service/digistore.js" defer>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    <script src="https://www.digistore24-scripts.com/service/digistore.js">
     </script>
     <script type="text/javascript">
         digistorePromocode({
@@ -74,7 +74,7 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
     <link rel="preload" as="image" href="/images/perimenopause.webp" fetchpriority="high">
     <link rel="preload" as="image" href="/images/floraltop.webp" fetchpriority="high">
 
-    <!-- Preload Digistore24 checkout script for instant embed -->
+    <!-- Preload Digistore24 checkout script for instant popup (loaded in background) -->
     <link rel="preload" as="script" href="https://www.checkout-ds24.com/service/digistore.js">
 
     <style>
@@ -413,9 +413,17 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
         .key-message { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 500; font-size: 1.05rem; line-height: 1.6; color: #3d2e2e; }
         @media (max-width: 640px) { .key-message { font-size: 0.95rem; } }
 
-        /* Professional bonus badge */
-        .bonus-badge { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
-        .bonus-badge i { font-size: 0.8rem; }
+        /* Professional bonus badge – more eye-catching */
+        .bonus-badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.9rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; background: linear-gradient(135deg, #ecfdf5, #d1fae5); color: #065f46; border: 2px solid #6ee7b7; box-shadow: 0 2px 8px rgba(16,185,129,0.18); animation: bonusGlow 2.5s ease-in-out infinite; }
+        .bonus-badge i { font-size: 0.85rem; }
+        @keyframes bonusGlow { 0%, 100% { box-shadow: 0 2px 8px rgba(16,185,129,0.18); } 50% { box-shadow: 0 4px 18px rgba(16,185,129,0.38); } }
+
+        /* Eye-catching research highlight */
+        .research-highlight { background: linear-gradient(135deg, #faf5ff 0%, #fff1f2 30%, #eff6ff 70%, #f0fdf4 100%); border-left: 5px solid #a78bfa; border-radius: 1.25rem; padding: 1.75rem 2rem; box-shadow: 0 8px 30px rgba(139,92,246,0.10); position: relative; }
+        .research-highlight::before { content: "🔬"; position: absolute; top: -18px; left: 20px; font-size: 1.8rem; background: #fefcf8; padding: 0 8px; border-radius: 50%; }
+        .research-quote { font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif; font-weight: 700; font-style: italic; font-size: 1.35rem; line-height: 1.6; color: #2d1f3d; }
+        .research-explanation { font-weight: 600; font-size: 1.05rem; color: #4a3a5e; }
+        @media (max-width: 640px) { .research-quote { font-size: 1.1rem; } .research-explanation { font-size: 0.9rem; } }
 
         /* Research sources block */
         .research-sources { display: none; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.25rem; margin-top: 1rem; text-align: left; }
@@ -423,34 +431,44 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
         .research-sources ol { padding-left: 1.25rem; font-size: 0.85rem; color: #374151; line-height: 1.5; }
         .research-sources li { margin-bottom: 0.35rem; }
 
-        /* Checkout embed stability */
-        #checkout-embed {
+        /* Checkout Popup Styles */
+        .checkout-popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .checkout-popup-overlay.active {
+            display: flex;
+        }
+        .checkout-popup-content {
+            background: white;
+            border-radius: 10px;
+            max-width: 600px;
             width: 100%;
-            min-height: 2800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 20px;
             position: relative;
-            overflow: visible;
-            overflow-anchor: none;
-            scroll-margin-top: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
-        #checkout-embed,
-        #checkout-embed *,
-        #checkout-embed::before,
-        #checkout-embed::after {
-            overflow-anchor: none;
-        }
-        #checkout-embed my-order-form {
-            display: block;
-            width: 100%;
-            min-height: 2800px;
-        }
-        #checkout-embed iframe,
-        #checkout-embed .ds24_payIFrame {
-            width: 100% !important;
-            max-width: 100% !important;
-            min-height: 2800px;
-            border: 0 !important;
-            display: block;
-            background: transparent;
+        .checkout-popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 28px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #333;
+            z-index: 10;
         }
     </style>
     <base target="_blank">
@@ -537,8 +555,8 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     </div>
 
                     <div class="text-center mb-6">
-                        <a href="#checkout-embed" target="_self" class="cta-rose font-bold py-4 px-8 rounded-full text-center inline-block text-xl shadow-lg">
-                            GET COMPLETE SYSTEM - $17
+                        <a href="#" onclick="openCheckoutPopup(event)" class="cta-rose font-bold py-4 px-8 rounded-full text-center inline-block text-xl shadow-lg">
+                            GET COMPLETE SYSTEM - $47
                         </a>
                         <div class="flex items-center justify-center mt-4 gap-4">
                             <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async">
@@ -698,14 +716,16 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
         </div>
     </section>
 
-    <!-- New research finding section added above "Here's Exactly What You'll Get" -->
+    <!-- New research finding section – made more eye-catching -->
     <section class="py-12 bg-white px-4 relative overflow-hidden">
         <div class="container mx-auto max-w-4xl text-center">
-            <blockquote class="text-xl italic font-medium text-gray-700 max-w-2xl mx-auto leading-relaxed">
-                “Many areas of the brain, including the hippocampus and prefrontal cortex, contain estrogen receptors.”
-            </blockquote>
-            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">This helps explain why our cognition changes during perimenopause.</p>
-            <p class="mt-6 text-gray-500 text-sm">— <em>SWAN Study of Women’s Health</em> (Study of Women’s Health Across the Nation)</p>
+            <div class="research-highlight max-w-3xl mx-auto">
+                <blockquote class="research-quote mb-3">
+                    "Many areas of the brain, including the hippocampus and prefrontal cortex, contain estrogen receptors."
+                </blockquote>
+                <p class="research-explanation">This helps explain why our cognition changes during perimenopause.</p>
+            </div>
+            <p class="mt-6 text-gray-500 text-sm">— <em>SWAN Study of Women's Health</em> (Study of Women's Health Across the Nation)</p>
         </div>
     </section>
 
@@ -742,7 +762,6 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     <div class="text-right text-xs font-bold text-gray-500">Value $33.99</div>
                 </div>
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md relative">
-                    <!-- Removed "FREE BONUS" badge -->
                     <img src="/images/workout.webp" alt="Workout Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">QUICK HOME WORKOUT PLAN for PERIMENOPAUSE</h3>
@@ -784,8 +803,8 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     </span>
                 </div>
                 <div class="text-center mb-2">
-                    <a href="#checkout-embed" target="_self" class="cta-green-soft font-bold py-5 px-10 rounded-full text-center inline-block text-2xl">
-                        CLAIM IT ALL NOW - $17 (One Time)
+                    <a href="#" onclick="openCheckoutPopup(event)" class="cta-green-soft font-bold py-5 px-10 rounded-full text-center inline-block text-2xl">
+                        CLAIM IT ALL NOW - $47 (One Time)
                     </a>
                 </div>
                 <div class="flex items-center justify-center mt-4 gap-4">
@@ -795,6 +814,8 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async">
                 </div>
                 <p class="text-gray-600 mt-4 font-medium">100% Risk Free • Instant Access • Money-Back Guarantee</p>
+                <!-- Number of People Bought Today moved below the guarantee line -->
+                <p class="text-red-600 font-bold text-xl mb-4 counter">107 People Bought Today</p>
             </div>
         </div>
     </section>
@@ -857,7 +878,7 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
             <div class="space-y-4">
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
                     <button class="flex justify-between items-center w-full text-left font-bold text-lg">
-                        <span>$17 seems too cheap. What is the catch?</span>
+                        <span>$47 seems too cheap. What is the catch?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="mt-3 text-gray-600 hidden">
@@ -868,7 +889,7 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                             <li>This information should be accessible to every woman who needs it</li>
                             <li>The value is in the practical density, not the price tag</li>
                         </ul>
-                        <p class="mt-3">Also almost all of this $17 goes to partners, affiliates & in marketing. So, if you're reading this and don't take action, my efforts will be of no use. The actual cost is doing nothing & expecting things to get better by itself which won't happen.</p>
+                        <p class="mt-3">Also almost all of this $47 goes to partners, affiliates & in marketing. So, if you're reading this and don't take action, my efforts will be of no use. The actual cost is doing nothing & expecting things to get better by itself which won't happen.</p>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
@@ -957,10 +978,8 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
             <img src="/images/handmockup.webp" alt="Hand mockup" class="rounded-2xl shadow-xl w-full max-w-sm mx-auto mb-6" loading="lazy" decoding="async">
             <p class="closing-message mb-6">You are not buying another thing to manage.<br>You are choosing a simpler, more supported way forward.</p>
 
-            <p class="text-red-600 font-bold text-xl mb-4 counter">107 People Bought Today</p>
-
-            <a href="#checkout-embed" target="_self" class="cta-rose font-bold py-5 px-10 rounded-full text-center inline-block text-2xl shadow-xl">
-                PROCEED SECURELY — $17
+            <a href="#" onclick="openCheckoutPopup(event)" class="cta-rose font-bold py-5 px-10 rounded-full text-center inline-block text-2xl shadow-xl">
+                PROCEED SECURELY — $47
             </a>
             <p class="mt-4 text-gray-600 text-sm max-w-md mx-auto">Join women in California, London, Toronto, Sydney, and 14 other cities who refuse to let hormones dictate their earning trajectory.</p>
 
@@ -971,15 +990,22 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                 <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:54px;" loading="lazy" decoding="async">
             </div>
 
-            <img src="/images/money.webp" alt="Money Back Guarantee" class="mx-auto mb-3 mt-4" style="max-width:150px;" loading="lazy" decoding="async">
-
-            <p class="text-center text-gray-600 font-semibold flex items-center justify-center gap-2 mt-2">
-                <i class="fas fa-shield-alt text-green-600"></i> <strong>100% Risk-Free: 60-Day Money-Back Guarantee</strong>
-            </p>
-
+            <!-- 256-bit SSL Encryption moved right below payment icons -->
             <p class="ssl-badge text-xs text-green-600 font-medium flex items-center justify-center mt-3">
                 <i class="fas fa-lock"></i> 256-bit SSL Encryption • Your Privacy Protected
             </p>
+
+            <img src="/images/money.webp" alt="Money Back Guarantee" class="mx-auto mb-3 mt-4" style="max-width:150px;" loading="lazy" decoding="async">
+
+            <p class="text-gray-600 mt-4 font-medium">100% Risk Free • Instant Access • Money-Back Guarantee</p>
+
+            <!-- 100% Risk FREE 60-Day Money-Back Guarantee Badge at the bottom of the page (replaces old inline text) -->
+            <div class="text-center mt-6">
+                <div class="bg-green-100 text-green-800 p-4 rounded-xl inline-flex items-center justify-center shadow-md">
+                    <i class="fas fa-shield-alt text-2xl mr-3"></i>
+                    <span class="font-bold text-lg">100% Risk FREE 60-Day Money-Back Guarantee</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1015,11 +1041,11 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
                     <ol>
                         <li>Greendale GA, Derby CA, and Maki PM. Perimenopause and cognition. Obstetrics and Gynecology Clinics. 2011 Sep 1;38(3):519-35.</li>
                         <li>Greendale GA, Huang MH, Wight RG, Seeman TE, Luetters C, Avis NE, Johnston J, and Karlamangla AS. Effects of the menopause transition and hormone use on cognitive performance in mid-life women. Neurology 2009; 72: 1850-1857.</li>
-                        <li>Greendale GA, Wight RG, Huang MH, Avis N, Gold E, Joffe H, Seeman T, Vuge M, and Karlamangla AS. Menopause-associated symptoms and cognitive performance: Results from the Study of Women’s Health Across the Nation. Amer J Epidemiol 2010; 171(11): 1214-1224.</li>
-                        <li>Swanson LM, Hood MM, Hall MH, Kravitz HM, Matthews KA, Joffe H, Thurston RC, Butters MA, Ruppert K, Harlow SD. Associations between sleep and cognitive performance in a racially/ethnically diverse cohort: the Study of Women’s Health Across the Nation. Sleep. 2021 Feb;44(2):zsaa182.</li>
-                        <li>Karlamangla AS, Lachman ME, Han W-J, Huang M-H, and Greendale GA. Evidence for cognitive aging in midlife women: Study of Women’s Health Across the Nation. PLoS One 2017 January 3;DOI:10.1371/journal.pone.0169008.</li>
+                        <li>Greendale GA, Wight RG, Huang MH, Avis N, Gold E, Joffe H, Seeman T, Vuge M, and Karlamangla AS. Menopause-associated symptoms and cognitive performance: Results from the Study of Women's Health Across the Nation. Amer J Epidemiol 2010; 171(11): 1214-1224.</li>
+                        <li>Swanson LM, Hood MM, Hall MH, Kravitz HM, Matthews KA, Joffe H, Thurston RC, Butters MA, Ruppert K, Harlow SD. Associations between sleep and cognitive performance in a racially/ethnically diverse cohort: the Study of Women's Health Across the Nation. Sleep. 2021 Feb;44(2):zsaa182.</li>
+                        <li>Karlamangla AS, Lachman ME, Han W-J, Huang M-H, and Greendale GA. Evidence for cognitive aging in midlife women: Study of Women's Health Across the Nation. PLoS One 2017 January 3;DOI:10.1371/journal.pone.0169008.</li>
                         <li>Greendale GA, Han W, Huang M, Upchurch DM, Karvonen-Gutierrez C, Avis NE, and Karlamangla AS. Longitudinal assessment of physical activity and cognitive outcomes among women at midlife. JAMA Netw Open. 2021 Mar 1;4(3):e213227.</li>
-                        <li>Kazlauskaite R, Janssen I, Wilson RS, Appelhans BM, Evans DA, Arvanitakis Z, El Khoudary SR, Kravitz HM. Is midlife metabolic syndrome associated with cognitive function change? The study of women’s health across the nation. The Journal of Clinical Endocrinology & Metabolism. 2020 Apr1;105(4):e1093-105.</li>
+                        <li>Kazlauskaite R, Janssen I, Wilson RS, Appelhans BM, Evans DA, Arvanitakis Z, El Khoudary SR, Kravitz HM. Is midlife metabolic syndrome associated with cognitive function change? The study of women's health across the nation. The Journal of Clinical Endocrinology & Metabolism. 2020 Apr1;105(4):e1093-105.</li>
                         <li>Derby CA, Hutchins F, Greendale GA, Matthews KA, Sternfeld B, Everson‐Rose SA, Kazlauskaite R, Whitmer RA, Brooks MM. Cardiovascular risk and midlife cognitive decline in the Study of Women's Health Across the Nation. Alzheimer's & Dementia. 2021 Mar 12.</li>
                     </ol>
                 </div>
@@ -1027,22 +1053,31 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
         </div>
     </section>
 
-    <!-- Digistore24 Checkout Embed (loaded dynamically after page load to keep initial render lightning fast) -->
-    <div id="checkout-embed" class="bg-white p-6 rounded-xl shadow-lg max-w-2xl mx-auto my-8">
-        <!-- Begin of digistore multi-step order box code – script loaded in background after page load -->
-        <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
-        <!-- End of digistore multi-step order box code -->
-    </div>
-    <!-- 100% Risk-Free Guarantee and People Counter (replaced with copy of the one above PROCEED SECURELY) -->
-    <div class="text-center mt-6 mb-12">
-        <div class="bg-green-100 text-green-800 p-4 rounded-xl inline-flex items-center justify-center shadow-md">
-            <i class="fas fa-shield-alt text-2xl mr-3"></i>
-            <span class="font-bold text-lg">100% Risk FREE 60-Day Money-Back Guarantee</span>
-        </div>
-        <p class="text-red-600 font-bold text-xl mb-4 counter">107 People Bought Today</p>
-    </div>
-
     <audio id="audioSample" src="/audiobooksample.m4a" preload="none"></audio>
+
+    <footer class="py-6 bg-gray-100 text-center text-xs text-gray-500">
+        <div class="container mx-auto px-4">
+            <a href="/terms-conditions.html" class="hover:text-gray-800 mx-2">Terms of Service</a> &bull;
+            <a href="/privacy-policy.html" class="hover:text-gray-800 mx-2">Privacy Policy</a> &bull;
+            <a href="/legal-information.html" class="hover:text-gray-800 mx-2">Legal Information</a> &bull;
+            <a href="/contact-us.html" class="hover:text-gray-800 mx-2">Contact Us</a> &bull;
+            <a href="/refund-policy.html" class="hover:text-gray-800 mx-2">Refund Policy</a>
+        </div>
+    </footer>
+
+    <!-- Digistore24 checkout script loaded before popup for custom element registration -->
+    <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
+
+    <!-- Checkout Popup Overlay – fully preloaded in background, appears instantly on click -->
+    <div id="checkoutPopupOverlay" class="checkout-popup-overlay">
+        <div class="checkout-popup-content">
+            <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
+            <!-- Begin of digistore multi-step order box code -->
+            <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
+            <my-order-form product-id="692610" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
+            <!-- End of digistore multi-step order box code -->
+        </div>
+    </div>
 
     <script>
         (function() {
@@ -1050,7 +1085,6 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
 
             window.openBookPreview = function() {
                 var iframe = popup.querySelector('iframe');
-                // iframe src is already preloaded in background; fallback to data-src just in case
                 if (iframe && !iframe.src) {
                     iframe.src = iframe.dataset.src;
                 }
@@ -1077,102 +1111,4 @@ src="https://www.facebook.com/tr?id=1050918547614215&ev=PageView&noscript=1"/>
             window.toggleStory = function() {
                 var more = document.getElementById('storyMore');
                 var btn = document.getElementById('readMoreBtn');
-                if (more.style.display === 'none' || more.style.display === '') {
-                    more.style.display = 'block';
-                    btn.textContent = 'Show less ↑';
-                } else {
-                    more.style.display = 'none';
-                    btn.textContent = 'Read Christine\'s full story →';
-                }
-            };
-
-            document.addEventListener('DOMContentLoaded', function() {
-                var audio = document.getElementById('audioSample');
-                var btn = document.getElementById('audioSampleBtn');
-                if (audio && btn) {
-                    audio.addEventListener('play', function() {
-                        btn.innerHTML = '<i class="fas fa-pause"></i> Playing Preview';
-                    });
-                    audio.addEventListener('pause', function() {
-                        btn.innerHTML = '<i class="fas fa-play"></i> Audio Preview';
-                    });
-                    audio.addEventListener('ended', function() {
-                        btn.innerHTML = '<i class="fas fa-play"></i> Audio Preview';
-                    });
-                }
-
-                document.querySelectorAll('#faq button').forEach(function(button) {
-                    button.addEventListener('click', function() {
-                        var content = button.nextElementSibling;
-                        content.classList.toggle('hidden');
-                        var icon = button.querySelector('i');
-                        if (icon) {
-                            icon.classList.toggle('rotate-180');
-                        }
-                    });
-                });
-
-                var counters = document.querySelectorAll('.counter');
-                var baseCount = 107;
-                var randomAddition = Math.floor(Math.random() * 15);
-                var finalCount = baseCount + randomAddition;
-                counters.forEach(function(counter) {
-                    counter.textContent = finalCount + ' People Bought Today';
-                });
-
-                // Research sources toggle
-                var toggleBtn = document.getElementById('toggleResearchBtn');
-                var sourcesDiv = document.getElementById('researchSources');
-                if (toggleBtn && sourcesDiv) {
-                    toggleBtn.addEventListener('click', function() {
-                        if (sourcesDiv.classList.contains('visible')) {
-                            sourcesDiv.classList.remove('visible');
-                            toggleBtn.textContent = 'See Research Sources';
-                        } else {
-                            sourcesDiv.classList.add('visible');
-                            toggleBtn.textContent = 'Hide Research Sources';
-                        }
-                    });
-                }
-
-                // Preload book preview iframe after checkout embed is fully loaded (delay 3s)
-                setTimeout(function() {
-                    var iframe = document.querySelector('#bookPreviewPopup iframe');
-                    if (iframe && iframe.dataset.src && !iframe.src) {
-                        iframe.src = iframe.dataset.src;
-                    }
-                }, 3000);
-            });
-        })();
-    </script>
-
-    <!-- Load checkout embed in background 800ms after full page load for instant ready when needed -->
-    <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                var dsScript = document.createElement('script');
-                dsScript.src = 'https://www.checkout-ds24.com/service/digistore.js';
-                dsScript.async = true;
-                document.head.appendChild(dsScript);
-            }, 800);
-        });
-    </script>
-
-    <footer class="py-6 bg-gray-100 text-center text-xs text-gray-500">
-        <div class="container mx-auto px-4">
-            <a href="/terms-conditions.html" class="hover:text-gray-800 mx-2">Terms of Service</a> &bull;
-            <a href="/privacy-policy.html" class="hover:text-gray-800 mx-2">Privacy Policy</a> &bull;
-            <a href="/legal-information.html" class="hover:text-gray-800 mx-2">Legal Information</a> &bull;
-            <a href="/contact-us.html" class="hover:text-gray-800 mx-2">Contact Us</a> &bull;
-            <a href="/refund-policy.html" class="hover:text-gray-800 mx-2">Refund Policy</a>
-        </div>
-    </footer>
-<script>
-document.querySelectorAll('a[href*="checkout-ds24.com"]').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        fbq('track', 'InitiateCheckout');
-    });
-});
-</script>
-</body>
-</html>
+                if (more.style.display === 'none' || more.style.display === '
