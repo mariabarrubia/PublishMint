@@ -3,346 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Your System — Add the Home Workout</title>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <title>Perimenopause Home Workout Plan — Special Offer</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
         body {
-            font-family: 'Inter', Arial, sans-serif;
-            background-color: #f8fafc;
-            color: #0f172a;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            margin: 0;
+            padding: 20px;
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
         }
-
-        .cta-green {
-            background: linear-gradient(180deg, #16a34a 0%, #15803d 100%);
-            color: white;
-            transition: all 0.2s ease;
-            box-shadow: 0 8px 20px rgba(22, 163, 74, 0.35);
-            border: 2px solid #166534;
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 15px;
         }
-        .cta-green:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 28px rgba(22, 163, 74, 0.45);
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
         }
-
-        .price-slash {
-            position: relative;
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1e40af;
+            margin: 1rem 0;
+        }
+        .btn {
             display: inline-block;
+            background-color: #dc2626;
+            color: #fff;
+            font-weight: bold;
+            padding: 16px 36px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.25rem;
+            margin: 1rem 0;
+            transition: background-color 0.2s;
         }
-        .price-slash::after {
-            content: '';
-            position: absolute;
-            left: -5%;
-            top: 50%;
-            width: 110%;
-            height: 3px;
-            background: #ef4444;
-            transform: rotate(-8deg);
+        .btn:hover {
+            background-color: #b91c1c;
         }
-
-        .reject-link {
-            color: #94a3b8;
-            font-size: 0.8rem;
-            text-decoration: underline;
-            text-underline-offset: 2px;
-            transition: color 0.2s;
-        }
-        .reject-link:hover {
-            color: #64748b;
-        }
-
-        .bold-line {
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #16a34a, transparent);
-            border: none;
+        .product-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
             margin: 1.5rem 0;
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            background: #000;
-        }
-        .video-container video {
-            width: 100%;
             display: block;
-            max-height: 420px;
-            object-fit: cover;
         }
-
-        .badge-check {
-            background: #dcfce7;
-            color: #166534;
-            border: 1px solid #bbf7d0;
+        .list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-
-        .card-accent-teal {
-            border-left: 4px solid #0d9488;
+        .list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .list li::before {
+            content: "✓";
+            color: #16a34a;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .guarantee {
+            background: #f0fdf4;
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #d1fae5;
+        }
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1.5rem;
+        }
+        .footer a {
+            color: #6b7280;
+            text-decoration: underline;
+            margin: 0 0.5rem;
+        }
+        .disclaimer {
+            font-size: 0.875rem;
+            color: #4b5563;
+            margin-top: 2rem;
+            background: #f9fafb;
+            padding: 1rem 1.25rem;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+        }
+        .upsell-badge {
+            display: inline-block;
+            background: #fef3c7;
+            color: #92400e;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            letter-spacing: 0.03em;
+            margin-bottom: 0.75rem;
+        }
+        .strike {
+            text-decoration: line-through;
+            color: #9ca3af;
+            font-size: 1.25rem;
+            font-weight: normal;
+            margin-right: 0.5rem;
         }
     </style>
-    <base target="_blank">
 </head>
-<body class="antialiased">
+<body>
+    <div class="container">
 
-    <!-- Begin of Digistore24 Trusted Badge Code -->
-    <script type="text/javascript" src="https://www.digistore24.com/trusted-badge/39913/3vTmVoSYTlXck0g/salespage">
-    </script>
-    <!-- End of Digistore24 Trusted Badge Code -->
+        <p style="text-align:center; margin-top:0;"><span class="upsell-badge">🔥 Special One-Time Offer</span></p>
 
-    <div class="max-w-2xl mx-auto px-4 py-10 md:py-14">
+        <h1>Perimenopause Home Workout Plan</h1>
+        <p style="font-size:1.1rem; color:#4b5563;">The exact 15-minute strength training protocol designed for hormonal resilience, cognitive stamina, and a leaner body during perimenopause — no gym required, all from home.</p>
 
-        <!-- ============================================================ -->
-        <!-- 1. ORDER CONFIRMED HERO -->
-        <!-- ============================================================ -->
-        <div class="text-center mb-8">
-            <span class="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide mb-4">
-                <i class="fas fa-check-circle mr-1"></i> Order Confirmed
-            </span>
-            <p class="text-red-600 font-bold text-sm uppercase tracking-widest mb-2">Wait! — Your Order Isn't Complete</p>
-            <h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-3">
-                You Have the Roadmap.<br>
-                <span class="text-teal-700">But, Who's Going to Move Your Body Through It?</span>
-            </h1>
-            <p class="text-slate-600 text-lg font-medium max-w-lg mx-auto">
-                The system tells you <em>what</em> to do. This is the physical layer that makes it actually stick.
-            </p>
+        <!-- Single product image -->
+        <img src="images/mockup.webp" alt="Perimenopause Home Workout Plan digital download" class="product-img" loading="lazy">
+
+        <h2>What You Get</h2>
+        <ul class="list">
+            <li><strong>Quick Home Workout Plan for Perimenopause (PDF)</strong> — A complete 15-minute strength training system purpose-built for women navigating perimenopause. Designed to boost metabolism, support hormonal balance, sharpen cognitive function, and build functional strength — all with minimal equipment, right from your living room.</li>
+            <li><strong>Exercise demonstrations & form cues</strong> — Clear, printable reference guides so you never wonder if you're doing it right.</li>
+            <li><strong>Weekly scheduling templates</strong> — Flexible 3-day, 4-day, and 5-day rotation options that fit around your demanding schedule.</li>
+            <li><strong>Progress tracker</strong> — A simple, printable log to track strength gains, energy levels, and consistency over time.</li>
+        </ul>
+
+        <p class="price"><span class="strike">$27</span> Your price: $17</p>
+
+        <a href="https://www.checkout-ds24.com/product/716473" class="btn">Get Instant Access — $17</a>
+
+        <div class="guarantee">
+            <p style="font-weight:bold; margin:0;">60-Day Money-Back Guarantee</p>
+            <p style="margin:0.25rem 0 0 0;">Try the workout plan for 60 days. If you're not satisfied, contact our support team for a full refund — no questions asked.</p>
         </div>
 
-        <hr class="bold-line">
+        <p style="text-align:center; color:#4b5563; margin-top:1rem;">Secure checkout. Download instantly — delivered as a digital PDF file.</p>
 
-        <!-- ============================================================ -->
-        <!-- 2. THE GAP -->
-        <!-- ============================================================ -->
-        <div class="mb-8">
-            <p class="font-bold text-lg mb-4 text-slate-900">The Book is Powerful. But it requires something perimenopause actively works against:</p>
-            <div class="space-y-3 text-slate-700 font-medium">
-                <div class="flex items-start bg-white p-3 rounded-lg border border-slate-200 shadow-sm">
-                    <i class="fas fa-times-circle text-red-500 mr-3 mt-0.5 text-lg"></i>
-                    <span><strong>Physical follow-through.</strong> Knowing you need strength training and actually doing it consistently are two different things.</span>
-                </div>
-                <div class="flex items-start bg-white p-3 rounded-lg border border-slate-200 shadow-sm">
-                    <i class="fas fa-times-circle text-red-500 mr-3 mt-0.5 text-lg"></i>
-                    <span><strong>Body-level implementation.</strong> The protocols live in your head. Your muscles, bones, and metabolism need their own daily practice.</span>
-                </div>
-                <div class="flex items-start bg-white p-3 rounded-lg border border-slate-200 shadow-sm">
-                    <i class="fas fa-times-circle text-red-500 mr-3 mt-0.5 text-lg"></i>
-                    <span><strong>Fog-day translation.</strong> On a low-energy morning, translating a protocol into movement feels impossible. You need something you can just press play on.</span>
-                </div>
-            </div>
+        <div class="disclaimer">
+            <p><strong>Important Information:</strong></p>
+            <p>This is a digital product. All content is delivered as a downloadable PDF file immediately after purchase. No physical items are shipped.</p>
+            <p>This product is not medical advice. It is a fitness guide designed for general wellness during perimenopause. For medical decisions or before beginning any exercise program, consult a qualified healthcare professional.</p>
+            <p>Individual results may vary. The product provides a structured workout framework; outcomes depend on consistent application and personal circumstances. No specific results are guaranteed.</p>
         </div>
 
-        <hr class="bold-line">
-
-        <!-- ============================================================ -->
-        <!-- 3. VIDEO DEMO — THE WORKOUT VIBE -->
-        <!-- ============================================================ -->
-        <div class="mb-8">
-            <p class="text-center text-sm font-bold text-slate-500 uppercase tracking-wide mb-3">
-                <i class="fas fa-play-circle mr-1"></i> See the Workout — Realistic, Calm, Doable
-            </p>
-            <div class="video-container">
-                <video controls preload="metadata" poster="" playsinline>
-                    <source src="/workoutdemo.mp4" type="video/mp4">
-                    Your browser does not support the video element.
-                </video>
-            </div>
-            <p class="text-center text-xs text-slate-400 mt-2">
-                No bootcamp energy. No gym intimidation. Just a real home routine you can actually finish.
-            </p>
-        </div>
-
-        <hr class="bold-line">
-
-        <!-- ============================================================ -->
-        <!-- 4. THE STACK — COMPLETE HOME WORKOUT -->
-        <!-- ============================================================ -->
-        <div class="mb-8">
-            <h2 class="text-center font-bold text-xl text-slate-900 mb-6 uppercase tracking-wide">
-                YOU'LL RECEIVE — LIFETIME ACCESS
-            </h2>
-
-            <!-- Workout Product Card -->
-            <div class="bg-white rounded-xl card-accent-teal shadow-md p-5 mb-4">
-                <div class="flex justify-between items-start mb-3">
-                    <h3 class="font-bold text-lg text-teal-900">The Complete Peri-Menopause Home Workout</h3>
-                    <span class="text-slate-400 font-bold text-lg price-slash"> $86.99</span>
-                </div>
-                <p class="text-sm text-slate-800 font-semibold mb-3">
-                    The missing physical layer. Short. At home. Built for your body <em>now</em>.
-                </p>
-                <ul class="text-sm text-slate-700 space-y-2 font-medium">
-                    <li class="flex items-start"><i class="fas fa-video text-teal-500 mr-2 mt-1"></i> Follow-along video workout — press play, move, done.</li>
-                    <li class="flex items-start"><i class="fas fa-clock text-teal-500 mr-2 mt-1"></i> Short sessions designed for busy workdays and low-energy mornings.</li>
-                    <li class="flex items-start"><i class="fas fa-home text-teal-500 mr-2 mt-1"></i> Zero equipment needed. Living room, bedroom, hotel room — wherever you are.</li>
-                    <li class="flex items-start"><i class="fas fa-dumbbell text-teal-500 mr-2 mt-1"></i> Progressive strength focus — bone health, muscle preservation, metabolic resilience.</li>
-                    <li class="flex items-start"><i class="fas fa-cloud-sun text-teal-500 mr-2 mt-1"></i> Fog-day adaptations — gentler versions for when energy is low but consistency matters.</li>
-                </ul>
-            </div>
-        </div>
-
-        <hr class="bold-line">
-
-        <!-- ============================================================ -->
-        <!-- 5. WHY WOMEN LIKE HER ACTUALLY USE IT -->
-        <!-- ============================================================ -->
-        <div class="mb-8">
-            <h2 class="text-center font-bold text-lg text-slate-900 mb-4">
-                Why It Works for Women Like You
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div class="bg-white border border-slate-200 rounded-lg p-3 shadow-sm">
-                    <i class="fas fa-bolt text-amber-500 text-lg mb-1"></i>
-                    <p class="text-sm font-bold text-slate-800">Fog-day friendly</p>
-                    <p class="text-xs text-slate-600">No decisions. No planning. Just press play and follow. Your brain gets a break.</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-lg p-3 shadow-sm">
-                    <i class="fas fa-calendar-check text-teal-500 text-lg mb-1"></i>
-                    <p class="text-sm font-bold text-slate-800">Actually fits your week</p>
-                    <p class="text-xs text-slate-600">Short enough to finish before the next meeting. No commute. No gym membership.</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-lg p-3 shadow-sm">
-                    <i class="fas fa-heart text-rose-500 text-lg mb-1"></i>
-                    <p class="text-sm font-bold text-slate-800">Built for this phase</p>
-                    <p class="text-xs text-slate-600">Strength, bone density, mood — exactly what perimenopause demands, nothing extra.</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-lg p-3 shadow-sm">
-                    <i class="fas fa-lock text-slate-500 text-lg mb-1"></i>
-                    <p class="text-sm font-bold text-slate-800">Private. No cameras. No group.</p>
-                    <p class="text-xs text-slate-600">Just you, at home, on your own terms. No one watching, no one judging.</p>
-                </div>
-            </div>
-        </div>
-
-        <hr class="bold-line">
-
-        <!-- ============================================================ -->
-        <!-- 6. OBJECTION HANDLING -->
-        <!-- ============================================================ -->
-        <div class="mb-8">
-            <h2 class="text-center font-bold text-lg text-slate-900 mb-4">
-                If You're Thinking…
-            </h2>
-            <div class="space-y-2 text-sm text-slate-700">
-                <div class="bg-slate-50 border border-slate-200 rounded-lg p-3">
-                    <span class="font-bold text-slate-900">"I don't have time."</span>
-                    <span class="text-slate-600"> — Most sessions are under 20 minutes. Shorter than scrolling your phone.</span>
-                </div>
-                <div class="bg-slate-50 border border-slate-200 rounded-lg p-3">
-                    <span class="font-bold text-slate-900">"I'm not fit enough."</span>
-                    <span class="text-slate-600"> — This is not a bootcamp. Every move has a modification. You start where you are.</span>
-                </div>
-                <div class="bg-slate-50 border border-slate-200 rounded-lg p-3">
-                    <span class="font-bold text-slate-900">"I already bought the system."</span>
-                    <span class="text-slate-600"> — Exactly. The system tells you what to do. This is the body layer that makes it real. They are designed to work together.</span>
-                </div>
-                <div class="bg-slate-50 border border-slate-200 rounded-lg p-3">
-                    <span class="font-bold text-slate-900">"I might not use it."</span>
-                    <span class="text-slate-600"> — Most women find the video format easier to stick with than self-guided plans. Press play is the simplest instruction there is.</span>
-                </div>
-            </div>
-        </div>
-
-        <hr class="bold-line">
-
-        <!-- ============================================================ -->
-        <!-- 7. ECOSYSTEM BRIDGE -->
-        <!-- ============================================================ -->
-        <div class="bg-teal-50 border border-teal-200 rounded-lg p-4 mb-8 text-center">
-            <p class="text-teal-900 font-bold text-sm md:text-base">
-                <i class="fas fa-layer-group text-teal-600 mr-2"></i>
-                System (knowledge) + Workout (embodiment) = Complete Coverage. Mind <em>and</em> body, working together.
-            </p>
-        </div>
-
-        <!-- ============================================================ -->
-        <!-- 8. PRICE & CTA -->
-        <!-- ============================================================ -->
-        <div class="bg-slate-900 rounded-2xl p-6 md:p-8 text-center shadow-2xl mb-8">
-            <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-3">One-Time Add-On Price</p>
-
-            <div class="flex items-center justify-center gap-4 mb-2">
-                <span class="text-2xl md:text-3xl text-slate-500 font-bold price-slash">$86.99</span>
-                <span class="text-4xl md:text-5xl font-extrabold text-white">$17</span>
-            </div>
-
-            <p class="text-green-400 font-bold text-lg mb-2">Lifetime Access — Instant Delivery</p>
-
-            <div class="bg-amber-500/20 border border-amber-500/50 rounded-lg p-3 mb-6 mt-4">
-                <p class="text-amber-200 text-sm font-bold">
-                    <i class="fas fa-exclamation-triangle mr-2"></i>
-                    This offer appears only once — right here, right now
-                </p>
-            </div>
-
-            <!-- TODO: Replace href with your upsell checkout URL -->
-            <a href="[UPSELL_CHECKOUT_URL]" class="cta-green block w-full font-extrabold py-4 px-6 rounded-xl text-center text-lg md:text-xl uppercase tracking-wide">
-                YES! ADD THE HOME WORKOUT TO MY ORDER
-            </a>
-
-            <div class="flex items-center justify-center gap-2 mt-4 text-slate-400 text-xs">
-                <i class="fas fa-lock"></i>
-                <span>256-bit SSL Encryption • 60 Day Guarantee • Private &amp; Secure</span>
-            </div>
-        </div>
-
-        <!-- ============================================================ -->
-        <!-- 9. TRUST / RISK REVERSAL -->
-        <!-- ============================================================ -->
-        <div class="text-center mb-10">
-            <div class="flex justify-center items-center space-x-3 mb-4">
-                <img src="mastercard.svg" alt="Mastercard" class="h-8">
-                <img src="visa.svg" alt="Visa" class="h-8">
-                <img src="applepay.svg" alt="Apple Pay" class="h-8">
-                <img src="paypal.svg" alt="PayPal" class="h-8">
-            </div>
-            <div class="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-bold mb-3">
-                <i class="fas fa-shield-alt mr-2"></text 60 Days Risk-Free Guarantee
-            </div>
-            <p class="text-slate-600 text-sm max-w-md mx-auto leading-relaxed">
-                If the workout doesn't fit your life, you're covered. Simple as that.
-            </p>
-        </div>
-
-        <!-- ============================================================ -->
-        <!-- 10. FAQ — BRIEF -->
-        <!-- ============================================================ -->
-        <div class="mb-8">
-            <h2 class="text-center font-bold text-lg text-slate-900 mb-4">Quick Answers</h2>
-            <div class="space-y-3 text-sm">
-                <div class="bg-white border border-slate-200 rounded-lg p-3 shadow-sm">
-                    <p class="font-bold text-slate-800">How long are the workouts?</p>
-                    <p class="text-slate-600">Most sessions are 15–25 minutes. Designed to fit before work, during lunch, or whenever you have a small window.</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-lg p-3 shadow-sm">
-                    <p class="font-bold text-slate-800">Do I need equipment?</p>
-                    <p class="text-slate-600">No. Bodyweight is enough. If you have a pair of light dumbbells or resistance bands, there are optional upgrades — but nothing you need to buy.</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-lg p-3 shadow-sm">
-                    <p class="font-bold text-slate-800">How do I access it?</p>
-                    <p class="text-slate-600">Instant digital delivery. You'll get a private link immediately after checkout. Stream from any device, anywhere.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ============================================================ -->
-        <!-- 11. REJECT LINK -->
-        <!-- ============================================================ -->
-        <div class="text-center border-t border-slate-300 pt-8 pb-4">
-            <a href="[THANKYOU_URL]" class="reject-link">
-                No thanks. I'll rely on the system alone and figure out the movement part on my own.
-            </a>
+        <div class="footer">
+            <a href="terms-conditions.html">Terms of Service</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="legal-information.html">Legal Information</a>
+            <a href="refund-policy.html">Refund Policy</a>
+            <a href="contact-us.html">Contact Us</a>
+            <p>© 2026. All rights reserved.</p>
         </div>
 
     </div>
+
+    <!-- Digistore24 promocode integration for checkout links -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var s = document.createElement('script');
+            s.src = 'https://www.digistore24-scripts.com/service/digistore.js';
+            s.defer = true;
+            s.onload = function() {
+                if (typeof digistorePromocode === 'function') {
+                    digistorePromocode({ product_id: 716473, adjust_domain: true });
+                }
+            };
+            document.head.appendChild(s);
+        });
+    </script>
 
 </body>
 </html>
