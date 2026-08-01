@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
-<script type="text/javascript">
-digistorePromocode( { "product_id": 716473, "adjust_domain": true } );
-</script>
+    <script>
+        digistoreUpsell({
+            accept_url: 'https://www.checkout-ds24.com/answer/yes?template=light',
+            reject_url: 'https://www.checkout-ds24.com/answer/no'
+        });
+    </script>
+    <script type="text/javascript">
+        digistorePromocode({ "product_id": 716473, "adjust_domain": true });
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyond Burnout — Private Community for Perimenopause Professionals</title>
@@ -195,7 +201,7 @@ digistorePromocode( { "product_id": 716473, "adjust_domain": true } );
 
     </div>
 
-    <!-- Digistore24 promocode integration for checkout links -->
+    <!-- Digistore24 promocode integration for checkout links (kept as fallback) -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var s = document.createElement('script');
