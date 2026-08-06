@@ -47,15 +47,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://simplebooklet.com" crossorigin>
+    <link rel="preconnect" href="https://www.canva.com" crossorigin>
     <link rel="preconnect" href="https://www.checkout-ds24.com" crossorigin>
     <link rel="preconnect" href="https://www.digistore24-scripts.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.checkout-ds24.com">
     <link rel="dns-prefetch" href="https://www.digistore24-scripts.com">
-    <link rel="dns-prefetch" href="https://simplebooklet.com">
+    <link rel="dns-prefetch" href="https://www.canva.com">
 
     <!-- Prefetch book preview URL to load in background -->
-    <link rel="prefetch" href="https://simplebooklet.com/embed.php?wpKey=Itg1Z9gHEKyMe4ZEonPNfN&source=embed" as="document">
+    <link rel="prefetch" href="https://www.canva.com/design/DAHRioeExfo/76RKmShuHfQCuS6A3gR-Mg/view?embed" as="document">
 
     <!-- Preload critical fonts with display swap -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" as="style" crossorigin>
@@ -481,19 +481,23 @@
 
     <!-- Watercolor Floral Border – Hanging Flowers from Top Edge -->
     <div class="floral-garland" aria-hidden="true">
-        <img src="/images/floraltop.webp" alt="" loading="eager" decoding="async" fetchpriority="high">
+        <img src="/images/floraltop.webp" alt="" loading="eager" decoding="async" fetchpriority="high" width="2400" height="200">
     </div>
     <div class="floral-garland-spacer" aria-hidden="true"></div>
 
+    <!-- Book Preview Popup – Canva Embed -->
     <div id="bookPreviewPopup" class="book-preview-popup" onclick="closeBookPreview(event)">
         <div class="book-preview-content" onclick="event.stopPropagation()">
             <button class="book-preview-close" onclick="closeBookPreview()"><i class="fas fa-times text-gray-700"></i></button>
-            <div class="book-preview-iframe-wrapper">
-                <iframe data-src="https://simplebooklet.com/embed.php?wpKey=Itg1Z9gHEKyMe4ZEonPNfN&source=embed" allowfullscreen width="100%" height="100%" style="border:0;overflow:hidden;" scrolling="no" loading="lazy" title="Book Preview"></iframe>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 129.4118%;
+             padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+             border-radius: 8px; will-change: transform;">
+              <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                src="https://www.canva.com/design/DAHRioeExfo/76RKmShuHfQCuS6A3gR-Mg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen" title="Book Preview">
+              </iframe>
             </div>
-            <div class="book-preview-footer">
-                <button class="book-preview-done-btn" onclick="closeBookPreview()"><i class="fas fa-check-circle"></i> Done</button>
-            </div>
+            <p style="text-align:center; color:#555; font-size:0.85rem; margin:0.5rem 0 0.25rem;">← Swipe or use arrow keys to flip pages →</p>
+            <a href="https://www.canva.com/design/DAHRioeExfo/76RKmShuHfQCuS6A3gR-Mg/view?utm_content=DAHRioeExfo&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" style="font-size:0.75rem; display:block; text-align:center; color:#7a9f7e;">Book Preview</a> by Christine
         </div>
     </div>
 
@@ -506,15 +510,6 @@
                         <span class="title-floral-left">❀</span>Peri-menopausal Woman's Career Protection System<span class="title-floral-right">✿</span>
                     </h1>
                     <span class="title-underline"></span>
-                    <p class="text-center text-gray-600 italic mb-6 mt-2 font-medium subtitle-caveat">"I used to rehearse conversations in the shower so I wouldn't blank later. I don't have to do that anymore."</p>
-
-                    <!-- Professionally added Eleri Owens testimonial -->
-                    <div class="text-right mb-4">
-                        <p class="font-semibold text-sm">— Eleri Owens, HR Manager, Texas</p>
-                        <span class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded-full">
-                            <i class="fas fa-check-circle mr-1"></i> Verified Buyer
-                        </span>
-                    </div>
 
                     <div class="md:hidden mb-4">
                         <img src="/images/perimenopause.webp" alt="Woman at peace" class="rounded-2xl shadow-2xl w-full" style="max-height:450px;object-fit:cover;" loading="lazy" decoding="async" width="800" height="600">
@@ -554,7 +549,7 @@
                     </div>
 
                     <div class="mb-6">
-                        <img src="/images/handmockup.webp" alt="Hand mockup" class="rounded-2xl shadow-lg w-full max-w-md mx-auto mb-1" loading="lazy" decoding="async">
+                        <img src="/images/handmockup.webp" alt="Hand mockup" class="rounded-2xl shadow-lg w-full max-w-md mx-auto mb-1" loading="lazy" decoding="async" width="800" height="534">
                         <p class="text-xs text-gray-400 italic text-center">All items are delivered digitally</p>
                     </div>
 
@@ -563,10 +558,10 @@
                             GET COMPLETE SYSTEM - $27
                         </a>
                         <div class="flex items-center justify-center mt-4 gap-4">
-                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async">
-                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async">
-                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async">
-                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async">
+                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async" width="80" height="48">
+                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async" width="100" height="60">
+                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async" width="80" height="48">
+                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async" width="100" height="60">
                         </div>
                     </div>
                     <p class="text-center text-gray-600 font-semibold flex items-center justify-center gap-2">
@@ -582,8 +577,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Testimonial card section deleted -->
 
     <!-- New research finding section – made more eye-catching -->
     <section class="py-12 bg-white px-4 relative overflow-hidden">
@@ -607,7 +600,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-3 mb-10">
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="/images/ebookmockup.webp" alt="Ebook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/ebookmockup.webp" alt="Ebook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async" width="400" height="400">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">THE BUSY WOMAN'S PERIMENOPAUSE - EBOOK</h3>
                     <p class="text-gray-600 text-xs mb-2">Every protocol, script, and framework I built for myself after research that included 488 sources. Searchable, private, available instantly.</p>
@@ -616,10 +609,9 @@
                             <i class="fas fa-book-open"></i> Preview Book
                         </button>
                     </div>
-                    <div class="text-right text-xs font-bold text-gray-500">Value $26.99</div>
                 </div>
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="/images/audiobookmockup.webp" alt="Audiobook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/audiobookmockup.webp" alt="Audiobook Mockup" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async" width="400" height="400">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Delivered digitally</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">THE BUSY WOMAN'S PERIMENOPAUSE - AUDIOBOOK</h3>
                     <p class="text-gray-600 text-xs mb-2">Complete book narrated, for the mornings you can't read. Pre-meeting priming, fog-day commutes, or 4am when your brain is already running.</p>
@@ -628,38 +620,32 @@
                             <i class="fas fa-play"></i> Audio Preview
                         </button>
                     </div>
-                    <div class="text-right text-xs font-bold text-gray-500">Value $33.99</div>
                 </div>
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md relative">
-                    <img src="/images/workout.webp" alt="Workout Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/workout.webp" alt="Workout Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async" width="400" height="400">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">QUICK HOME WORKOUT PLAN for PERIMENOPAUSE</h3>
                     <p class="text-gray-600 text-xs mb-2">Strength training specifically calibrated for perimenopause — hormonal resilience, bone density, cognitive stamina. Just 15 minutes. No gym.</p>
                     <div class="bonus-badge mt-2"><i class="fas fa-gift"></i> Bonus: Yoga Routine for Hormonal Balance</div>
-                    <div class="text-right text-xs font-bold text-gray-500">Value $22.99</div>
                 </div>
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="/images/mealplan.webp" alt="Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/mealplan.webp" alt="Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async" width="400" height="400">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">7-DAY MEAL PLAN</h3>
                     <p class="text-gray-600 text-xs mb-2">A brain-fuel framework. Phytoestrogens, omega-3s, blood-sugar stability — the nutritional architecture your prefrontal cortex needs.</p>
                     <div class="bonus-badge mt-2"><i class="fas fa-gift"></i> Bonus: Natural Remedies to Relieve Perimenopause Symptoms</div>
-                    <div class="text-right text-xs font-bold text-gray-500">Value $26.99</div>
                 </div>
                 <div class="value-card value-card-compact bg-white p-3 rounded-xl shadow-md">
-                    <img src="/images/vegan.webp" alt="Vegan Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async">
+                    <img src="/images/vegan.webp" alt="Vegan Meal Plan" class="w-3/4 mx-auto rounded-lg mb-2" loading="lazy" decoding="async" width="400" height="400">
                     <p class="text-xs text-gray-400 italic text-center mb-1">Printable</p>
                     <h3 class="text-sm font-bold mb-1 text-gray-800">7-DAY (VEGAN) MEAL PLAN</h3>
                     <p class="text-gray-600 text-xs mb-2">The brain-fuel architecture, entirely plant-based. B12, iron, and complete protein fully mapped — no compromise on ethics or cognitive function.</p>
-                    <div class="text-right text-xs font-bold text-gray-500">Value $32.99</div>
                 </div>
             </div>
 
             <div class="bg-white p-8 rounded-2xl shadow-md text-center max-w-2xl mx-auto border border-rose-100">
-                <!-- Deleted "Support System Bought by 3,200+ WomenLast Updated: Today" badge -->
-                <img src="/images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mb-1" loading="lazy" decoding="async">
+                <img src="/images/mockup.webp" alt="Mockup" class="rounded-lg shadow-md w-full max-w-lg mx-auto mb-1" loading="lazy" decoding="async" width="800" height="400">
                 <p class="text-xs text-gray-400 italic mb-4">All items are delivered digitally</p>
-                <!-- Deleted "Total Value: $143.95" h3 -->
                 <p class="text-gray-600 mb-6">What is your peace of mind worth? Your clarity? Your confidence in the rooms that matter?</p>
                 <div class="mb-3">
                     <span class="inline-block bg-green-100 text-green-800 font-bold py-2 px-4 rounded-full text-sm">
@@ -672,18 +658,15 @@
                     </a>
                 </div>
                 <div class="flex items-center justify-center mt-4 gap-4">
-                    <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async">
-                    <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async">
-                    <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async">
-                    <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async">
+                    <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async" width="80" height="48">
+                    <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async" width="100" height="60">
+                    <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async" width="80" height="48">
+                    <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async" width="100" height="60">
                 </div>
-                <p class="text-gray-600 mt-4 font-medium">100% Risk Free • Instant Access • Money-Back Guarantee</p>
-                <!-- Deleted "107 People Bought Today" -->
+                <p class="text-gray-600 mt-4 font-medium">100% Risk Free • Instant Access • 60-Day Money-Back Guarantee</p>
             </div>
         </div>
     </section>
-
-    <!-- My Story section deleted -->
 
     <section id="faq" class="py-16 bg-white px-4">
         <div class="container mx-auto max-w-4xl">
@@ -780,20 +763,8 @@
     <section class="py-16 bg-soft-pink px-4 relative overflow-hidden">
         <span class="section-petal" style="bottom:5px;left:10%;color:#b8c9a8;">✿</span>
         <div class="container mx-auto max-w-3xl text-center relative z-10">
-            <!-- New Louise Whitfield testimonial placed above the Support System badge -->
-            <div class="mb-6 text-center">
-                <p class="subtitle-caveat">"My manager thinks I got more Organised this year. She has no idea that this Helped me"</p>
-                <div class="mt-2">
-                    <p class="font-semibold text-sm">— Louise Whitfield, Practice Lead, Edinburgh</p>
-                    <span class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded-full">
-                        <i class="fas fa-check-circle mr-1"></i> Verified Buyer
-                    </span>
-                </div>
-            </div>
 
-            <!-- Deleted "Support System Bought by 3,200+ WomenLast Updated: Today" badge -->
-
-            <img src="/images/handmockup.webp" alt="Hand mockup" class="rounded-2xl shadow-xl w-full max-w-sm mx-auto mb-6" loading="lazy" decoding="async">
+            <img src="/images/handmockup.webp" alt="Hand mockup" class="rounded-2xl shadow-xl w-full max-w-sm mx-auto mb-6" loading="lazy" decoding="async" width="800" height="534">
             <p class="closing-message mb-6">You are not buying another thing to manage.<br>You are choosing a simpler, more supported way forward.</p>
 
             <a href="#" onclick="openCheckoutPopup(event)" class="cta-rose font-bold py-5 px-10 rounded-full text-center inline-block text-2xl shadow-xl">
@@ -802,22 +773,20 @@
             <p class="mt-4 text-gray-600 text-sm max-w-md mx-auto">Join women in California, London, Toronto, Sydney, and 14 other cities who refuse to let hormones dictate their earning trajectory.</p>
 
             <div class="flex items-center justify-center mt-4 gap-4">
-                <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter:none;height:44px;" loading="lazy" decoding="async">
-                <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter:none;height:54px;" loading="lazy" decoding="async">
-                <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter:none;height:44px;" loading="lazy" decoding="async">
-                <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:54px;" loading="lazy" decoding="async">
+                <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter:none;height:44px;" loading="lazy" decoding="async" width="73" height="44">
+                <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter:none;height:54px;" loading="lazy" decoding="async" width="90" height="54">
+                <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter:none;height:44px;" loading="lazy" decoding="async" width="73" height="44">
+                <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:54px;" loading="lazy" decoding="async" width="90" height="54">
             </div>
 
-            <!-- 256-bit SSL Encryption moved right below payment icons -->
             <p class="ssl-badge text-xs text-green-600 font-medium flex items-center justify-center mt-3">
                 <i class="fas fa-lock"></i> 256-bit SSL Encryption • Your Privacy Protected
             </p>
 
-            <img src="/images/money.webp" alt="Money Back Guarantee" class="mx-auto mb-3 mt-4" style="max-width:150px;" loading="lazy" decoding="async">
+            <img src="/images/money.webp" alt="Money Back Guarantee" class="mx-auto mb-3 mt-4" style="max-width:150px;" loading="lazy" decoding="async" width="150" height="63">
 
-            <p class="text-gray-600 mt-4 font-medium">100% Risk Free • Instant Access • Money-Back Guarantee</p>
+            <p class="text-gray-600 mt-4 font-medium">100% Risk Free • Instant Access • 60-Day Money-Back Guarantee</p>
 
-            <!-- 100% Risk FREE 60-Day Money-Back Guarantee Badge at the bottom of the page (replaces old inline text) -->
             <div class="text-center mt-6">
                 <div class="bg-green-100 text-green-800 p-4 rounded-xl inline-flex items-center justify-center shadow-md">
                     <i class="fas fa-shield-alt text-2xl mr-3"></i>
@@ -833,24 +802,23 @@
                 <p class="text-sm text-gray-600 font-medium">System validated against current clinical and occupational evidence:</p>
                 <div class="flex flex-wrap justify-center gap-6 items-start">
                     <div class="flex flex-col items-center">
-                        <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmwomeq/91/report.html" target="_blank"><img src="/images/hocc.webp" alt="UK Parliament Women and Equalities Committee" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmwomeq/91/report.html" target="_blank"><img src="/images/hocc.webp" alt="UK Parliament Women and Equalities Committee" class="h-16" loading="lazy" decoding="async" width="150" height="64"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">UK Parliament</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://journals.lww.com/menopausejournal/fulltext/2019/10000/the_menopause_transition_and_women_s_health_at.20.aspx" target="_blank"><img src="/images/swan.webp" alt="SWAN Longitudinal Study" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://journals.lww.com/menopausejournal/fulltext/2019/10000/the_menopause_transition_and_women_s_health_at.20.aspx" target="_blank"><img src="/images/swan.webp" alt="SWAN Longitudinal Study" class="h-16" loading="lazy" decoding="async" width="150" height="64"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">SWAN Study</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/29315132/" target="_blank"><img src="/images/nih.webp" alt="MENOS@Work RCT Data" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/29315132/" target="_blank"><img src="/images/nih.webp" alt="MENOS@Work RCT Data" class="h-16" loading="lazy" decoding="async" width="150" height="64"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">NIH MENOS@Work</span>
                     </div>
                     <div class="flex flex-col items-center">
-                        <a href="https://www.nyp.org/healthmatters/how-to-protect-your-brain-health-during-menopause" target="_blank"><img src="/images/neuro.webp" alt="Occupational Neuroscience" class="h-16" loading="lazy" decoding="async"></a>
+                        <a href="https://www.nyp.org/healthmatters/how-to-protect-your-brain-health-during-menopause" target="_blank"><img src="/images/neuro.webp" alt="Occupational Neuroscience" class="h-16" loading="lazy" decoding="async" width="150" height="64"></a>
                         <span class="text-xs text-gray-600 mt-1 font-medium">NeuroScience</span>
                     </div>
                 </div>
             </div>
-            <!-- Research sources "see more" toggle -->
             <div class="text-center mt-6">
                 <button id="toggleResearchBtn" class="text-sm font-semibold text-blue-700 hover:text-blue-900 underline bg-transparent border-none cursor-pointer">
                     See Research Sources
@@ -911,7 +879,7 @@
             };
 
             window.closeBookPreview = function(event) {
-                if (!event || event.target.id === 'bookPreviewPopup' || event.target.closest('.book-preview-close') || event.target.closest('.book-preview-done-btn')) {
+                if (!event || event.target.id === 'bookPreviewPopup' || event.target.closest('.book-preview-close')) {
                     popup.classList.remove('active');
                     document.body.style.overflow = '';
                 }
@@ -943,7 +911,6 @@
                 if (e) e.preventDefault();
                 document.getElementById('checkoutPopupOverlay').classList.add('active');
                 document.body.style.overflow = 'hidden';
-                // Track InitiateCheckout with Facebook Pixel
                 if (typeof fbq !== 'undefined') {
                     fbq('track', 'InitiateCheckout');
                 }
@@ -994,7 +961,6 @@
                     });
                 }
 
-                // Close checkout popup when clicking outside content
                 var checkoutOverlay = document.getElementById('checkoutPopupOverlay');
                 if (checkoutOverlay) {
                     checkoutOverlay.addEventListener('click', function(e) {
@@ -1002,6 +968,13 @@
                             closeCheckoutPopup();
                         }
                     });
+                }
+
+                // For the Canva popup: preload the iframe src directly (no lazy load needed after open)
+                var canvaIframe = popup.querySelector('iframe');
+                if (canvaIframe) {
+                    // Set src immediately for instant load when popup opens
+                    canvaIframe.src = canvaIframe.src;
                 }
             });
         })();
