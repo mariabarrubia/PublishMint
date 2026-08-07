@@ -369,9 +369,8 @@
         .book-preview-content { background: white; width: 100%; max-width: 1000px; height: 85vh; border-radius: 16px; overflow: hidden; position: relative; display: flex; flex-direction: column; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
         .book-preview-iframe-wrapper { flex: 1; width: 100%; position: relative; background: #f1f5f9; }
         .book-preview-iframe-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .book-preview-footer { padding: 12px 20px; background: white; border-top: 1px solid #e5e7eb; display: flex; justify-content: flex-end; }
-        .book-preview-done-btn { background-color: #7a9f7e; color: white; font-weight: 600; padding: 8px 28px; border-radius: 40px; border: none; cursor: pointer; transition: all 0.2s; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-        .book-preview-done-btn:hover { background-color: #5f8b63; transform: scale(1.02); }
+        .book-preview-footer { padding: 12px 20px; background: white; border-top: 1px solid #e5e7eb; display: flex; justify-content: space-between; align-items: center; }
+        .book-preview-cta { font-weight: 600; padding: 8px 24px; border-radius: 40px; font-size: 0.9rem; text-decoration: none; display: inline-block; }
         .book-preview-close { position: absolute; top: 16px; right: 16px; background: white; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
 
         .book-preview-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 1rem; border: 1px solid #7a9f7e; color: #5f8b63; background: white; font-size: 0.75rem; font-weight: 600; border-radius: 40px; cursor: pointer; transition: all 0.2s; line-height: 1.2; }
@@ -485,7 +484,7 @@
     </div>
     <div class="floral-garland-spacer" aria-hidden="true"></div>
 
-    <!-- Book Preview Popup – Redesigned with CTA -->
+    <!-- Book Preview Popup – Canva Embed redesigned -->
     <div id="bookPreviewPopup" class="book-preview-popup" onclick="closeBookPreview(event)">
         <div class="book-preview-content" onclick="event.stopPropagation()">
             <button class="book-preview-close" onclick="closeBookPreview()"><i class="fas fa-times text-gray-700"></i></button>
@@ -496,9 +495,9 @@
                 src="https://www.canva.com/design/DAHRioeExfo/76RKmShuHfQCuS6A3gR-Mg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen" title="Book Preview">
               </iframe>
             </div>
-            <p style="text-align:center; color:#555; font-size:0.85rem; margin:0.5rem 0 0.25rem;">Swipe or use ← → arrow keys to flip through the book.</p>
-            <div style="text-align:right; padding: 0 10px 10px 10px;">
-                <a href="https://www.checkout-ds24.com/product/717596" class="cta-rose font-bold py-2 px-6 rounded-full text-sm inline-block" style="text-decoration:none;">Get the Complete System – $27</a>
+            <div class="book-preview-footer">
+                <span style="color:#555; font-size:0.85rem;">← Swipe or use arrow keys to flip pages →</span>
+                <a href="https://www.checkout-ds24.com/product/717596" class="book-preview-cta cta-green-soft">Get Complete System – $27 →</a>
             </div>
         </div>
     </div>
@@ -559,11 +558,11 @@
                         <a href="https://www.checkout-ds24.com/product/717596" class="cta-rose font-bold py-4 px-8 rounded-full text-center inline-block text-xl shadow-lg">
                             GET COMPLETE SYSTEM - $27
                         </a>
-                        <div class="flex items-center justify-center mt-4 gap-4 text-xs text-gray-500 font-medium">
-                            <span>[1] Mastercard</span>
-                            <span>[2] Visa</span>
-                            <span>[3] PayPal</span>
-                            <span>[4] Apple Pay</span>
+                        <div class="flex items-center justify-center mt-4 gap-4">
+                            <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async" width="80" height="48">
+                            <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async" width="100" height="60">
+                            <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async" width="80" height="48">
+                            <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async" width="100" height="60">
                         </div>
                     </div>
                     <p class="text-center text-gray-600 font-semibold flex items-center justify-center gap-2">
@@ -659,11 +658,11 @@
                         CLAIM IT ALL NOW - $27 (One Time)
                     </a>
                 </div>
-                <div class="flex items-center justify-center mt-4 gap-4 text-xs text-gray-500 font-medium">
-                    <span>[1] Mastercard</span>
-                    <span>[2] Visa</span>
-                    <span>[3] PayPal</span>
-                    <span>[4] Apple Pay</span>
+                <div class="flex items-center justify-center mt-4 gap-4">
+                    <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async" width="80" height="48">
+                    <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async" width="100" height="60">
+                    <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter:none;height:48px;" loading="lazy" decoding="async" width="80" height="48">
+                    <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:60px;" loading="lazy" decoding="async" width="100" height="60">
                 </div>
                 <p class="text-gray-600 mt-4 font-medium">100% Risk Free • Instant Access • 60-Day Money-Back Guarantee</p>
             </div>
@@ -687,7 +686,6 @@
                             <li>This information should be accessible to every woman who needs it</li>
                             <li>The value is in the practical density, not the price tag</li>
                         </ul>
-                        <!-- Deleted: "Also almost all of this $27 goes to partners..." -->
                     </div>
                 </div>
                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
@@ -774,11 +772,11 @@
             </a>
             <p class="mt-4 text-gray-600 text-sm max-w-md mx-auto">Join women in California, London, Toronto, Sydney, and 14 other cities who refuse to let hormones dictate their earning trajectory.</p>
 
-            <div class="flex items-center justify-center mt-4 gap-4 text-xs text-gray-500 font-medium">
-                <span>[1] Mastercard</span>
-                <span>[2] Visa</span>
-                <span>[3] PayPal</span>
-                <span>[4] Apple Pay</span>
+            <div class="flex items-center justify-center mt-4 gap-4">
+                <img src="/images/mastercard.svg" alt="Mastercard" class="payment-logo payment-logo-large" style="filter:none;height:44px;" loading="lazy" decoding="async" width="73" height="44">
+                <img src="/images/visa.svg" alt="Visa" class="payment-logo payment-logo-large" style="filter:none;height:54px;" loading="lazy" decoding="async" width="90" height="54">
+                <img src="/images/paypal.svg" alt="PayPal" class="payment-logo payment-logo-large" style="filter:none;height:44px;" loading="lazy" decoding="async" width="73" height="44">
+                <img src="/images/applepay.svg" alt="Apple Pay" class="payment-logo payment-logo-large" style="filter:none;height:54px;" loading="lazy" decoding="async" width="90" height="54">
             </div>
 
             <p class="ssl-badge text-xs text-green-600 font-medium flex items-center justify-center mt-3">
@@ -803,21 +801,17 @@
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
                 <p class="text-sm text-gray-600 font-medium">System validated against current clinical and occupational evidence:</p>
                 <div class="flex flex-wrap justify-center gap-6 items-start">
-                    <div class="flex flex-col items-center">
-                        <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmwomeq/91/report.html" target="_blank"><img src="/images/hocc.webp" alt="UK Parliament Women and Equalities Committee" class="h-16" loading="lazy" decoding="async" width="150" height="64"></a>
-                        <span class="text-xs text-gray-600 mt-1 font-medium">UK Parliament</span>
+                    <div class="text-sm text-gray-700">
+                        <strong>1.</strong> <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmwomeq/91/report.html" class="font-medium underline text-blue-700">UK Parliament</a> <span class="text-xs text-gray-500">Women and Equalities Committee</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <a href="https://journals.lww.com/menopausejournal/fulltext/2019/10000/the_menopause_transition_and_women_s_health_at.20.aspx" target="_blank"><img src="/images/swan.webp" alt="SWAN Longitudinal Study" class="h-16" loading="lazy" decoding="async" width="150" height="64"></a>
-                        <span class="text-xs text-gray-600 mt-1 font-medium">SWAN Study</span>
+                    <div class="text-sm text-gray-700">
+                        <strong>2.</strong> <a href="https://journals.lww.com/menopausejournal/fulltext/2019/10000/the_menopause_transition_and_women_s_health_at.20.aspx" class="font-medium underline text-blue-700">SWAN Study</a> <span class="text-xs text-gray-500">Longitudinal Study of Women's Health</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/29315132/" target="_blank"><img src="/images/nih.webp" alt="MENOS@Work RCT Data" class="h-16" loading="lazy" decoding="async" width="150" height="64"></a>
-                        <span class="text-xs text-gray-600 mt-1 font-medium">NIH MENOS@Work</span>
+                    <div class="text-sm text-gray-700">
+                        <strong>3.</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/29315132/" class="font-medium underline text-blue-700">NIH MENOS@Work</a> <span class="text-xs text-gray-500">Menopause & Occupational Stress RCT</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <a href="https://www.nyp.org/healthmatters/how-to-protect-your-brain-health-during-menopause" target="_blank"><img src="/images/neuro.webp" alt="Occupational Neuroscience" class="h-16" loading="lazy" decoding="async" width="150" height="64"></a>
-                        <span class="text-xs text-gray-600 mt-1 font-medium">NeuroScience</span>
+                    <div class="text-sm text-gray-700">
+                        <strong>4.</strong> <a href="https://www.nyp.org/healthmatters/how-to-protect-your-brain-health-during-menopause" class="font-medium underline text-blue-700">NeuroScience</a> <span class="text-xs text-gray-500">Brain Health During Menopause</span>
                     </div>
                 </div>
             </div>
@@ -853,17 +847,31 @@
         </div>
     </footer>
 
-    <!-- Separate Imprint Footer -->
-    <footer class="py-6 bg-gray-100 text-center text-xs text-gray-500 border-t border-gray-200">
+    <!-- Imprint Footer -->
+    <div class="py-4 bg-gray-50 text-center text-xs text-gray-500 border-t border-gray-200">
         <div class="container mx-auto px-4">
-            <span class="font-semibold">Imprint:</span>
+            <strong>Imprint</strong> | 
             <a href="/terms-conditions.html" class="hover:text-gray-800 mx-2">Terms of Service</a> &bull;
             <a href="/privacy-policy.html" class="hover:text-gray-800 mx-2">Privacy Policy</a> &bull;
             <a href="/legal-information.html" class="hover:text-gray-800 mx-2">Legal Information</a> &bull;
             <a href="/contact-us.html" class="hover:text-gray-800 mx-2">Contact Us</a> &bull;
             <a href="/refund-policy.html" class="hover:text-gray-800 mx-2">Refund Policy</a>
         </div>
-    </footer>
+    </div>
+
+    <!-- Digistore24 checkout script loaded before popup for custom element registration -->
+    <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
+
+    <!-- Checkout Popup Overlay – fully preloaded in background, appears instantly on click -->
+    <div id="checkoutPopupOverlay" class="checkout-popup-overlay">
+        <div class="checkout-popup-content">
+            <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
+            <!-- Begin of digistore multi-step order box code -->
+            <script src="https://www.checkout-ds24.com/service/digistore.js"></script>
+            <my-order-form product-id="717596" order-form-id="242231" base-url="https://www.checkout-ds24.com"></my-order-form>
+            <!-- End of digistore multi-step order box code -->
+        </div>
+    </div>
 
     <script>
         (function() {
@@ -906,6 +914,21 @@
                 }
             };
 
+            // Checkout Popup Functions
+            window.openCheckoutPopup = function(e) {
+                if (e) e.preventDefault();
+                document.getElementById('checkoutPopupOverlay').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'InitiateCheckout');
+                }
+            };
+
+            window.closeCheckoutPopup = function() {
+                document.getElementById('checkoutPopupOverlay').classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
             document.addEventListener('DOMContentLoaded', function() {
                 var audio = document.getElementById('audioSample');
                 var btn = document.getElementById('audioSampleBtn');
@@ -946,9 +969,19 @@
                     });
                 }
 
-                // For the Canva popup: preload the iframe src directly
+                var checkoutOverlay = document.getElementById('checkoutPopupOverlay');
+                if (checkoutOverlay) {
+                    checkoutOverlay.addEventListener('click', function(e) {
+                        if (e.target === checkoutOverlay) {
+                            closeCheckoutPopup();
+                        }
+                    });
+                }
+
+                // For the Canva popup: preload the iframe src directly (no lazy load needed after open)
                 var canvaIframe = popup.querySelector('iframe');
                 if (canvaIframe) {
+                    // Set src immediately for instant load when popup opens
                     canvaIframe.src = canvaIframe.src;
                 }
             });
